@@ -1,15 +1,13 @@
+import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { PlantApiResponse, Plant } from '@/types/plant.types';
 
-const TREFLE_API_KEY = process.env.TREFLE_API_KEY;
-
+@Injectable()
 export class PlantService {
+  constructor(private configService: ConfigService) {}
+
   async getPlants(): Promise<PlantApiResponse> {
-    console.log(TREFLE_API_KEY);
-
-    const response = await fetch(
-      `https://trefle.io/api/v1/plants?token=${TREFLE_API_KEY}`
-    );
-
+    const response = await fetch('/api/plants');
     return response.json();
   }
 
