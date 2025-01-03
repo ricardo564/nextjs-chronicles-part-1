@@ -23,7 +23,7 @@ export default async function Home() {
 
     return (
       <DefaultLayout>
-        <div className="min-h-screen bg-gray-900 p-8">
+        <div className="min-h-screen bg-primary p-8">
           <div className="flex flex-wrap justify-center items-center gap-6">
             {typedPlants.map((plant: Plant) => (
               <PlantCard key={plant.id} plant={plant} />
