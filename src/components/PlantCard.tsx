@@ -52,7 +52,7 @@ export function PlantCard({
 
   return (
     <div
-      className="relative bg-black/10 backdrop-blur-xl rounded-[32px] p-8 border border-white/20 w-full max-w-[20rem] flex flex-col items-center animate-fade-in"
+      className="relative bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-xl rounded-[32px] p-8 border border-white/20 w-full max-w-[20rem] flex flex-col items-center animate-fade-in"
       role="article"
       aria-label={`Plant card for ${plant.common_name || plant.scientific_name}`}
     >
@@ -86,7 +86,7 @@ export function PlantCard({
 
         <div className="w-full flex items-center justify-start animate-fade-in-delay">
           <button
-            className="px-6 py-3 bg-gray-500/20 backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 hover:scale-105 transition-all duration-300"
+            className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
             aria-label={`Buy ${plant.common_name || plant.scientific_name}`}
           >
             Buy Now
