@@ -1,17 +1,30 @@
 export class HttpClient {
-  async get<T>(url: string): Promise<T> {
-    const response = await fetch(url);
-    return response.json();
+  private readonly baseURL: string;
+
+  constructor() {
+    this.baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
   }
 
-  async post<T, D = Record<string, unknown>>(url: string, data: D): Promise<T> {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    return response.json();
+  async get<T>(path: string): Promise<{ data: T }> {
+    try {
+      const url = new URL(path, this.baseURL);
+
+      const response = await fetch(url.toString(), {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const { data } = await response.json();
+      return { data };
+    } catch (error) {
+      console.error("HttpClient error:", error);
+      throw error;
+    }
   }
 }
