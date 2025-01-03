@@ -32,7 +32,11 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-gray-900 p-8">
       <div className="flex flex-wrap justify-center items-center gap-6">
-        {!plants.length && <p>Loading...</p>}
+        {!plants.length && (
+          <p className="text-white text-2xl font-bold">
+            Nenhuma planta para ser exibida...
+          </p>
+        )}
 
         {plants.map((plant: Plant) => (
           <PlantCard key={plant.id} plant={plant} />
