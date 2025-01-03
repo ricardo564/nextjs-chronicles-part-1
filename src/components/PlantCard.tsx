@@ -52,23 +52,23 @@ export function PlantCard({
 
   return (
     <div
-      className="relative bg-black/10 backdrop-blur-xl rounded-[32px] p-8 border border-white/20 w-full max-w-[20rem] flex flex-col items-center"
+      className="relative bg-black/10 backdrop-blur-xl rounded-[32px] p-8 border border-white/20 w-full max-w-[20rem] flex flex-col items-center animate-fade-in"
       role="article"
       aria-label={`Plant card for ${plant.common_name || plant.scientific_name}`}
     >
-      <div className="mb-6">
+      <div className="mb-6 animate-slide-down">
         {plant.image_url && (
           <Image
             src={plant.image_url}
             alt={plant.common_name || plant.scientific_name}
             width={240}
             height={240}
-            className={`object-cover w-60 h-60 rounded-2xl ${imageClassName}`}
+            className={`object-cover w-60 h-60 rounded-2xl animate-scale-in ${imageClassName}`}
           />
         )}
       </div>
 
-      <div className="flex flex-col w-full gap-2">
+      <div className="flex flex-col w-full gap-2 animate-slide-up">
         <p className="text-gray-300 text-sm mb-2">
           {getRandomName()}
         </p>
@@ -86,9 +86,9 @@ export function PlantCard({
         </p>
       </div>
 
-        <div className="w-full flex items-center justify-start">
+        <div className="w-full flex items-center justify-start animate-fade-in-delay">
           <button
-            className="px-6 py-3 bg-gray-500/20 backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
+            className="px-6 py-3 bg-gray-500/20 backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 hover:scale-105 transition-all duration-300"
             aria-label={`Buy ${plant.common_name || plant.scientific_name}`}
           >
             Buy Now
