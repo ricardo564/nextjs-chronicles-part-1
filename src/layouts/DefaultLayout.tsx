@@ -6,11 +6,13 @@ interface Props {
 
 export default function DefaultLayout({ children }: Props) {
   return (
-    <div className="bg-primary min-h-screen overflow-x-hidden">
+    <div className="bg-primary min-h-screen overflow-x-hidden grid">
       <Header menuItems={menuItems} />
-      <main className="max-w-7xl mx-auto bg-red-500">
+
+      <main className="grid max-w-7xl mx-auto pt-16">
         {children}
       </main>
+
     </div>
   )
 }
