@@ -2,6 +2,8 @@ import { PlantCard } from "@/components/PlantCard";
 import { PlantService } from "@/services/plant.service";
 import { HttpClient } from "@/services/http-client";
 import { Plant } from "@/types/plant.types";
+import { NoDataToShow } from "@/components/NoDataToShow";
+
 export default async function Home() {
   const httpClient = new HttpClient();
   const plantService = new PlantService(httpClient);
@@ -12,11 +14,7 @@ export default async function Home() {
 
     if (typedPlants.length === 0) {
       return (
-        <div className="min-h-screen bg-gray-900 p-8 flex justify-center items-center">
-          <p className="text-white text-2xl font-bold">
-            Nenhuma planta para ser exibida...
-          </p>
-        </div>
+        <NoDataToShow message="Nenhuma planta para ser exibida..." />
       );
     }
 
