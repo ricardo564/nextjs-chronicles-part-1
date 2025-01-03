@@ -6,7 +6,7 @@ interface Props {
 
 export default function DefaultLayout({ children }: Props) {
   return (
-    <div className="bg-primary">
+    <div className="bg-primary min-h-screen">
       <Header menuItems={menuItems} />
       <main className="max-w-7xl mx-auto bg-red-500">
         {children}
