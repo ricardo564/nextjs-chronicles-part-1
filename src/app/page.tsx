@@ -3,6 +3,7 @@ import { PlantCard } from "@/components/PlantCard";
 
 async function getPlants(): Promise<PlantApiResponse> {
   const apiKey = process.env.TREFLE_API_KEY;
+  const errorMessage = "Failed to fetch plants";
 
   try {
     const response = await fetch(
@@ -15,13 +16,13 @@ async function getPlants(): Promise<PlantApiResponse> {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch plants");
+      throw new Error(errorMessage);
     }
 
     return response.json();
   } catch (error) {
-    console.error("Error:", error);
-    throw new Error("Failed to fetch plants");
+    console.error(errorMessage, error);
+    throw new Error(errorMessage);
   }
 }
 
