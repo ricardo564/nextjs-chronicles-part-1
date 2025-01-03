@@ -68,20 +68,17 @@ export function PlantCard({
         )}
       </div>
 
-      <div className="flex flex-col w-full gap-2 animate-slide-up">
+      <div className="flex flex-col w-full animate-slide-up">
         <p className="text-gray-300 text-sm mb-2">
           {getRandomName()}
         </p>
 
-        <p className="text-gray-300 text-sm">
-            Family: {plant.family}
+        <p className="text-gray-300 text-xs grid grid-cols-2">
+          <span>Family: {plant.family}</span>
+          <span>Genus: {plant.genus}</span>
         </p>
 
-        <p className="text-gray-300 text-sm">
-          Genus: {plant.genus}
-        </p>
-
-        <p className={`text-white text-2xl font-semibold mb-6 ${titleClassName}`}>
+        <p className={`text-white text-2xl font-semibold my-3 ${titleClassName}`}>
           {plant.bibliography + " " + plant.scientific_name}
         </p>
       </div>
