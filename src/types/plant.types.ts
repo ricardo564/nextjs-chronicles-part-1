@@ -1,8 +1,8 @@
 interface ApiLinks {
-  self: string;
   first?: string;
-  next?: string;
   last?: string;
+  prev?: string;
+  next?: string;
 }
 
 interface PlantLinks {
@@ -12,7 +12,8 @@ interface PlantLinks {
 }
 
 interface ApiMeta {
-  total: number;
+  current_page?: number;
+  total?: number;
 }
 
 interface Plant {
@@ -36,8 +37,8 @@ interface Plant {
 
 interface PlantApiResponse {
   data: Plant[];
-  links: ApiLinks;
-  meta: ApiMeta;
+  links?: ApiLinks;
+  meta?: ApiMeta;
 }
 
 export type {
