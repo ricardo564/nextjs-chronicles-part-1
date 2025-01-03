@@ -1,18 +1,14 @@
-import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { HttpClient } from '@/services/http-client';
 import { PlantApiResponse, Plant } from '@/types/plant.types';
 
-@Injectable()
 export class PlantService {
-  constructor(private configService: ConfigService) {}
+  constructor(private readonly httpClient: HttpClient) {}
 
   async getPlants(): Promise<PlantApiResponse> {
-    const response = await fetch('/api/plants');
-    return response.json();
+    return this.httpClient.get<PlantApiResponse>('/api/plants');
   }
 
   async getPlantById(id: number): Promise<Plant> {
-    const response = await fetch(`sua-url-api/plants/${id}`);
-    return response.json();
+    return this.httpClient.get<Plant>(`/api/plants/${id}`);
   }
 }
