@@ -30,7 +30,6 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-gray-900 p-8">
-      <pre className="text-white">{JSON.stringify(plants, null, 2)}</pre>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {plants.map((plant: Plant) => (
           <div
