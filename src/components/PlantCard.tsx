@@ -63,6 +63,7 @@ export function PlantCard({
             alt={plant.common_name || plant.scientific_name}
             width={240}
             height={240}
+            loading="lazy"
             className={`object-cover w-60 h-60 rounded-2xl animate-scale-in ${imageClassName}`}
           />
         )}
