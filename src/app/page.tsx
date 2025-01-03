@@ -1,4 +1,4 @@
-import { PlantApiResponse } from "@/types/plant.types";
+import { Plant, PlantApiResponse } from "@/types/plant.types";
 import Image from "next/image";
 
 async function getPlants(): Promise<PlantApiResponse> {
@@ -32,7 +32,7 @@ export default async function Home() {
     <div className="min-h-screen bg-gray-900 p-8">
       <pre className="text-white">{JSON.stringify(plants, null, 2)}</pre>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {plants.map((plant) => (
+        {plants.map((plant: Plant) => (
           <div
             key={plant.id}
             className="relative bg-white/20 backdrop-blur-sm rounded-3xl p-6 flex flex-col items-center text-center"
