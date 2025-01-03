@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { menuItems } from "@/static/menuItems";
+
 interface Props {
   children: React.ReactNode;
 }
