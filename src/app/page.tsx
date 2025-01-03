@@ -1,16 +1,16 @@
 'use client';
 
+import { HttpClient } from '@/services/http-client';
 import { PlantService } from '@/services/plant.service';
-import { Plant } from '@/types/plant.types';
+import { Plant, PlantApiResponse } from '@/types/plant.types';
 import { useEffect, useState } from 'react';
-
 export default function Home() {
   const [plants, setPlants] = useState<Plant[]>([]);
 
-  const plantService = new PlantService();
+  const plantService = new PlantService(new HttpClient());
 
   const handleGetPlants = async () => {
-    plantService.getPlants().then((response) => {
+    plantService.getPlants().then((response: PlantApiResponse) => {
       const { data } = response;
       if (!data) return;
 
