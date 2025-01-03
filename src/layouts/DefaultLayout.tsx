@@ -1,16 +1,16 @@
-// import Navbar from './navbar'
-// import Footer from './footer'
-
+import { Header } from "@/components/Header";
+import { menuItems } from "@/static/menuItems";
 interface Props {
   children: React.ReactNode;
 }
 
 export default function DefaultLayout({ children }: Props) {
   return (
-    <>
-      {/* <Navbar /> */}
-      <main>{children}</main>
-      {/* <Footer /> */}
-    </>
+    <div className="bg-primary">
+      <Header menuItems={menuItems} />
+      <main className="max-w-7xl mx-auto bg-red-500">
+        {children}
+      </main>
+    </div>
   )
 }
