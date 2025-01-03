@@ -80,18 +80,18 @@ export function PlantCard({
         </p>
 
         <p className={`text-white text-2xl font-semibold my-3 h-32 w-full line-clamp-3 overflow-hidden  ${titleClassName}`}>
-        {plant.bibliography + " " + plant.scientific_name}
+          {plant.bibliography + " " + plant.scientific_name}
         </p>
       </div>
 
-        <div className="w-full flex items-center justify-start animate-fade-in-delay">
-          <button
-            className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-            aria-label={`Buy ${plant.common_name || plant.scientific_name}`}
-          >
-            Buy Now
-          </button>
-        </div>
+      <div className="w-full flex items-center justify-start animate-fade-in-delay">
+        <button
+          className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
+          aria-label={`Buy ${plant.common_name || plant.scientific_name}`}
+        >
+          Buy Now
+        </button>
+      </div>
     </div>
   );
 }
