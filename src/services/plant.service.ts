@@ -5,10 +5,15 @@ export class PlantService {
   constructor(private readonly httpClient: HttpClient) {}
 
   async getPlants(): Promise<PlantApiResponse> {
-    return this.httpClient.get<PlantApiResponse>('/api/plants');
+    const response = await this.httpClient.get<{ data: Plant[] }>('/api/plants');
+
+    console.log("getPlants -> response", response)
+
+    return response.data;
   }
 
   async getPlantById(id: number): Promise<Plant> {
-    return this.httpClient.get<Plant>(`/api/plants/${id}`);
+    const response = await this.httpClient.get<{ data: Plant }>(`/api/plants/${id}`);
+    return response.data.data;
   }
 }
