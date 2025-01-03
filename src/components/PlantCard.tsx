@@ -79,8 +79,8 @@ export function PlantCard({
           <span>Genus: {plant.genus}</span>
         </p>
 
-        <p className={`text-white text-2xl font-semibold my-3 ${titleClassName}`}>
-          {plant.bibliography + " " + plant.scientific_name}
+        <p className={`text-white text-2xl font-semibold my-3 h-32 w-full line-clamp-3 overflow-hidden  ${titleClassName}`}>
+        {plant.bibliography + " " + plant.scientific_name}
         </p>
       </div>
 
