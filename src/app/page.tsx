@@ -3,6 +3,7 @@ import { PlantService } from "@/services/plant.service";
 import { HttpClient } from "@/services/http-client";
 import { Plant } from "@/types/plant.types";
 import { NoDataToShow } from "@/components/NoDataToShow";
+import DefaultLayout from "@/layouts/DefaultLayout";
 
 export default async function Home() {
   const httpClient = new HttpClient();
@@ -14,27 +15,29 @@ export default async function Home() {
 
     if (typedPlants.length === 0) {
       return (
-        <NoDataToShow message="Nenhuma planta para ser exibida..." />
+        <DefaultLayout>
+          <NoDataToShow message="Nenhuma planta para ser exibida..." />
+        </DefaultLayout>
       );
     }
 
     return (
-      <div className="min-h-screen bg-gray-900 p-8">
-        <div className="flex flex-wrap justify-center items-center gap-6">
-          {typedPlants.map((plant: Plant) => (
-            <PlantCard key={plant.id} plant={plant} />
-          ))}
+      <DefaultLayout>
+        <div className="min-h-screen bg-gray-900 p-8">
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            {typedPlants.map((plant: Plant) => (
+              <PlantCard key={plant.id} plant={plant} />
+            ))}
+          </div>
         </div>
-      </div>
+      </DefaultLayout>
     );
   } catch (error) {
     console.error('Error fetching plants:', error);
     return (
-      <div className="min-h-screen bg-gray-900 p-8 flex justify-center items-center">
-        <p className="text-white text-2xl font-bold">
-          Erro ao carregar as plantas...
-        </p>
-      </div>
+      <DefaultLayout>
+        <NoDataToShow message="Erro ao carregar as plantas..." />
+      </DefaultLayout>
     );
   }
 }
