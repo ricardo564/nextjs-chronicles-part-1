@@ -10,12 +10,15 @@ export default function Home() {
   const plantService = new PlantService(new HttpClient());
 
   const handleGetPlants = async () => {
-    plantService.getPlants().then((response: PlantApiResponse) => {
+    try {
+      const response: PlantApiResponse = await plantService.getPlants();
       const { data } = response;
       if (!data) return;
 
       setPlants(data);
-    });
+    } catch (error) {
+      console.error('Error fetching plants:', error);
+    }
   };
 
   useEffect(() => {
