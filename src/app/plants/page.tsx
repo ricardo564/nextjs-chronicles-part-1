@@ -2,12 +2,20 @@ import { PlantCard } from "@/components/PlantCard";
 import { Plant } from "@/types/plant.types";
 import { NoDataToShow } from "@/components/NoDataToShow";
 import DefaultLayout from "@/layouts/DefaultLayout";
+import { PlantsService } from "@/modules/plants/plants.service";
+import { HttpService } from '@nestjs/axios';
 
 export default async function PlantsPage() {
+  const httpService = new HttpService();
+  const plantsService = new PlantsService(httpService);
+
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/plants`);
-    const data = await response.json();
-    const plants: Plant[] = data.data;
+    const response = await plantsService.getPlants();
+    const plants: Plant[] = response.data;
+
+    if (!Array.isArray(plants)) {
+      throw new Error('Dados inválidos recebidos do servidor');
+    }
 
     return (
       <DefaultLayout>
@@ -24,12 +32,17 @@ export default async function PlantsPage() {
         </div>
       </DefaultLayout>
     );
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Error fetching plants:', error);
+
+    const errorMessage = error instanceof Error
+      ? `Erro ao carregar as plantas: ${error.message}`
+      : 'Erro ao carregar as plantas...';
+
     return (
       <DefaultLayout>
         <div className="py-8">
-          <NoDataToShow message="Erro ao carregar as plantas..." />
+          <NoDataToShow message={errorMessage} />
         </div>
       </DefaultLayout>
     );
