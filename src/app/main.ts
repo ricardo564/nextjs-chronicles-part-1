@@ -8,6 +8,8 @@ async function bootstrap() {
 
     const port = configService.get<number>('PORT') || 3000;
     await app.listen(port);
+    app.enableCors();
+
     console.log(`Application is running on: http://localhost:${port}`);
 }
 
