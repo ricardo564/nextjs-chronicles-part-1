@@ -23,7 +23,7 @@ export async function IntroSection() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col justify-between items-start mb-16 pt-32">
           <h1 className="text-8xl text-white font-semibold">
             Breath Natureal
