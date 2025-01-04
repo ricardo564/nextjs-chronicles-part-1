@@ -59,13 +59,12 @@ export async function IntroSection() {
           </div>
         </div>
 
-
         <div className="space-y-6 flex flex-col items-center gap-24">
           <QuotedTitle className="text-center text-white">
             Our Trendy Plants
           </QuotedTitle>
 
-          <div className="flex flex-wrap gap-4 justify-center w-full">
+          <div className="flex flex-wrap justify-center w-full gap-[6rem]">
             {mockupPlants.map((plant) => (
               <PlantBannerCard key={plant.id} plant={plant} />
             ))}
