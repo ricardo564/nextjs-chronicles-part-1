@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export function Header({ menuItems }: HeaderProps) {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-primary/90 backdrop-blur-sm z-50">
+    <header className="fixed top-0 left-0 right-0 bg-primary/90 backdrop-blur-sm z-50 px-2">
       <nav className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
