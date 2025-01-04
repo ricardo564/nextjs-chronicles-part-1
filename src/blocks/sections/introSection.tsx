@@ -1,7 +1,4 @@
 import { PlantBannerCard } from '@/components/PlantBannerCard';
-import { HttpClient } from '@/services/http-client';
-import { PlantService } from '@/services/plant.service';
-import { Plant } from '@/types/plant.types';
 import { LiveDemoShortcut } from './liveDemoShortcut';
 import background from '@/assets/images/topiary-green-pot.webp';
 import { HighlightedTestimonial } from '@/components/HighlightedTestimonial';
@@ -12,19 +9,6 @@ import { PlantCard } from '@/components/PlantCard';
 import { QuotedTitle } from '@/components/QuotedTitle';
 
 export async function IntroSection() {
-  const httpClient = new HttpClient();
-  const plantService = new PlantService(httpClient);
-  const plants = await plantService.getPlants();
-  const typedPlants = plants as unknown as Plant[];
-
-  const getRandomPlants = () => {
-    const shuffled = [...typedPlants].sort(() => Math.random() - 0.5);
-
-    return shuffled.slice(0, 2);
-  };
-
-  const randomPlants = getRandomPlants();
-
   const randomTestimonial = () => {
     const shuffled = [...testimonials].sort(() => Math.random() - 0.5);
 
@@ -54,7 +38,7 @@ export async function IntroSection() {
           </div>
 
           <div className="flex gap-4 relative justify-between">
-            <ExploreShortcut plant={randomPlants[0]} />
+            <ExploreShortcut plant={mockupPlants[1]} />
 
             <LiveDemoShortcut />
           </div>
@@ -81,7 +65,7 @@ export async function IntroSection() {
             Our Trendy Plants
           </QuotedTitle>
           <div className="flex flex-wrap gap-4 justify-center w-full">
-            {randomPlants.map((plant) => (
+            {mockupPlants.map((plant) => (
               <PlantBannerCard key={plant.id} plant={plant} />
             ))}
           </div>
