@@ -26,7 +26,7 @@ export function PlantBannerCard({
               width={180}
               height={180}
               loading="lazy"
-              className={`object-cover w-44 h-44 rounded-2xl ${imageClassName}`}
+              className={`object-cover w-[17rem] h-[17rem] rounded-2xl absolute -top-[1rem] left-0 scale-150 ${imageClassName}`}
             />
           )}
         </div>
