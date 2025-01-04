@@ -1,4 +1,4 @@
-import IntroSection from "@/blocks/sections/introSection";
+import { IntroSection } from "@/blocks/sections/introSection";
 import TopSellingSection from "@/blocks/sections/topSellingSection";
 import DefaultLayout from "@/layouts/DefaultLayout";
 
