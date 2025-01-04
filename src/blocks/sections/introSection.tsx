@@ -9,6 +9,7 @@ import { testimonials } from '@/static/testimonial';
 import { ExploreShortcut } from '@/components/ExploreShortcut';
 import { mockupPlants } from '@/static/mockupPlants';
 import { PlantCard } from '@/components/PlantCard';
+import { QuotedTitle } from '@/components/QuotedTitle';
 
 export async function IntroSection() {
   const httpClient = new HttpClient();
@@ -31,13 +32,13 @@ export async function IntroSection() {
   };
 
   return (
-    <section   className="relative overflow-hidden w-screen pb-24"
-    style={{
-      backgroundImage: `url(${background.src})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-    }}>
+    <section className="relative overflow-hidden w-screen pb-24 px-4"
+      style={{
+        backgroundImage: `url(${background.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col justify-between items-start mb-16 pt-32">
           <h1 className="text-8xl text-white font-semibold">
@@ -45,12 +46,12 @@ export async function IntroSection() {
           </h1>
 
           <div className="mb-8 max-w-prose">
-              <p className="text-gray-400 mb-4">
-                Transform your space into a natural sanctuary with our curated collection of indoor plants.
-                Experience the beauty and serenity of nature while improving your home air quality and
-                creating a more vibrant, living environment.
-              </p>
-            </div>
+            <p className="text-gray-400 mb-4">
+              Transform your space into a natural sanctuary with our curated collection of indoor plants.
+              Experience the beauty and serenity of nature while improving your home air quality and
+              creating a more vibrant, living environment.
+            </p>
+          </div>
 
           <div className="flex gap-4 relative justify-between">
             <ExploreShortcut plant={randomPlants[0]} />
@@ -74,10 +75,16 @@ export async function IntroSection() {
           </div>
         </div>
 
-        <div className="space-y-6">
-          {randomPlants.map((plant) => (
-            <PlantBannerCard key={plant.id} plant={plant} />
-          ))}
+
+        <div className="space-y-6 flex flex-col items-center gap-24">
+          <QuotedTitle className="text-center text-white">
+            Our Trendy Plants
+          </QuotedTitle>
+          <div className="flex flex-wrap gap-4 justify-center w-full">
+            {randomPlants.map((plant) => (
+              <PlantBannerCard key={plant.id} plant={plant} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
