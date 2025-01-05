@@ -3,11 +3,12 @@ import { MenuItem } from "@/types/menuItem";
 
 interface DesktopMenuProps {
   menuItems: MenuItem[];
+  className?: string;
 }
 
-export function DesktopMenu({ menuItems }: DesktopMenuProps) {
+export function DesktopMenu({ menuItems, className }: DesktopMenuProps) {
   return (
-    <ul className="hidden md:flex items-center space-x-8">
+    <ul className={`hidden md:flex items-center space-x-8 ${className}`}>
       {menuItems.map((item) => (
         <li key={item.label}>
           <Link
