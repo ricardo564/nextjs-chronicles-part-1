@@ -66,6 +66,7 @@ export function PlantCard({
         <div className="w-full flex items-center justify-start animate-fade-in-delay">
           <BuyShortcut
             className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
+            showIcon={false}
             plant={plant}
           />
         </div>
