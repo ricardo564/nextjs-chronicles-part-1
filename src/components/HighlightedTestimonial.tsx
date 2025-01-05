@@ -23,7 +23,7 @@ export const HighlightedTestimonial = ({ testimonial }: HighlightedTestimonialPr
           <StarRating rating={testimonial.rating} />
         </div>
       </div>
-      <p className="mt-4 text-lg text-gray-300">{testimonial.testimonial}</p>
+      <p className="mt-4 text-lg text-white">{testimonial.testimonial}</p>
     </div>
   );
 };
