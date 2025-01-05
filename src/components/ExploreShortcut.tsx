@@ -10,7 +10,7 @@ export const ExploreShortcut = ({ plant }: ExploreShortcutProps) => {
     <Link
       className="px-6 py-2 border border-white/20 text-white rounded-lg min-w-[13rem] text-[1.75rem] hover:bg-white/10 transition-all duration-300 text-center"
       title={`Explore ${plant.common_name || plant.scientific_name} plants`}
-      href={`/plants/${plant.id}`}
+      href='/plants'
     >
       Explore
     </Link>
