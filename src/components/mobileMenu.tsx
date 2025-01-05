@@ -52,6 +52,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
                   href={item.to}
                   aria-label={item.ariaLabel}
                   className="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:underline w-full text-center pb-2"
+                  onClick={handleToggleMenu}
                 >
                   {item.label}
                 </Link>
