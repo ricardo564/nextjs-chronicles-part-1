@@ -58,7 +58,7 @@ export async function IntroSection() {
             />
           </div>
 
-          <div className="md:absolute md:top-[10rem] md:right-32 mx-auto">
+          <div className="md:absolute md:top-[10rem] md:right-0 mx-auto">
             <PlantCard
               plant={mockupPlants[0]}
             />
