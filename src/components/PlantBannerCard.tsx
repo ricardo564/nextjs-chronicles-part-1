@@ -6,15 +6,17 @@ import { BuyShortcut } from "./BuyShortcut";
 interface PlantBannerCardProps {
   plant: Plant;
   imageClassName?: string;
+  className?: string;
 }
 
 export function PlantBannerCard({
   plant,
   imageClassName,
+  className,
 }: PlantBannerCardProps) {
   return (
     <div
-      className="relative w-full bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-full p-8 border border-white/20 max-w-6xl mx-auto"
+      className={`relative w-full bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-full p-8 border border-white/20 max-w-6xl mx-auto ${className}`}
       role="article"
       aria-label={`Plant card for ${plant.common_name || plant.scientific_name}`}
     >
