@@ -3,7 +3,7 @@ import { Plant } from "@/types/plant.types";
 import { NoDataToShow } from "@/components/NoDataToShow";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { PlantsService } from "@/modules/plants/plants.service";
-import { HttpService } from '@nestjs/axios';
+import { HttpService } from "@nestjs/axios";
 
 export default async function PlantsPage() {
   const httpService = new HttpService();
@@ -14,7 +14,7 @@ export default async function PlantsPage() {
     const plants: Plant[] = response.data;
 
     if (!Array.isArray(plants)) {
-      throw new Error('Dados inválidos recebidos do servidor');
+      throw new Error("Dados inválidos recebidos do servidor");
     }
 
     return (
@@ -25,7 +25,13 @@ export default async function PlantsPage() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-[10rem] pt-[8rem]">
               {plants.map((plant) => (
-                <PlantCard key={plant.id} plant={plant} />
+                <PlantCard
+                  containerClassName="w-full max-w-full min-w-full gap-8"
+                  imageClassName="rounded-full overflow-hidden w-[10rem] h-[10rem] -mt-[9rem]"
+                  key={plant.id}
+                  plant={plant}
+                  showPrice
+                />
               ))}
             </div>
           )}
@@ -33,11 +39,12 @@ export default async function PlantsPage() {
       </DefaultLayout>
     );
   } catch (error: unknown) {
-    console.error('Error fetching plants:', error);
+    console.error("Error fetching plants:", error);
 
-    const errorMessage = error instanceof Error
-      ? `Erro ao carregar as plantas: ${error.message}`
-      : 'Erro ao carregar as plantas...';
+    const errorMessage =
+      error instanceof Error
+        ? `Erro ao carregar as plantas: ${error.message}`
+        : "Erro ao carregar as plantas...";
 
     return (
       <DefaultLayout>
