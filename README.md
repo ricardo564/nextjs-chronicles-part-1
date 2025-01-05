@@ -1,9 +1,10 @@
 # 🪴 Breath Natural - NestJS Chronicles Part 1
 
 ## 🔗 Quick Links
-- Live Preview - https://breath-natural-nest-chronicles-part1.netlify.app
-- Design Inspiration - https://www.figma.com/community/file/1341057411255052611
-- Design Author - https://www.figma.com/@dsingr
+🔗 Preview: https://breath-natural-nest-chronicles-part1.netlify.app
+📂 Github: https://github.com/ricardo564
+🧑‍🎨 Design credits: https://www.figma.com/@dsingr
+🗂️ Original design: https://www.figma.com/community/file/1341057411255052611
 
 🇧🇷 Versão em português abaixo ⤵️
 
