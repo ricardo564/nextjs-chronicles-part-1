@@ -15,6 +15,12 @@ export async function IntroSection() {
     return shuffled[0];
   };
 
+  const randomFlexDIrection = (index: number) => {
+    const isEven = index % 2 === 0;
+
+    return isEven ? 'flex-col md:flex-row' : 'flex-col md:flex-row-reverse';
+  }
+
   return (
     <section className="relative overflow-hidden w-screen pb-24 px-4"
       style={{
@@ -65,8 +71,8 @@ export async function IntroSection() {
           </QuotedTitle>
 
           <div className="flex flex-wrap justify-center w-full gap-[6rem]">
-            {mockupPlants.slice(1, 4).map((plant) => (
-              <PlantBannerCard key={plant.id} plant={plant} />
+            {mockupPlants.slice(1, 4).map((plant, index) => (
+              <PlantBannerCard key={plant.id} plant={plant} className={randomFlexDIrection(index)} />
             ))}
           </div>
         </div>
