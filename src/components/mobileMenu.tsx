@@ -18,7 +18,23 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
 
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
+
+    if (isOpen) {
+      unblockDocumentScroll();
+      return;
+    }
+
+    blockDocumentScroll();
   };
+
+
+  const blockDocumentScroll = () => {
+    document.body.style.overflow = "hidden";
+  }
+
+  const unblockDocumentScroll = () => {
+    document.body.style.overflow = "auto";
+  }
 
   return (
     <div className={`flex flex-col items-center space-y-4 ${className}`}>
