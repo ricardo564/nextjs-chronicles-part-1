@@ -65,7 +65,7 @@ export async function IntroSection() {
           </QuotedTitle>
 
           <div className="flex flex-wrap justify-center w-full gap-[6rem]">
-            {mockupPlants.map((plant) => (
+            {mockupPlants.slice(1, 4).map((plant) => (
               <PlantBannerCard key={plant.id} plant={plant} />
             ))}
           </div>
