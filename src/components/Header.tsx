@@ -25,7 +25,7 @@ export function Header({ menuItems }: HeaderProps) {
 
             <ShopMenuShortcut />
 
-            <MobileMenu menuItems={menuItems} />
+            <MobileMenu menuItems={menuItems} className="md:hidden" />
           </div>
         </div>
       </nav>
