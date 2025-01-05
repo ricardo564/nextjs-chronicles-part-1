@@ -1,7 +1,7 @@
 # 🪴 Breath Natural - NextJS Chronicles Part 1
 
 ## 🔗 Quick Links
-🔗 Preview: https://breath-natural-next-chronicles-part1.netlify.app
+🔗 Preview: https://breath-natural-nextjs-chronicles.netlify.app/
 📂 Github: https://github.com/ricardo564
 🧑‍🎨 Design credits: https://www.figma.com/@dsingr
 🗂️ Original design: https://www.figma.com/community/file/1341057411255052611
