@@ -1,7 +1,7 @@
 import { Plant } from "@/types/plant.types";
 import Image from "next/image";
-import { BuyShortcut } from "./BuyShortcut";
-import { ExploreShortcut } from "./ExploreShortcut";
+import { BuyShortcut } from "../blocks/buyShortcut";
+import { ExploreShortcut } from "../blocks/exploreShortcut";
 
 interface PlantCardProps {
   plant: Plant;
