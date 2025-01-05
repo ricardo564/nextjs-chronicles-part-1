@@ -18,7 +18,7 @@ export async function IntroSection() {
   const randomFlexDIrection = (index: number) => {
     const isEven = index % 2 === 0;
 
-    return isEven ? 'flex-col md:flex-row' : 'flex-col md:flex-row-reverse';
+    return isEven ? 'flex-col lg:flex-row' : 'flex-col lg:flex-row-reverse';
   }
 
   return (
@@ -31,12 +31,12 @@ export async function IntroSection() {
       }}>
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col justify-between items-start mb-16 pt-32">
-          <h1 className="text-8xl text-white font-semibold">
+          <h1 className="text-7xl xl:text-8xl text-white font-semibold">
             Breath Natureal
           </h1>
 
           <div className="mb-8 max-w-prose">
-            <p className="text-white mb-4 text-lg md:text-xl">
+            <p className="text-white mb-4 text-lg xl:text-lg">
               Transform your space into a natural sanctuary with our curated collection of indoor plants.
               Experience the beauty and serenity of nature while improving your home air quality and
               creating a more vibrant, living environment.
@@ -50,7 +50,7 @@ export async function IntroSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[9rem] md:gap-12 md:mb-[15rem] mb-[5rem]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[9rem] lg:gap-12 lg:mb-[15rem] mb-[5rem]">
           <div>
 
             <HighlightedTestimonial
@@ -58,19 +58,19 @@ export async function IntroSection() {
             />
           </div>
 
-          <div className="md:absolute md:top-[10rem] md:right-0 mx-auto">
+          <div className="lg:absolute lg:top-[10rem] lg:right-0 mx-auto">
             <PlantCard
               plant={mockupPlants[0]}
             />
           </div>
         </div>
 
-        <div className="space-y-6 flex flex-col items-center gap-32 md:gap-24">
+        <div className="space-y-6 flex flex-col items-center gap-32 lg:gap-24">
           <QuotedTitle className="text-center text-white">
             Our Trendy Plants
           </QuotedTitle>
 
-          <div className="flex flex-wrap justify-center w-full gap-[9rem] md:gap-[6rem]">
+          <div className="flex flex-wrap justify-center w-full gap-[9rem] lg:gap-[6rem]">
             {mockupPlants.slice(1, 4).map((plant, index) => (
               <PlantBannerCard key={plant.id} plant={plant} className={randomFlexDIrection(index)} />
             ))}
