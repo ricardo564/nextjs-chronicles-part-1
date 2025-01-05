@@ -1,9 +1,9 @@
 import { PlantBannerCard } from '@/components/PlantBannerCard';
-import { LiveDemoShortcut } from './liveDemoShortcut';
+import { LiveDemoShortcut } from '../liveDemoShortcut';
 import background from '@/assets/images/topiary-green-pot.webp';
-import { HighlightedTestimonial } from '@/components/HighlightedTestimonial';
+import { HighlightedTestimonial } from '@/blocks/highlightedTestimonial';
 import { testimonials } from '@/static/testimonial';
-import { ExploreShortcut } from '@/components/ExploreShortcut';
+import { ExploreShortcut } from '@/blocks/exploreShortcut';
 import { mockupPlants } from '@/static/mockupPlants';
 import { PlantCard } from '@/components/PlantCard';
 import { QuotedTitle } from '@/components/QuotedTitle';
