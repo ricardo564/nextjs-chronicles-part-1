@@ -39,7 +39,7 @@ export function PlantBannerCard({
             {plant.common_name || plant.scientific_name}
           </h3>
 
-          <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+          <p className="text-white text-sm mb-4 line-clamp-2">
             {plant.bibliography}
           </p>
 
