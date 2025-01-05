@@ -38,7 +38,7 @@ export function PlantCard({
             width={240}
             height={240}
             loading="lazy"
-            className={`-mt-32 object-cover w-[20rem] h-[20rem] rounded-2xl animate-scale-in scale-125 ${imageClassName}`}
+            className={`-mt-24 md:-mt-32 object-cover w-[20rem] h-[20rem] rounded-2xl animate-scale-in scale-150 md:scale-125 ${imageClassName}`}
           />
         )}
       </div>
