@@ -17,6 +17,7 @@ export default async function TopSellingSection() {
             containerClassName="w-full md:max-w-none"
             key={plant.id}
             plant={plant}
+            showPrice
           />
         ))}
       </div>
