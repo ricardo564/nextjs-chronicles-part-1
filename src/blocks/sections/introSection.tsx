@@ -36,7 +36,7 @@ export async function IntroSection() {
           </h1>
 
           <div className="mb-8 max-w-prose">
-            <p className="text-gray-400 mb-4">
+            <p className="text-white mb-4 text-lg md:text-xl">
               Transform your space into a natural sanctuary with our curated collection of indoor plants.
               Experience the beauty and serenity of nature while improving your home air quality and
               creating a more vibrant, living environment.
