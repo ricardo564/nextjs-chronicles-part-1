@@ -16,12 +16,12 @@ export function PlantBannerCard({
 }: PlantBannerCardProps) {
   return (
     <div
-      className={`relative w-full bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-full p-8 border border-white/20 max-w-6xl mx-auto ${className}`}
+      className={`flex relative justify-between items-center w-full bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-3xl md:ounded-full p-8 border border-white/20 max-w-6xl mx-auto ${className}`}
       role="article"
       aria-label={`Plant card for ${plant.common_name || plant.scientific_name}`}
     >
-      <div className="grid grid-cols-2 gap-8 items-center w-full justify-between">
-        <div className="shrink-0">
+
+        <div className="w-full relative h-24 ml-auto top-0 flex justify-center items-center">
           {plant.image_url && (
             <Image
               src={plant.image_url}
@@ -29,12 +29,12 @@ export function PlantBannerCard({
               width={180}
               height={180}
               loading="lazy"
-              className={`object-cover w-[17rem] h-[17rem] rounded-2xl absolute -top-[1rem] left-0 scale-150 ${imageClassName}`}
+              className={`object-cover w-[17rem] h-[17rem] rounded-2xl absolute -top-[7rem] right-0 md:-top-[11rem] md:left-0 scale-150 ${imageClassName}`}
             />
           )}
         </div>
 
-        <div className="w-full max-w-[45rem]">
+        <div className="w-full max-w-[45rem] px-6">
           <h3 className="text-white text-2xl font-semibold mb-2">
             {plant.common_name || plant.scientific_name}
           </h3>
@@ -53,7 +53,6 @@ export function PlantBannerCard({
             <BuyShortcut plant={plant} />
           </div>
         </div>
-      </div>
     </div>
   );
 }
