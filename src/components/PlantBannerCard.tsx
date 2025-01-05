@@ -26,10 +26,10 @@ export function PlantBannerCard({
             <Image
               src={plant.image_url}
               alt={plant.common_name || plant.scientific_name}
-              width={180}
-              height={180}
+              width={240}
+              height={240}
               loading="lazy"
-              className={`object-cover w-[17rem] h-[17rem] rounded-2xl absolute -top-[7rem] right-0 md:-top-[11rem] md:left-0 scale-150 ${imageClassName}`}
+              className={`object-cover w-[17rem] h-[17rem] rounded-2xl absolute -top-[9rem] right-0 md:-top-[11rem] md:left-0 scale-150 ${imageClassName}`}
             />
           )}
         </div>
