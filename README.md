@@ -1,7 +1,7 @@
-# 🪴 Breath Natural - NestJS Chronicles Part 1
+# 🪴 Breath Natural - NextJS Chronicles Part 1
 
 ## 🔗 Quick Links
-🔗 Preview: https://breath-natural-nest-chronicles-part1.netlify.app
+🔗 Preview: https://breath-natural-next-chronicles-part1.netlify.app
 📂 Github: https://github.com/ricardo564
 🧑‍🎨 Design credits: https://www.figma.com/@dsingr
 🗂️ Original design: https://www.figma.com/community/file/1341057411255052611
@@ -13,7 +13,7 @@
 US English version:
 
 ## 🎯 Project Overview
-This project was developed using NestJS to create a modern and responsive web application for Breath Natural, showcasing contemporary web development resources and practices.
+This project was developed using NextJS to create a modern and responsive web application for Breath Natural, showcasing contemporary web development resources and practices.
 
 The design was chosen for its beauty and simplicity, with the idea of this project being to serve as a showcase for plants. To make the project more complex, requests were added to an API called "Trefle - A global plants API", which is a plant API.
 
@@ -39,10 +39,10 @@ I plan to integrate with NextJS, which would be a new and complex learning exper
 - 📦 Dynamic routing and data search
 
 ## 📚 Learning Outcomes
-- 🏗️ Gain practical experience with NestJS component architecture
+- 🏗️ Gain practical experience with NextJS component architecture
 - 📘 Practice TypeScript
-- 🎨 Master NestJS template syntax
-- 🔄 Increase understanding of conditional rendering in NestJS
+- 🎨 Master NextJS template syntax
+- 🔄 Increase understanding of conditional rendering in NextJS
 - 📦 Practice code organization skills
 
 ---
@@ -50,7 +50,7 @@ I plan to integrate with NextJS, which would be a new and complex learning exper
 Português:
 
 ## 🎯 Visão Geral do Projeto
-Este projeto foi desenvolvido usando NestJS para criar uma aplicação web moderna e responsiva para Breath Natural, demonstrando recursos e práticas de desenvolvimento web contemporâneo.
+Este projeto foi desenvolvido usando NextJS para criar uma aplicação web moderna e responsiva para Breath Natural, demonstrando recursos e práticas de desenvolvimento web contemporâneo.
 
 O design foi escolhido por sua beleza e simplicidade, a ideia desse projeto é servir como um mostruario de plantas. Para tornar o projeto mais complexo foi adicionado requisições a uma API chamada "Trefle - A global plants API" que é uma API de plantas.
 
@@ -77,10 +77,10 @@ Pretendo fazer integração com o NextJS, que seria um novo e complexo aprendiza
 - 📊 Roteamento dinâmico e busca de dados
 
 ## 📚 Resultados pretendidos no Aprendizado
-- 🏗️ Ganhar experiência prática com a arquitetura de componentes do NestJS
+- 🏗️ Ganhar experiência prática com a arquitetura de componentes do NextJS
 - 📘 Praticar TypeScript
-- 🎨 Dominar a sintaxe de template do NestJS
-- 🔄 Aumentar a compreensão da renderização condicional no NestJS
+- 🎨 Dominar a sintaxe de template do NextJS
+- 🔄 Aumentar a compreensão da renderização condicional no NextJS
 - 📦 Praticar as habilidades de organização de código
 
 ---
@@ -92,14 +92,14 @@ Pretendo fazer integração com o NextJS, que seria um novo e complexo aprendiza
 UI/UX inspired by https://www.figma.com/community/file/1341057411255052611 by dsingr - https://www.figma.com/@dsingr, adapted and implemented with modern web technologies.
 
 ## 🚀 Technologies
-- NestJS - https://nestjs.com
+- NextJS - https://NextJS.com
 - TailwindCSS - https://tailwindcss.com
 - TypeScript - https://www.typescriptlang.org/
 - Axios - https://axios-http.com
 - Figma - https://www.figma.com
 
 
-#NextJS #Web #Frontend #TypeScript #TailwindCSS #Git #Axios #Figma #CleanCode #NestJSChronicles
+#NextJS #Web #Frontend #TypeScript #TailwindCSS #Git #Axios #Figma #CleanCode #NextJSChronicles
 
 
 ## Getting Started
