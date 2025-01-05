@@ -1,0 +1,28 @@
+<svg
+  width="31"
+  height="17"
+  viewBox="0 0 31 17"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g opacity="0.75">
+    <line
+      x1="2"
+      y1="2"
+      x2="29"
+      y2="2"
+      stroke="white"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <line
+      x1="10"
+      y1="15"
+      x2="29"
+      y2="15"
+      stroke="white"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>
