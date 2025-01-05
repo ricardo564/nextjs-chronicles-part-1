@@ -8,7 +8,7 @@ interface HighlightedTestimonialProps {
 
 export const HighlightedTestimonial = ({ testimonial }: HighlightedTestimonialProps) => {
   return (
-    <div className="rounded-3xl bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md p-8 border border-white/20 max-w-[25rem]">
+    <div className="rounded-3xl bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md p-8 border border-white/20 md:max-w-[25rem]">
       <div className="flex items-center gap-4">
         <Image
           src={testimonial.avatarUrl}
