@@ -50,7 +50,7 @@ export async function IntroSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-[15rem]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[9rem] md:gap-12 md:mb-[15rem] mb-[5rem]">
           <div>
 
             <HighlightedTestimonial
@@ -58,7 +58,7 @@ export async function IntroSection() {
             />
           </div>
 
-          <div className="absolute top-[10rem] right-32">
+          <div className="md:absolute md:top-[10rem] md:right-32 mx-auto">
             <PlantCard
               plant={mockupPlants[0]}
             />
