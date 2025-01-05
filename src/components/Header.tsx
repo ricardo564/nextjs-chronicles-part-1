@@ -3,6 +3,7 @@ import { DesktopMenu } from "@/components/DesktopMenu";
 import { Logo } from "@/components/Logo";
 import { SearchShortcut } from "@/blocks/searchShortcut";
 import { ShopMenuShortcut } from "@/blocks/shopMenuShortcut";
+import { MobileMenu } from "@/components/mobileMenu";
 
 interface HeaderProps {
   menuItems: MenuItem[];
@@ -24,9 +25,7 @@ export function Header({ menuItems }: HeaderProps) {
 
             <ShopMenuShortcut />
 
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Login
-            </button>
+            <MobileMenu menuItems={menuItems} />
           </div>
         </div>
       </nav>
