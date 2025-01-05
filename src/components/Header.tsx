@@ -1,6 +1,8 @@
 import { MenuItem } from "@/types/menuItem";
 import { DesktopMenu } from "@/components/DesktopMenu";
 import { Logo } from "@/components/Logo";
+import { SearchShortcut } from "@/blocks/searchShortcut";
+import { ShopMenuShortcut } from "@/blocks/shopMenuShortcut";
 
 interface HeaderProps {
   menuItems: MenuItem[];
@@ -17,7 +19,11 @@ export function Header({ menuItems }: HeaderProps) {
 
           <DesktopMenu menuItems={menuItems} />
 
-          <div>
+          <div className="flex items-center gap-4">
+            <SearchShortcut />
+
+            <ShopMenuShortcut />
+
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Login
             </button>
