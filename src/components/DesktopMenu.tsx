@@ -13,7 +13,7 @@ export function DesktopMenu({ menuItems }: DesktopMenuProps) {
           <Link
             href={item.to}
             aria-label={item.ariaLabel}
-            className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+            className="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
           >
             {item.label}
           </Link>
