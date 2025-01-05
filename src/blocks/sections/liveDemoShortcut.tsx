@@ -4,7 +4,7 @@ export function LiveDemoShortcut() {
   return (
     <Link
       href="/demo"
-      className="group flex items-center gap-3 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+      className="group flex items-center gap-3 px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
       aria-label="View Live Demo"
     >
       {/* Play Button Circle */}
