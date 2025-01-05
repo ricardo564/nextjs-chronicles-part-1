@@ -48,37 +48,39 @@ export function PlantCard({
       </div>
 
       <div className="flex flex-col w-full animate-slide-up">
-        <p className="text-white text-sm mb-2">{getRandomName()}</p>
+        <div className="flex flex-col w-full animate-slide-up">
+          <p className="text-white text-sm mb-2">{getRandomName()}</p>
 
-        <p className="text-white text-xs grid grid-cols-2">
-          <span>Family: {plant.family}</span>
-          <span>Genus: {plant.genus}</span>
-        </p>
+          <p className="text-white text-xs grid grid-cols-2">
+            <span>Family: {plant.family}</span>
+            <span>Genus: {plant.genus}</span>
+          </p>
 
-        <p
-          className={`text-white text-2xl font-semibold my-3 h-32 w-full line-clamp-3 overflow-hidden  ${titleClassName}`}
-        >
-          {plant.bibliography + " " + plant.scientific_name}
-        </p>
-      </div>
-
-      {!showPrice && (
-        <div className="w-full flex items-center justify-start animate-fade-in-delay">
-          <BuyShortcut
-            className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-            showIcon={false}
-            plant={plant}
-          />
+          <p
+            className={`text-white text-2xl font-semibold my-3 h-32 w-full line-clamp-3 overflow-hidden  ${titleClassName}`}
+          >
+            {plant.bibliography + " " + plant.scientific_name}
+          </p>
         </div>
-      )}
 
-      {showPrice && (
-        <div className="flex items-center gap-4">
-          <ExploreShortcut plant={plant} />
+        {!showPrice && (
+          <div className="w-full flex items-center justify-start animate-fade-in-delay">
+            <BuyShortcut
+              className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
+              showIcon={false}
+              plant={plant}
+            />
+          </div>
+        )}
 
-          <BuyShortcut plant={plant} />
+        {showPrice && (
+          <div className="flex items-center gap-4">
+            <ExploreShortcut plant={plant} />
+
+            <BuyShortcut plant={plant} />
+          </div>
+        )}
         </div>
-      )}
     </div>
   );
 }
