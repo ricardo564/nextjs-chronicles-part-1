@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// import "@/assets/css/embla.css";
 import ogImage from "@/assets/images/android-launchericon-512-512.png";
 
 const geistSans = Geist({
