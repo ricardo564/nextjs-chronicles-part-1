@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import "@/assets/css/embla.css";
 import ogImage from "@/assets/images/android-launchericon-512-512.png";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,11 +17,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "🪴 Breath Natural - NextJS Chronicles Part 1",
-  description: "Discover premium indoor plants at Breath Natureal. Shop exotic houseplants, succulents & cacti with expert care guides. Free shipping on orders over $50. Same-day delivery available.",
-  keywords: ["indoor plants", "exotic houseplants", "succulents", "cacti", "expert care guides", "free shipping", "same-day delivery"],
+  description:
+    "Discover premium indoor plants at Breath Natureal. Shop exotic houseplants, succulents & cacti with expert care guides. Free shipping on orders over $50. Same-day delivery available.",
+  keywords: [
+    "indoor plants",
+    "exotic houseplants",
+    "succulents",
+    "cacti",
+    "expert care guides",
+    "free shipping",
+    "same-day delivery",
+  ],
   openGraph: {
     title: "🪴 Breath Natural - NextJS Chronicles Part 1",
-    description: "Discover premium indoor plants at Breath Natureal. Shop exotic houseplants, succulents & cacti with expert care guides. Free shipping on orders over $50. Same-day delivery available.",
+    description:
+      "Discover premium indoor plants at Breath Natureal. Shop exotic houseplants, succulents & cacti with expert care guides. Free shipping on orders over $50. Same-day delivery available.",
     url: "https://breath-natural-nextjs-chronicles.netlify.app/",
     siteName: "Breath Natural",
     images: [
@@ -45,6 +56,12 @@ export default function RootLayout({
       >
         {children}
       </body>
+
+      <Script
+        src="https://cdn.counter.dev/script.js"
+        data-id={process.env.COUNTER_API_KEY}
+        data-utcoffset="-3"
+      ></Script>
     </html>
   );
 }
