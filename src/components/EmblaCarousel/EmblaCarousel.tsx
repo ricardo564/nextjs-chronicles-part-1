@@ -1,6 +1,7 @@
 "use client"
 
-import React from 'react'
+import type { FC, ReactNode } from 'react'
+import { Children, useEffect } from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import {
   PrevButton,
@@ -15,11 +16,11 @@ import useEmblaCarousel from 'embla-carousel-react'
 
 type PropType = {
   className?: string
-  children: React.ReactNode
+  children: ReactNode
   options?: EmblaOptionsType
 }
 
-export const EmblaCarousel: React.FC<PropType> = (props) => {
+export const EmblaCarousel: FC<PropType> = (props) => {
   const { children, options, className } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
@@ -32,11 +33,67 @@ export const EmblaCarousel: React.FC<PropType> = (props) => {
 
   const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi)
 
+  const updateSlidesVisibility = () => {
+    if (!emblaApi) return
+
+    const viewport = document.getElementById('embla-carousel')
+    if (!viewport) return
+
+    const viewportRect = viewport.getBoundingClientRect()
+    const slideNodes = emblaApi.slideNodes()
+
+    slideNodes.forEach((slide) => {
+      const slideRect = slide.getBoundingClientRect()
+      const isVisible = (
+        slideRect.left >= viewportRect.left - 10 &&
+        slideRect.right <= viewportRect.right + 10
+      )
+
+      if (isVisible) {
+        slide.classList.remove('opacity-0')
+        slide.classList.add('opacity-100')
+      } else {
+        slide.classList.remove('opacity-100')
+        slide.classList.add('opacity-0')
+      }
+    })
+  }
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    emblaApi.on('scroll', updateSlidesVisibility)
+    emblaApi.on('reInit', updateSlidesVisibility)
+
+    updateSlidesVisibility()
+
+    return () => {
+      emblaApi.off('scroll', updateSlidesVisibility)
+      emblaApi.off('reInit', updateSlidesVisibility)
+    }
+  }, [emblaApi])
+
+  useEffect(() => {
+    console.log(emblaApi?.slideNodes())
+    console.log(emblaApi?.slideNodes()[0].getBoundingClientRect().width)
+  }, [emblaApi])
+
+  useEffect(() => {
+    updateSlidesVisibility()
+  }, [])
+
   return (
-    <section className={`rounded-[24px] p-8 ${className}`}>
-      <div className="overflow-x-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y">
-          {children}
+    <section
+      id="embla-carousel"
+      className={`rounded-[24px] p-8 ${className}`}
+    >
+      <div className="relative" ref={emblaRef}>
+        <div className="flex touch-pan-y items-center transition-opacity duration-300">
+          {Children.map(children, (child) => (
+            <div className="transition-opacity duration-300">
+              {child}
+            </div>
+          ))}
         </div>
       </div>
 
