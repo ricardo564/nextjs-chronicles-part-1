@@ -63,10 +63,16 @@ export async function IntroSection() {
           </div>
 
           <div className="lg:absolute lg:top-[10rem] lg:right-0 mx-auto">
-            <EmblaCarousel className="relative w-full md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px]">
+            <EmblaCarousel
+              className="relative w-full md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px]"
+              options={{ loop: true }}
+            >
               {mockupPlants.map((plant, index) => (
-                <div className="flex-[0_0_100%] min-w-0 relative" key={index}>
-                  <PlantCardContent plant={plant} />
+                <div
+                  className="flex-[0_0_100%] min-w-[20rem] relative mx-auto"
+                  key={index}
+                >
+                  <PlantCardContent plant={plant} containerClassName="ml-5" />
                 </div>
               ))}
             </EmblaCarousel>
