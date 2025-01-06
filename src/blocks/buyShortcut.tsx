@@ -21,7 +21,7 @@ export const BuyShortcut = ({
       href={`/plants`}
     >
       {showIcon && (
-        <Image src={shopIcon} className="w-11 h-11" alt="Shop icon" />
+        <Image src={shopIcon} className="w-11 h-11 scale-[4.0]" alt="Shop icon" />
       )}
       {!showIcon && <span className="text-sm">Buy now</span>}
     </Link>
