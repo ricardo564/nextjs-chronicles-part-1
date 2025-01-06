@@ -6,6 +6,8 @@ import { EmblaCarouselType } from 'embla-carousel'
 type UseSelectedSnapDisplayType = {
   selectedSnap: number
   snapCount: number
+  scrollSnaps: number[]
+  onDotButtonClick: (index: number) => void
 }
 
 export const useSelectedSnapDisplay = (
@@ -13,6 +15,7 @@ export const useSelectedSnapDisplay = (
 ): UseSelectedSnapDisplayType => {
   const [selectedSnap, setSelectedSnap] = useState(0)
   const [snapCount, setSnapCount] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
 
   const updateScrollSnapState = useCallback((emblaApi: EmblaCarouselType) => {
     setSnapCount(emblaApi.scrollSnapList().length)
@@ -27,8 +30,34 @@ export const useSelectedSnapDisplay = (
     emblaApi.on('reInit', updateScrollSnapState)
   }, [emblaApi, updateScrollSnapState])
 
+  const onDotButtonClick = useCallback(
+    (index: number) => {
+      if (!emblaApi) return
+      emblaApi.scrollTo(index)
+    },
+    [emblaApi]
+  )
+
+  const onInit = useCallback((emblaApi: EmblaCarouselType) => {
+    setScrollSnaps(emblaApi.scrollSnapList())
+  }, [])
+
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+    setSelectedSnap(emblaApi.selectedScrollSnap())
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onInit(emblaApi)
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onInit).on('reInit', onSelect).on('select', onSelect)
+  }, [emblaApi, onInit, onSelect])
+
   return {
     selectedSnap,
+    scrollSnaps,
+    onDotButtonClick,
     snapCount
   }
 }
@@ -37,18 +66,20 @@ type PropType = {
   selectedSnap: number
   snapCount: number
   className?: string
+  onDotButtonClick: (index: number) => void
 }
 
-export const SelectedSnapDisplay: FC<PropType> = ({ selectedSnap, snapCount, className }) => {
+export const SelectedSnapDisplay: FC<PropType> = ({ selectedSnap, snapCount, className, onDotButtonClick }) => {
   return (
     <div className={`flex gap-2 items-center justify-center ${className}`}>
       {Array.from({ length: snapCount }).map((_, index) => (
         <div
           key={index}
+          aria-label={`Slide ${index + 1} of ${snapCount}`}
           className={`h-2 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/70 cursor-pointer
             ${selectedSnap === index ? 'w-6' : 'w-2'}`}
-          aria-label={`Slide ${index + 1} of ${snapCount}`}
           role="button"
+          onClick={() => onDotButtonClick(index)}
         />
       ))}
     </div>
