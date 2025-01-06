@@ -1,5 +1,5 @@
 import { Plant } from "@/types/plant.types";
-import { PlantCardContent } from "./plantCardContent";
+import { PlantCardContent } from "@/components/plantCardContent";
 
 interface PlantCardProps {
   plant: Plant;
