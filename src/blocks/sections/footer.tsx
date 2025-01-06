@@ -6,8 +6,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-primary text-white py-12 w-screen mx-auto">
       <div className="flex flex-col md:flex-row justify-between mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-start md:justify-between gap-8">
-          <div className="space-y-4 max-w-[30rem] w-full">
+        <div className="flex flex-col md:flex-row justify-start md:justify-between gap-8 w-full">
+          <div className="space-y-4 max-w-[30rem] lg:max-w-[40rem] w-full">
             <div className="flex items-center gap-2">
               <Logo
                 imageClassName="w-[12rem]"
