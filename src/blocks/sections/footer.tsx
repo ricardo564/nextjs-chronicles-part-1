@@ -23,23 +23,25 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-4 w-full max-w-[25rem] md:ml-auto">
-            <h3 className="text-xl font-semibold mb-4">Quick Link&apos;s</h3>
-            <nav>
-              <ul className="space-y-2">
-                {quickLinks.map((link) => (
-                  <li key={link.id}>
-                    <a
-                      href={getRandomLinkForRedirection()}
-                      className="text-gray-300 hover:text-white transition-colors"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <div className="md:mx-auto">
+              <h3 className="text-xl font-semibold mb-4">Quick Link&apos;s</h3>
+              <nav>
+                <ul className="space-y-2">
+                  {quickLinks.map((link) => (
+                    <li key={link.id}>
+                      <a
+                        href={getRandomLinkForRedirection()}
+                        className="text-gray-300 hover:text-white transition-colors"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </div>
 
           <div className="flex flex-col gap-4 max-w-[25rem] md:ml-auto">
