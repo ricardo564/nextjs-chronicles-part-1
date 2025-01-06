@@ -66,13 +66,14 @@ export async function IntroSection() {
             <EmblaCarousel
               className="relative w-full md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20"
               options={{ loop: true }}
+              snapDisplayClassName="absolute bottom-[4rem] left-0 w-full"
             >
               {mockupPlants.map((plant, index) => (
                 <div
                   className="flex-[0_0_100%] min-w-[20rem] relative mx-auto"
                   key={index}
                 >
-                  <PlantCardContent plant={plant} containerClassName="ml-5" />
+                  <PlantCardContent plant={plant} containerClassName="ml-5" contentClassName="gap-8" />
                 </div>
               ))}
             </EmblaCarousel>
