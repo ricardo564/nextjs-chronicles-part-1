@@ -60,6 +60,11 @@ export const EmblaCarousel: FC<PropType> = (props) => {
     })
   }
 
+  const onDotButtonClick = (index: number) => {
+    if (!emblaApi) return
+    emblaApi.scrollTo(index)
+  }
+
   useEffect(() => {
     if (!emblaApi) return
 
@@ -111,6 +116,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
           selectedSnap={selectedSnap}
           snapCount={snapCount}
           className={`text-white/70 text-sm w-full justify-center ${snapDisplayClassName}`}
+          onDotButtonClick={onDotButtonClick}
         />
       </div>
     </section>
