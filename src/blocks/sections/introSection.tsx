@@ -33,7 +33,7 @@ export async function IntroSection() {
       }}
     >
       <div className="max-w-7xl mx-auto relative">
-        <div className="flex flex-col justify-between items-start mb-16 pt-32 z-[80]">
+        <div className="flex flex-col justify-between items-start mb-16 pt-32 !z-[99]">
           <h1 className="text-7xl xl:text-8xl text-white font-semibold">
             Breath Natureal
           </h1>
@@ -52,32 +52,31 @@ export async function IntroSection() {
 
             <LiveDemoShortcut />
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[9rem] lg:gap-12 lg:mb-[15rem] mb-[5rem]">
-          <div>
+          <div className="relative z-[80]">
             <TestimonialCard
               testimonial={randomTestimonial()}
               className="line-clamp-2 z-[80]"
             />
           </div>
+        </div>
 
-          <div className="lg:absolute lg:top-[10rem] lg:right-0 mx-auto">
-            <EmblaCarousel
-              className="relative w-full max-w-[22rem] md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20"
-              options={{ loop: true }}
-              snapDisplayClassName="absolute bottom-[4rem] left-0 w-full"
-            >
-              {mockupPlants.map((plant, index) => (
-                <div
-                  className="flex-[0_0_100%] min-w-[19rem] md:min-w-[20rem] relative mx-auto"
-                  key={index}
-                >
-                  <PlantCardContent plant={plant} containerClassName="ml-5" contentClassName="gap-8" />
-                </div>
-              ))}
-            </EmblaCarousel>
-          </div>
+
+        <div className="lg:absolute lg:top-[1rem] lg:right-0 mx-auto w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
+          <EmblaCarousel
+            className="relative w-full max-w-[22rem] md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 ml-12"
+            options={{ loop: true }}
+            snapDisplayClassName="absolute bottom-[4rem] left-0 w-full"
+          >
+            {mockupPlants.map((plant, index) => (
+              <div
+                className="flex-[0_0_100%] min-w-[19rem] md:min-w-[20rem] relative mx-auto"
+                key={index}
+              >
+                <PlantCardContent plant={plant} containerClassName="ml-5" contentClassName="gap-8" />
+              </div>
+            ))}
+          </EmblaCarousel>
         </div>
 
         <div className="space-y-6 flex flex-col items-center gap-32 lg:gap-24">
