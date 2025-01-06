@@ -1,8 +1,8 @@
 import { PlantBannerCard } from '@/components/PlantBannerCard';
 import { LiveDemoShortcut } from '../liveDemoShortcut';
 import background from '@/assets/images/topiary-green-pot.webp';
-import { HighlightedTestimonial } from '@/blocks/highlightedTestimonial';
-import { testimonials } from '@/static/testimonial';
+import { TestimonialCard } from '@/components/TestimonialCard';
+import { testimonials } from '@/static/testimonials';
 import { ExploreShortcut } from '@/blocks/exploreShortcut';
 import { mockupPlants } from '@/static/mockupPlants';
 import { PlantCard } from '@/components/PlantCard';
@@ -53,8 +53,9 @@ export async function IntroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[9rem] lg:gap-12 lg:mb-[15rem] mb-[5rem]">
           <div>
 
-            <HighlightedTestimonial
+            <TestimonialCard
               testimonial={randomTestimonial()}
+              className="line-clamp-2"
             />
           </div>
 
