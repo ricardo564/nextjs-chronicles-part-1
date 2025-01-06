@@ -41,8 +41,16 @@ type PropType = {
 
 export const SelectedSnapDisplay: FC<PropType> = ({ selectedSnap, snapCount, className }) => {
   return (
-    <div className={`embla__selected-snap-display ${className}`}>
-      {selectedSnap + 1} / {snapCount}
+    <div className={`flex gap-2 items-center justify-center ${className}`}>
+      {Array.from({ length: snapCount }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-2 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/70 cursor-pointer
+            ${selectedSnap === index ? 'w-6' : 'w-2'}`}
+          aria-label={`Slide ${index + 1} of ${snapCount}`}
+          role="button"
+        />
+      ))}
     </div>
   )
 }
