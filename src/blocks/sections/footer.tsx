@@ -1,6 +1,7 @@
 import React from "react";
 import { Logo } from "@/components/Logo";
 import { quickLinks, socialLinks } from "@/static/footer";
+import { getRandomLinkForRedirection } from "@/utils/getRandomLinkForRedirection";
 
 const Footer: React.FC = () => {
   return (
@@ -28,9 +29,10 @@ const Footer: React.FC = () => {
                 {quickLinks.map((link) => (
                   <li key={link.id}>
                     <a
-                      href={link.href}
+                      href={getRandomLinkForRedirection()}
                       className="text-gray-300 hover:text-white transition-colors"
                       rel="noopener noreferrer"
+                      target="_blank"
                     >
                       {link.label}
                     </a>
@@ -70,7 +72,7 @@ const Footer: React.FC = () => {
           {socialLinks.map((social) => (
             <a
               key={social.id}
-              href={social.href}
+              href={getRandomLinkForRedirection()}
               className="text-gray-300 hover:text-white transition-colors"
               aria-label={`Follow us on ${social.label}`}
               rel="noopener noreferrer"
