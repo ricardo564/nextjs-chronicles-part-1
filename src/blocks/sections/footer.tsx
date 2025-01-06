@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               />
               <button
                 type="submit"
-                className="px-6 py-2 border border-white text-black bg-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center uppercase font-semibold"
+                className="px-6 py-2 border border-white text-black hover:text-white bg-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center uppercase font-semibold"
               >
                 subscribe
               </button>
