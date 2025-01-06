@@ -30,6 +30,7 @@ const Footer: React.FC = () => {
                     <a
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors"
+                      rel="noopener noreferrer"
                     >
                       {link.label}
                     </a>
@@ -72,6 +73,7 @@ const Footer: React.FC = () => {
               href={social.href}
               className="text-gray-300 hover:text-white transition-colors"
               aria-label={`Follow us on ${social.label}`}
+              rel="noopener noreferrer"
             >
               {social.icon}
             </a>
