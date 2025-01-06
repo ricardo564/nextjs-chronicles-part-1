@@ -53,10 +53,11 @@ export const EmblaCarousel: FC<PropType> = (props) => {
       if (isVisible) {
         slide.classList.remove('opacity-0')
         slide.classList.add('opacity-100')
-      } else {
-        slide.classList.remove('opacity-100')
-        slide.classList.add('opacity-0')
+        return;
       }
+
+      slide.classList.remove('opacity-100')
+      slide.classList.add('opacity-0')
     })
   }
 
@@ -86,12 +87,12 @@ export const EmblaCarousel: FC<PropType> = (props) => {
   return (
     <section
       id="embla-carousel"
-      className={`rounded-[24px] p-8 ${className}`}
+      className={`rounded-[24px] p-8 relative z-[1] ${className}`}
     >
       <div className="relative" ref={emblaRef}>
         <div className="flex touch-pan-y items-center transition-opacity duration-300">
           {Children.map(children, (child) => (
-            <div className="transition-opacity duration-300">
+            <div className="transition-opacity duration-300 pointer-events-auto">
               {child}
             </div>
           ))}
