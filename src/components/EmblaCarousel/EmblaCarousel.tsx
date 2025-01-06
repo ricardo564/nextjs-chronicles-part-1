@@ -74,11 +74,6 @@ export const EmblaCarousel: FC<PropType> = (props) => {
   }, [emblaApi])
 
   useEffect(() => {
-    console.log(emblaApi?.slideNodes())
-    console.log(emblaApi?.slideNodes()[0].getBoundingClientRect().width)
-  }, [emblaApi])
-
-  useEffect(() => {
     updateSlidesVisibility()
   }, [])
 
