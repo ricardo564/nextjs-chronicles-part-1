@@ -18,10 +18,11 @@ type PropType = {
   className?: string
   children: ReactNode
   options?: EmblaOptionsType
+  snapDisplayClassName?: string
 }
 
 export const EmblaCarousel: FC<PropType> = (props) => {
-  const { children, options, className } = props
+  const { children, options, className, snapDisplayClassName } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
   const {
@@ -109,7 +110,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
         <SelectedSnapDisplay
           selectedSnap={selectedSnap}
           snapCount={snapCount}
-          className="text-white/70 text-sm"
+          className={`text-white/70 text-sm w-full justify-center ${snapDisplayClassName}`}
         />
       </div>
     </section>
