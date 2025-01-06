@@ -53,7 +53,7 @@ export async function IntroSection() {
             <LiveDemoShortcut />
           </div>
 
-          <div className="relative z-[80]">
+          <div className="relative z-[80] mt-24">
             <TestimonialCard
               testimonial={randomTestimonial()}
               className="line-clamp-2 z-[80]"
