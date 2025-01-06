@@ -9,6 +9,7 @@ interface PlantCardProps {
   imageClassName?: string;
   titleClassName?: string;
   showPrice?: boolean;
+  contentClassName?: string;
 }
 
 export function PlantCardContent({
@@ -17,6 +18,7 @@ export function PlantCardContent({
   imageClassName,
   titleClassName,
   showPrice = false,
+  contentClassName,
 }: PlantCardProps) {
   const getRandomName = () => {
     const synonymsLength = plant.synonyms.length;
@@ -41,7 +43,7 @@ export function PlantCardContent({
         )}
       </div>
 
-      <div className="flex flex-col w-full animate-slide-up">
+      <div className={`flex flex-col w-full animate-slide-up ${contentClassName}`}>
         <div className="flex flex-col w-full animate-slide-up">
           <p className="text-white text-sm mb-2">{getRandomName()}</p>
 
