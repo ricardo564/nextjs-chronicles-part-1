@@ -80,6 +80,11 @@ export const EmblaCarousel: FC<PropType> = (props) => {
     }
   }, [emblaApi])
 
+  const goToNextSlide = () => {
+    if (!emblaApi) return
+    emblaApi.scrollNext()
+  }
+
   useEffect(() => {
     updateSlidesVisibility()
   }, [])
@@ -90,7 +95,9 @@ export const EmblaCarousel: FC<PropType> = (props) => {
       className={`rounded-[24px] p-8 relative z-[1] ${className}`}
     >
       <div className="relative" ref={emblaRef}>
-        <div className="flex touch-pan-y items-center transition-opacity duration-300">
+        <div className="flex touch-pan-y items-center transition-opacity duration-300 cursor-grab hover:cursor-grabbing"
+        onClick={goToNextSlide}
+        >
           {Children.map(children, (child) => (
             <div className="transition-opacity duration-300 pointer-events-auto">
               {child}
