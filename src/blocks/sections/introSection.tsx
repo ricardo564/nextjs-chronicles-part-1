@@ -64,7 +64,7 @@ export async function IntroSection() {
 
           <div className="lg:absolute lg:top-[10rem] lg:right-0 mx-auto">
             <EmblaCarousel
-              className="relative w-full md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px]"
+              className="relative w-full md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20"
               options={{ loop: true }}
             >
               {mockupPlants.map((plant, index) => (
