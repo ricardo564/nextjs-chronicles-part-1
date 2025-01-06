@@ -2,18 +2,25 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/images/logo.webp";
 
-export function Logo() {
+interface LogoProps {
+  className?: string;
+  imageClassName?: string;
+  width?: number;
+  height?: number;
+}
+
+export function Logo({ className, imageClassName, width = 128, height = 128 }: LogoProps) {
   return (
     <Link
       href="/"
-      className="block transition-transform focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg"
+      className={`block transition-transform focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg ${className}`}
     >
       <Image
         src={logo}
         alt="Logo"
-        width={128}
-        height={128}
-        className="w-32 h-auto object-contain drop-shadow-md hover:drop-shadow-lg transition-shadow"
+        width={width}
+        height={height}
+        className={`w-32 h-auto object-contain drop-shadow-md hover:drop-shadow-lg transition-shadow ${imageClassName}`}
         priority
       />
     </Link>
