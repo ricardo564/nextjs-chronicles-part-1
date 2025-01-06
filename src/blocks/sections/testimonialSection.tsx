@@ -4,7 +4,7 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 
 export const TestimonialSection = () => {
   return (
-    <div className="relative min-h-screen max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
+    <div className="relative min-h-[20rem] max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
       <div className="flex flex-col items-center max-w-[40rem] mx-auto">
         <QuotedTitle className="text-center text-white">
           Costumer Reviews
