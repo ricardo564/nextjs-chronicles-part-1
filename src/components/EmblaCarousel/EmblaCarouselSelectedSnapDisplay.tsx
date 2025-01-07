@@ -74,7 +74,7 @@ export const SelectedSnapDisplay: FC<PropType> = ({ selectedSnap, snapCount, cla
     <div className={`flex gap-2 items-center justify-center ${className}`}>
       {Array.from({ length: snapCount }).map((_, index) => (
         <div
-          key={index}
+          key={index + "selected-snap-display"}
           aria-label={`Slide ${index + 1} of ${snapCount}`}
           className={`h-2 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/70 cursor-pointer
             ${selectedSnap === index ? 'w-6' : 'w-2'}`}
