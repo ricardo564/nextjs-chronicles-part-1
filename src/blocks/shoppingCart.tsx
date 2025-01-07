@@ -151,7 +151,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
                       Quantity: {cartItem.quantity}
                     </span>
                     <span className="font-semibold">
-                      ${cartItem.item.genus_id.toLocaleString()}
+                      ${cartItem.item.genus_id * cartItem.quantity}
                     </span>
                   </div>
 
