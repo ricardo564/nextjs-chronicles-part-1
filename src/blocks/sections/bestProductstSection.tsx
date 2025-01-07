@@ -21,7 +21,7 @@ export const BestProductsSection = () => {
         >
           {mockupPlants.map((plant, index) => (
             <div
-              className="flex-[0_0_100%] min-w-[19rem] md:min-w-[95vw] relative"
+              className="flex-[0_0_100%] min-w-[19rem] md:min-w-[80vw] relative"
               key={plant.id + index + "best-product"}
             >
               <PlantCardContent
