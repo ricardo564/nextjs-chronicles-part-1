@@ -5,30 +5,37 @@ import { PlantCardContent } from "@/components/plantCardContent";
 
 export const BestProductsSection = () => {
   return (
-    <div className="relative min-h-screen max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
+    <div className="relative min-h-screen max-w-[95vw] md:max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
       <div className="flex flex-col items-center max-w-[40rem] mx-auto">
         <QuotedTitle className="text-center text-white">
           Our Best o2
         </QuotedTitle>
       </div>
 
-      <div className="lg:absolute lg:top-[1rem] lg:right-0 mx-auto w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
-          <EmblaCarousel
-            carouselId="embla-carousel-best-products"
-            className="relative w-full max-w-[20rem] md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 md:ml-12"
-            options={{ loop: true }}
-            snapDisplayClassName="absolute bottom-[4rem] left-0 w-full"
-          >
-            {mockupPlants.map((plant, index) => (
-              <div
-                className="flex-[0_0_100%] min-w-[19rem] md:min-w-[20rem] relative mx-auto"
-                key={index}
-              >
-                <PlantCardContent plant={plant} containerClassName="ml-5" contentClassName="gap-8" />
-              </div>
-            ))}
-          </EmblaCarousel>
-        </div>
+      <div className="w-full md:max-w-[64rem] mx-auto mt-32">
+        <EmblaCarousel
+          carouselId="embla-carousel-best-products"
+          className="w-full bg-black/20 backdrop-blur-lg rounded-[2rem] p-8 border border-white/10"
+          options={{ loop: true }}
+          snapDisplayClassName="absolute -bottom-16 md:bottom-6 ml-auto md:right-[-25rem] flex gap-2"
+        >
+          {mockupPlants.map((plant, index) => (
+            <div
+              className="flex-[0_0_100%] min-w-[19rem] md:min-w-[95vw] relative"
+              key={index}
+            >
+              <PlantCardContent
+                plant={plant}
+                containerClassName="grid md:grid-cols-2 items-center gap-8 px-4"
+                contentClassName="space-y-6"
+                imageClassName="w-[10rem] h-[10rem] mx-auto -right-16 top-8 md:scale-150"
+                showPrice={true}
+                showBuyShortcut={false}
+              />
+            </div>
+          ))}
+        </EmblaCarousel>
+      </div>
     </div>
   );
-}
+};
