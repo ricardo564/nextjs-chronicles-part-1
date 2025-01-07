@@ -12,12 +12,13 @@ export default async function TopSellingSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center h-auto min-h-[90rem] w-full gap-[10rem] md:gap-y-[8rem] lg:gap-4 mt-[11rem] gap-y-[15rem]">
-        {mockupPlants.slice(1, mockupPlants.length).map((plant) => (
+        {mockupPlants.slice(1, mockupPlants.length).map((plant, index) => (
           <PlantCard
             containerClassName="w-full max-w-full min-w-full"
-            key={plant.id}
+            key={plant.id + index + "top-selling"}
             plant={plant}
             showPrice={true}
+            showRemoveButton={false}
           />
         ))}
       </div>
