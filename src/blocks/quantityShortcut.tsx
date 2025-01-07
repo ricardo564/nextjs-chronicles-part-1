@@ -65,7 +65,7 @@ export function QuantityShortcut({
       </Modal>
 
       <div
-        className={`ml-auto mr-3 w-[0.5rem] flex flex-col items-center justify-between overflow-hidden ${className} ${
+        className={`ml-auto mr-3 w-[1rem] flex flex-col items-center justify-between overflow-hidden ${className} ${
           !showRemoveButton ? "gap-4" : ""
         }`}
       >
