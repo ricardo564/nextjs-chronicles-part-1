@@ -7,6 +7,7 @@ import { handleWithBlockScroll } from "@/utils/handleWithBlockScroll";
 import CheckoutShortcut from "./checkoutShortcut";
 import { useShoppingCartStore } from "@/store/shoppingCartStore";
 import { QuantityShortcut } from "./quantityShortcut";
+import { Modal } from "@/components/Modal";
 
 interface ShoppingCartProps {
   className?: string;
@@ -14,9 +15,9 @@ interface ShoppingCartProps {
 
 export function ShoppingCart({ className }: ShoppingCartProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClearCartOpen, setIsClearCartOpen] = useState(false);
   const { items: cartItems } = useShoppingCartStore();
   const clearCart = useShoppingCartStore((state) => state.clearCart);
-
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
 
@@ -34,6 +35,10 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
     }
 
     return totalOnStore;
+  };
+
+  const handleClearCart = () => {
+    setIsClearCartOpen(true);
   };
 
   useEffect(() => {
@@ -90,9 +95,36 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
             </p>
 
             <div className="flex flex-col gap-1">
+            <Modal
+        isOpen={isClearCartOpen}
+        onClose={() => setIsClearCartOpen(false)}
+        id="clear-cart-modal"
+        title="Clear cart"
+      >
+        <div className="flex flex-col gap-4 justify-start">
+          <p className="text-lg text-center">Are you sure you want to clear the cart?</p>
+          <div className="flex justify-end gap-2 w-full">
+            <button
+              onClick={() => setIsClearCartOpen(false)}
+              className="bg-gray-500 text-white px-4 py-2 rounded-md w-full"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={() => clearCart()}
+              className="bg-red-500 text-white px-4 py-2 rounded-md w-full"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      </Modal>
               <button
+                title="Clear cart"
+                aria-label="Clear cart"
+                type="button"
                 className="text-white hover:text-red-500 rounded-full p-2 transition-all duration-300"
-                onClick={clearCart}
+                onClick={handleClearCart}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
