@@ -89,7 +89,7 @@ export async function IntroSection() {
             Our Trendy Plants
           </QuotedTitle>
 
-          <div className="flex flex-wrap justify-center w-full gap-[9rem] lg:gap-[6rem]">
+          <div className="flex flex-wrap justify-center w-full gap-y-[9rem] lg:gap-[6rem]">
             {mockupPlants.slice(1, 4).map((plant, index) => (
               <PlantBannerCard
                 key={plant.id}
