@@ -27,7 +27,7 @@ export default async function PlantsPage() {
               {plants.map((plant) => (
                 <PlantCard
                   containerClassName="w-full max-w-full min-w-full gap-8"
-                  imageClassName="rounded-full overflow-hidden w-[10rem] h-[10rem] -mt-[9rem]"
+                  imageClassName="rounded-full overflow-hidden w-[90vw] md:w-[15rem] h-[6rem] md:h-[15rem] -mt-[9rem] md:-mt-[12rem]"
                   key={plant.id}
                   plant={plant}
                   showPrice
