@@ -47,7 +47,7 @@ export function PlantBannerCard({
             Rs. 570/-
           </p>
 
-          <div className="flex flex-col md:flex-row items-center gap-4 w-full">
+          <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
             <ExploreShortcut plant={plant} />
 
             <BuyShortcut plant={plant} />

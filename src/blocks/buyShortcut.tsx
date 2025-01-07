@@ -16,7 +16,7 @@ export const BuyShortcut = ({
 }: BuyShortcutProps) => {
   return (
     <Link
-      className={`w-full  flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center ${className}`}
+      className={`w-full md:w-auto flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center ${className}`}
       title={`Buy ${plant.common_name || plant.scientific_name} plants`}
       href={`/plants`}
     >
