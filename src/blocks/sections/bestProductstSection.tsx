@@ -1,6 +1,7 @@
 import { QuotedTitle } from "@/components/QuotedTitle";
 import { mockupPlants } from "@/static/mockupPlants";
-import { PlantCard } from "@/components/PlantCard";
+import { EmblaCarousel } from "@/components/EmblaCarousel/EmblaCarousel";
+import { PlantCardContent } from "@/components/plantCardContent";
 
 export const BestProductsSection = () => {
   return (
@@ -11,16 +12,23 @@ export const BestProductsSection = () => {
         </QuotedTitle>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center h-auto min-h-[90rem] w-full gap-[10rem] md:gap-y-[8rem] lg:gap-4 mt-[11rem] gap-y-[15rem]">
-        {mockupPlants.slice(1, mockupPlants.length).map((plant) => (
-          <PlantCard
-            containerClassName="w-full max-w-full min-w-full"
-            key={plant.id}
-            plant={plant}
-            showPrice={false}
-          />
-        ))}
-      </div>
+      <div className="lg:absolute lg:top-[1rem] lg:right-0 mx-auto w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
+          <EmblaCarousel
+            carouselId="embla-carousel-best-products"
+            className="relative w-full max-w-[20rem] md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 md:ml-12"
+            options={{ loop: true }}
+            snapDisplayClassName="absolute bottom-[4rem] left-0 w-full"
+          >
+            {mockupPlants.map((plant, index) => (
+              <div
+                className="flex-[0_0_100%] min-w-[19rem] md:min-w-[20rem] relative mx-auto"
+                key={index}
+              >
+                <PlantCardContent plant={plant} containerClassName="ml-5" contentClassName="gap-8" />
+              </div>
+            ))}
+          </EmblaCarousel>
+        </div>
     </div>
   );
 }
