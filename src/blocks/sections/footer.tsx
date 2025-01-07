@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Quick Link&apos;s</h3>
               <nav>
                 <ul className="space-y-2">
-                  {quickLinks.map((link) => (
-                    <li key={link.id}>
+                  {quickLinks.map((link, index) => (
+                    <li key={link.id + index + "footer-quick-link"}>
                       <a
                         href={getRandomLinkForRedirection()}
                         className="text-gray-300 hover:text-white transition-colors"
