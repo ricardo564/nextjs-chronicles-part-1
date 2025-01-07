@@ -23,7 +23,7 @@ export default async function PlantsPage() {
           {plants.length === 0 ? (
             <NoDataToShow message="Nenhuma planta para ser exibida..." />
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-6 md:gap-y-[12rem]">
               {plants.map((plant, index) => (
                 <PlantCard
                   containerClassName="w-full bg-white/5 backdrop-blur-sm rounded-2xl p-6 relative flex flex-col items-center shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10"
