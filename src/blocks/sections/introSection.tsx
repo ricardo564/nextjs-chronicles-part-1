@@ -33,7 +33,7 @@ export async function IntroSection() {
       }}
     >
       <div className="max-w-7xl mx-auto relative">
-        <div className="flex flex-col justify-between items-start mb-16 pt-32">
+        <div className="flex flex-col justify-between items-start mb-16  pt-4 md:pt-32">
           <h1 className="text-7xl xl:text-8xl text-white font-semibold">
             Breath Natureal
           </h1>
