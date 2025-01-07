@@ -63,7 +63,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
-        <div className="relative  overflow-hidden overflow-y-auto">
+        <div className="relative  overflow-hidden overflow-y-auto h-[90vh]">
           <div className="fixed bg-primary flex items-center justify-between w-full text-white border-b border-white/20  py-2  z-[99]">
             <button
               className="flex items-center justify-center mr-4 mt-1 text-white hover:bg-white/10 hover:text-gray-50 rounded-full p-2"
@@ -121,7 +121,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
           </div>
 
           <div
-            className={`flex flex-col items-center space-y-4 min-w-[17rem] px-2 -mt-[5rem] h-[100vh] pt-[10rem] text-white`}
+            className={`flex flex-col items-center space-y-4 min-w-[17rem] px-2 h-[80vh] mt-[5rem] pb-[10rem] text-white`}
           >
             {cartItems.length > 0 ? (
               cartItems.map((cartItem, index) => (
