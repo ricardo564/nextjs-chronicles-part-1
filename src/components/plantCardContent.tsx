@@ -9,6 +9,7 @@ interface PlantCardProps {
   imageClassName?: string;
   titleClassName?: string;
   showPrice?: boolean;
+  showBuyShortcut?: boolean;
   contentClassName?: string;
 }
 
@@ -18,6 +19,7 @@ export function PlantCardContent({
   imageClassName,
   titleClassName,
   showPrice = false,
+  showBuyShortcut = true,
   contentClassName,
 }: PlantCardProps) {
   const getRandomName = () => {
@@ -73,7 +75,7 @@ export function PlantCardContent({
           <div className="flex items-center gap-4">
             <ExploreShortcut plant={plant} />
 
-            <BuyShortcut plant={plant} />
+            {showBuyShortcut && <BuyShortcut plant={plant} />}
           </div>
         )}
       </div>
