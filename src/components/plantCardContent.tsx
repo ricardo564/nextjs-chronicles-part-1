@@ -24,7 +24,7 @@ export function PlantCardContent({
   showBuyShortcut = true,
   contentClassName,
   showRemoveButton = true,
-  quantityClassName = "bg-red-500 !h-24",
+  quantityClassName = "!h-[3.7rem]",
 }: PlantCardProps) {
   const getRandomName = () => {
     const synonymsLength = plant.synonyms.length;
