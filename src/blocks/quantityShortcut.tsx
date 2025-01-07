@@ -4,9 +4,9 @@ import { useShoppingCartStore } from "@/store/shoppingCartStore";
 import { CartItem } from "@/types/cartItem"
 
 interface ShoppingCartProps {
+  cartItem: CartItem;
   className?: string;
   showRemoveButton?: boolean;
-  cartItem: CartItem;
 }
 
 export function QuantityShortcut({ className, cartItem, showRemoveButton = true }: ShoppingCartProps) {
