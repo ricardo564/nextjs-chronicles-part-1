@@ -6,6 +6,7 @@ import { useState } from "react";
 import Image from "next/image";
 import menuIcon from "@/assets/svg/menu-icon.svg";
 import { Logo } from "./Logo";
+import { handleWithBlockScroll } from "@/utils/handleWithBlockScroll";
 
 interface MobileMenuProps {
   menuItems: MenuItem[];
@@ -18,20 +19,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
 
-    if (isOpen) {
-      unblockDocumentScroll();
-      return;
-    }
-
-    blockDocumentScroll();
-  };
-
-  const blockDocumentScroll = () => {
-    document.body.style.overflow = "hidden";
-  };
-
-  const unblockDocumentScroll = () => {
-    document.body.style.overflow = "auto";
+    handleWithBlockScroll(isOpen);
   };
 
   return (
