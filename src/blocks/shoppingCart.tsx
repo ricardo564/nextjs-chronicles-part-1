@@ -138,7 +138,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
                       }
                       width={80}
                       height={80}
-                      className="w-full h-auto object-cover rounded scale-150"
+                      className="w-full h-auto object-cover rounded scale-150 overflow-hidden border border-white/20 max-h-[4.7rem]"
                     />
                   </div>
 
