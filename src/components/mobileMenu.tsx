@@ -74,8 +74,8 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
           className={`flex flex-col items-center space-y-4 min-w-[17rem] pt-8 -mt-[5rem]`}
         >
           <ul className="flex flex-col items-center w-full mt-24">
-            {menuItems.map((item) => (
-              <li key={item.label}>
+            {menuItems.map((item, index) => (
+              <li key={item.label + index + "mobile-menu"}>
                 <Link
                   href={item.to}
                   aria-label={item.ariaLabel}
