@@ -2,8 +2,8 @@ import { MenuItem } from "@/types/menuItem";
 import { DesktopMenu } from "@/components/DesktopMenu";
 import { Logo } from "@/components/Logo";
 import { SearchShortcut } from "@/blocks/searchShortcut";
-import { ShopMenuShortcut } from "@/blocks/shopMenuShortcut";
 import { MobileMenu } from "@/components/mobileMenu";
+import { ShoppingCart } from "@/blocks/ShoppingCart";
 
 interface HeaderProps {
   menuItems: MenuItem[];
@@ -23,7 +23,7 @@ export function Header({ menuItems }: HeaderProps) {
           <div className="flex items-center gap-4">
             <SearchShortcut />
 
-            <ShopMenuShortcut />
+            <ShoppingCart />
 
             <MobileMenu menuItems={menuItems} className="md:hidden" />
           </div>
