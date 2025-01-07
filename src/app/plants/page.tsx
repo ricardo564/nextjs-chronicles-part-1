@@ -19,7 +19,7 @@ export default async function PlantsPage() {
 
     return (
       <DefaultLayout>
-        <div className="py-8 px-2">
+        <div className="py-8 px-2 md:pt-[11rem]">
           {plants.length === 0 ? (
             <NoDataToShow message="Nenhuma planta para ser exibida..." />
           ) : (
