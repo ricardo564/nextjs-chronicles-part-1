@@ -90,7 +90,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
             </p>
 
             <button
-              className="text-white hover:text-gray-50 rounded-full p-2"
+              className="text-white hover:text-red-500 rounded-full p-2 transition-all duration-300"
               onClick={clearCart}
             >
               <svg
@@ -156,7 +156,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
                   <div className="w-[15%] flex justify-center">
                     <button
                       onClick={() => removeItem(cartItem.item.id)}
-                      className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                      className="p-2 hover:bg-white/10 rounded-full hover:text-red-500 transition-all duration-300"
                       aria-label="Remove item"
                       title="Remove item"
                     >
