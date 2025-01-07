@@ -1,19 +1,16 @@
 import { create } from "zustand";
 import { Plant } from "@/types/plant.types";
-
-interface ShoppingCartItem {
-  item: Plant;
-  quantity: number;
-}
+import { CartItem } from "@/types/cartItem";
 
 interface ShoppingCartState {
-  items: ShoppingCartItem[];
+  items: CartItem[];
   addItem: (item: Plant, quantity?: number) => void;
-  removeItem: (itemId: number) => void;
+  removeItem: (item: Plant) => void;
   clearCart: () => void;
+  decrementItemQuantity: (item: Plant) => void;
 }
 
-const ifItemExistsOnlyIncreaseQuantity = (cartItems: ShoppingCartItem[], item: Plant) => {
+const ifItemExistsOnlyIncreaseQuantity = (cartItems: CartItem[], item: Plant) => {
   if(!item.id) return cartItems;
 
   const itemExists = cartItems.find((cartItem) => cartItem.item.id === item.id);
@@ -30,8 +27,11 @@ export const useShoppingCartStore = create<ShoppingCartState>()((set) => ({
   addItem: (item: Plant) => set((state) => ({
     items: ifItemExistsOnlyIncreaseQuantity(state.items, item)
   })),
-  removeItem: (itemId: number) => set((state) => ({
-    items: state.items.filter((item) => item.item.id !== itemId)
+  decrementItemQuantity: (item: Plant) => set((state) => ({
+    items: state.items.map((cartItem) => cartItem.item.id === item.id ? { ...cartItem, quantity: cartItem.quantity - 1 } : cartItem)
+  })),
+  removeItem: (item: Plant) => set((state) => ({
+    items: state.items.filter((cartItem) => cartItem.item.id !== item.id)
   })),
   clearCart: () => set({ items: [] }),
 }));
