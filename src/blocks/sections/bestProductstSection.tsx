@@ -15,7 +15,7 @@ export const BestProductsSection = () => {
       <div className="w-full md:max-w-[64rem] mx-auto mt-32">
         <EmblaCarousel
           carouselId="embla-carousel-best-products"
-          className="w-full bg-black/20 backdrop-blur-lg rounded-[2rem] p-8 border border-white/10"
+          className="w-full bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/10"
           options={{ loop: true }}
           snapDisplayClassName="absolute -bottom-16 md:bottom-6 ml-auto md:right-[-25rem] flex gap-2"
         >
