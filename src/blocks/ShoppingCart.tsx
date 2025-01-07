@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import shopIcon from "@/assets/svg/shop-icon.svg";
+import { handleWithBlockScroll } from "@/utils/handleWithBlockScroll";
 
 interface ShoppingCartProps {
   className?: string;
@@ -15,20 +16,7 @@ export function ShoppingCart({ className, children }: ShoppingCartProps) {
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
 
-    if (isOpen) {
-      unblockDocumentScroll();
-      return;
-    }
-
-    blockDocumentScroll();
-  };
-
-  const blockDocumentScroll = () => {
-    document.body.style.overflow = "hidden";
-  };
-
-  const unblockDocumentScroll = () => {
-    document.body.style.overflow = "auto";
+    handleWithBlockScroll(isOpen);
   };
 
   return (
