@@ -42,7 +42,7 @@ export const Modal: FC<ModalProps> = ({
       >
         <h2
           id={`${id}-title`}
-          className="border-b text-xl font-semibold text-start text-gray-900 mb-4"
+          className="border-b text-xl font-semibold text-center md:text-start text-gray-900 mb-4 w-full"
         >
           {title}
         </h2>
