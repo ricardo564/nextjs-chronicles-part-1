@@ -46,7 +46,7 @@ export function QuantityShortcut({
         title="Remove item"
       >
         <div className="flex flex-col gap-4 justify-start">
-          <p className="text-lg">Are you sure you want to remove this item?</p>
+          <p className="text-lg text-center">Are you sure you want to remove this item?</p>
           <div className="flex justify-end gap-2 w-full">
             <button
               onClick={() => setIsOpen(false)}
