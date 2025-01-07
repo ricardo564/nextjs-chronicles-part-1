@@ -186,7 +186,6 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
 
           <div className="fixed mt-auto bottom-0 w-full bg-transparent">
             <CheckoutShortcut
-              total={0}
               className="w-full max-w-[17rem] mx-auto "
             />
           </div>
