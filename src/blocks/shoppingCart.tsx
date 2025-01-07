@@ -101,7 +101,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
                   viewBox="0 0 16 16"
                 >
                   <g fill="none">
-                    <g clip-path="url(#gravityUiBroomMotion0)">
+                    <g clipPath="url(#gravityUiBroomMotion0)">
                       <path
                         fill="currentColor"
                         fillRule="evenodd"
