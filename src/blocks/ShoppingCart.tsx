@@ -29,7 +29,7 @@ export function ShoppingCart({ className, children }: ShoppingCartProps) {
       </button>
 
       <div
-        className={`flex-w-full absolute inset-y-0 right-0 w-full bg-primary/90 backdrop-blur-sm min-h-screen border-l border-white/20 shadow-sm max-w-xs -top-4 p-2 z-[9999] ${
+        className={`h-[90vh] flex-grow w-full absolute inset-y-0 right-0 bg-primary/90 backdrop-blur-sm min-h-screen border-l border-white/20 shadow-sm max-w-xs -top-4 p-2 z-[9999] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
@@ -57,7 +57,7 @@ export function ShoppingCart({ className, children }: ShoppingCartProps) {
         </div>
 
         <div
-          className={`flex flex-col items-center space-y-4 min-w-[17rem] pt-8 -mt-[5rem] min-h-full`}
+          className={`flex flex-col items-center space-y-4 min-w-[17rem] pt-8 -mt-[5rem] min-h-[90vh]`}
         >
             {children}
         </div>
