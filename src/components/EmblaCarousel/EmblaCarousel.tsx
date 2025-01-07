@@ -107,8 +107,11 @@ export const EmblaCarousel: FC<PropType> = (props) => {
         <div className="flex touch-pan-y items-center transition-opacity duration-300 cursor-grab hover:cursor-grabbing"
         onClick={goToNextSlide}
         >
-          {Children.map(children, (child) => (
-            <div className="transition-opacity duration-300 pointer-events-auto">
+          {Children.map(children, (child, index) => (
+            <div
+              key={index + 'embla-carousel-slide' + carouselId}
+              className="transition-opacity duration-300 pointer-events-auto"
+            >
               {child}
             </div>
           ))}
