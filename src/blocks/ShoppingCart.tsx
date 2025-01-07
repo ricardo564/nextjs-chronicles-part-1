@@ -34,7 +34,11 @@ export function ShoppingCart({ className, children }: ShoppingCartProps) {
         } transition-transform duration-300`}
       >
         <div className="flex items-center justify-between w-full text-white border-b border-white/20 pb-4">
-          <button className="flex items-center justify-center mr-4 mt-1 text-white hover:bg-white/10 hover:text-gray-50 rounded-full p-2"
+          <button
+            className="flex items-center justify-center mr-4 mt-1 text-white hover:bg-white/10 hover:text-gray-50 rounded-full p-2"
+            type="button"
+            aria-label="Close shopping cart"
+            title="Close shopping cart"
             onClick={handleToggleMenu}
           >
             <svg
