@@ -33,7 +33,7 @@ export async function IntroSection() {
       }}
     >
       <div className="max-w-7xl mx-auto relative">
-        <div className="flex flex-col justify-between items-start mb-16 pt-32 !z-[99]">
+        <div className="flex flex-col justify-between items-start mb-16 pt-32">
           <h1 className="text-7xl xl:text-8xl text-white font-semibold">
             Breath Natureal
           </h1>
@@ -58,10 +58,10 @@ export async function IntroSection() {
             />
           </div>
 
-          <div className="relative z-[80] mt-24">
+          <div className="relative mt-24">
             <TestimonialCard
               testimonial={randomTestimonial()}
-              className="line-clamp-2 z-[80]"
+              className="line-clamp-2"
             />
           </div>
         </div>
