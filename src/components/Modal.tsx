@@ -21,7 +21,7 @@ export const Modal: FC<ModalProps> = ({
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 backdrop-blur-sm transition-opacity"
+          className="fixed inset-0 backdrop-blur-sm transition-opacity !z-[999]"
           onClick={onClose}
           aria-hidden="true"
         />
@@ -33,7 +33,7 @@ export const Modal: FC<ModalProps> = ({
         className={`
           fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
           w-full max-w-md rounded-lg bg-white p-6 shadow-xl
-          transition-all duration-200
+          transition-all duration-200 !z-[999]
           ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
         `}
         role={isModal ? "dialog" : "alertdialog"}
