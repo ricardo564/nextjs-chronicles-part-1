@@ -19,10 +19,19 @@ type PropType = {
   children: ReactNode
   options?: EmblaOptionsType
   snapDisplayClassName?: string
+  carouselId?: string
+  hideInactiveSlides?: boolean
 }
 
 export const EmblaCarousel: FC<PropType> = (props) => {
-  const { children, options, className, snapDisplayClassName } = props
+  const {
+    children,
+    options,
+    className,
+    snapDisplayClassName,
+    carouselId = 'embla-carousel',
+    hideInactiveSlides = true
+  } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
   const {
@@ -35,9 +44,9 @@ export const EmblaCarousel: FC<PropType> = (props) => {
   const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi)
 
   const updateSlidesVisibility = () => {
-    if (!emblaApi) return
+    if (!emblaApi || !hideInactiveSlides) return
 
-    const viewport = document.getElementById('embla-carousel')
+    const viewport = document.getElementById(carouselId)
     if (!viewport) return
 
     const viewportRect = viewport.getBoundingClientRect()
@@ -91,7 +100,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
 
   return (
     <section
-      id="embla-carousel"
+      id={carouselId}
       className={`rounded-[24px] p-8 relative z-[1] ${className}`}
     >
       <div className="relative" ref={emblaRef}>
