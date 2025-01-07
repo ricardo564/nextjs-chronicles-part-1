@@ -92,11 +92,6 @@ export const EmblaCarousel: FC<PropType> = (props) => {
     }
   }, [emblaApi])
 
-  const goToNextSlide = () => {
-    if (!emblaApi) return
-    emblaApi.scrollNext()
-  }
-
   return (
     <section
       id={carouselId}
@@ -104,7 +99,6 @@ export const EmblaCarousel: FC<PropType> = (props) => {
     >
       <div className="relative" ref={emblaRef}>
         <div className="flex touch-pan-y items-center transition-opacity duration-300 cursor-grab hover:cursor-grabbing"
-        onClick={goToNextSlide}
         >
           {Children.map(children, (child, index) => (
             <div
