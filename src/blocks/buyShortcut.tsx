@@ -10,12 +10,14 @@ interface BuyShortcutProps {
   plant: Plant;
   className?: string;
   showIcon?: boolean;
+  showRemoveButton?: boolean;
 }
 
 export const BuyShortcut = ({
   plant,
   className,
   showIcon = true,
+  showRemoveButton = true,
 }: BuyShortcutProps) => {
   const { addItem } = useShoppingCartStore();
 
@@ -28,6 +30,7 @@ export const BuyShortcut = ({
     <QuantityShortcut
       cartItem={{ item: plant, quantity: 1 }}
       className={`w-full md:w-auto !flex-row px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center mr-auto`}
+      showRemoveButton={showRemoveButton}
     />
   ) : (
     <button
