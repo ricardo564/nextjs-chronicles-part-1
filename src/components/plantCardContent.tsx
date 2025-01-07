@@ -11,6 +11,8 @@ interface PlantCardProps {
   showPrice?: boolean;
   showBuyShortcut?: boolean;
   contentClassName?: string;
+  showRemoveButton?: boolean;
+  quantityClassName?: string;
 }
 
 export function PlantCardContent({
@@ -21,6 +23,8 @@ export function PlantCardContent({
   showPrice = false,
   showBuyShortcut = true,
   contentClassName,
+  showRemoveButton = true,
+  quantityClassName = "bg-red-500 !h-24",
 }: PlantCardProps) {
   const getRandomName = () => {
     const synonymsLength = plant.synonyms.length;
@@ -79,7 +83,7 @@ export function PlantCardContent({
           <div className="flex items-center gap-4">
             <ExploreShortcut plant={plant} />
 
-            {showBuyShortcut && <BuyShortcut plant={plant} />}
+            {showBuyShortcut &&<BuyShortcut plant={plant} showRemoveButton={showRemoveButton} quantityClassName={quantityClassName} />}
           </div>
         )}
       </div>
