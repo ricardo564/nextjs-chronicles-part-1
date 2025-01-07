@@ -50,8 +50,12 @@ export function PlantCardContent({
           <p className="text-white text-sm mb-2">{getRandomName()}</p>
 
           <p className="text-white text-xs grid grid-cols-1 md:grid-cols-2">
-            <span>Family: {plant.family}</span>
-            <span>Genus: {plant.genus}</span>
+            <span className="truncate max-w-[10rem] text-ellipsis">
+              Family: {plant.family}
+            </span>
+            <span className="truncate max-w-[10rem] text-ellipsis">
+              Genus: {plant.genus}
+            </span>
           </p>
 
           <p
