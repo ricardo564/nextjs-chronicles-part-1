@@ -32,7 +32,7 @@ export function ShoppingCart({ className, children }: ShoppingCartProps) {
   };
 
   return (
-    <div className={`flex flex-col items-center space-y-4 h-screen overflow-hidden overflow-y-auto ${className}`}>
+    <div className={`flex flex-col items-center space-y-4 ${className}`}>
       <button
         className="flex items-center justify-between w-full"
         onClick={handleToggleMenu}
@@ -71,7 +71,7 @@ export function ShoppingCart({ className, children }: ShoppingCartProps) {
         </div>
 
         <div className="flex items-center justify-center w-full bottom-12 -mt-6">
-          <button className="bg-white text-primary hover:text-white px-4 py-2 rounded-md w-full grid grid-cols-2 gap-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center">
+          <button className="bg-white text-primary hover:text-white px-4 py-2 w-full grid grid-cols-2 gap-2 border border-white/20 rounded-lg hover:bg-white/10 transition-all duration-300 text-center">
             <span className="font-bold">
               $100.00
             </span>
