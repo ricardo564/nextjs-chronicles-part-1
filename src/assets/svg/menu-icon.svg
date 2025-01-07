@@ -12,8 +12,8 @@
       x2="29"
       y2="2"
       stroke="white"
-      stroke-width="4"
-      stroke-linecap="round"
+      strokeWidth="4"
+      strokeLinecap="round"
     />
     <line
       x1="10"
@@ -21,8 +21,8 @@
       x2="29"
       y2="15"
       stroke="white"
-      stroke-width="4"
-      stroke-linecap="round"
+      strokeWidth="4"
+      strokeLinecap="round"
     />
   </g>
 </svg>
