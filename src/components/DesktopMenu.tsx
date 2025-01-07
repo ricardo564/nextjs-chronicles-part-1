@@ -9,8 +9,8 @@ interface DesktopMenuProps {
 export function DesktopMenu({ menuItems, className }: DesktopMenuProps) {
   return (
     <ul className={`hidden md:flex items-center space-x-8 ${className}`}>
-      {menuItems.map((item) => (
-        <li key={item.label}>
+      {menuItems.map((item, index) => (
+        <li key={item.label + index + "desktop-menu"}>
           <Link
             href={item.to}
             aria-label={item.ariaLabel}
