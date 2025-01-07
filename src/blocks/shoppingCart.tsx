@@ -126,7 +126,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
             {cartItems.length > 0 ? (
               cartItems.map((cartItem, index) => (
                 <div
-                  key={cartItem.item.id + index + "cart-item"}
+                  key={cartItem.item.id + index + "cart-item-on-cart"}
                   className="flex w-full items-center p-4 bg-white/5 rounded-lg"
                 >
                   <div className="w-1/5">
