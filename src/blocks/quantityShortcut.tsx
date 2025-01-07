@@ -20,9 +20,10 @@ export function QuantityShortcut({ className, cartItem, showRemoveButton = true 
   const handleWithdrawItem = () => {
     if (cartItem.quantity === 1) {
       removeItem(cartItem.item);
-    } else {
-      decrementItemQuantity(cartItem.item);
+      return;
     }
+
+    decrementItemQuantity(cartItem.item);
   }
 
   return (
