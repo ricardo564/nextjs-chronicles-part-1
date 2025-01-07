@@ -3,7 +3,7 @@ import { DesktopMenu } from "@/components/DesktopMenu";
 import { Logo } from "@/components/Logo";
 import { SearchShortcut } from "@/blocks/searchShortcut";
 import { MobileMenu } from "@/components/mobileMenu";
-import { ShoppingCart } from "@/blocks/ShoppingCart";
+import { ShoppingCart } from "@/blocks/shoppingCart";
 
 interface HeaderProps {
   menuItems: MenuItem[];
