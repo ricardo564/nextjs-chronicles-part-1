@@ -46,27 +46,25 @@ export const EmblaCarousel: FC<PropType> = (props) => {
   const updateSlidesVisibility = () => {
     if (!emblaApi || !hideInactiveSlides) return
 
-    const viewport = document.getElementById(carouselId)
-    if (!viewport) return
+    requestAnimationFrame(() => {
+      const viewport = document.getElementById(carouselId)
+      if (!viewport) return
 
-    const viewportRect = viewport.getBoundingClientRect()
-    const slideNodes = emblaApi.slideNodes()
+      const viewportRect = viewport.getBoundingClientRect()
+      const slideNodes = emblaApi.slideNodes()
 
-    slideNodes.forEach((slide) => {
-      const slideRect = slide.getBoundingClientRect()
-      const isVisible = (
-        slideRect.left >= viewportRect.left - 10 &&
-        slideRect.right <= viewportRect.right + 10
-      )
+      const tolerance = 100
 
-      if (isVisible) {
-        slide.classList.remove('opacity-0')
-        slide.classList.add('opacity-100')
-        return;
-      }
+      slideNodes.forEach((slide) => {
+        const slideRect = slide.getBoundingClientRect()
+        const isVisible = (
+          slideRect.left >= viewportRect.left - tolerance &&
+          slideRect.right <= viewportRect.right + tolerance
+        )
 
-      slide.classList.remove('opacity-100')
-      slide.classList.add('opacity-0')
+        slide.classList.toggle('opacity-0', !isVisible)
+        slide.classList.toggle('opacity-100', isVisible)
+      })
     })
   }
 
@@ -78,14 +76,19 @@ export const EmblaCarousel: FC<PropType> = (props) => {
   useEffect(() => {
     if (!emblaApi) return
 
+    const timer = setTimeout(() => {
+      updateSlidesVisibility()
+    }, 100)
+
     emblaApi.on('scroll', updateSlidesVisibility)
     emblaApi.on('reInit', updateSlidesVisibility)
-
-    updateSlidesVisibility()
+    emblaApi.on('select', updateSlidesVisibility)
 
     return () => {
+      clearTimeout(timer)
       emblaApi.off('scroll', updateSlidesVisibility)
       emblaApi.off('reInit', updateSlidesVisibility)
+      emblaApi.off('select', updateSlidesVisibility)
     }
   }, [emblaApi])
 
@@ -93,10 +96,6 @@ export const EmblaCarousel: FC<PropType> = (props) => {
     if (!emblaApi) return
     emblaApi.scrollNext()
   }
-
-  useEffect(() => {
-    updateSlidesVisibility()
-  }, [])
 
   return (
     <section
