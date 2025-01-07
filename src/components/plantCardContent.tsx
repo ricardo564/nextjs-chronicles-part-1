@@ -38,7 +38,7 @@ export function PlantCardContent({
             width={240}
             height={240}
             loading="lazy"
-            className={`absolute md:relative -mt-[7rem] -ml-[6rem] md:ml-0 md:-mt-32 object-cover w-[20rem] h-[16rem] md:h-[20rem] rounded-2xl animate-scale-in md:scale-125 ${imageClassName}`}
+            className={`absolute md:relative -mt-[8.5rem] -ml-[6rem] md:ml-0 md:-mt-32 object-cover w-[20rem] h-[16rem] md:h-[20rem] rounded-2xl animate-scale-in md:scale-125 ${imageClassName}`}
           />
         )}
       </div>
@@ -53,7 +53,7 @@ export function PlantCardContent({
           </p>
 
           <p
-            className={`text-white md:text-2xl font-semibold my-3 h-32 w-full line-clamp-3 overflow-hidden  ${titleClassName}`}
+            className={`text-white text-sm md:text-2xl font-semibold my-3 h-32 w-full md:line-clamp-3 overflow-ellipsis overflow-y-auto  ${titleClassName}`}
           >
             {plant.bibliography + " " + plant.scientific_name}
           </p>
