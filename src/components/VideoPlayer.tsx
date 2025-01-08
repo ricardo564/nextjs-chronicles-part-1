@@ -1,11 +1,12 @@
 import type { FC } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface Props {
   className?: string;
   src: string;
   params?: Record<string, string>;
   title?: string;
+  isModalOpen?: boolean;
 }
 
 interface VideoOption {
@@ -14,9 +15,10 @@ interface VideoOption {
   params: Record<string, string>;
 }
 
-const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
+const VideoPlayer: FC<Props> = ({ className, src, params = {}, title, isModalOpen }) => {
   const [valid, setValid] = useState(false);
   const [url, setUrl] = useState("");
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const videoOptions: VideoOption[] = [
     {
       reg: /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/i,
@@ -56,6 +58,14 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
     videoLinkIsValid();
   }, [src]);
 
+  useEffect(() => {
+    if (!isModalOpen && iframeRef.current) {
+      const currentSrc = iframeRef.current.src;
+      iframeRef.current.src = '';
+      iframeRef.current.src = currentSrc;
+    }
+  }, [isModalOpen]);
+
   const videoLinkIsValid = () => {
     if (src) {
       for (const option of videoOptions) {
@@ -87,6 +97,7 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
       aria-label={title || "Video player"}
     >
       <iframe
+        ref={iframeRef}
         className="h-full border-0 min-h-96 w-full top-0 left-0 aspect-video overflow-hidden"
         loading="lazy"
         sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation allow-presentation allow-popups"
