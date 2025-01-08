@@ -43,7 +43,6 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
   };
 
   useEffect(() => {
-    console.log(cartItems);
   }, [cartItems]);
 
   return (
