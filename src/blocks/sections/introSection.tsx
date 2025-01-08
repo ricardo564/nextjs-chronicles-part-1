@@ -48,7 +48,7 @@ export async function IntroSection() {
             </p>
           </div>
 
-          <div className="flex md:flex-row flex-col gap-4 relative justify-between w-full">
+          <div className="flex md:flex-row flex-col gap-4 relative justify-between w-full max-w-md">
             <ExploreShortcut
               plant={mockupPlants[1]}
               className="w-full md:w-auto"
