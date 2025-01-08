@@ -48,15 +48,15 @@ export async function IntroSection() {
             </p>
           </div>
 
-          <div className="flex lg:flex-row flex-col gap-4 relative justify-between w-full max-w-md">
+          <div className="grid grid-cols-2 gap-4 max-w-[23rem]">
             <ExploreShortcut
               plant={mockupPlants[1]}
-              className="w-full lg:w-auto"
+              className="w-full"
             />
 
             <LiveDemoShortcut
               videoUrl={process.env.LIVE_DEMO_VIDEO_URL ?? ""}
-              className="w-full lg:w-auto"
+              className="w-full"
             />
           </div>
 
