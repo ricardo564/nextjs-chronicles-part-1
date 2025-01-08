@@ -11,11 +11,13 @@ interface BuyShortcutProps {
   className?: string;
   showIcon?: boolean;
   quantityClassName?: string;
+  shopIconClassName?: string;
 }
 
 export const BuyShortcut = ({
   plant,
   className,
+  shopIconClassName,
   showIcon = true,
   quantityClassName,
 }: BuyShortcutProps) => {
@@ -41,7 +43,7 @@ export const BuyShortcut = ({
         {showIcon && (
           <Image
             src={shopIcon}
-            className="w-11 h-11 max-w-[44px] max-h-[44px]"
+            className={`w-11 h-11 max-w-[44px] max-h-[44px] ${shopIconClassName}`}
             alt="Shop icon"
           />
         )}
