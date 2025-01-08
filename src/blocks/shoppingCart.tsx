@@ -65,7 +65,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
       </button>
 
       <div
-        className={`absolute inset-y-0 right-0 flex-grow w-full bg-primary/90 backdrop-blur-sm h-[99vh] border-l border-white/20 shadow-sm max-w-xs -top-4 z-[9999] ${
+        className={`absolute inset-y-0 right-0 flex-grow w-full bg-primary/90 backdrop-blur-sm h-[99vh] border-l border-white/20 shadow-sm max-w-xs md:max-w-sm -top-4 z-[9999] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
@@ -160,7 +160,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
               cartItems.map((cartItem, index) => (
                 <div
                   key={cartItem.item.id + index + "cart-item-on-cart"}
-                  className="flex w-full items-center p-4 bg-white/5 rounded-lg"
+                  className="flex w-full items-center p-4 gap-3 bg-white/5 rounded-lg"
                 >
                   <div className="w-1/5">
                     <Image
@@ -171,7 +171,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
                       }
                       width={80}
                       height={80}
-                      className="w-full h-auto object-cover rounded scale-150 overflow-hidden border border-white/20 max-h-[4.7rem]"
+                      className="w-full h-auto object-cover rounded scale-150 overflow-hidden border border-white/20 max-h-[4.7rem] ml-1"
                     />
                   </div>
 
