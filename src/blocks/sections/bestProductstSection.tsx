@@ -6,7 +6,7 @@ import { getUniqueId } from "@/utils/getUniqueId";
 
 export const BestProductsSection = () => {
   return (
-    <div className="relative min-h-screen max-w-[95vw] md:max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
+    <div className="relative min-h-[35rem] max-w-[95vw] md:max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
       <div className="flex flex-col items-center max-w-[40rem] mx-auto">
         <QuotedTitle className="text-center text-white">
           Our Best o2
