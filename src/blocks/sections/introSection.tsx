@@ -66,7 +66,7 @@ export async function IntroSection() {
           <div className="relative mt-24">
             <TestimonialCard
               testimonial={randomTestimonial()}
-              className="line-clamp-2"
+              testimonialClassName="line-clamp-2"
             />
           </div>
         </div>
