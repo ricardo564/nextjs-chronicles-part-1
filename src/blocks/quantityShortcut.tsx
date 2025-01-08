@@ -47,16 +47,16 @@ export function QuantityShortcut({
       >
         <div className="flex flex-col gap-4 justify-start">
           <p className="text-lg text-center">Are you sure you want to remove this item?</p>
-          <div className="flex justify-end gap-2 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
             <button
               onClick={() => setIsOpen(false)}
-              className="bg-gray-500 text-white px-4 py-2 rounded-md w-full"
+              className="bg-gray-500 text-white px-4 py-2 rounded-md w-full order-2 md:order-1"
             >
               Cancel
             </button>
             <button
               onClick={() => removeItem(cartItem.item)}
-              className="bg-red-500 text-white px-4 py-2 rounded-md w-full"
+              className="bg-red-500 text-white px-4 py-2 rounded-md w-full order-1 md:order-2"
             >
               Remove
             </button>
