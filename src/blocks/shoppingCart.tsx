@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import shopIcon from "@/assets/svg/shop-icon.svg";
-import { handleWithBlockScroll } from "@/utils/handleWithBlockScroll";
+import { blockScroll } from "@/utils/handleWithBlockScroll";
 import CheckoutShortcut from "./checkoutShortcut";
 import { useShoppingCartStore } from "@/store/shoppingCartStore";
 import { QuantityShortcut } from "./quantityShortcut";
@@ -22,7 +22,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
 
-    handleWithBlockScroll(isOpen);
+    blockScroll(isOpen);
   };
 
   const totalItems = () => {
