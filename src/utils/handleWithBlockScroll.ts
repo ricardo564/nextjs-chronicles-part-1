@@ -7,7 +7,7 @@ const unblockDocumentScroll = () => {
   document.body.style.overflow = "auto";
 };
 
-export const handleWithBlockScroll = (hideScroll: boolean) => {
+export const blockScroll = (hideScroll: boolean) => {
   if (hideScroll) {
     unblockDocumentScroll();
     return;
