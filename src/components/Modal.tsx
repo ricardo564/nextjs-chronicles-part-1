@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { ReactNode, useEffect, useRef } from "react";
 import { isClickOutsideElement } from "@/utils/isClickOutsideElement";
-
+import { handleWithBlockScroll } from "@/utils/handleWithBlockScroll";
 interface ModalProps {
   id: string;
   title: string;
@@ -30,9 +30,14 @@ export const Modal: FC<ModalProps> = ({
   };
 
   useEffect(() => {
+    console.log("isOpen", isOpen);
     if (isOpen) {
+      handleWithBlockScroll(false);
       document.addEventListener("click", handleClickOutside);
+      return;
     }
+
+    handleWithBlockScroll(true);
 
     return () => {
       document.removeEventListener("click", handleClickOutside);
@@ -42,14 +47,14 @@ export const Modal: FC<ModalProps> = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 backdrop-blur-sm transition-opacity !z-[999] h-full overflow-hidden mt-[30%] overflow-y-auto">
+        <div className="absolute inset-0 backdrop-blur-sm transition-opacity !z-[999] h-full overflow-hidden overflow-y-auto">
           <dialog
             ref={modalRef}
             id={id}
             open={isOpen}
             className={`
           w-full max-w-md rounded-lg bg-white p-6 shadow-xl
-          transition-all duration-200 !z-[999]
+          transition-all duration-200 !z-[999] mt-[30%]
           ${className}
           ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
         `}
