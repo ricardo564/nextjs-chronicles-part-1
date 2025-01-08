@@ -26,13 +26,16 @@ export async function IntroSection() {
   return (
     <section
       className="relative overflow-hidden w-screen pb-24 px-4"
-      style={{
-        backgroundImage: `url(${background.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
+      <div
+        className="absolute w-full h-full"
+        style={{
+          backgroundImage: `url(${background.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col justify-between items-start mb-16  pt-4 md:pt-32">
           <h1 className="text-7xl xl:text-8xl text-white font-semibold">
@@ -68,7 +71,6 @@ export async function IntroSection() {
           </div>
         </div>
 
-
         <div className="lg:absolute lg:top-[1rem] lg:right-0 mx-auto w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
           <EmblaCarousel
             className="relative w-full max-w-[20rem] md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 md:ml-12"
@@ -80,7 +82,11 @@ export async function IntroSection() {
                 className="flex-[0_0_100%] min-w-[19rem] md:min-w-[20rem] relative mx-auto"
                 key={`${plant.id}-${index}-intro-carousel-${getUniqueId()}`}
               >
-                <PlantCardContent plant={plant} containerClassName="ml-5" contentClassName="gap-8" />
+                <PlantCardContent
+                  plant={plant}
+                  containerClassName="ml-5"
+                  contentClassName="gap-8"
+                />
               </div>
             ))}
           </EmblaCarousel>
