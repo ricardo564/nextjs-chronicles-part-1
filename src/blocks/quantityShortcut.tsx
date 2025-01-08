@@ -8,13 +8,11 @@ import { Modal } from "@/components/Modal";
 interface ShoppingCartProps {
   cartItem: CartItem;
   className?: string;
-  showRemoveButton?: boolean;
 }
 
 export function QuantityShortcut({
   className,
   cartItem,
-  showRemoveButton = true,
 }: ShoppingCartProps) {
   const [isOpen, setIsOpen] = useState(false);
   const cartItemQuantity = useShoppingCartStore.getState().items.find(item => item.item.id === cartItem.item.id)?.quantity;
@@ -67,13 +65,11 @@ export function QuantityShortcut({
       </Modal>
 
       <div
-        className={`ml-auto mr-3 w-[1rem] flex flex-col items-center justify-between overflow-hidden ${className} ${
-          !showRemoveButton ? "gap-4" : ""
-        }`}
+        className={` flex justify-between items-center min-w-full w-full md:w-auto border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center mr-auto min-h-[3.5rem] mx-auto ${className}`}
       >
         <button
           type="button"
-          className="flex items-center justify-center w-8 h-8 text-white hover:text-green-500 hover:bg-white/10 rounded-full transition-all duration-300 active:scale-95"
+          className="flex items-center justify-center w-full min-h-[3.5rem] text-white hover:text-green-500 hover:bg-white/10 active:text-green-500 active:bg-white/20 active:scale-95 touch-none transition-all duration-300"
           aria-label="Increase quantity"
           title="Increase quantity"
           onClick={() => incrementItemQuantity(cartItem.item)}
@@ -81,10 +77,9 @@ export function QuantityShortcut({
           <span className="text-xl font-medium">+</span>
         </button>
 
-        {showRemoveButton && (
           <button
             type="button"
-            className="flex items-center justify-center w-8 h-8 hover:bg-white/10 rounded-full hover:text-red-500 transition-all duration-300 active:scale-95"
+            className="w-full min-h-[3.5rem] flex items-center justify-center"
             aria-label="Remove item"
             title="Remove item"
             onClick={toggleModal}
@@ -106,11 +101,10 @@ export function QuantityShortcut({
               <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
             </svg>
           </button>
-        )}
 
         <button
           type="button"
-          className="flex items-center justify-center w-8 h-8 text-white hover:text-orange-500 hover:bg-white/10 rounded-full transition-all duration-300 active:scale-95"
+          className="w-full min-h-[3.5rem] flex items-center justify-center"
           aria-label="Decrease quantity"
           title="Decrease quantity"
           onClick={() => handleWithdrawItem()}
