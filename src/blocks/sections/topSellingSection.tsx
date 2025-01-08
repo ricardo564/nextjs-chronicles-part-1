@@ -16,7 +16,6 @@ export default async function TopSellingSection() {
         {mockupPlants.slice(1, mockupPlants.length).map((plant, index) => (
           <PlantCard
             containerClassName="w-full max-w-full min-w-full"
-            quantityClassName="!h-[3.7rem] w-[3.7rem]"
             key={`${plant.id}-${index}-top-selling-${getUniqueId()}`}
             plant={plant}
             showPrice={true}
