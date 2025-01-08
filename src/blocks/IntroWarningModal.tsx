@@ -6,29 +6,31 @@ import { saveItemOnLocalStorage, getItemFromLocalStorage } from "@/utils/localSt
 
 export default function IntroWarningModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const userHasChosenToNotSeeAgain = getItemFromLocalStorage("intro-warning-modal") === "true" ? true : false;
+  const [isMounted, setIsMounted] = useState(false);
 
-  const handleShowModalOnStart = () => {
-    if (userHasChosenToNotSeeAgain) {
-      setIsOpen(false);
-      saveItemOnLocalStorage("intro-warning-modal", "true");
-      return;
-    }
+  useEffect(() => {
+    setIsMounted(true);
+    const userHasChosenToNotSeeAgain = getItemFromLocalStorage("intro-warning-modal") === "true";
 
-    setIsOpen(true);
-    saveItemOnLocalStorage("intro-warning-modal", "false");
-  }
+    const timer = setTimeout(() => {
+      if (userHasChosenToNotSeeAgain) {
+        setIsOpen(false);
+        saveItemOnLocalStorage("intro-warning-modal", "true");
+      } else {
+        setIsOpen(true);
+        saveItemOnLocalStorage("intro-warning-modal", "false");
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleCloseModal = () => {
     setIsOpen(false);
     saveItemOnLocalStorage("intro-warning-modal", "true");
-  }
+  };
 
-  useEffect(() => {
-    setTimeout(() => {
-      handleShowModalOnStart();
-    }, 1000);
-  }, []);
+  if (!isMounted) return null;
 
   return (
     <Modal
