@@ -33,7 +33,7 @@ export default function IntroWarningModal() {
   return (
     <Modal
       id="intro-warning-modal"
-      title="Study Project"
+      title="Study Project - # 🪴 Breath Natural - NextJS Chronicles Part 1"
       isOpen={isOpen}
       onClose={handleCloseModal}
       className="max-w-2xl"
