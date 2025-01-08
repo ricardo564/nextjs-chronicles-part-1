@@ -24,25 +24,24 @@ export const Modal: FC<ModalProps> = ({
   const modalRef = useRef<HTMLDialogElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (modalRef.current && isClickOutsideElement(modalRef.current, event)) {
+    if (modalRef.current && isClickOutsideElement(modalRef.current, event) && isOpen) {
       onClose();
     }
   };
 
   useEffect(() => {
-    console.log("isOpen", isOpen);
     if (isOpen) {
       handleWithBlockScroll(false);
       document.addEventListener("click", handleClickOutside);
-      return;
+    } else {
+      handleWithBlockScroll(true);
+      document.removeEventListener("click", handleClickOutside);
     }
-
-    handleWithBlockScroll(true);
 
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [isOpen, handleClickOutside]);
+  }, [isOpen]);
 
   return (
     <>
@@ -54,7 +53,7 @@ export const Modal: FC<ModalProps> = ({
             open={isOpen}
             className={`
               w-full max-w-md rounded-lg bg-white p-6 shadow-xl
-              transition-all duration-200 !z-[999] mt-[30%]
+              transition-all duration-200 !z-[999]
               ${className}
               ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
             `}
