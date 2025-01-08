@@ -8,6 +8,8 @@ interface PlantCardProps {
   titleClassName?: string;
   showPrice?: boolean;
   quantityClassName?: string;
+  showExploreShortcut?: boolean;
+  shopIconClassName?: string;
 }
 
 export function PlantCard({
@@ -17,6 +19,8 @@ export function PlantCard({
   titleClassName,
   showPrice = false,
   quantityClassName,
+  showExploreShortcut = true,
+  shopIconClassName,
 }: PlantCardProps) {
   return (
     <div
@@ -31,6 +35,8 @@ export function PlantCard({
         imageClassName={imageClassName}
         titleClassName={titleClassName}
         quantityClassName={quantityClassName}
+        showExploreShortcut={showExploreShortcut}
+        shopIconClassName={shopIconClassName}
       />
     </div>
   );
