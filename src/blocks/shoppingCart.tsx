@@ -45,7 +45,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
   const renderCartItem = useCallback((cartItem: CartItem, index: number) => (
     <div
       key={`${cartItem.item.id}-${index}-cart-item-on-cart-${getUniqueId()}`}
-      className="flex w-full items-center p-4 gap-3 bg-white/5 rounded-lg"
+      className="flex w-full items-center p-4 gap-5 bg-white/5 rounded-lg"
     >
       <div className="w-1/5">
         <Image
@@ -56,7 +56,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
           }
           width={80}
           height={80}
-          className="w-full h-auto object-cover rounded scale-150 overflow-hidden border border-white/20 max-h-[4.7rem] ml-1"
+          className="min-w-[4rem] w-full h-auto object-cover rounded scale-150 overflow-hidden border border-white/20 max-h-[4.7rem] ml-1"
         />
       </div>
 
@@ -73,7 +73,10 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
         </span>
       </div>
 
-      <QuantityShortcut cartItem={cartItem} />
+      <QuantityShortcut
+        cartItem={cartItem}
+        className="flex-col min-w-[0.001rem] w-[3rem] relative -mr-4 border-none"
+      />
     </div>
   ), []);
 
