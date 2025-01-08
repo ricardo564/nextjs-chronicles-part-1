@@ -13,7 +13,6 @@ import { getUniqueId } from "@/utils/getUniqueId";
 export async function IntroSection() {
   const randomTestimonial = () => {
     const shuffled = [...testimonials].sort(() => Math.random() - 0.5);
-
     return shuffled[0];
   };
 
