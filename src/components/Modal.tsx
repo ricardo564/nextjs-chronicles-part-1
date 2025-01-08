@@ -1,15 +1,15 @@
 import type { FC } from "react";
 import { ReactNode, useEffect, useRef } from "react";
-import { isClickOutsideElement } from "@/utils/isClickOutsideElement";
-import { handleWithBlockScroll } from "@/utils/handleWithBlockScroll";
+import { blockScroll } from "@/utils/handleWithBlockScroll";
+
 interface ModalProps {
   id: string;
-  title: string;
   isOpen: boolean;
-  onClose: () => void;
+  title?: string;
   children?: ReactNode;
   isModal?: boolean;
   className?: string;
+  onClose: () => void;
 }
 
 export const Modal: FC<ModalProps> = ({
@@ -18,70 +18,42 @@ export const Modal: FC<ModalProps> = ({
   isOpen,
   onClose,
   children,
-  isModal = true,
   className,
 }) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (modalRef.current && isClickOutsideElement(modalRef.current, event) && isOpen) {
-      onClose();
-    }
-  };
-
   useEffect(() => {
-    if (isOpen) {
-      handleWithBlockScroll(false);
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      handleWithBlockScroll(true);
-      document.removeEventListener("click", handleClickOutside);
-    }
+    const dialog = modalRef.current;
 
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
+    if (!dialog) return;
+
+    if (isOpen) {
+      dialog.showModal();
+      blockScroll(false);
+    } else {
+      dialog.close();
+      blockScroll(true);
+    }
   }, [isOpen]);
 
   return (
-    <>
-      {isOpen && (
-        <div className="absolute inset-0 backdrop-blur-sm transition-opacity !z-[999] h-full overflow-hidden overflow-y-auto">
-          <dialog
-            ref={modalRef}
-            id={id}
-            open={isOpen}
-            className={`
-              w-full max-w-md rounded-lg bg-white p-6 shadow-xl
-              transition-all duration-200 !z-[999]
-              ${className}
-              ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
-            `}
-            role={isModal ? "dialog" : "alertdialog"}
-            aria-labelledby={`${id}-title`}
-            aria-modal={isModal}
+    <dialog
+      ref={modalRef}
+      id={id}
+      className={`bg-white text-black p-6 rounded-lg border border-white/20 backdrop:bg-black/50 open:animate-fade-in ${className}`}
+      onClose={onClose}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div className="flex flex-col gap-4 min-w-[300px]">
+        <header className="flex items-center justify-between border-b border-white/20 pb-2">
+          <h2 className="text-xl font-bold">{title}</h2>
+          <button
+            onClick={onClose}
+            className="text-black/80 hover:text-red-500"
+            aria-label="Close modal"
           >
-            <h2
-              id={`${id}-title`}
-              className="border-b text-xl font-semibold text-center md:text-start text-gray-900 mb-4 w-full"
-            >
-              {title}
-            </h2>
-
-            <div className="mt-2">{children}</div>
-
-            <button
-              type="button"
-              aria-label="Close modal"
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-500
-          rounded-full p-2 inline-flex items-center justify-center
-          hover:bg-gray-100 focus:outline-none focus:ring-2
-          focus:ring-inset focus:ring-indigo-500"
-              onClick={onClose}
-            >
-              <span className="sr-only">
-                Close {isModal ? "modal" : "dialog"}
-              </span>
               <svg
                 className="h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,10 +68,10 @@ export const Modal: FC<ModalProps> = ({
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-            </button>
-          </dialog>
-        </div>
-      )}
-    </>
+          </button>
+        </header>
+        {children}
+      </div>
+    </dialog>
   );
 };
