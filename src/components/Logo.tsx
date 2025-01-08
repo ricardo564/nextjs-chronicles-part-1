@@ -13,7 +13,7 @@ export function Logo({ className, imageClassName, width = 128, height = 128 }: L
   return (
     <Link
       href="/"
-      className={`block transition-transform focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg ${className}`}
+      className={`block transition-transform focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg scale-125 ml-3 md:ml-0 md:scale-100 ${className}`}
     >
       <Image
         src={logo}
