@@ -71,7 +71,7 @@ type PropType = {
 
 export const SelectedSnapDisplay: FC<PropType> = ({ selectedSnap, snapCount, className, onDotButtonClick }) => {
   return (
-    <div className={`flex gap-2 items-center justify-center ${className}`}>
+    <div className={`flex gap-2 items-center justify-center -z-[1] ${className}`}>
       {Array.from({ length: snapCount }).map((_, index) => (
         <div
           key={index + "selected-snap-display"}
