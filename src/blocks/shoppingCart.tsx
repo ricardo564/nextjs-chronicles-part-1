@@ -185,7 +185,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
           </div>
 
           <div
-            className={`flex flex-col items-center space-y-4 min-w-[17rem] px-2 h-[80vh] mt-[5rem] pb-[10rem] text-white`}
+            className={`flex flex-col items-center space-y-4 min-w-[17rem] px-2 md:h-[80vh] mt-[5rem] pb-[5rem] md:pb-[10rem] text-white max-h-[]`}
           >
             {cartItems.length > 0 ? (
               cartItems.map((cartItem, index) => renderCartItem(cartItem, index))
@@ -194,7 +194,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
             )}
           </div>
 
-          <div className="fixed mt-auto bottom-0 w-full bg-transparent md:mb-2">
+          <div className="fixed mt-auto bottom-14 md:bottom-0 w-full bg-transparent md:mb-2">
             <CheckoutShortcut className="w-full max-w-[17rem] md:max-w-sm md:px-2 mx-auto " />
           </div>
         </div>
