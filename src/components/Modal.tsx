@@ -40,7 +40,7 @@ export const Modal: FC<ModalProps> = ({
     <dialog
       ref={modalRef}
       id={id}
-      className={`bg-white text-black p-6 rounded-lg border border-white/20 backdrop:bg-black/50 open:animate-fade-in ${className}`}
+      className={`bg-white text-black p-2 md:p-6 rounded-lg border border-white/20 backdrop:bg-black/50 open:animate-fade-in ${className}`}
       onClose={onClose}
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
