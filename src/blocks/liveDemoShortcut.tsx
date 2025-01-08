@@ -49,6 +49,7 @@ export function LiveDemoShortcut({ className, videoUrl }: LiveDemoShortcutProps)
       >
         <VideoPlayer
           src={videoUrl}
+          isModalOpen={isOpen}
         />
       </Modal>
     </>
