@@ -42,7 +42,7 @@ export const Modal: FC<ModalProps> = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 backdrop-blur-sm transition-opacity !z-[999] h-full overflow-hidden">
+        <div className="fixed inset-0 backdrop-blur-sm transition-opacity !z-[999] h-full overflow-hidden mt-[30%] overflow-y-auto">
           <dialog
             ref={modalRef}
             id={id}
