@@ -79,7 +79,7 @@ export function QuantityShortcut({
 
           <button
             type="button"
-            className="w-full min-h-[3.5rem] flex items-center justify-center"
+            className="w-full min-h-[3.5rem] flex items-center justify-center active:text-red-500 active:bg-white/10 transition-all duration-300"
             aria-label="Remove item"
             title="Remove item"
             onClick={toggleModal}
@@ -104,7 +104,7 @@ export function QuantityShortcut({
 
         <button
           type="button"
-          className="w-full min-h-[3.5rem] flex items-center justify-center"
+          className="w-full min-h-[3.5rem] flex items-center justify-center active:text-red-500 active:bg-white/10 transition-all duration-300"
           aria-label="Decrease quantity"
           title="Decrease quantity"
           onClick={() => handleWithdrawItem()}
