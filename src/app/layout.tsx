@@ -52,10 +52,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <IntroWarningModal />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <IntroWarningModal />
         {children}
       </body>
 
