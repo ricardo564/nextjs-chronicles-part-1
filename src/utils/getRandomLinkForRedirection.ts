@@ -5,5 +5,10 @@ export function getRandomLinkForRedirection() {
     'https://www.instagram.com/ricardohks/',
   ];
 
-  return links[Math.floor(Math.random() * links.length)];
+  if (typeof window !== 'undefined') {
+    const shuffled = [...links].sort(() => Math.random() - 0.5);
+    return shuffled[0];
+  }
+
+  return links[0];
 }
