@@ -6,6 +6,7 @@ import { ExploreShortcut } from "@/blocks/exploreShortcut";
 interface PlantCardProps {
   plant: Plant;
   containerClassName?: string;
+  imageContainerClassName?: string;
   imageClassName?: string;
   titleClassName?: string;
   showPrice?: boolean;
@@ -19,6 +20,7 @@ export function PlantCardContent({
   plant,
   containerClassName,
   imageClassName,
+  imageContainerClassName,
   titleClassName,
   showPrice = false,
   showBuyShortcut = true,
@@ -36,7 +38,7 @@ export function PlantCardContent({
 
   return (
     <div className={`flex flex-col items-center ${containerClassName}`}>
-      <div className={`mb-6 animate-slide-down`}>
+      <div className={`mb-6 animate-slide-down ${imageContainerClassName}`}>
         {plant.image_url && (
           <Image
             src={plant.image_url}
