@@ -13,7 +13,6 @@ import {
   useSelectedSnapDisplay
 } from '@/components/EmblaCarousel/EmblaCarouselSelectedSnapDisplay'
 import useEmblaCarousel from 'embla-carousel-react'
-import { getUniqueId } from '@/utils/getUniqueId'
 
 type PropType = {
   className?: string
@@ -103,7 +102,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
         >
           {Children.map(children, (child, index) => (
             <div
-              key={`${index}-embla-carousel-slide-${carouselId}-${getUniqueId()}`}
+              key={index + 'embla-carousel-slide' + carouselId}
               className="transition-opacity duration-300 pointer-events-auto"
             >
               {child}

@@ -2,7 +2,6 @@ import React from "react";
 import { Logo } from "@/components/Logo";
 import { quickLinks, socialLinks } from "@/static/footer";
 import { getRandomLinkForRedirection } from "@/utils/getRandomLinkForRedirection";
-import { getUniqueId } from "@/utils/getUniqueId";
 
 const Footer: React.FC = () => {
   return (
@@ -29,7 +28,7 @@ const Footer: React.FC = () => {
               <nav>
                 <ul className="space-y-2">
                   {quickLinks.map((link, index) => (
-                    <li key={`${link.id}-${index}-footer-quick-link-${getUniqueId()}`}>
+                    <li key={link.id + index + "footer-quick-link"}>
                       <a
                         href={getRandomLinkForRedirection()}
                         className="text-gray-300 hover:text-white transition-colors"
@@ -74,7 +73,7 @@ const Footer: React.FC = () => {
         <div className="flex gap-4">
           {socialLinks.map((social) => (
             <a
-              key={`${social.id}-${getUniqueId()}`}
+              key={social.id}
               href={getRandomLinkForRedirection()}
               className="text-gray-300 hover:text-white transition-colors"
               aria-label={`Follow us on ${social.label}`}

@@ -1,5 +1,3 @@
-import { getUniqueId } from "@/utils/getUniqueId";
-
 interface StarRatingProps {
   rating: number;
   maxRating?: number;
@@ -26,7 +24,7 @@ export const StarRating = ({
     >
       {Array.from({ length: maxRating }, (_, index) => (
         <svg
-          key={`star-${index}-${getUniqueId()}`}
+          key={`star-${index}`}
           className={`${index < normalizedRating ? "text-yellow-400" : "text-white"}`}
           width={size}
           height={size}

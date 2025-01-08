@@ -4,7 +4,6 @@ import { NoDataToShow } from "@/components/NoDataToShow";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { PlantsService } from "@/modules/plants/plants.service";
 import { HttpService } from "@nestjs/axios";
-import { getUniqueId } from "@/utils/getUniqueId";
 
 export default async function PlantsPage() {
   const httpService = new HttpService();
@@ -29,7 +28,7 @@ export default async function PlantsPage() {
                 <PlantCard
                   containerClassName="w-full bg-white/5 backdrop-blur-sm rounded-2xl p-6 relative flex flex-col items-center shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10"
                   imageClassName="rounded-full overflow-hidden w-[120px] h-[120px] md:w-[9rem] md:h-[9rem] -mt-12 md:-mt-[10rem] shadow-lg border-4 border-white/10 ml-12"
-                  key={`${plant.id}-${index}-plant-card-${getUniqueId()}`}
+                  key={plant.id + index + "plant-card"}
                   plant={plant}
                   showPrice
                 />

@@ -8,7 +8,6 @@ import { mockupPlants } from "@/static/mockupPlants";
 import { PlantCardContent } from "@/components/plantCardContent";
 import { QuotedTitle } from "@/components/QuotedTitle";
 import { EmblaCarousel } from "@/components/EmblaCarousel/EmblaCarousel";
-import { getUniqueId } from "@/utils/getUniqueId";
 
 export async function IntroSection() {
   const randomTestimonial = () => {
@@ -77,7 +76,7 @@ export async function IntroSection() {
             {mockupPlants.map((plant, index) => (
               <div
                 className="flex-[0_0_100%] min-w-[19rem] md:min-w-[20rem] relative mx-auto"
-                key={`${plant.id}-${index}-intro-carousel-${getUniqueId()}`}
+                key={plant.id + index + "intro-carousel"}
               >
                 <PlantCardContent plant={plant} containerClassName="ml-5" contentClassName="gap-8" />
               </div>
@@ -93,7 +92,7 @@ export async function IntroSection() {
           <div className="flex flex-wrap justify-center w-full gap-y-[9rem] lg:gap-[6rem]">
             {mockupPlants.slice(1, 4).map((plant, index) => (
               <PlantBannerCard
-                key={`${plant.id}-${index}-intro-banner-${getUniqueId()}`}
+                key={plant.id + index + "intro-banner"}
                 plant={plant}
                 className={randomFlexDIrection(index)}
               />
