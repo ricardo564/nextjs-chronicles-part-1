@@ -11,8 +11,10 @@ interface PlantCardProps {
   titleClassName?: string;
   showPrice?: boolean;
   showBuyShortcut?: boolean;
+  showExploreShortcut?: boolean;
   contentClassName?: string;
   quantityClassName?: string;
+  shopIconClassName?: string;
 }
 
 export function PlantCardContent({
@@ -23,8 +25,10 @@ export function PlantCardContent({
   titleClassName,
   showPrice = false,
   showBuyShortcut = true,
+  showExploreShortcut = true,
   contentClassName,
   quantityClassName = "h-[3.7rem]",
+  shopIconClassName,
 }: PlantCardProps) {
   const getRandomName = () => {
     const synonymsLength = plant.synonyms.length;
@@ -84,12 +88,15 @@ export function PlantCardContent({
 
           {showPrice && (
             <div className="min-h-[2rem] w-full grid md:grid-cols-2 min-w-[16rem] max-w-[25rem] md:space-x-6 gap-4 lg:max-w-full place-items-center">
-              <ExploreShortcut plant={plant} />
+              {showExploreShortcut && (
+                <ExploreShortcut plant={plant} />
+              )}
 
               {showBuyShortcut && (
                 <BuyShortcut
                   plant={plant}
                   quantityClassName={quantityClassName}
+                  shopIconClassName={shopIconClassName}
                 />
               )}
             </div>
