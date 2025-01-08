@@ -36,7 +36,7 @@ export default function IntroWarningModal() {
       title="Study Project - # 🪴 Breath Natural - NextJS Chronicles Part 1"
       isOpen={isOpen}
       onClose={handleCloseModal}
-      className="max-w-2xl absolute inset-0 min-h-screen"
+      className="max-w-2xl absolute inset-0 min-h-screen mx-auto"
     >
       <div className="space-y-6 p-2">
         <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-4 rounded-lg shadow-md">
