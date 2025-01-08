@@ -4,6 +4,7 @@ import "./globals.css";
 // import "@/assets/css/embla.css";
 import ogImage from "@/assets/images/android-launchericon-512-512.png";
 import Script from "next/script";
+import IntroWarningModal from "@/blocks/IntroWarningModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <IntroWarningModal />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
