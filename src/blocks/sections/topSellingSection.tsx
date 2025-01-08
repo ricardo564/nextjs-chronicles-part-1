@@ -20,7 +20,6 @@ export default async function TopSellingSection() {
             key={`${plant.id}-${index}-top-selling-${getUniqueId()}`}
             plant={plant}
             showPrice={true}
-            showRemoveButton={false}
           />
         ))}
       </div>
