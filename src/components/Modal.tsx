@@ -7,6 +7,7 @@ interface ModalProps {
   onClose: () => void;
   children?: ReactNode;
   isModal?: boolean;
+  className?: string;
 }
 
 export const Modal: FC<ModalProps> = ({
@@ -16,6 +17,7 @@ export const Modal: FC<ModalProps> = ({
   onClose,
   children,
   isModal = true,
+  className,
 }) => {
   return (
     <>
@@ -34,6 +36,7 @@ export const Modal: FC<ModalProps> = ({
           fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
           w-full max-w-md rounded-lg bg-white p-6 shadow-xl
           transition-all duration-200 !z-[999]
+          ${className}
           ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
         `}
         role={isModal ? "dialog" : "alertdialog"}
