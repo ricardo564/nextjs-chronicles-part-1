@@ -26,16 +26,13 @@ export async function IntroSection() {
   return (
     <section
       className="relative overflow-hidden w-screen pb-24 px-4"
+      style={{
+        backgroundImage: `url(${background.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <div
-        className="absolute w-full h-full"
-        style={{
-          backgroundImage: `url(${background.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      ></div>
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col justify-between items-start mb-16  pt-4 lg:pt-32">
           <h1 className="text-7xl xl:text-8xl text-white font-semibold">
