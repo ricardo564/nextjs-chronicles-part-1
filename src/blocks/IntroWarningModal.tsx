@@ -1,17 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "@/components/Modal";
+import { saveItemOnLocalStorage, getItemFromLocalStorage } from "@/utils/localStorage";
 
 export default function IntroWarningModal() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const userHasChosenToNotSeeAgain = getItemFromLocalStorage("intro-warning-modal") === "true" ? true : false;
+
+  const handleShowModalOnStart = () => {
+    if (userHasChosenToNotSeeAgain) {
+      setIsOpen(false);
+      saveItemOnLocalStorage("intro-warning-modal", "true");
+      return;
+    }
+
+    setIsOpen(true);
+    saveItemOnLocalStorage("intro-warning-modal", "false");
+  }
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+    saveItemOnLocalStorage("intro-warning-modal", "true");
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      handleShowModalOnStart();
+    }, 1000);
+  }, []);
 
   return (
     <Modal
-      id="study-project"
+      id="intro-warning-modal"
       title="Study Project"
       isOpen={isOpen}
-      onClose={() => setIsOpen(false)}
+      onClose={handleCloseModal}
       className="max-w-2xl"
     >
       <div className="space-y-6 p-2">
