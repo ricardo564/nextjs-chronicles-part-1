@@ -24,7 +24,7 @@ export function PlantCardContent({
   showBuyShortcut = true,
   contentClassName,
   showRemoveButton = true,
-  quantityClassName = "!h-[3.7rem]",
+  quantityClassName = "h-[3.7rem]",
 }: PlantCardProps) {
   const getRandomName = () => {
     const synonymsLength = plant.synonyms.length;
@@ -49,7 +49,9 @@ export function PlantCardContent({
         )}
       </div>
 
-      <div className={`flex flex-col w-full animate-slide-up ${contentClassName}`}>
+      <div
+        className={`flex flex-col w-full animate-slide-up ${contentClassName}`}
+      >
         <div className="flex flex-col w-full animate-slide-up">
           <p className="text-white text-sm mb-2">{getRandomName()}</p>
 
@@ -80,10 +82,16 @@ export function PlantCardContent({
         )}
 
         {showPrice && (
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 max-w-[19rem]">
             <ExploreShortcut plant={plant} />
 
-            {showBuyShortcut &&<BuyShortcut plant={plant} showRemoveButton={showRemoveButton} quantityClassName={quantityClassName} />}
+            {showBuyShortcut && (
+              <BuyShortcut
+                plant={plant}
+                showRemoveButton={showRemoveButton}
+                quantityClassName={quantityClassName}
+              />
+            )}
           </div>
         )}
       </div>
