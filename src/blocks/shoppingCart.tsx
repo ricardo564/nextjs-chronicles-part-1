@@ -8,6 +8,7 @@ import CheckoutShortcut from "./checkoutShortcut";
 import { useShoppingCartStore } from "@/store/shoppingCartStore";
 import { QuantityShortcut } from "./quantityShortcut";
 import { Modal } from "@/components/Modal";
+import { getUniqueId } from "@/utils/getUniqueId";
 
 interface ShoppingCartProps {
   className?: string;
@@ -159,7 +160,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
             {cartItems.length > 0 ? (
               cartItems.map((cartItem, index) => (
                 <div
-                  key={cartItem.item.id + index + "cart-item-on-cart"}
+                  key={`${cartItem.item.id}-${index}-cart-item-on-cart-${getUniqueId()}`}
                   className="flex w-full items-center p-4 gap-3 bg-white/5 rounded-lg"
                 >
                   <div className="w-1/5">

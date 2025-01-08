@@ -7,6 +7,7 @@ import Image from "next/image";
 import menuIcon from "@/assets/svg/menu-icon.svg";
 import { Logo } from "./Logo";
 import { handleWithBlockScroll } from "@/utils/handleWithBlockScroll";
+import { getUniqueId } from "@/utils/getUniqueId";
 
 interface MobileMenuProps {
   menuItems: MenuItem[];
@@ -75,7 +76,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
         >
           <ul className="flex flex-col items-center w-full mt-24">
             {menuItems.map((item, index) => (
-              <li key={item.label + index + "mobile-menu"}>
+              <li key={`${item.label}-${index}-mobile-menu-${getUniqueId()}`}>
                 <Link
                   href={item.to}
                   aria-label={item.ariaLabel}
