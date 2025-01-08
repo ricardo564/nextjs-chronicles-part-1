@@ -15,14 +15,12 @@ export default function IntroWarningModal() {
       className="max-w-2xl"
     >
       <div className="space-y-6 p-2">
-        {/* Mensagem principal */}
         <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-4 rounded-lg shadow-md">
           <p className="text-white text-lg font-medium text-center">
             Welcome to my study project! 🚀
           </p>
         </div>
 
-        {/* Sobre o projeto */}
         <div className="bg-gray-50 p-4 rounded-lg">
           <p className="text-gray-700 text-center leading-relaxed">
             This is a demonstration of my frontend development skills, focusing
@@ -30,7 +28,6 @@ export default function IntroWarningModal() {
           </p>
         </div>
 
-        {/* Links e contatos */}
         <div className="space-y-3">
           <a
             href="https://www.linkedin.com/in/ricardo-camilo-frontend-web-developer/"
@@ -71,7 +68,6 @@ export default function IntroWarningModal() {
           </a>
         </div>
 
-        {/* Créditos do design */}
         <div className="border-t pt-4 mt-4">
           <p className="text-sm text-gray-500 text-center">
             Design credits:
