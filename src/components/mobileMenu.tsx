@@ -29,7 +29,13 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
         className="flex items-center justify-between w-full"
         onClick={handleToggleMenu}
       >
-        <Image src={menuIcon} alt="Menu" width={24} height={24} />
+        <Image
+          src={menuIcon}
+          alt="Menu"
+          width={24}
+          height={24}
+          className="text-white scale-150"
+        />
       </button>
 
       <div
