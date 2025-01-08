@@ -12,7 +12,6 @@ interface PlantCardProps {
   showPrice?: boolean;
   showBuyShortcut?: boolean;
   contentClassName?: string;
-  showRemoveButton?: boolean;
   quantityClassName?: string;
 }
 
@@ -25,7 +24,6 @@ export function PlantCardContent({
   showPrice = false,
   showBuyShortcut = true,
   contentClassName,
-  showRemoveButton = true,
   quantityClassName = "h-[3.7rem]",
 }: PlantCardProps) {
   const getRandomName = () => {
@@ -73,29 +71,30 @@ export function PlantCardContent({
           </p>
         </div>
 
-        {!showPrice && (
-          <div className="w-full flex items-center justify-start animate-fade-in-delay">
-            <BuyShortcut
-              className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-              showIcon={false}
-              plant={plant}
-            />
-          </div>
-        )}
-
-        {showPrice && (
-          <div className="flex items-center gap-4 max-w-[19rem] lg:max-w-full">
-            <ExploreShortcut plant={plant} />
-
-            {showBuyShortcut && (
+        <div className="flex flex-col w-full justify-center items-center">
+          {!showPrice && (
+            <div className=" min-w-[15rem] max-w-[14rem] lg:max-w-full flex items-center justify-start animate-fade-in-delay">
               <BuyShortcut
+                className="px-6 py-3 bg-transparent backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
+                showIcon={false}
                 plant={plant}
-                showRemoveButton={showRemoveButton}
-                quantityClassName={quantityClassName}
               />
-            )}
-          </div>
-        )}
+            </div>
+          )}
+
+          {showPrice && (
+            <div className="min-h-[2rem] w-full grid md:grid-cols-2 min-w-[16rem] max-w-[25rem] space-x-6 gap-4 lg:max-w-full place-items-center">
+              <ExploreShortcut plant={plant} />
+
+              {showBuyShortcut && (
+                <BuyShortcut
+                  plant={plant}
+                  quantityClassName={quantityClassName}
+                />
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
