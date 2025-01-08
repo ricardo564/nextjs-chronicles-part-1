@@ -30,10 +30,11 @@ export const Modal: FC<ModalProps> = ({
     if (isOpen) {
       dialog.showModal();
       blockScroll(false);
-    } else {
-      dialog.close();
-      blockScroll(true);
+      return;
     }
+
+    dialog.close();
+    blockScroll(true);
   }, [isOpen]);
 
   return (
