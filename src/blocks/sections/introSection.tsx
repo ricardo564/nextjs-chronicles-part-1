@@ -55,6 +55,7 @@ export async function IntroSection() {
             />
 
             <LiveDemoShortcut
+              videoUrl={process.env.LIVE_DEMO_VIDEO_URL ?? ""}
               className="w-full md:w-auto"
             />
           </div>
