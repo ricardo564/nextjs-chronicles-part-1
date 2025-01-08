@@ -2,6 +2,7 @@
 
 import { FC, useCallback, useEffect, useState } from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
+import { getUniqueId } from '@/utils/getUniqueId'
 
 type UseSelectedSnapDisplayType = {
   selectedSnap: number
@@ -74,7 +75,7 @@ export const SelectedSnapDisplay: FC<PropType> = ({ selectedSnap, snapCount, cla
     <div className={`flex gap-2 items-center justify-center -z-[1] ${className}`}>
       {Array.from({ length: snapCount }).map((_, index) => (
         <div
-          key={index + "selected-snap-display"}
+          key={`${index}selected-snap-display${getUniqueId()}`}
           aria-label={`Slide ${index + 1} of ${snapCount}`}
           className={`h-2 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/70 cursor-pointer
             ${selectedSnap === index ? 'w-6' : 'w-2'}`}

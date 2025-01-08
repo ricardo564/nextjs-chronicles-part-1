@@ -1,6 +1,7 @@
 import { QuotedTitle } from "@/components/QuotedTitle";
 import { mockupPlants } from "@/static/mockupPlants";
 import { PlantCard } from "@/components/PlantCard";
+import { getUniqueId } from "@/utils/getUniqueId";
 
 export default async function TopSellingSection() {
   return (
@@ -15,7 +16,7 @@ export default async function TopSellingSection() {
         {mockupPlants.slice(1, mockupPlants.length).map((plant, index) => (
           <PlantCard
             containerClassName="w-full max-w-full min-w-full"
-            key={plant.id + index + "top-selling"}
+            key={`${plant.id}-${index}-top-selling-${getUniqueId()}`}
             plant={plant}
             showPrice={true}
             showRemoveButton={false}

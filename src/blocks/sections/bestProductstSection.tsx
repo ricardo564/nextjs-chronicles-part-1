@@ -2,6 +2,7 @@ import { QuotedTitle } from "@/components/QuotedTitle";
 import { mockupPlants } from "@/static/mockupPlants";
 import { EmblaCarousel } from "@/components/EmblaCarousel/EmblaCarousel";
 import { PlantCardContent } from "@/components/plantCardContent";
+import { getUniqueId } from "@/utils/getUniqueId";
 
 export const BestProductsSection = () => {
   return (
@@ -22,7 +23,7 @@ export const BestProductsSection = () => {
           {mockupPlants.map((plant, index) => (
             <div
               className="flex-[0_0_100%] min-w-[19rem] md:min-w-[80vw] relative"
-              key={plant.id + index + "best-product"}
+              key={`${plant.id}-${index}-best-product-${getUniqueId()}`}
             >
               <PlantCardContent
                 plant={plant}

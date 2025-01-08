@@ -102,7 +102,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
         >
           {Children.map(children, (child, index) => (
             <div
-              key={index + 'embla-carousel-slide' + carouselId}
+              key={`${index}embla-carousel-slide${carouselId}`}
               className="transition-opacity duration-300 pointer-events-auto"
             >
               {child}
