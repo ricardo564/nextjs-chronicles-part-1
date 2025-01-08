@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import Image from "next/image";
 import shopIcon from "@/assets/svg/shop-icon.svg";
 import { blockScroll } from "@/utils/handleWithBlockScroll";
@@ -9,6 +9,7 @@ import { useShoppingCartStore } from "@/store/shoppingCartStore";
 import { QuantityShortcut } from "./quantityShortcut";
 import { Modal } from "@/components/Modal";
 import { getUniqueId } from "@/utils/getUniqueId";
+import { CartItem } from "@/types/cartItem";
 
 interface ShoppingCartProps {
   className?: string;
@@ -25,18 +26,13 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
     blockScroll(isOpen);
   };
 
-  const totalItems = () => {
+  const totalItems = useMemo(() => {
     const totalOnStore = cartItems.reduce(
       (acc, item) => acc + item.quantity,
       0
     );
-
-    if (totalOnStore > 99) {
-      return "99+";
-    }
-
-    return totalOnStore;
-  };
+    return totalOnStore > 99 ? "99+" : totalOnStore;
+  }, [cartItems]);
 
   const handleClearCartConfirm = () => {
     clearCart();
@@ -45,6 +41,41 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
 
   useEffect(() => {
   }, [cartItems]);
+
+  const renderCartItem = useCallback((cartItem: CartItem, index: number) => (
+    <div
+      key={`${cartItem.item.id}-${index}-cart-item-on-cart-${getUniqueId()}`}
+      className="flex w-full items-center p-4 gap-3 bg-white/5 rounded-lg"
+    >
+      <div className="w-1/5">
+        <Image
+          src={cartItem.item.image_url}
+          alt={
+            cartItem.item.common_name ||
+            cartItem.item.scientific_name
+          }
+          width={80}
+          height={80}
+          className="w-full h-auto object-cover rounded scale-150 overflow-hidden border border-white/20 max-h-[4.7rem] ml-1"
+        />
+      </div>
+
+      <div className="w-[65%] px-4 flex flex-col space-y-1">
+        <h3 className="font-medium text-lg">
+          {cartItem.item.common_name ||
+            cartItem.item.scientific_name}
+        </h3>
+        <span className="text-sm text-gray-300">
+          Quantity: {cartItem.quantity}
+        </span>
+        <span className="font-semibold">
+          ${cartItem.item.genus_id * cartItem.quantity}
+        </span>
+      </div>
+
+      <QuantityShortcut cartItem={cartItem} />
+    </div>
+  ), []);
 
   return (
     <div className={`flex flex-col items-center space-y-4 ${className}`}>
@@ -59,7 +90,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
         />
         {cartItems.length > 0 && (
           <span className="absolute -top-1 right-0 text-white text-lg font-bold rounded-full bg-primary w-6 h-6 flex items-center justify-center border border-white/20">
-            {totalItems()}
+            {totalItems}
           </span>
         )}
       </button>
@@ -157,40 +188,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
             className={`flex flex-col items-center space-y-4 min-w-[17rem] px-2 h-[80vh] mt-[5rem] pb-[10rem] text-white`}
           >
             {cartItems.length > 0 ? (
-              cartItems.map((cartItem, index) => (
-                <div
-                  key={`${cartItem.item.id}-${index}-cart-item-on-cart-${getUniqueId()}`}
-                  className="flex w-full items-center p-4 gap-3 bg-white/5 rounded-lg"
-                >
-                  <div className="w-1/5">
-                    <Image
-                      src={cartItem.item.image_url}
-                      alt={
-                        cartItem.item.common_name ||
-                        cartItem.item.scientific_name
-                      }
-                      width={80}
-                      height={80}
-                      className="w-full h-auto object-cover rounded scale-150 overflow-hidden border border-white/20 max-h-[4.7rem] ml-1"
-                    />
-                  </div>
-
-                  <div className="w-[65%] px-4 flex flex-col space-y-1">
-                    <h3 className="font-medium text-lg">
-                      {cartItem.item.common_name ||
-                        cartItem.item.scientific_name}
-                    </h3>
-                    <span className="text-sm text-gray-300">
-                      Quantity: {cartItem.quantity}
-                    </span>
-                    <span className="font-semibold">
-                      ${cartItem.item.genus_id * cartItem.quantity}
-                    </span>
-                  </div>
-
-                  <QuantityShortcut cartItem={cartItem} />
-                </div>
-              ))
+              cartItems.map((cartItem, index) => renderCartItem(cartItem, index))
             ) : (
               <p>No items in cart</p>
             )}
