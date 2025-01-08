@@ -48,7 +48,7 @@ export async function IntroSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 max-w-[23rem]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:max-w-[23rem]">
             <ExploreShortcut
               plant={mockupPlants[1]}
               className="w-full"
