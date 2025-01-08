@@ -82,7 +82,7 @@ export function PlantCardContent({
         )}
 
         {showPrice && (
-          <div className="flex items-center gap-4 max-w-[19rem]">
+          <div className="flex items-center gap-4 max-w-[19rem] lg:max-w-full">
             <ExploreShortcut plant={plant} />
 
             {showBuyShortcut && (
