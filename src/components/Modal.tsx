@@ -53,11 +53,11 @@ export const Modal: FC<ModalProps> = ({
             id={id}
             open={isOpen}
             className={`
-          w-full max-w-md rounded-lg bg-white p-6 shadow-xl
-          transition-all duration-200 !z-[999] mt-[30%]
-          ${className}
-          ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
-        `}
+              w-full max-w-md rounded-lg bg-white p-6 shadow-xl
+              transition-all duration-200 !z-[999] mt-[30%]
+              ${className}
+              ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
+            `}
             role={isModal ? "dialog" : "alertdialog"}
             aria-labelledby={`${id}-title`}
             aria-modal={isModal}
