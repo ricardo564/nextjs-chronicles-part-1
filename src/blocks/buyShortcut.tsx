@@ -10,7 +10,6 @@ interface BuyShortcutProps {
   plant: Plant;
   className?: string;
   showIcon?: boolean;
-  showRemoveButton?: boolean;
   quantityClassName?: string;
 }
 
@@ -18,7 +17,6 @@ export const BuyShortcut = ({
   plant,
   className,
   showIcon = true,
-  showRemoveButton = true,
   quantityClassName,
 }: BuyShortcutProps) => {
   const { addItem } = useShoppingCartStore();
@@ -31,14 +29,13 @@ export const BuyShortcut = ({
   return itemExistsOnCart() ? (
     <QuantityShortcut
       cartItem={{ item: plant, quantity: 1 }}
-      className={`w-full md:w-auto max-w-[7rem] !flex-row px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center mr-auto ${quantityClassName}`}
-      showRemoveButton={showRemoveButton}
+      className={`${quantityClassName}`}
     />
   ) : (
     <button
       onClick={() => addItem(plant)}
       type="button"
-        className={`w-full md:w-auto flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center ${className}`}
+        className={`w-full md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center ${className}`}
         title={`Buy ${plant.common_name || plant.scientific_name} plants`}
       >
         {showIcon && (
