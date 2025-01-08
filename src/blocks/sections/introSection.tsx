@@ -37,7 +37,7 @@ export async function IntroSection() {
         }}
       ></div>
       <div className="max-w-7xl mx-auto relative">
-        <div className="flex flex-col justify-between items-start mb-16  pt-4 md:pt-32">
+        <div className="flex flex-col justify-between items-start mb-16  pt-4 lg:pt-32">
           <h1 className="text-7xl xl:text-8xl text-white font-semibold">
             Breath Natureal
           </h1>
@@ -51,15 +51,15 @@ export async function IntroSection() {
             </p>
           </div>
 
-          <div className="flex md:flex-row flex-col gap-4 relative justify-between w-full max-w-md">
+          <div className="flex lg:flex-row flex-col gap-4 relative justify-between w-full max-w-md">
             <ExploreShortcut
               plant={mockupPlants[1]}
-              className="w-full md:w-auto"
+              className="w-full lg:w-auto"
             />
 
             <LiveDemoShortcut
               videoUrl={process.env.LIVE_DEMO_VIDEO_URL ?? ""}
-              className="w-full md:w-auto"
+              className="w-full lg:w-auto"
             />
           </div>
 
@@ -73,13 +73,13 @@ export async function IntroSection() {
 
         <div className="lg:absolute lg:top-[1rem] lg:right-0 mx-auto w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
           <EmblaCarousel
-            className="relative w-full max-w-[20rem] md:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 md:ml-12"
+            className="relative w-full max-w-[20rem] lg:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 lg:ml-12"
             options={{ loop: true }}
             snapDisplayClassName="absolute bottom-[4rem] left-0 w-full"
           >
             {mockupPlants.map((plant, index) => (
               <div
-                className="flex-[0_0_100%] min-w-[19rem] md:min-w-[20rem] relative mx-auto"
+                className="flex-[0_0_100%] min-w-[19rem] lg:min-w-[20rem] relative mx-auto"
                 key={`${plant.id}-${index}-intro-carousel-${getUniqueId()}`}
               >
                 <PlantCardContent
