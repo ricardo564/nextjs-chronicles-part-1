@@ -45,10 +45,10 @@ export const Modal: FC<ModalProps> = ({
     try {
       if (isOpen) {
         dialog.showModal();
-        blockScroll(true);
+        blockScroll(false);
       } else {
         dialog.close();
-        blockScroll(false);
+        blockScroll(true);
       }
     } catch (error) {
       console.error('Modal operation failed:', error);
