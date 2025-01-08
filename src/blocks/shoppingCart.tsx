@@ -144,7 +144,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
                   </button>
                   <button
                     onClick={() => handleClearCartConfirm()}
-                    className=" text-white px-4 py-2 rounded-md w-full"
+                    className=" text-white bg-red-500 px-4 py-2 rounded-md w-full"
                   >
                     Clear
                   </button>
