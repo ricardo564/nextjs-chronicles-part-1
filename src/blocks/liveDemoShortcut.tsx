@@ -23,7 +23,7 @@ export function LiveDemoShortcut({ className, videoUrl }: LiveDemoShortcutProps)
   return (
     <>
       <button
-        className={`min-w-[13rem] group flex items-center gap-3 px-6 py-3 rounded-full w-full ${className}`}
+        className={`min-w-[20rem] md:min-w-[13rem] group flex items-center gap-3 px-6 py-3 rounded-full w-full ${className}`}
         aria-label="View Live Demo"
         title="View Live Demo"
         onClick={handleOpenModal}
