@@ -19,7 +19,6 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
   const [url, setUrl] = useState("");
   const videoOptions: VideoOption[] = [
     {
-      // eslint-disable-next-line no-useless-escape
       reg: /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/i,
       url: "https://www.youtube.com/embed/$5",
       params: {
@@ -38,7 +37,6 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
       },
     },
     {
-      // eslint-disable-next-line no-useless-escape
       reg: /^.*(?:\/video|dai.ly)\/([A-Za-z0-9]+)([^#\&\?]*).*/i,
       url: "https://www.dailymotion.com/embed/video/$1",
       params: {
@@ -46,7 +44,6 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
       },
     },
     {
-      // eslint-disable-next-line no-useless-escape
       reg: /^.*coub.com\/(?:embed|view)\/([A-Za-z0-9]+)([^#\&\?]*).*/i,
       url: "https://coub.com/embed/$1",
       params: {
@@ -86,6 +83,8 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
     <div
       id="video-embed"
       className={`flex h-full my-12 w-full py-0 overflow-hidden ${className}`}
+      role="region"
+      aria-label={title || "Video player"}
     >
       <iframe
         className="h-full border-0 min-h-96 w-full top-0 left-0 aspect-video overflow-hidden"
@@ -93,14 +92,25 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title }) => {
         sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation allow-presentation allow-popups"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        title={title}
+        title={title || "Embedded video content"}
         src={url}
+        aria-hidden="false"
       />
     </div>
   ) : (
-    <div className="flex h-full my-12 w-full py-0 overflow-hidden">
-      <div className="h-full border-0 min-h-96 w-full top-0 left-0 aspect-video overflow-hidden">
-        <div className="flex items-center justify-center h-full text-2xl text-gray-500">
+    <div
+      className="flex h-full my-12 w-full py-0 overflow-hidden"
+      role="alert"
+      aria-live="polite"
+    >
+      <div
+        className="h-full border-0 min-h-96 w-full top-0 left-0 aspect-video overflow-hidden"
+        role="presentation"
+      >
+        <div
+          className="flex items-center justify-center h-full text-2xl text-gray-500"
+          aria-label="Error message"
+        >
           <span>Invalid video link</span>
         </div>
       </div>
