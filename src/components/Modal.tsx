@@ -1,5 +1,7 @@
+"use client";
+
 import type { FC } from "react";
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { blockScroll } from "@/utils/handleWithBlockScroll";
 
 interface ModalProps {
@@ -21,21 +23,26 @@ export const Modal: FC<ModalProps> = ({
   className,
 }) => {
   const modalRef = useRef<HTMLDialogElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const dialog = modalRef.current;
-
-    if (!dialog) return;
+    if (!dialog || !isMounted) return;
 
     if (isOpen) {
       dialog.showModal();
+      blockScroll(true);
+    } else {
+      dialog.close();
       blockScroll(false);
-      return;
     }
+  }, [isOpen, isMounted]);
 
-    dialog.close();
-    blockScroll(true);
-  }, [isOpen]);
+  if (!isMounted) return null;
 
   return (
     <dialog
@@ -55,20 +62,20 @@ export const Modal: FC<ModalProps> = ({
             className="text-black/80 hover:text-red-500"
             aria-label="Close modal"
           >
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+            <svg
+              className="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </button>
         </header>
         {children}
