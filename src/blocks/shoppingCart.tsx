@@ -65,7 +65,7 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
       </button>
 
       <div
-        className={`absolute inset-y-0 right-0 flex-grow w-full bg-primary/90 backdrop-blur-sm h-[99vh] border-l border-white/20 shadow-sm max-w-xs md:max-w-sm -top-4 z-[9999] ${
+        className={`absolute inset-y-0 right-0 flex-grow w-full bg-primary/90 backdrop-blur-sm h-[99vh] md:h-screen border-l border-white/20 shadow-sm max-w-xs md:max-w-sm -top-4 z-[9999] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
@@ -196,8 +196,8 @@ export function ShoppingCart({ className }: ShoppingCartProps) {
             )}
           </div>
 
-          <div className="fixed mt-auto bottom-0 w-full bg-transparent">
-            <CheckoutShortcut className="w-full max-w-[17rem] mx-auto " />
+          <div className="fixed mt-auto bottom-0 w-full bg-transparent md:mb-2">
+            <CheckoutShortcut className="w-full max-w-[17rem] md:max-w-sm md:px-2 mx-auto " />
           </div>
         </div>
       </div>
