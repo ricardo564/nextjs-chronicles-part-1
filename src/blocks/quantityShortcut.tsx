@@ -17,6 +17,7 @@ export function QuantityShortcut({
   showRemoveButton = true,
 }: ShoppingCartProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const cartItemQuantity = useShoppingCartStore.getState().items.find(item => item.item.id === cartItem.item.id)?.quantity;
   const removeItem = useShoppingCartStore((state) => state.removeItem);
   const incrementItemQuantity = useShoppingCartStore((state) => state.addItem);
 
@@ -29,7 +30,8 @@ export function QuantityShortcut({
   };
 
   const handleWithdrawItem = () => {
-    if (cartItem.quantity === 1) {
+
+    if (cartItemQuantity === 1) {
       toggleModal();
       return;
     }
