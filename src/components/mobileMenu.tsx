@@ -48,7 +48,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
           <Logo />
 
           <Button
-            className="flex items-center justify-end mr-4 ml-24 mt-1 text-white hover:bg-white/10 hover:text-red-500/90 !rounded-full p-2 border-none transition-colors duration-200 hover:bg-transparent"
+            className="flex items-center justify-end mr-4 ml-24 mt-1 text-white hover:text-red-500/90 !rounded-full p-2 border-none transition-colors duration-200 hover:bg-transparent"
             onClick={handleToggleMenu}
           >
             <svg
