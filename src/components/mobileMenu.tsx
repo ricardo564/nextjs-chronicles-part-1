@@ -35,7 +35,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
           alt="Menu"
           width={24}
           height={24}
-          className="text-white scale-150"
+          className="md:w-11 md:h-11 max-w-[44px] max-h-[44px]"
         />
       </Button>
 
