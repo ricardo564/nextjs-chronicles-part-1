@@ -25,7 +25,7 @@ export function Header({ menuItems }: HeaderProps) {
 
             <ShoppingCart />
 
-            <MobileMenu menuItems={menuItems} className="md:hidden" />
+            <MobileMenu menuItems={menuItems} className="lg:hidden" />
           </div>
         </div>
       </nav>
