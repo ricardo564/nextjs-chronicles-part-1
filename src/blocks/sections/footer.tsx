@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
             </a>
           ))}
         </div>
-        <p className="text-gray-300">
+        <p className="text-gray-300 text-center md:text-end w-full">
           © {new Date().getFullYear()} Planto. All rights reserved. Bringing
           nature indoors.
         </p>
