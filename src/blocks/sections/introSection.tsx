@@ -69,7 +69,7 @@ export async function IntroSection() {
 
         <div className="lg:absolute lg:top-[1rem] lg:right-0 mx-auto w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
           <EmblaCarousel
-            className="relative w-full max-w-[20rem] lg:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 lg:ml-12"
+            className="relative w-full max-w-[20rem] sm:max-w-[99vw] lg:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 lg:ml-12"
             options={{ loop: true }}
             snapDisplayClassName="absolute bottom-[4rem] left-0 w-full"
           >
