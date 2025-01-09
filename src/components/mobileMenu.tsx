@@ -27,7 +27,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
   return (
     <div className={`flex flex-col items-center space-y-4 ${className}`}>
       <Button
-        className="flex items-center justify-between w-full"
+        className="flex items-center justify-between w-full h-16 border-none"
         onClick={handleToggleMenu}
       >
         <Image
