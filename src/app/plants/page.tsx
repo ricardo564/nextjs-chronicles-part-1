@@ -28,7 +28,7 @@ export default async function PlantsPage() {
               {plants.map((plant, index) => (
                 <PlantCard
                   containerClassName="w-full bg-white/5 backdrop-blur-sm rounded-2xl p-6 relative flex flex-col items-center shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10"
-                  imageClassName="rounded-full overflow-hidden w-[120px] h-[120px] md:w-[9rem] md:h-[9rem] -mt-[2.5rem] md:-mt-[10rem] shadow-lg border-4 border-white/10 ml-12"
+                  imageClassName="rounded-full overflow-hidden !w-[120px] !h-[120px] md:!w-[9rem] md:!h-[9rem] !-mt-[2.5rem] md:!-mt-[10rem] shadow-lg border-4 border-white/10 ml-12"
                   shopIconClassName="min-w-[17rem] w-full"
                   quantityClassName="!min-w-[17rem] !w-full md:!ml-[11rem]"
                   key={`${plant.id}-${index}-plant-card-${getUniqueId()}`}
