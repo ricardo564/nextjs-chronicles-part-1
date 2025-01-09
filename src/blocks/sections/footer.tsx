@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 max-w-[25rem] md:ml-auto">
+          <div className="flex flex-col gap-4 md:max-w-[25rem] md:ml-auto">
             <h3 className="text-xl font-semibold mb-4">Stay Connected</h3>
             <p className="text-gray-300 mb-4">
               Subscribe to receive care tips, special offers, and updates about
