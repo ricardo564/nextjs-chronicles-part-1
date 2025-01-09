@@ -144,7 +144,7 @@ const DropdownSelect: FC<Props> = ({
         </div>
       </div>
       {isDropdownOpen && (
-        <div className="absolute top-full left-0 w-full place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center disabled:cursor-not-allowed border-base-gray shadow-md max-h-[20rem] overflow-hidden overflow-y-auto -mt-1">
+        <div className="absolute top-full left-0 w-full place-self-start flex items-center justify-center px-6 py-2 border bg-primary/90 backdrop-blur-sm border-white/20 text-white rounded-lg transition-all duration-300 text-center disabled:cursor-not-allowed border-base-gray shadow-md max-h-[20rem] overflow-hidden overflow-y-auto -mt-1">
           <ul className="list-none py-2 w-full">
             {filteredOptions.map(({ label, value }, index) => (
               <li key={`${getUniqueId()}-${label}-${value}-${index}`} className=  "w-full">
