@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/Button";
 import { Modal } from "@/components/Modal";
 import VideoPlayer from "@/components/VideoPlayer";
 import { useState } from 'react';
@@ -22,8 +23,8 @@ export function LiveDemoShortcut({ className, videoUrl }: LiveDemoShortcutProps)
 
   return (
     <>
-      <button
-        className={`min-w-[20rem] md:min-w-[13rem] group flex items-center gap-3 px-6 py-3 rounded-full w-full ${className}`}
+      <Button
+        className={`min-w-[20rem] md:min-w-[13rem] group flex items-center gap-3 px-6 py-3 rounded-full w-full border-none ${className}`}
         aria-label="View Live Demo"
         title="View Live Demo"
         onClick={handleOpenModal}
@@ -38,7 +39,7 @@ export function LiveDemoShortcut({ className, videoUrl }: LiveDemoShortcutProps)
             Live Demo...
           </span>
         </div>
-      </button>
+      </Button>
 
       <Modal
         id="live-demo-modal"
