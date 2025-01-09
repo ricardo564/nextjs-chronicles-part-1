@@ -87,7 +87,7 @@ export function PlantCardContent({
           )}
 
           {showPrice && (
-            <div className="min-h-[2rem] w-full grid md:grid-cols-2 min-w-[16rem] max-w-[25rem] md:space-x-6 gap-4 lg:max-w-full place-items-center">
+            <div className="min-h-[2rem] w-full grid md:grid-cols-2 min-w-[16rem] max-w-[25rem] md:space-x-6 gap-8 lg:max-w-full place-items-center md:ml-6 px-2">
               {showExploreShortcut && (
                 <ExploreShortcut plant={plant} />
               )}
