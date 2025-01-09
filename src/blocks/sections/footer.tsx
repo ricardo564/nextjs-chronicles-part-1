@@ -3,6 +3,7 @@ import { Logo } from "@/components/Logo";
 import { quickLinks, socialLinks } from "@/static/footer";
 import { getRandomLinkForRedirection } from "@/utils/getRandomLinkForRedirection";
 import { getUniqueId } from "@/utils/getUniqueId";
+import Button from "@/components/Button";
 
 const Footer: React.FC = () => {
   return (
@@ -58,12 +59,11 @@ const Footer: React.FC = () => {
                 className="bg-transparent border border-gray-600 rounded px-4 py-2 w-full md:w-auto"
                 aria-label="Email for newsletter"
               />
-              <button
+              <Button
                 type="submit"
-                className="px-6 py-2 border border-white text-black hover:text-white bg-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center uppercase font-semibold w-full md:w-auto"
-              >
-                subscribe
-              </button>
+                label="subscribe"
+                className="px-6 py-2 border border-white !text-black hover:!text-white bg-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center uppercase font-semibold w-full md:w-auto"
+              />
             </form>
           </div>
         </div>
