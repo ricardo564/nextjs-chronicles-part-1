@@ -13,7 +13,7 @@ export const BestProductsSection = () => {
         </QuotedTitle>
       </div>
 
-      <div className="w-full md:max-w-[64rem] mx-auto mt-32">
+      <div className="w-full sm:max-w-[95vw] lg:max-w-[64rem] mx-auto mt-32">
         <EmblaCarousel
           carouselId={`embla-carousel-best-products-${getUniqueId()}`}
           className="w-full bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/10"
@@ -22,14 +22,14 @@ export const BestProductsSection = () => {
         >
           {mockupPlants.map((plant, index) => (
             <div
-              className="flex-[0_0_100%] min-w-[19rem] md:min-w-[80vw] relative"
+              className="flex-[0_0_100%] min-w-[19rem] md:min-w-[60rem] relative"
               key={`${plant.id}-${index}-best-product-${getUniqueId()}`}
             >
               <PlantCardContent
                 plant={plant}
                 containerClassName="grid md:grid-cols-2 items-center gap-8 px-4"
                 contentClassName="space-y-6"
-                imageClassName="w-[10rem] h-[10rem] mx-auto -right-16 top-8 md:scale-150"
+                imageClassName="w-[10rem] h-[10rem] mx-auto lg:-right-16 top-8 md:scale-150"
                 showPrice={true}
                 showBuyShortcut={false}
               />
