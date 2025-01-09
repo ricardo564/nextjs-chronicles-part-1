@@ -15,7 +15,7 @@ export const TestimonialCard = ({
 }: TestimonialCardProps) => {
   return (
     <div
-      className={`rounded-3xl bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md p-8 border border-white/20 md:max-w-[25rem] ${className}`}
+      className={`rounded-3xl bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md p-8 border border-white/20 lg:max-w-[25rem] ${className}`}
     >
       <div className="flex items-center gap-4 my-auto">
         <Image
