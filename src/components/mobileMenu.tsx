@@ -86,12 +86,12 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
             {menuItems.map((item, index) => (
               <li
                 key={`${item.label}-${index}-mobile-menu-${getUniqueId()}`}
-                className="w-full"
+                className="w-full hover:bg-white/10 transition-all duration-300 hover:border-b-white border-b border-transparent"
               >
                 <Link
                   href={item.to}
                   aria-label={item.ariaLabel}
-                  className="flex items-center justify-center w-full px-3 py-2 text-sm font-medium text-white rounded-md transition-colors duration-200 hover:underline hover:text-white"
+                  className="flex items-center justify-center w-full px-3 py-2 text-sm font-medium text-white rounded-md transition-colors duration-200"
                   onClick={handleToggleMenu}
                 >
                   {item.label}
