@@ -46,25 +46,24 @@ export const EmblaCarousel: FC<PropType> = (props) => {
   const updateSlidesVisibility = () => {
     if (!emblaApi || !hideInactiveSlides) return
 
-    requestAnimationFrame(() => {
-      const viewport = document.getElementById(carouselId)
-      if (!viewport) return
+    const viewport = document.getElementById(carouselId)
+    if (!viewport) return
 
-      const viewportRect = viewport.getBoundingClientRect()
-      const slideNodes = emblaApi.slideNodes()
+    const viewportRect = viewport.getBoundingClientRect()
+    const slideNodes = emblaApi.slideNodes()
 
-      const tolerance = 100
+    const tolerance = 200
 
-      slideNodes.forEach((slide) => {
-        const slideRect = slide.getBoundingClientRect()
-        const isVisible = (
-          slideRect.left >= viewportRect.left - tolerance &&
-          slideRect.right <= viewportRect.right + tolerance
-        )
+    slideNodes.forEach((slide) => {
+      const slideRect = slide.getBoundingClientRect()
+      const isVisible = (
+        slideRect.left >= viewportRect.left - tolerance &&
+        slideRect.right <= viewportRect.right + tolerance
+      )
 
-        slide.classList.toggle('opacity-0', !isVisible)
-        slide.classList.toggle('opacity-100', isVisible)
-      })
+      slide.classList.toggle('opacity-0', !isVisible)
+      slide.classList.toggle('opacity-100', isVisible)
+      slide.classList.toggle('pointer-events-none', !isVisible)
     })
   }
 
@@ -78,17 +77,19 @@ export const EmblaCarousel: FC<PropType> = (props) => {
 
     const timer = setTimeout(() => {
       updateSlidesVisibility()
-    }, 100)
+    }, 50)
 
     emblaApi.on('scroll', updateSlidesVisibility)
     emblaApi.on('reInit', updateSlidesVisibility)
     emblaApi.on('select', updateSlidesVisibility)
+    emblaApi.on('settle', updateSlidesVisibility)
 
     return () => {
       clearTimeout(timer)
       emblaApi.off('scroll', updateSlidesVisibility)
       emblaApi.off('reInit', updateSlidesVisibility)
       emblaApi.off('select', updateSlidesVisibility)
+      emblaApi.off('settle', updateSlidesVisibility)
     }
   }, [emblaApi])
 
