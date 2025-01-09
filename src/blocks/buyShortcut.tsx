@@ -5,6 +5,7 @@ import Image from "next/image";
 import shopIcon from "@/assets/svg/shop-icon.svg";
 import { useShoppingCartStore } from "@/store/shoppingCartStore";
 import { QuantityShortcut } from "./quantityShortcut";
+import Button from "@/components/Button";
 
 interface BuyShortcutProps {
   plant: Plant;
@@ -12,6 +13,7 @@ interface BuyShortcutProps {
   showIcon?: boolean;
   quantityClassName?: string;
   shopIconClassName?: string;
+  loading?: boolean;
 }
 
 export const BuyShortcut = ({
@@ -20,6 +22,7 @@ export const BuyShortcut = ({
   shopIconClassName,
   showIcon = true,
   quantityClassName,
+  loading,
 }: BuyShortcutProps) => {
   const { addItem } = useShoppingCartStore();
 
@@ -34,12 +37,13 @@ export const BuyShortcut = ({
       className={`${quantityClassName}`}
     />
   ) : (
-    <button
+    <Button
       onClick={() => addItem(plant)}
       type="button"
-        className={`w-full md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center ${className}`}
-        title={`Buy ${plant.common_name || plant.scientific_name} plants`}
-      >
+      loading={loading}
+      className={`${className}`}
+      title={`Buy ${plant.common_name || plant.scientific_name} plants`}
+    >
         {showIcon && (
           <Image
             src={shopIcon}
@@ -48,6 +52,6 @@ export const BuyShortcut = ({
           />
         )}
       {!showIcon && <span className="text-sm">Buy now</span>}
-    </button>
+    </Button>
   );
 };
