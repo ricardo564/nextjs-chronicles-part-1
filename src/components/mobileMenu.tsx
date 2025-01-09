@@ -8,6 +8,7 @@ import menuIcon from "@/assets/svg/menu-icon.svg";
 import { Logo } from "./Logo";
 import { blockScroll } from "@/utils/handleWithBlockScroll";
 import { getUniqueId } from "@/utils/getUniqueId";
+import Button from "./Button";
 
 interface MobileMenuProps {
   menuItems: MenuItem[];
@@ -25,7 +26,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
 
   return (
     <div className={`flex flex-col items-center space-y-4 ${className}`}>
-      <button
+      <Button
         className="flex items-center justify-between w-full"
         onClick={handleToggleMenu}
       >
@@ -36,7 +37,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
           height={24}
           className="text-white scale-150"
         />
-      </button>
+      </Button>
 
       <div
         className={`flex-w-full absolute inset-y-0 left-0 w-full bg-primary/90 backdrop-blur-sm min-h-screen border-r border-white/20 shadow-sm z-[6] max-w-xs -top-4 p-2 ${
@@ -46,11 +47,12 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
         <div className="flex items-center justify-between w-full">
           <Logo />
 
-          <button
-            className="flex items-center justify-center mr-4 mt-1 hover:bg-white/10 hover:text-red-500 rounded-full p-2"
+          <Button
+            className="flex items-center justify-end mr-4 ml-24 mt-1 text-white hover:bg-white/10 hover:text-red-500/90 !rounded-full p-2 border-none transition-colors duration-200 hover:bg-transparent"
             onClick={handleToggleMenu}
           >
             <svg
+              className="h-5 w-5 ml-auto"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -59,22 +61,22 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
               <path
                 fill="none"
                 stroke="currentColor"
-                strokeDasharray="12"
-                strokeDashoffset="12"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
+                stroke-dasharray="12"
+                stroke-dashoffset="12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
                 d="M12 12l7 7M12 12l-7 -7M12 12l-7 7M12 12l7 -7"
               >
                 <animate
                   fill="freeze"
-                  attributeName="strokeDashoffset"
+                  attributeName="stroke-dashoffset"
                   dur="0.3s"
                   values="12;0"
                 />
               </path>
             </svg>
-          </button>
+          </Button>
         </div>
 
         <div
@@ -96,12 +98,12 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
           </ul>
         </div>
       </div>
-      <button
+      <Button
         className={` min-w-screen min-h-screen bg-black/10 backdrop-blur-xs z-[5] -top-4 ${
           isOpen ? "absolute inset-0" : "hidden"
         } transition-transform duration-300`}
         onClick={handleToggleMenu}
-      ></button>
+      ></Button>
     </div>
   );
 }
