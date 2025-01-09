@@ -89,7 +89,7 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
       >
         <Image
           src={shopIcon}
-          className="w-11 h-11 max-w-[44px] max-h-[44px]"
+          className="md:w-11 md:h-11 max-w-[44px] max-h-[44px]"
           alt="Shop icon"
         />
         {cartItems.length > 0 && (
