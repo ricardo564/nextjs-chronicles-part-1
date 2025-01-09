@@ -91,7 +91,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
       emblaApi.off('select', updateSlidesVisibility)
       emblaApi.off('settle', updateSlidesVisibility)
     }
-  }, [emblaApi])
+  }, [emblaApi, hideInactiveSlides, selectedSnap])
 
   return (
     <section
