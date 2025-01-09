@@ -82,13 +82,16 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
         <div
           className={`flex flex-col items-center space-y-4 min-w-[17rem] pt-8 -mt-[5rem]`}
         >
-          <ul className="flex flex-col items-center w-full mt-24">
+          <ul className="flex flex-col items-center gap-2 w-full mt-24">
             {menuItems.map((item, index) => (
-              <li key={`${item.label}-${index}-mobile-menu-${getUniqueId()}`}>
+              <li
+                key={`${item.label}-${index}-mobile-menu-${getUniqueId()}`}
+                className="w-full"
+              >
                 <Link
                   href={item.to}
                   aria-label={item.ariaLabel}
-                  className="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:underline w-full text-center pb-2"
+                  className="flex items-center justify-center w-full px-3 py-2 text-sm font-medium text-white rounded-md transition-colors duration-200 hover:underline hover:text-white"
                   onClick={handleToggleMenu}
                 >
                   {item.label}
