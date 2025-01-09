@@ -76,7 +76,7 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
 
       <QuantityShortcut
         cartItem={cartItem}
-        className="flex-col min-w-[0.001rem] w-[3rem] relative -mr-4 border-none"
+        className="!flex-col !min-w-[0.001rem] !w-[3rem] !relative !-mr-4 !border-none"
       />
     </div>
   ), []);
