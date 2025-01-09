@@ -15,10 +15,11 @@ export const SearchShortcut = ({ className, label }: SearchShortcutProps) => {
       href={`/plants`}
     >
       <Image
-        src={searchIcon}
         alt="Search icon"
+        className="md:w-11 md:h-11 max-w-[44px] max-h-[44px]"
         width={26}
         height={26}
+        src={searchIcon}
       />
       {label}
     </Link>
