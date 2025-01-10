@@ -37,6 +37,10 @@ export default {
           '0%': { transform: 'scale(0.9)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
+        'fade-in-from-left': {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-out',
@@ -44,6 +48,7 @@ export default {
         'slide-up': 'slide-up 0.5s ease-out',
         'slide-down': 'slide-down 0.5s ease-out',
         'scale-in': 'scale-in 0.5s ease-out',
+        'fade-in-from-left': 'fade-in-from-left 0.5s ease-out',
       },
     },
   },
