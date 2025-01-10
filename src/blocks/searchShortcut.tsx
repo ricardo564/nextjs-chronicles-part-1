@@ -56,7 +56,7 @@ export const SearchShortcut = ({ className, label }: SearchShortcutProps) => {
       >
         <Image
           alt="Search icon"
-          className="md:w-11 md:h-11 max-w-[44px] max-h-[44px]"
+          className="md:w-10 md:h-10 max-w-max max-h-[34px]"
           width={26}
           height={26}
           src={searchIcon}
