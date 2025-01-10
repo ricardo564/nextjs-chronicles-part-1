@@ -1,0 +1,1 @@
+export const ANALYTICS_LOCAL_STORAGE_NAME = "analytics-enabled"
