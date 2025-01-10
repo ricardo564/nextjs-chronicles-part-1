@@ -2,7 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { Modal } from "@/components/Modal";
-import { saveItemOnLocalStorage, getItemFromLocalStorage } from "@/utils/localStorage";
+import {
+  saveItemOnLocalStorage,
+  getItemFromLocalStorage,
+} from "@/utils/localStorage";
 import { ANALYTICS_LOCAL_STORAGE_NAME } from "@/static/analyticsLocalStorageName";
 
 export default function IntroWarningModal() {
@@ -12,23 +15,32 @@ export default function IntroWarningModal() {
 
   useEffect(() => {
     setIsMounted(true);
-    const userHasChosenToNotSeeAgain = getItemFromLocalStorage("intro-warning-modal") === "true";
+    const userHasChosenToNotSeeAgain =
+      getItemFromLocalStorage("intro-warning-modal") === "true";
 
     if (!getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME)) {
       saveItemOnLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME, "true");
     }
 
-    setAnalyticsEnabled(getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME) === "true");
+    setAnalyticsEnabled(
+      getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME) === "true"
+    );
 
     const timer = setTimeout(() => {
       if (userHasChosenToNotSeeAgain) {
         setIsOpen(false);
         saveItemOnLocalStorage("intro-warning-modal", "true");
-        saveItemOnLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME, analyticsEnabled.toString());
+        saveItemOnLocalStorage(
+          ANALYTICS_LOCAL_STORAGE_NAME,
+          analyticsEnabled.toString()
+        );
       } else {
         setIsOpen(true);
         saveItemOnLocalStorage("intro-warning-modal", "false");
-        saveItemOnLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME, analyticsEnabled.toString());
+        saveItemOnLocalStorage(
+          ANALYTICS_LOCAL_STORAGE_NAME,
+          analyticsEnabled.toString()
+        );
       }
     }, 1000);
 
@@ -38,7 +50,10 @@ export default function IntroWarningModal() {
   const handleCloseModal = () => {
     setIsOpen(false);
     saveItemOnLocalStorage("intro-warning-modal", "true");
-    saveItemOnLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME, analyticsEnabled.toString());
+    saveItemOnLocalStorage(
+      ANALYTICS_LOCAL_STORAGE_NAME,
+      analyticsEnabled.toString()
+    );
   };
 
   if (!isMounted) return null;
@@ -106,16 +121,18 @@ export default function IntroWarningModal() {
         </div>
 
         <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-          <span className="text-gray-700">Permitir Google Analytics</span>
+          <span className="text-gray-700">
+            Permitir Ferramentas de Análise
+          </span>
           <button
             onClick={() => setAnalyticsEnabled(!analyticsEnabled)}
-            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${analyticsEnabled ? 'bg-purple-600' : 'bg-gray-200'
+            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${analyticsEnabled ? "bg-purple-600" : "bg-gray-200"
               }`}
             role="switch"
             aria-checked={analyticsEnabled}
           >
             <span
-              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${analyticsEnabled ? 'translate-x-6' : 'translate-x-1'
+              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${analyticsEnabled ? "translate-x-6" : "translate-x-1"
                 }`}
             />
           </button>
