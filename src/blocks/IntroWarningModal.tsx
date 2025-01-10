@@ -45,7 +45,7 @@ export default function IntroWarningModal() {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [analyticsEnabled]);
 
   const handleCloseModal = () => {
     setIsOpen(false);
