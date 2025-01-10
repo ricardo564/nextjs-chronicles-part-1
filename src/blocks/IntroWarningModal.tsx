@@ -13,22 +13,21 @@ export default function IntroWarningModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
+  const now = new Date();
+  const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
 
   const clearLocalStorageAfterOneHour = () => {
-    const now = new Date();
-    const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
-
-    Object.keys(localStorage).forEach((key) => {
-      const item = getItemFromLocalStorage(key);
+      const item = getItemFromLocalStorage("last-visit");
 
       if (item) {
         const itemDate = new Date(item);
 
         if (itemDate < oneHourAgo) {
-          removeItemFromLocalStorage(key);
+          removeItemFromLocalStorage("last-visit");
+          removeItemFromLocalStorage("intro-warning-modal");
+          removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
         }
       }
-    });
   };
 
   useEffect(() => {
@@ -39,6 +38,7 @@ export default function IntroWarningModal() {
     setIsMounted(true);
     const userHasChosenToNotSeeAgain =
       getItemFromLocalStorage("intro-warning-modal") === "true";
+      saveItemOnLocalStorage("last-visit", new Date().toISOString());
 
     if (!getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME)) {
       saveItemOnLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME, "true");
