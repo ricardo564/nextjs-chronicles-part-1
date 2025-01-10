@@ -23,6 +23,7 @@ export default function IntroWarningModal() {
 
       if (item) {
         const itemDate = new Date(item);
+
         if (itemDate < oneHourAgo) {
           removeItemFromLocalStorage(key);
         }
