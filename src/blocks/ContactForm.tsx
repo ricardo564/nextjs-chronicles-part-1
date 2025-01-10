@@ -43,7 +43,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-4">
-            Grow with <span className='text-purple-500'>us</span>
+            Grow with <span className='text-green-500'>us</span>
           </h1>
           <p className="text-gray-400 text-lg">
             Reach out, and let&apos;s cultivate a world of possibilities together!
