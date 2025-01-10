@@ -3,15 +3,18 @@ import TopSellingSection from "@/blocks/sections/topSellingSection";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { TestimonialSection } from "@/blocks/sections/testimonialSection";
 import { BestProductsSection } from "@/blocks/sections/bestProductstSection";
+import { Suspense } from 'react'
 
-export default async function Home() {
+export default function Home() {
   return (
-    <DefaultLayout>
-      <IntroSection />
-      <TopSellingSection />
-      <TestimonialSection />
-      <BestProductsSection />
-    </DefaultLayout>
+    <Suspense fallback={<div>Loading...</div>}>
+      <DefaultLayout>
+        <IntroSection />
+        <TopSellingSection />
+        <TestimonialSection />
+        <BestProductsSection />
+      </DefaultLayout>
+    </Suspense>
   );
 }
 
