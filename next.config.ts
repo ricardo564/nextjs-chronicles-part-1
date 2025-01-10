@@ -14,6 +14,29 @@ const nextConfig: NextConfig = {
       'bs.plantnet.org'
     ],
   },
+  experimental: {
+    turbo: {
+      treeShaking: true,
+      moduleIdStrategy: 'deterministic',
+      resolveExtensions: [
+        '.tsx',
+        '.ts',
+        '.jsx',
+        '.js',
+        '.json',
+        '.css',
+        '.scss',
+        '.mdx',
+      ],
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        }
+      },
+      memoryLimit: 4 * 1024 * 1024 * 1024,
+    },
+  },
   webpack: (config) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
