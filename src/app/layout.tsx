@@ -5,6 +5,7 @@ import ogImage from "@/assets/images/android-launchericon-512-512.png";
 import Script from "next/script";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
 import { Analytics } from '@/components/Analytics'
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,7 +70,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`scroll-smooth	${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`scroll-smooth relative ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <noscript>
           <iframe
@@ -82,6 +83,7 @@ export default function RootLayout({
         <IntroWarningModal />
         {children}
         <Analytics />
+        <ScrollToTop />
       </body>
 
       <Script
