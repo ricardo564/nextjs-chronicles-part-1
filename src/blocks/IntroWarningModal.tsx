@@ -89,7 +89,7 @@ export default function IntroWarningModal() {
       className="max-w-2xl absolute inset-0 mx-auto"
     >
       <div className="space-y-6 p-2">
-        <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-4 rounded-lg shadow-md">
+        <div className="bg-gradient-to-r from-green-600 to-blue-500 p-4 rounded-lg shadow-md">
           <p className="text-white text-lg font-medium text-center">
             Welcome to my study project! 🚀
           </p>
@@ -148,7 +148,7 @@ export default function IntroWarningModal() {
           </span>
           <button
             onClick={() => setAnalyticsEnabled(!analyticsEnabled)}
-            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${analyticsEnabled ? "bg-purple-600" : "bg-gray-200"
+            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${analyticsEnabled ? "bg-green-600" : "bg-gray-200"
               }`}
             role="switch"
             aria-checked={analyticsEnabled}
@@ -167,7 +167,7 @@ export default function IntroWarningModal() {
               href="https://www.figma.com/@dsingr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-600 hover:text-purple-700 ml-1"
+              className="text-green-600 hover:text-green-700 ml-1"
             >
               @dsingr
             </a>
@@ -177,7 +177,7 @@ export default function IntroWarningModal() {
               href="https://www.figma.com/community/file/1341057411255052611"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-600 hover:text-purple-700"
+              className="text-green-600 hover:text-green-700"
             >
               View original design
             </a>
