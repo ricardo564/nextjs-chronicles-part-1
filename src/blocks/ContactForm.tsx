@@ -19,6 +19,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema)
@@ -34,6 +35,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
     } finally {
       setTimeout(() => {
         setIsSending(false)
+        reset()
       }, 3000)
     }
   }
