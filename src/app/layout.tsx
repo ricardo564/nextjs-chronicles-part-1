@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "@/styles/globals.css";
+import "@/assets/styles/globals.css";
 import ogImage from "@/assets/images/android-launchericon-512-512.png";
 import Script from "next/script";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
