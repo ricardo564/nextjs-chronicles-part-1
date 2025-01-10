@@ -5,23 +5,23 @@ import { useEffect } from 'react'
 import * as gtm from '@/lib/gtm'
 import { getItemFromLocalStorage } from '@/utils/localStorage'
 import { ANALYTICS_LOCAL_STORAGE_NAME } from '@/static/analyticsLocalStorageName'
+import { Suspense } from 'react'
 
-export function Analytics() {
+function AnalyticsContent() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const isAnalyticsEnabled = getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME)
 
-  const removeAnalyticsScriptFromDom = () => {
-    if (isAnalyticsEnabled) {
-      const script = document.getElementById('gtm-script')
-
-      if (script) {
-        script.remove()
+  useEffect(() => {
+    const removeAnalyticsScriptFromDom = () => {
+      if (isAnalyticsEnabled) {
+        const script = document.getElementById('gtm-script')
+        if (script) {
+          script.remove()
+        }
       }
     }
-  }
 
-  useEffect(() => {
     if (pathname && isAnalyticsEnabled) {
       gtm.pageview(pathname + searchParams.toString())
       return;
@@ -33,4 +33,12 @@ export function Analytics() {
   }, [pathname, searchParams, isAnalyticsEnabled])
 
   return null
+}
+
+export function Analytics() {
+  return (
+    <Suspense fallback={null}>
+      <AnalyticsContent />
+    </Suspense>
+  )
 }
