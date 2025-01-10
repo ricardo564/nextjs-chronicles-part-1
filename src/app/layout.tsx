@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ''),
   title: "Breath Natural - NextJS Chronicles Part 1",
   description:
     "Discover premium indoor plants at Breath Natureal. Shop exotic houseplants, succulents & cacti with expert care guides. Free shipping on orders over $50. Same-day delivery available.",
