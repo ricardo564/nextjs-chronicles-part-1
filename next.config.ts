@@ -1,4 +1,9 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 const nextConfig: NextConfig = {
   output: 'export',
@@ -9,6 +14,13 @@ const nextConfig: NextConfig = {
       'bs.plantnet.org'
     ],
   },
+  webpack: (config) => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      punycode: false,
+    };
+    return config;
+  },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
