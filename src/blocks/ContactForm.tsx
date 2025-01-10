@@ -61,6 +61,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <TextInput
+                label="First Name"
                 name="firstName"
                 placeholder="First Name"
                 disabled={isSending}
@@ -68,6 +69,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
                 error={errors.firstName?.message}
               />
               <TextInput
+                label="Last Name"
                 name="lastName"
                 placeholder="Last Name"
                 disabled={isSending}
@@ -77,6 +79,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
             </div>
 
             <EmailInput
+              label="Email"
               name="email"
               placeholder="Email"
               register={register as unknown as UseFormRegister<FieldValues>}
@@ -85,6 +88,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
             />
 
             <PhoneInput
+              label="Phone Number"
               name="phoneNumber"
               placeholder="Phone Number"
               register={register as unknown as UseFormRegister<FieldValues>}
@@ -93,6 +97,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
             />
 
             <TextArea
+              label="Message"
               name="message"
               placeholder="Message"
               register={register as unknown as UseFormRegister<FieldValues>}
@@ -103,7 +108,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
             <Button
               type="submit"
               disabled={isSending}
-              className=""
+              className="w-full"
             >
               {isSending ? (
                 <span className="animate-pulse">Sending...</span>
