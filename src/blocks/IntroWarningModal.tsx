@@ -122,7 +122,7 @@ export default function IntroWarningModal() {
 
         <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
           <span className="text-gray-700">
-            Permitir Ferramentas de Análise
+            Allow Analytics Tools
           </span>
           <button
             onClick={() => setAnalyticsEnabled(!analyticsEnabled)}
