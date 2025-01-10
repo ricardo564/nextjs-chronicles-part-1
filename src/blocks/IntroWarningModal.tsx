@@ -17,12 +17,12 @@ export default function IntroWarningModal() {
   const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
 
   const clearLocalStorageAfterOneHour = () => {
-      const item = getItemFromLocalStorage("last-visit");
+      const lastVisit = getItemFromLocalStorage("last-visit");
 
-      if (item) {
-        const itemDate = new Date(item);
+      if (lastVisit) {
+        const lastVisitDate = new Date(lastVisit);
 
-        if (itemDate < oneHourAgo) {
+        if (lastVisitDate < oneHourAgo) {
           removeItemFromLocalStorage("last-visit");
           removeItemFromLocalStorage("intro-warning-modal");
           removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
