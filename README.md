@@ -1,53 +1,61 @@
 # 🪴 Breath Natural - NextJS Chronicles Part 1
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d47b2f19-f948-4850-926f-40a3fdf478e8/deploy-status)](https://app.netlify.com/sites/breath-natural-nextjs-chronicles/deploys)
+
+
+> A modern plant showcase application built with NextJS, TypeScript, and TailwindCSS.
+
+[🇺🇸 English](#english) | [🇧🇷 Português](#português)
+
 ## 🔗 Quick Links
-🔗 Preview: https://breath-natural-nextjs-chronicles.netlify.app/
-📂 Github: https://github.com/ricardo564
-🧑‍🎨 Design credits: https://www.figma.com/@dsingr
-🗂️ Original design: https://www.figma.com/community/file/1341057411255052611
+- [Live Preview](https://breath-natural-nextjs-chronicles.netlify.app/)
+- [GitHub Repository](https://github.com/ricardo564)
+- [Original Design](https://www.figma.com/community/file/1341057411255052611) by [@dsingr](https://www.figma.com/@dsingr)
 
-🇧🇷 Versão em português abaixo ⤵️
-
----
-
-US English version:
+<h2 id="english">English</h2>
 
 ## 🎯 Project Overview
-This project was developed using NextJS to create a modern and responsive web application for Breath Natural, showcasing contemporary web development resources and practices.
+A NextJS application showcasing plants with data from the [Trefle API](https://trefle.io/). The project combines beautiful design with modern web development practices.
 
-The design was chosen for its beauty and simplicity, with the idea of this project being to serve as a showcase for plants. To make the project more complex, requests were added to an API called "Trefle - A global plants API", which is a plant API.
+### 🚀 Planned Features
+- [ ] Authentication system
+- [ ] Shopping cart functionality
+- [ ] Checkout flow
+- [ ] Reviews system
+- [ ] Plant search functionality
+- [ ] Administrative panel
+  - [ ] Plant management dashboard
+  - [ ] Detailed plant information
+  - [ ] Pagination system
 
-I will take some liberties and add things that are not in the original design, such as:
-- Login and registration page - static data for now
-- Interactive shortcut to the shopping cart
-- Adding and removing plants from the cart
-- Checkout flow - static data for now
-- Reviews page - static data for now
-- Search page and results by plant name
-- Administrative panel - I will choose another design and artist for the administrative panel
-- Page with plant table and pagination in the administrative panel
-- Plant details page by ID in the administrative panel
+## 🛠️ Tech Stack
+- [NextJS](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [TailwindCSS](https://tailwindcss.com/) - Styling
+- [Axios](https://axios-http.com/) - API requests
+- [Trefle API](https://trefle.io/) - Plant data
 
-These new functionalities will be added in a project release and aim to make it more complex and realistic, but they are still within my area of knowledge.
+## 📚 Learning Focus
+- NextJS component architecture
+- TypeScript implementation
+- Server & Client Components
+- Dynamic routing
+- Code organization
+- Responsive design
 
-I plan to integrate with NextJS, which would be a new and complex learning experience, and add more functionalities by removing the static parts, or it might be for an exclusive project to that.
+## 🚀 Getting Started
 
-## 🛠️ Key Technical Implementations
-- 🎨 Modern UI with Tailwind CSS
-- 📱 Responsive design principles
-- 🎯 Server and Client Components
-- 📦 Dynamic routing and data search
+```bash
+# Install dependencies
+pnpm install
 
-## 📚 Learning Outcomes
-- 🏗️ Gain practical experience with NextJS component architecture
-- 📘 Practice TypeScript
-- 🎨 Master NextJS template syntax
-- 🔄 Increase understanding of conditional rendering in NextJS
-- 📦 Practice code organization skills
+# Start development server
+pnpm dev
+```
 
----
+Then open [http://localhost:3000](http://localhost:3000)
 
-Português:
+<h2 id="português">Português</h2>
 
 ## 🎯 Visão Geral do Projeto
 Este projeto foi desenvolvido usando NextJS para criar uma aplicação web moderna e responsiva para Breath Natural, demonstrando recursos e práticas de desenvolvimento web contemporâneo.
@@ -68,7 +76,6 @@ Vou tomar um pouco de liberdade e adicionar coisas que não estão no design ori
 Essas novas funcionalidades serão adicionadas em uma release do projeto e visão tornar ele mais complexo e realista, mas ainda estão na minha area de conhecimento autais.
 
 Pretendo fazer integração com o NextJS, que seria um novo e complexo aprendizado, e adicionar a mais funcionalidades removendo as partes estaticas, ou fica para um projeto exclusivo a isso.
-
 
 ## 🛠️ Implementações Técnicas Chave
 - 🎨 UI Moderna com Tailwind CSS
@@ -98,23 +105,13 @@ UI/UX inspired by https://www.figma.com/community/file/1341057411255052611 by ds
 - Axios - https://axios-http.com
 - Figma - https://www.figma.com
 
-
 #NextJS #Web #Frontend #TypeScript #TailwindCSS #Git #Axios #Figma #CleanCode #NextJSChronicles
 
+## 📄 License
+MIT © Ricardo Damaceno
+---
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+Made with ❤️ by <a href="https://github.com/ricardo564">Ricardo</a>
+</p>
 
