@@ -19,7 +19,7 @@ A NextJS application showcasing plants with data from the [Trefle API](https://t
 
 ### 🚀 Planned Features
 - [ ] Authentication system
-- [ ] Shopping cart functionality
+- [x] Shopping cart functionality
 - [ ] Checkout flow
 - [ ] Reviews system
 - [ ] Plant search functionality
