@@ -123,7 +123,7 @@ export default function IntroWarningModal() {
           </a>
 
           <a
-            href="https://github.com/ricardo564"
+            href={`https://github.com/${process.env.GITHUB_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors"

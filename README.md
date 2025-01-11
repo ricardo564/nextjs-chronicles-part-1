@@ -9,7 +9,7 @@
 
 ## 🔗 Quick Links
 - [Live Preview](https://breath-natural-nextjs-chronicles.netlify.app/)
-- [GitHub Repository](https://github.com/ricardo564)
+- [GitHub Repository](https://github.com/ricardo-camilo-programador-frontend-web)
 - [Original Design](https://www.figma.com/community/file/1341057411255052611) by [@dsingr](https://www.figma.com/@dsingr)
 
 <h2 id="english">English</h2>
@@ -112,6 +112,6 @@ MIT © Ricardo Damaceno
 ---
 
 <p align="center">
-Made with ❤️ by <a href="https://github.com/ricardo564">Ricardo</a>
+Made with ❤️ by <a href={`https://github.com/${process.env.GITHUB_USERNAME}`}>Ricardo</a>
 </p>
 
