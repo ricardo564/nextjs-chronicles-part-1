@@ -9,7 +9,11 @@ import {
 } from "@/utils/localStorage";
 import { ANALYTICS_LOCAL_STORAGE_NAME } from "@/static/analyticsLocalStorageName";
 
-export default function IntroWarningModal() {
+interface IntroWarningModalProps {
+  githubUsername: string;
+}
+
+export default function IntroWarningModal({ githubUsername }: IntroWarningModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
@@ -123,7 +127,7 @@ export default function IntroWarningModal() {
           </a>
 
           <a
-            href={`https://github.com/${process.env.GITHUB_USERNAME}`}
+            href={`https://github.com/${githubUsername}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors"

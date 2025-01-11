@@ -80,7 +80,9 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <IntroWarningModal />
+        <IntroWarningModal
+          githubUsername={process.env.GITHUB_USERNAME || ''}
+        />
         {children}
         <Analytics />
         <ScrollToTop />
