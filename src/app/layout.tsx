@@ -81,8 +81,8 @@ export default function RootLayout({
           />
         </noscript>
         <IntroWarningModal
-          githubUsername={process.env.GITHUB_USERNAME || ''}
           linkedinUsername={process.env.LINKEDIN_USERNAME || ''}
+          portfolioUrl={process.env.PORTFOLIO_URL || ''}
         />
         {children}
         <Analytics />
