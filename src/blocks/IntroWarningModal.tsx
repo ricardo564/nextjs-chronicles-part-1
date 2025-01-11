@@ -11,9 +11,10 @@ import { ANALYTICS_LOCAL_STORAGE_NAME } from "@/static/analyticsLocalStorageName
 
 interface IntroWarningModalProps {
   githubUsername: string;
+  linkedinUsername: string;
 }
 
-export default function IntroWarningModal({ githubUsername }: IntroWarningModalProps) {
+export default function IntroWarningModal({ githubUsername, linkedinUsername }: IntroWarningModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
@@ -108,7 +109,7 @@ export default function IntroWarningModal({ githubUsername }: IntroWarningModalP
 
         <div className="space-y-3">
           <a
-            href="https://www.linkedin.com/in/ricardo-camilo-frontend-web-developer/"
+            href={`https://www.linkedin.com/in/${linkedinUsername}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
