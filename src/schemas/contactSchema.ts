@@ -1,19 +1,19 @@
 import { z } from 'zod'
 
-export const contactSchema = z.object({
+export const getContactSchema = (messages: Record<string, string>) => z.object({
   firstName: z.string()
-    .min(2, 'First name must be at least 2 characters')
-    .max(50, 'First name cannot exceed 50 characters'),
+    .min(2, messages['firstName.min'])
+    .max(50, messages['firstName.max']),
   lastName: z.string()
-    .min(2, 'Last name must be at least 2 characters')
-    .max(50, 'Last name cannot exceed 50 characters'),
+    .min(2, messages['lastName.min'])
+    .max(50, messages['lastName.max']),
   email: z.string()
-    .email('Invalid email address'),
+    .email(messages['email.invalid']),
   phoneNumber: z.string()
-    .regex(/^\+?[1-9]\d{1,14}$/, 'Invalid phone number'),
+    .regex(/^\+?[1-9]\d{1,14}$/, messages['phoneNumber.invalid']),
   message: z.string()
-    .min(10, 'Message must be at least 10 characters')
-    .max(500, 'Message cannot exceed 500 characters')
+    .min(10, messages['message.min'])
+    .max(500, messages['message.max'])
 })
 
-export type ContactFormData = z.infer<typeof contactSchema>
+export type ContactFormData = z.infer<ReturnType<typeof getContactSchema>>
