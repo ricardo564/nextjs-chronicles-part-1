@@ -1,9 +1,11 @@
 import { QuotedTitle } from "@/components/QuotedTitle";
-import { mockupPlants } from "@/static/mockupPlants";
+import { useMockupPlants } from "@/hooks/mockupPlants";
 import { PlantCard } from "@/components/PlantCard";
 import { getUniqueId } from "@/utils/getUniqueId";
 
-export default async function TopSellingSection() {
+export default function TopSellingSection() {
+  const mockupPlants = useMockupPlants();
+
   return (
     <div className="relative min-h-screen max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
       <div className="flex flex-col items-center max-w-[40rem] mx-auto">
