@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ContactForm } from '@/blocks/ContactForm'
+import Contact from '@/blocks/sections/Contact'
 import ogImage from '@/assets/images/android-launchericon-512-512.png'
 import DefaultLayout from "@/layouts/DefaultLayout";
 import bgBonsai from '@/assets/images/bonsai.webp'
@@ -73,7 +73,7 @@ export default function ContactPage() {
         />
       </div>
 
-      <ContactForm
+      <Contact
         className="mt-8"
       />
     </DefaultLayout>
