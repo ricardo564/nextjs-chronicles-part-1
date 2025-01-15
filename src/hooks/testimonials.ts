@@ -5,35 +5,41 @@ import { useTranslations } from "next-intl";
 export const useTestimonials = (): Testimonial[] => {
   const t = useTranslations("testimonials");
 
-  const getTranslatedValue = (
-    key: string,
-    defaultValue: string | number = ""
-  ) => {
+
+  type TestimonialKey = 'id' | 'name' | 'rating' | 'testimonial';
+
+  const getTestimonialField = <T extends string | number>(
+    index: number,
+    field: TestimonialKey,
+    defaultValue: T
+  ): T => {
+    const translationKey = `testimonial${index}.${field}`;
     try {
-      return t(key);
+      const translated = t(translationKey);
+      return typeof defaultValue === 'number'
+        ? Number(translated) as T
+        : String(translated) as T;
     } catch {
-      console.warn(`Translation missing for key: ${key}`);
+      console.warn(`Translation missing for ${translationKey}`);
       return defaultValue;
     }
   };
 
-  const testimonialFormatted: Testimonial[] = Array.from(
-    { length: 8 },
-    (_, index) => {
-      const num = index + 1;
-      return {
-        id: Number(getTranslatedValue(`testimonial${num}.id`, num)),
-        name: String(
-          getTranslatedValue(`testimonial${num}.name`, `User ${num}`)
-        ),
-        rating: Number(getTranslatedValue(`testimonial${num}.rating`, 5)),
-        testimonial: String(
-          getTranslatedValue(`testimonial${num}.testimonial`, "")
-        ),
-        avatarUrl: Logo.src,
-      };
-    }
-  );
+  const createTestimonial = (index: number): Testimonial => {
+    const testimonialNumber = index + 1;
 
-  return testimonialFormatted;
+    return {
+      id: getTestimonialField(testimonialNumber, 'id', testimonialNumber),
+      name: getTestimonialField(testimonialNumber, 'name', `User ${testimonialNumber}`),
+      rating: getTestimonialField(testimonialNumber, 'rating', 5),
+      testimonial: getTestimonialField(testimonialNumber, 'testimonial', ''),
+      avatarUrl: Logo.src,
+    };
+  };
+
+  const TESTIMONIAL_COUNT = 8;
+
+  return Array.from({ length: TESTIMONIAL_COUNT }, (_, index) =>
+    createTestimonial(index)
+  );
 };
