@@ -98,6 +98,9 @@ Pretendo fazer integração com o NextJS, que seria um novo e complexo aprendiza
 ## 🎨 Design Credits
 UI/UX inspired by https://www.figma.com/community/file/1341057411255052611 by dsingr - https://www.figma.com/@dsingr, adapted and implemented with modern web technologies.
 
+## 🎨 Design Credits
+UI/UX for contact page inspired by https://www.figma.com/@VictorBravim by Victor Bravim.
+
 ## 🚀 Technologies
 - NextJS - https://NextJS.com
 - TailwindCSS - https://tailwindcss.com
