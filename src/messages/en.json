@@ -15,23 +15,24 @@
     "modalTitle": "Live Demo"
   },
   "testimonials": {
+    "title": "Customer Reviews",
     "testimonial1": {
       "id": 1,
       "name": "John Smith",
       "rating": 5,
-      "testimonial": "The attention to detail and quality of work exceeded my expectations. Highly recommended! The team's dedication to delivering a top-notch product was evident throughout the project. Their ability to understand our vision and bring it to life was impressive. I would not hesitate to recommend them to anyone seeking exceptional service."
+      "testimonial": "The attention to detail and quality of work exceeded my expectations. Highly recommended!"
     },
     "testimonial2": {
       "id": 2,
       "name": "Sarah Chen",
       "rating": 3,
-      "testimonial": "Incredible service and communication throughout the entire project. Would definitely work with them again. The team's responsiveness and willingness to adapt to our changing needs were crucial in the project's success. Although there were some minor issues, the overall experience was positive, and I would consider collaborating with them again in the future."
+      "testimonial": "Incredible service and communication throughout the entire project. Would definitely work with them again."
     },
     "testimonial3": {
       "id": 3,
       "name": "Michael Rodriguez",
       "rating": 4,
-      "testimonial": "Very professional and delivered exactly what was promised. Minor delays but great overall. The team's professionalism and commitment to delivering high-quality work were evident throughout the project. While there were some minor delays, the final product exceeded our expectations, and we were pleased with the outcome."
+      "testimonial": "Very professional and delivered exactly what was promised. Minor delays but great overall."
     },
     "testimonial4": {
       "id": 4,

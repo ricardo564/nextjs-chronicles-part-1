@@ -2,15 +2,17 @@ import { QuotedTitle } from "@/components/QuotedTitle";
 import { useTestimonials } from "@/hooks/testimonials";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { getUniqueId } from "@/utils/getUniqueId";
+import { useTranslations } from 'next-intl';
 
 export function TestimonialSection() {
   const testimonials = useTestimonials();
+  const t = useTranslations('testimonials');
 
   return (
     <div className="relative min-h-[20rem] max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
       <div className="flex flex-col items-center max-w-[40rem] mx-auto">
         <QuotedTitle className="text-center text-white">
-          Costumer Reviews
+          {t('title')}
         </QuotedTitle>
       </div>
 

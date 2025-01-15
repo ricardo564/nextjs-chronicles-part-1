@@ -15,6 +15,7 @@
     "modalTitle": "Apresentação"
   },
   "testimonials": {
+    "title": "Avaliações dos Clientes",
     "testimonial1": {
       "id": 1,
       "name": "John Smith",
