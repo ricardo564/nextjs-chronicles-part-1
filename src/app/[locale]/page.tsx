@@ -1,7 +1,7 @@
 import { IntroSection } from "@/blocks/sections/introSection";
 import TopSellingSection from "@/blocks/sections/topSellingSection";
 import DefaultLayout from "@/layouts/DefaultLayout";
-// import { TestimonialSection } from "@/blocks/sections/testimonialSection";
+import { TestimonialSection } from "@/blocks/sections/testimonialSection";
 import { BestProductsSection } from "@/blocks/sections/bestProductstSection";
 import { Suspense } from 'react'
 
@@ -11,7 +11,7 @@ export default function Home() {
       <DefaultLayout>
         <IntroSection />
         <TopSellingSection />
-        {/* <TestimonialSection /> */}
+        <TestimonialSection />
         <BestProductsSection />
       </DefaultLayout>
     </Suspense>

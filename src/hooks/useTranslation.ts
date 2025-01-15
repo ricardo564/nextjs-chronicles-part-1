@@ -13,7 +13,7 @@ type TranslationType = {
 }
 
 const translations: Record<string, TranslationType> = {
-  'pt-BR': pt,
+  'pt': pt,
   'en-US': en,
 }
 

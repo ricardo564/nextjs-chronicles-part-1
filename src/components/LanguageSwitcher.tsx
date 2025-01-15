@@ -12,7 +12,7 @@ export const LanguageSwitcher: FC = (): ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const currentLang = pathname.split("/")[1] ?? "pt-BR";
+  const currentLang = pathname.split("/")[1] ?? "pt";
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
