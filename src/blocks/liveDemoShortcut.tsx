@@ -8,9 +8,13 @@ import { useState } from 'react';
 interface LiveDemoShortcutProps {
   className?: string;
   videoUrl: string;
+  buttonLabel: string;
+  buttonTitle: string;
+  text: string;
+  modalTitle: string;
 }
 
-export function LiveDemoShortcut({ className, videoUrl }: LiveDemoShortcutProps) {
+export function LiveDemoShortcut({ className, videoUrl, buttonLabel, buttonTitle, text, modalTitle }: LiveDemoShortcutProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCloseModal = () => {
@@ -25,8 +29,8 @@ export function LiveDemoShortcut({ className, videoUrl }: LiveDemoShortcutProps)
     <>
       <Button
         className={`min-w-[20rem] md:min-w-[13rem] group flex items-center gap-3 px-6 py-3 rounded-full w-full border-none ${className}`}
-        aria-label="View Live Demo"
-        title="View Live Demo"
+        aria-label={buttonLabel}
+        title={buttonTitle}
         onClick={handleOpenModal}
       >
         <div className="flex items-center justify-center gap-3 w-full">
@@ -36,14 +40,14 @@ export function LiveDemoShortcut({ className, videoUrl }: LiveDemoShortcutProps)
           </div>
 
           <span className="text-white font-medium text-lg truncate">
-            Live Demo...
+            {text}...
           </span>
         </div>
       </Button>
 
       <Modal
         id="live-demo-modal"
-        title="Live Demo"
+        title={modalTitle}
         isOpen={isOpen}
         onClose={handleCloseModal}
         className="min-w-[17rem] max-w-2xl"
