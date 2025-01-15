@@ -21,7 +21,7 @@ export function Header({ menuItems }: HeaderProps) {
 
           <DesktopMenu menuItems={menuItems} />
 
-          <div className="grid grid-cols-3 place-items-center gap-4">
+          <div className="grid grid-cols-4 place-items-center gap-4">
             <LanguageSwitcher />
 
             <SearchShortcut />
