@@ -81,7 +81,7 @@ export const useMockupPlants = (): Plant[] => {
     };
   };
 
-  const PLANT_COUNT = 8;
+  const PLANT_COUNT = 7;
 
   return Array.from({ length: PLANT_COUNT }, (_, index) =>
     createPlant(index)
