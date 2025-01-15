@@ -3,18 +3,19 @@ import { LiveDemoShortcut } from "../liveDemoShortcut";
 import background from "@/assets/images/topiary-green-pot.webp";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { ExploreShortcut } from "@/blocks/exploreShortcut";
-import { mockupPlants } from "@/static/mockupPlants";
 import { PlantCardContent } from "@/components/plantCardContent";
 import { QuotedTitle } from "@/components/QuotedTitle";
 import { EmblaCarousel } from "@/components/EmblaCarousel/EmblaCarousel";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { useTranslations } from 'next-intl';
 import { useTestimonials } from "@/hooks/testimonials";
+import { useMockupPlants } from "@/hooks/mockupPlants";
 
 export function IntroSection() {
   const t = useTranslations('hero');
   const liveDemo = useTranslations('liveDemo');
   const testimonials = useTestimonials();
+  const mockupPlants = useMockupPlants();
 
   const randomTestimonial = () => {
     if (!testimonials.length) return null;
