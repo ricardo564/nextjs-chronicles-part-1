@@ -13,6 +13,7 @@ import { useTranslations } from 'next-intl';
 
 export function IntroSection() {
   const t = useTranslations('hero');
+  const liveDemo = useTranslations('liveDemo');
 
   const randomTestimonial = () => {
     const shuffled = [...testimonials].sort(() => Math.random() - 0.5);
@@ -56,6 +57,10 @@ export function IntroSection() {
             <LiveDemoShortcut
               videoUrl={process.env.LIVE_DEMO_VIDEO_URL ?? ""}
               className="w-full"
+              buttonLabel={liveDemo('buttonLabel')}
+              buttonTitle={liveDemo('buttonTitle')}
+              text={liveDemo('text')}
+              modalTitle={liveDemo('modalTitle')}
             />
           </div>
 
