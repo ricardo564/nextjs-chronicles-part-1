@@ -9,8 +9,11 @@ import { PlantCardContent } from "@/components/plantCardContent";
 import { QuotedTitle } from "@/components/QuotedTitle";
 import { EmblaCarousel } from "@/components/EmblaCarousel/EmblaCarousel";
 import { getUniqueId } from "@/utils/getUniqueId";
+import { useTranslations } from 'next-intl';
 
-export async function IntroSection() {
+export function IntroSection() {
+  const t = useTranslations('hero');
+
   const randomTestimonial = () => {
     const shuffled = [...testimonials].sort(() => Math.random() - 0.5);
     return shuffled[0];
@@ -35,15 +38,12 @@ export async function IntroSection() {
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col justify-between items-start mb-16  pt-4 lg:pt-32">
           <h1 className="text-7xl xl:text-8xl text-white font-semibold">
-            Breath Natural
+            {t('title')}
           </h1>
 
           <div className="mb-8 max-w-prose">
             <p className="text-white mb-4 text-lg xl:text-lg">
-              Transform your space into a natural sanctuary with our curated
-              collection of indoor plants. Experience the beauty and serenity of
-              nature while improving your home air quality and creating a more
-              vibrant, living environment.
+              {t('description')}
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export async function IntroSection() {
 
         <div className="space-y-6 flex flex-col items-center gap-32 lg:gap-24">
           <QuotedTitle className="text-center text-white">
-            Our Trendy Plants
+            {t('trendyPlantsTitle')}
           </QuotedTitle>
 
           <div className="flex flex-wrap justify-center w-full gap-y-[9rem] lg:gap-[6rem]">
