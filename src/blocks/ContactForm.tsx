@@ -2,13 +2,13 @@
 
 import type { FC } from 'react'
 import { FieldValues, useForm, UseFormRegister } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { contactSchema, ContactFormData } from '@/schemas/contactSchema'
+import { ContactFormData, getContactSchema } from '@/schemas/contactSchema'
 import Button from '@/components/Button'
 import { TextInput } from '@/components/forms/TextInput'
 import { EmailInput } from '@/components/forms/EmailInput'
 import { PhoneInput } from '@/components/forms/PhoneInput'
 import { TextArea } from '@/components/forms/TextArea'
+import { zodResolver } from '@hookform/resolvers/zod'
 
 interface ContactFormProps {
   className?: string
@@ -24,16 +24,17 @@ interface ContactFormProps {
   message: string
   sending: boolean
   send: string
+  validationMessages: Record<string, string>
 }
 
-export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighlight, subtitle, formTitle, formSubtitle, firstName, lastName, email, phoneNumber, message, sending = false, send }) => {
+export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighlight, subtitle, formTitle, formSubtitle, firstName, lastName, email, phoneNumber, message, sending = false, send, validationMessages }) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors }
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema)
+    resolver: zodResolver(getContactSchema(validationMessages))
   })
 
   const onSubmit = async (data: ContactFormData) => {
