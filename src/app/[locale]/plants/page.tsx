@@ -5,17 +5,24 @@ import DefaultLayout from "@/layouts/DefaultLayout";
 import { PlantsService } from "@/modules/plants/plants.service";
 import { HttpService } from "@nestjs/axios";
 import { getUniqueId } from "@/utils/getUniqueId";
-import { mockupPlants } from "@/static/mockupPlants";
+import { useMockupPlants } from "@/hooks/mockupPlants";
 
-export default async function PlantsPage() {
+export default function PlantsPage() {
   const httpService = new HttpService();
   const plantsService = new PlantsService(httpService);
+  const mockupPlants = useMockupPlants();
 
-  try {
+  const handleGetPlants = async () => {
     const response = await plantsService.getPlants();
     const plants: Plant[] = response.data;
 
     plants.push(...mockupPlants);
+
+    return plants;
+  }
+
+  try {
+    const plants = handleGetPlants();
 
     if (!Array.isArray(plants)) {
       throw new Error("Dados inválidos recebidos do servidor");
