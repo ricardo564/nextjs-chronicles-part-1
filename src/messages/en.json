@@ -309,5 +309,8 @@
       "followUs": "Follow us on {platform}"
     },
     "copyright": "© {year} Planto. All rights reserved. Bringing nature indoors."
+  },
+  "topSelling": {
+    "title": "Our Top Selling"
   }
 }
