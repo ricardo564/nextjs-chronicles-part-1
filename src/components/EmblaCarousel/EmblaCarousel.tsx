@@ -1,7 +1,7 @@
 "use client"
 
 import type { FC, ReactNode } from 'react'
-import { Children, useEffect } from 'react'
+import { Children, useEffect, useCallback } from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import {
   PrevButton,
@@ -43,7 +43,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
 
   const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi)
 
-  const updateSlidesVisibility = () => {
+  const updateSlidesVisibility = useCallback(() => {
     if (!emblaApi || !hideInactiveSlides) return
 
     const viewport = document.getElementById(carouselId)
@@ -65,7 +65,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
       slide.classList.toggle('opacity-100', isVisible)
       slide.classList.toggle('pointer-events-none', !isVisible)
     })
-  }
+  }, [emblaApi, hideInactiveSlides, carouselId])
 
   const onDotButtonClick = (index: number) => {
     if (!emblaApi) return
@@ -91,7 +91,7 @@ export const EmblaCarousel: FC<PropType> = (props) => {
       emblaApi.off('select', updateSlidesVisibility)
       emblaApi.off('settle', updateSlidesVisibility)
     }
-  }, [emblaApi, hideInactiveSlides, selectedSnap])
+  }, [emblaApi, updateSlidesVisibility])
 
   return (
     <section
