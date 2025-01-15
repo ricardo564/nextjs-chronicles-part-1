@@ -50,7 +50,7 @@ export const SearchShortcut = ({ className, label }: SearchShortcutProps) => {
   return (
     <>
       <Button
-        className={`px-6 py-2  text-[1.75rem] hover:bg-white/10 transition-all duration-300 text-center flex items-center gap-2 border-none ${className}`}
+        className={`mt-3 md:mt-0 px-6 py-2  text-[1.75rem] hover:bg-white/10 transition-all duration-300 text-center flex items-center gap-2 border-none ${className}`}
         title={`Search for plants`}
         onClick={handleToggle}
       >
