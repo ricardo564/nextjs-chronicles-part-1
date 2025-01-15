@@ -2,10 +2,16 @@
   "hero": {
     "title": "Breath Natural",
     "description": "Transform your space into a natural sanctuary with our curated collection of indoor plants. Experience the beauty and serenity of nature while improving your home air quality and creating a more vibrant, living environment.",
-    "trendyPlantsTitle": "Our Trendy Plants",
-    "explore": {
-      "text": "Explore",
-      "title": "Explore {name} plants"
-    }
+    "trendyPlantsTitle": "Our Trendy Plants"
+  },
+  "explore": {
+    "text": "Explore",
+    "title": "Explore {name} plants"
+  },
+  "liveDemo": {
+    "buttonLabel": "View Live Demo",
+    "buttonTitle": "View Live Demo",
+    "text": "Live Demo",
+    "modalTitle": "Live Demo"
   }
 }
