@@ -26,16 +26,16 @@ export const Modal: FC<ModalProps> = ({
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    const dialog = modalRef.current;
     setIsMounted(true);
-    return () => {
-      const dialog = modalRef.current;
 
+    return () => {
       if (dialog?.open) {
         dialog.close();
         blockScroll(false);
       }
     };
-  }, []);
+  }, [blockScroll]);
 
   useEffect(() => {
     const dialog = modalRef.current;
@@ -45,13 +45,15 @@ export const Modal: FC<ModalProps> = ({
     try {
       if (isOpen) {
         dialog.showModal();
+        blockScroll(true);
       } else {
         dialog.close();
+        blockScroll(false);
       }
     } catch (error) {
       console.error('Modal operation failed:', error);
     }
-  }, [isOpen, isMounted]);
+  }, [isOpen, isMounted, blockScroll]);
 
   if (!isMounted) return null;
 
