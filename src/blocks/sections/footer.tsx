@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 
 const Footer: FC = () => {
   return (
-    <footer className="bg-primary text-white py-12 w-screen mx-auto">
+    <footer className="bg-primary text-white py-12 w-screen mx-auto z-[99]">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-start md:justify-between gap-8 w-full">
