@@ -44,8 +44,8 @@ export function IntroSection() {
       }}
     >
       <div className="max-w-7xl mx-auto relative">
-        <div className="flex flex-col justify-between items-start mb-16  pt-4 lg:pt-32">
-          <h1 className="text-7xl xl:text-8xl text-white font-semibold">
+        <div className="flex flex-col justify-between items-start mb-16  pt-4 lg:pt-32 gap-4">
+          <h1 className="text-7xl xl:text-6xl text-white font-semibold max-w-[40rem]">
             {t('title')}
           </h1>
 
