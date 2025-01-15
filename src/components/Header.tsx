@@ -4,6 +4,7 @@ import { Logo } from "@/components/Logo";
 import { SearchShortcut } from "@/blocks/searchShortcut";
 import { MobileMenu } from "@/components/mobileMenu";
 import { ShoppingCart } from "@/blocks/shoppingCart";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface HeaderProps {
   menuItems: MenuItem[];
@@ -21,6 +22,8 @@ export function Header({ menuItems }: HeaderProps) {
           <DesktopMenu menuItems={menuItems} />
 
           <div className="grid grid-cols-3 place-items-center gap-4">
+            <LanguageSwitcher />
+
             <SearchShortcut />
 
             <ShoppingCart />
