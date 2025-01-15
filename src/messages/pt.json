@@ -309,12 +309,12 @@
     "social": {
       "followUs": "Siga-nos no {platform}"
     },
-    "copyright": "© {year} Planto. Todos os direitos reservados. Trazendo a natureza para dentro de casa.",
-    "topSelling": {
-      "title": "Nossas Estrelas Verdes"
-    },
-    "bestProducts": {
-      "title": "Nossos Melhores"
-    }
+    "copyright": "© {year} Planto. Todos os direitos reservados. Trazendo a natureza para dentro de casa."
+  },
+  "bestProducts": {
+    "title": "Nosso Melhor o2"
+  },
+  "topSelling": {
+    "title": "Nossas Estrelas Verdes"
   }
 }
