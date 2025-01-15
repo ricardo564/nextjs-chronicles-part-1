@@ -248,5 +248,23 @@
         "genus": "/api/v1/genus/monstera"
       }
     }
+  },
+  "loading": {
+    "ariaLabel": "Carregando",
+    "status": "Carregando"
+  },
+  "contact": {
+    "title": "Cresça",
+    "titleHighlight": "conosco",
+    "subtitle": "Entre em contato e vamos cultivar um mundo de possibilidades juntos!",
+    "formTitle": "Vamos nutrir conexões",
+    "formSubtitle": "Vamos conectar nossas raízes! Entre em contato e deixe o poder da colaboração florescer em nossos jardins.",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "email": "E-mail",
+    "phoneNumber": "Telefone",
+    "message": "Mensagem",
+    "sending": "Enviando...",
+    "send": "Enviar para o jardim"
   }
 }

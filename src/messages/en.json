@@ -248,5 +248,23 @@
         "genus": "/api/v1/genus/monstera"
       }
     }
+  },
+  "loading": {
+    "ariaLabel": "Loading indicator - Growing plant animation",
+    "status": "Loading"
+  },
+  "contact": {
+    "title": "Grow",
+    "titleHighlight": "with us",
+    "subtitle": "Reach out, and let's cultivate a world of possibilities together!",
+    "formTitle": "Let's nurture connections",
+    "formSubtitle": "Let's connect our roots! Reach out and let the power of collaboration bloom in our gardens.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "message": "Message",
+    "sending": "Sending...",
+    "send": "Send it to the garden"
   }
 }
