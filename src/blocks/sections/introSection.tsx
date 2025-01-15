@@ -2,7 +2,6 @@ import { PlantBannerCard } from "@/components/PlantBannerCard";
 import { LiveDemoShortcut } from "../liveDemoShortcut";
 import background from "@/assets/images/topiary-green-pot.webp";
 import { TestimonialCard } from "@/components/TestimonialCard";
-import { testimonials } from "@/static/testimonials";
 import { ExploreShortcut } from "@/blocks/exploreShortcut";
 import { mockupPlants } from "@/static/mockupPlants";
 import { PlantCardContent } from "@/components/plantCardContent";
@@ -10,15 +9,22 @@ import { QuotedTitle } from "@/components/QuotedTitle";
 import { EmblaCarousel } from "@/components/EmblaCarousel/EmblaCarousel";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { useTranslations } from 'next-intl';
+import { useTestimonials } from "@/hooks/testimonials";
 
 export function IntroSection() {
   const t = useTranslations('hero');
   const liveDemo = useTranslations('liveDemo');
+  const testimonials = useTestimonials();
 
   const randomTestimonial = () => {
+    if (!testimonials.length) return null;
+
     const shuffled = [...testimonials].sort(() => Math.random() - 0.5);
+
     return shuffled[0];
   };
+
+  const selectedTestimonial = randomTestimonial();
 
   const randomFlexDIrection = (index: number) => {
     const isEven = index % 2 === 0;
@@ -65,10 +71,12 @@ export function IntroSection() {
           </div>
 
           <div className="relative mt-24">
-            <TestimonialCard
-              testimonial={randomTestimonial()}
-              testimonialClassName="line-clamp-2"
-            />
+            {selectedTestimonial && (
+              <TestimonialCard
+                testimonial={selectedTestimonial}
+                testimonialClassName="line-clamp-2"
+              />
+            )}
           </div>
         </div>
 
