@@ -266,5 +266,11 @@
     "message": "Message",
     "sending": "Sending...",
     "send": "Send it to the garden"
+  },
+  "plants": {
+    "invalidDataError": "Invalid data received from server",
+    "noPlantsMessage": "No plants to display...",
+    "loadError": "Error loading plants: {message}",
+    "genericError": "Error loading plants..."
   }
 }

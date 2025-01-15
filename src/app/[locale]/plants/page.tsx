@@ -8,8 +8,10 @@ import { getUniqueId } from "@/utils/getUniqueId";
 import { useMockupPlants } from "@/hooks/mockupPlants";
 import { Loading } from "@/components/Loading";
 import { Suspense } from "react";
+import { useTranslations } from 'next-intl';
 
 export default function PlantsPage() {
+  const t = useTranslations('plants');
   const httpService = new HttpService();
   const plantsService = new PlantsService(httpService);
   const mockupPlants = useMockupPlants();
@@ -27,7 +29,7 @@ export default function PlantsPage() {
     const plants = handleGetPlants();
 
     if (!Array.isArray(plants)) {
-      throw new Error("Dados inválidos recebidos do servidor");
+      throw new Error(t('invalidDataError'));
     }
 
     return (
@@ -37,7 +39,7 @@ export default function PlantsPage() {
         <DefaultLayout>
           <div className="py-8 px-2 md:pt-[11rem]">
             {plants.length === 0 ? (
-              <NoDataToShow message="Nenhuma planta para ser exibida..." />
+              <NoDataToShow message={t('noPlantsMessage')} />
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-6 md:gap-y-[12rem]">
                 {plants.map((plant, index) => (
@@ -63,8 +65,8 @@ export default function PlantsPage() {
 
     const errorMessage =
       error instanceof Error
-        ? `Erro ao carregar as plantas: ${error.message}`
-        : "Erro ao carregar as plantas...";
+        ? t('loadError', { message: error.message })
+        : t('genericError');
 
     return (
       <DefaultLayout>

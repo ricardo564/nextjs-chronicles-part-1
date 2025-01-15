@@ -266,5 +266,11 @@
     "message": "Mensagem",
     "sending": "Enviando...",
     "send": "Enviar para o jardim"
+  },
+  "plants": {
+    "invalidDataError": "Dados inválidos recebidos do servidor",
+    "noPlantsMessage": "Nenhuma planta para ser exibida...",
+    "loadError": "Erro ao carregar as plantas: {message}",
+    "genericError": "Erro ao carregar as plantas..."
   }
 }
