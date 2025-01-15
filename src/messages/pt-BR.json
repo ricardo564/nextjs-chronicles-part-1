@@ -1,18 +1,18 @@
 {
   "hero": {
-    "title": "Territorio Verde",
-    "description": "Transforme seu espaço em um santuário natural com nossa coleção selecionada de plantas para ambientes internos. Experimente a beleza e serenidade da natureza enquanto melhora a qualidade do ar em sua casa e cria um ambiente mais vibrante e vivo.",
-    "trendyPlantsTitle": "Nossas Plantas em Tendência"
+    "title": "Território Verde - Seu Oásis Pessoal",
+    "description": "Descubra o poder transformador das plantas em sua vida! Nossa coleção exclusiva de plantas para ambientes internos não apenas embeleza seu espaço, mas cria um refúgio de paz e bem-estar. Deixe a natureza trabalhar sua magia, purificando o ar e trazendo vida nova para cada canto de sua casa.",
+    "trendyPlantsTitle": "Plantas Que Estão Conquistando Corações"
   },
   "explore": {
     "text": "Explorar",
     "title": "Explorar plantas {name}"
   },
   "liveDemo": {
-    "buttonLabel": "Ver Demonstração ao Vivo",
-    "buttonTitle": "Ver Demonstração ao Vivo",
-    "text": "Demonstração ao Vivo",
-    "modalTitle": "Demonstração ao Vivo"
+    "buttonLabel": "Ver Apresentação",
+    "buttonTitle": "Ver Apresentação",
+    "text": "Apresentação",
+    "modalTitle": "Apresentação"
   },
   "testimonials": {
     "testimonial1": {
@@ -65,14 +65,14 @@
     }
   },
   "mockupPlants": {
-    "title": "Plantas Modelo",
+    "title": "Nossas Estrelas Verdes",
     "plant1": {
       "id": 1,
       "common_name": "Dieffenbachia",
       "slug": "dieffenbachia-amoena",
       "scientific_name": "Dieffenbachia amoena",
       "year": 1977,
-      "bibliography": "Plantas de Folhagem Exótica: Um Guia Completo para Cultivo e Cuidados. Este livro oferece um olhar aprofundado sobre o mundo das plantas de folhagem exótica, incluindo sua história, classificação e técnicas de cultivo.",
+      "bibliography": "Ah, a Dieffenbachia! Uma verdadeira obra-prima da natureza que transforma qualquer ambiente com suas folhas exuberantes e padrões únicos. Conhecida carinhosamente como 'comigo-ninguém-pode', ela é perfeita para quem busca uma planta marcante e de fácil cuidado. Suas folhas grandes e manchadas criam um visual tropical impressionante, sendo ideal para espaços internos bem iluminados. Apenas tome cuidado com crianças e pets, pois ela deve ser admirada à distância!",
       "author": "Heinrich Wilhelm Schott",
       "status": "aceito",
       "rank": "espécie",
@@ -98,7 +98,7 @@
       "slug": "hosta-ventricosa",
       "scientific_name": "Hosta ventricosa",
       "year": 1859,
-      "bibliography": "Jornal da Sociedade Horticultural de Londres: Volume 14. Esta edição do jornal apresenta uma descrição detalhada da espécie Hosta ventricosa, incluindo sua descoberta, classificação e cultivo.",
+      "bibliography": "A Hosta é como aquela amiga confiável que sempre está lá por você! Com suas folhas impressionantes em tons de verde e azul, ela é a escolha perfeita para trazer um toque de elegância ao seu jardim. Resistente e versátil, ela prospera em áreas sombreadas, criando um espetáculo visual único com suas folhas texturizadas. É incrível como ela consegue transformar até mesmo os cantos mais esquecidos em verdadeiros pontos focais de beleza!",
       "author": "Stapf",
       "status": "aceito",
       "rank": "espécie",
@@ -124,7 +124,7 @@
       "slug": "succulent-mint-pot",
       "scientific_name": "Suculenta mint pot",
       "year": 1859,
-      "bibliography": "Jornal da Sociedade Horticultural de Londres: Volume 14. Esta edição do jornal apresenta uma descrição detalhada da espécie Suculenta mint pot, incluindo sua descoberta, classificação e cultivo.",
+      "bibliography": "Nossas suculentas são pequenas joias do mundo vegetal! Perfeitas para quem está começando sua jornada no paisagismo ou para aqueles que buscam plantas de baixa manutenção. Com suas formas geométricas fascinantes e cores suaves, elas são verdadeiras esculturas vivas que trazem um toque moderno e sofisticado para qualquer ambiente. E o melhor? São super resistentes e adaptáveis!",
       "author": "Stapf",
       "status": "aceito",
       "rank": "espécie",
@@ -150,7 +150,7 @@
       "slug": "aloe-vera-modern",
       "scientific_name": "Aloe barbadensis miller",
       "year": 1768,
-      "bibliography": "Plantas Medicinais do Mundo: Um Guia Científico Ilustrado. Este guia abrangente detalha as propriedades terapêuticas e os requisitos de cultivo da Aloe vera.",
+      "bibliography": "A lendária Aloe Vera é muito mais que uma planta medicinal - é uma verdadeira companheira de vida! Suas folhas suculentas não só trazem um visual contemporâneo ao seu espaço, mas também guardam um gel precioso cheio de propriedades curativas. Fácil de cuidar e linda de se ver, ela é aquele tipo de planta que combina beleza com utilidade. Um verdadeiro tesouro verde para ter em casa!",
       "author": "Philip Miller",
       "status": "aceito",
       "rank": "espécie",
@@ -176,7 +176,7 @@
       "slug": "strelitzia-reginae",
       "scientific_name": "Strelitzia reginae",
       "year": 1789,
-      "bibliography": "Revista Botânica: Volume 3. Primeira descrição detalhada e ilustração da planta Ave do Paraíso, destacando sua estrutura floral única e origens tropicais.",
+      "bibliography": "A majestosa Ave do Paraíso é pura exuberância tropical! Com suas flores espetaculares que parecem pássaros em pleno voo, ela é garantia de um show de cores e formas em seu jardim. Cada flor é uma obra de arte da natureza, combinando tons vibrantes de laranja e azul em uma estrutura única. Uma escolha ousada para quem quer fazer uma verdadeira declaração de estilo!",
       "author": "William Aiton",
       "status": "aceito",
       "rank": "espécie",
@@ -202,7 +202,7 @@
       "slug": "echinocactus-grusonii",
       "scientific_name": "Echinocactus grusonii",
       "year": 1886,
-      "bibliography": "Cactos e Suculentas: Um Guia Completo para Espécies, Cultivo e Cuidados. Exame detalhado das plantas do deserto com foco no Cacto Barril Dourado.",
+      "bibliography": "O Cacto Barril Dourado é como uma escultura viva que conta histórias do deserto! Sua forma robusta e espinhos dourados criam um visual impressionante que captura a atenção de todos. Perfeito para ambientes modernos e minimalistas, ele é aquele tipo de planta que exige pouca água mas oferece muito charme. Uma verdadeira peça de conversação para sua coleção!",
       "author": "Heinrich Hildmann",
       "status": "aceito",
       "rank": "espécie",
@@ -228,7 +228,7 @@
       "slug": "monstera-deliciosa",
       "scientific_name": "Monstera deliciosa",
       "year": 1849,
-      "bibliography": "Plantas Tropicais das Américas: Um Guia Completo para Identificação e Cuidados. Apresenta uma cobertura extensa das Aráceas, incluindo espécies de Monstera.",
+      "bibliography": "A Costela de Adão é a queridinha dos amantes de plantas! Suas folhas gigantes e recortadas são verdadeiras obras de arte natural que trazem um toque de drama tropical a qualquer ambiente. Versátil e charmosa, ela cresce com personalidade, criando um visual único à medida que suas folhas se desenvolvem. É aquela planta que todo mundo reconhece e deseja ter em casa!",
       "author": "Karl Heinrich Leopold Liebmann",
       "status": "aceito",
       "rank": "espécie",
