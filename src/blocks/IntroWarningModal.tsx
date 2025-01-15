@@ -21,23 +21,23 @@ export default function IntroWarningModal({ linkedinUsername, portfolioUrl }: In
   const now = new Date();
   const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
 
-  const clearLocalStorageAfterOneHour = () => {
-    const lastVisit = getItemFromLocalStorage("last-visit");
-
-    if (lastVisit) {
-      const lastVisitDate = new Date(lastVisit);
-
-      if (lastVisitDate < oneHourAgo) {
-        removeItemFromLocalStorage("last-visit");
-        removeItemFromLocalStorage("intro-warning-modal");
-        removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
-      }
-    }
-  };
-
   useEffect(() => {
+    const clearLocalStorageAfterOneHour = () => {
+      const lastVisit = getItemFromLocalStorage("last-visit");
+
+      if (lastVisit) {
+        const lastVisitDate = new Date(lastVisit);
+
+        if (lastVisitDate < oneHourAgo) {
+          removeItemFromLocalStorage("last-visit");
+          removeItemFromLocalStorage("intro-warning-modal");
+          removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
+        }
+      }
+    };
+
     clearLocalStorageAfterOneHour();
-  }, []);
+  }, [oneHourAgo]);
 
   useEffect(() => {
     setIsMounted(true);
