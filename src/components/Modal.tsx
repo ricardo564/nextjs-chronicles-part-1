@@ -2,7 +2,6 @@
 
 import type { FC } from "react";
 import { ReactNode, useEffect, useRef, useState } from "react";
-import { blockScroll } from "@/utils/handleWithBlockScroll";
 
 interface ModalProps {
   id: string;
@@ -32,10 +31,9 @@ export const Modal: FC<ModalProps> = ({
     return () => {
       if (dialog?.open) {
         dialog.close();
-        blockScroll(false);
       }
     };
-  }, [blockScroll]);
+  }, []);
 
   useEffect(() => {
     const dialog = modalRef.current;
@@ -45,15 +43,13 @@ export const Modal: FC<ModalProps> = ({
     try {
       if (isOpen) {
         dialog.showModal();
-        blockScroll(true);
       } else {
         dialog.close();
-        blockScroll(false);
       }
     } catch (error) {
       console.error('Modal operation failed:', error);
     }
-  }, [isOpen, isMounted, blockScroll]);
+  }, [isOpen, isMounted,]);
 
   if (!isMounted) return null;
 

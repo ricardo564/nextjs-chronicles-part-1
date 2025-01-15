@@ -6,7 +6,6 @@ import { useState } from "react";
 import Image from "next/image";
 import menuIcon from "@/assets/svg/menu-icon.svg";
 import { Logo } from "./Logo";
-import { blockScroll } from "@/utils/handleWithBlockScroll";
 import { getUniqueId } from "@/utils/getUniqueId";
 import Button from "./Button";
 
@@ -20,8 +19,6 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
 
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
-
-    blockScroll(isOpen);
   };
 
   return (
