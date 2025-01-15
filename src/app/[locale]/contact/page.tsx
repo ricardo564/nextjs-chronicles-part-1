@@ -37,6 +37,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const t = useTranslations('contact')
+
   const backgrounds = [
     {
       id: 1,
@@ -56,6 +57,17 @@ export default function ContactPage() {
   ]
 
   const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)]
+
+  const validationMessages = {
+    'firstName.min': t('validation.firstName.min'),
+    'firstName.max': t('validation.firstName.max'),
+    'lastName.min': t('validation.lastName.min'),
+    'lastName.max': t('validation.lastName.max'),
+    'email.invalid': t('validation.email.invalid'),
+    'phoneNumber.invalid': t('validation.phoneNumber.invalid'),
+    'message.min': t('validation.message.min'),
+    'message.max': t('validation.message.max')
+  }
 
   return (
     <DefaultLayout>
@@ -89,6 +101,7 @@ export default function ContactPage() {
         message={t('message')}
         sending={false}
         send={t('send')}
+        validationMessages={validationMessages}
       />
     </DefaultLayout>
   )
