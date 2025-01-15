@@ -272,5 +272,22 @@
     "noPlantsMessage": "Nenhuma planta para ser exibida...",
     "loadError": "Erro ao carregar as plantas: {message}",
     "genericError": "Erro ao carregar as plantas..."
+  },
+  "footer": {
+    "description": "Descubra as plantas perfeitas para seu espaço na Planto. Oferecemos uma seleção cuidadosamente curada de plantas internas e externas, guias especializados de cuidados e soluções sustentáveis de jardinagem para entusiastas de plantas.",
+    "quickLinks": {
+      "title": "Links Rápidos"
+    },
+    "newsletter": {
+      "title": "Fique Conectado",
+      "description": "Inscreva-se para receber dicas de cuidados, ofertas especiais e atualizações sobre novas chegadas de plantas.",
+      "emailPlaceholder": "Digite seu Email",
+      "emailAriaLabel": "Email para newsletter",
+      "subscribeButton": "Inscrever-se"
+    },
+    "social": {
+      "followUs": "Siga-nos no {platform}"
+    },
+    "copyright": "© {year} Planto. Todos os direitos reservados. Trazendo a natureza para dentro de casa."
   }
 }
