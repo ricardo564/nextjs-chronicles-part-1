@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import Contact from '@/blocks/sections/Contact'
+import { ContactForm } from '@/blocks/ContactForm'
 import ogImage from '@/assets/images/android-launchericon-512-512.png'
 import DefaultLayout from "@/layouts/DefaultLayout";
 import bgBonsai from '@/assets/images/bonsai.webp'
 import bgCactus from '@/assets/images/cactus.webp'
 import bgJibola from '@/assets/images/jibola.webp'
 import Image from 'next/image'
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ''),
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const t = useTranslations('contact')
   const backgrounds = [
     {
       id: 1,
@@ -73,8 +75,20 @@ export default function ContactPage() {
         />
       </div>
 
-      <Contact
+      <ContactForm
         className="mt-8"
+        title={t('title')}
+        titleHighlight={t('titleHighlight')}
+        subtitle={t('subtitle')}
+        formTitle={t('formTitle')}
+        formSubtitle={t('formSubtitle')}
+        firstName={t('firstName')}
+        lastName={t('lastName')}
+        email={t('email')}
+        phoneNumber={t('phoneNumber')}
+        message={t('message')}
+        sending={false}
+        send={t('send')}
       />
     </DefaultLayout>
   )

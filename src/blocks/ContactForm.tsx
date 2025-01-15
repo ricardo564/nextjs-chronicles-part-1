@@ -1,7 +1,6 @@
 'use client'
 
 import type { FC } from 'react'
-import { useState } from 'react'
 import { FieldValues, useForm, UseFormRegister } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { contactSchema, ContactFormData } from '@/schemas/contactSchema'
@@ -23,11 +22,11 @@ interface ContactFormProps {
   email: string
   phoneNumber: string
   message: string
-  sending: string
+  sending: boolean
   send: string
 }
 
-export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighlight, subtitle, formTitle, formSubtitle, firstName, lastName, email, phoneNumber, message, sending, send }) => {
+export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighlight, subtitle, formTitle, formSubtitle, firstName, lastName, email, phoneNumber, message, sending = false, send }) => {
   const {
     register,
     handleSubmit,
@@ -36,17 +35,14 @@ export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighl
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema)
   })
-  const [isSending, setIsSending] = useState(false)
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      setIsSending(true)
       console.log(data)
     } catch (error) {
       console.error('Error submitting form:', error)
     } finally {
       setTimeout(() => {
-        setIsSending(false)
         reset()
       }, 3000)
     }
@@ -78,7 +74,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighl
                 label={firstName}
                 name="firstName"
                 placeholder="First Name"
-                disabled={isSending}
+                disabled={sending}
                 register={register as unknown as UseFormRegister<FieldValues>}
                 error={errors.firstName?.message}
               />
@@ -86,7 +82,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighl
                 label={lastName}
                 name="lastName"
                 placeholder="Last Name"
-                disabled={isSending}
+                disabled={sending}
                 register={register as unknown as UseFormRegister<FieldValues>}
                 error={errors.lastName?.message}
               />
@@ -98,7 +94,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighl
               placeholder="Email"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.email?.message}
-              disabled={isSending}
+              disabled={sending}
             />
 
             <PhoneInput
@@ -107,7 +103,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighl
               placeholder="Phone Number"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.phoneNumber?.message}
-              disabled={isSending}
+              disabled={sending}
             />
 
             <TextArea
@@ -116,15 +112,15 @@ export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighl
               placeholder="Message"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.message?.message}
-              disabled={isSending}
+              disabled={sending}
             />
 
             <Button
               type="submit"
-              disabled={isSending}
+              disabled={sending}
               className="w-full"
             >
-              {isSending ? (
+              {sending ? (
                 <span className="animate-pulse">{sending}</span>
               ) : (
                 <>
