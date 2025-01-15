@@ -312,6 +312,9 @@
     "copyright": "© {year} Planto. Todos os direitos reservados. Trazendo a natureza para dentro de casa.",
     "topSelling": {
       "title": "Nossas Estrelas Verdes"
+    },
+    "bestProducts": {
+      "title": "Nossos Melhores"
     }
   }
 }
