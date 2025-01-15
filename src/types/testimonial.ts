@@ -1,7 +1,7 @@
 export interface Testimonial {
-  id: number | string;
+  id: number;
   name: string;
-  rating: number | string;
+  rating: number;
   testimonial: string;
   avatarUrl: string;
 }
