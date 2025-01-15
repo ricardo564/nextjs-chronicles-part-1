@@ -52,7 +52,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 shadow-xl">
+        <div className="max-w-3xl mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-8 border border-white/20 shadow-xl">
           <h2 className="text-2xl font-bold text-white mb-2">
             Let&apos;s nurture connections
           </h2>
