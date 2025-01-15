@@ -13,5 +13,63 @@
     "buttonTitle": "Ver Demonstração ao Vivo",
     "text": "Demonstração ao Vivo",
     "modalTitle": "Demonstração ao Vivo"
-  }
+  },
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "rating": 5,
+      "testimonial": "O cuidado com os detalhes e a qualidade do trabalho superaram minhas expectativas. Altamente recomendado! A dedicação da equipe em entregar um produto de alto padrão foi evidente durante todo o projeto. A capacidade de entender nossa visão e transformá-la em realidade foi impressionante. Não hesitaria em recomendar a eles a qualquer pessoa que busque um serviço excepcional.",
+      "avatarUrl": "Logo.src"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Chen",
+      "rating": 3,
+      "testimonial": "Serviço incrível e comunicação durante todo o projeto. Com certeza trabalharia com eles novamente. A capacidade de resposta da equipe e a disposição para se adaptar às nossas necessidades em mudança foram cruciais para o sucesso do projeto. Embora tenham ocorrido alguns problemas menores, a experiência geral foi positiva, e eu consideraria colaborar com eles novamente no futuro.",
+      "avatarUrl": "Logo.src"
+    },
+    {
+      "id": 3,
+      "name": "Michael Rodriguez",
+      "rating": 4,
+      "testimonial": "Muito profissional e entregou exatamente o que foi prometido. Pequenos atrasos, mas ótimo no geral. O profissionalismo da equipe e o compromisso em entregar um trabalho de alta qualidade foram evidentes durante todo o projeto. Embora tenha havido alguns atrasos menores, o produto final superou nossas expectativas, e ficamos satisfeitos com o resultado.",
+      "avatarUrl": "Logo.src"
+    },
+    {
+      "id": 4,
+      "name": "Emma Thompson",
+      "rating": 5,
+      "testimonial": "Resultados excepcionais! Eles transformaram nossa visão em realidade perfeitamente. A capacidade da equipe de entender nossa visão e trazê-la à vida foi excepcional. O produto final superou nossas expectativas em todos os aspectos, e não poderíamos estar mais felizes com o resultado. A dedicação deles em entregar resultados excepcionais é verdadeiramente louvável.",
+      "avatarUrl": "Logo.src"
+    },
+    {
+      "id": 5,
+      "name": "David Kim",
+      "rating": 4,
+      "testimonial": "Ótimo custo-benefício. A equipe foi responsiva e acomodou nossas necessidades. O valor do projeto foi excepcional, considerando a qualidade do trabalho entregue. A capacidade de resposta da equipe e a disposição para se adaptar às nossas necessidades garantiram uma execução suave do projeto. Ficamos satisfeitos com o produto final e recomendaríamos a qualquer um que busque uma solução econômica.",
+      "avatarUrl": "Logo.src"
+    },
+    {
+      "id": 6,
+      "name": "Lisa Anderson",
+      "rating": 5,
+      "testimonial": "Superou as expectativas em todos os aspectos. Sua expertise realmente se mostra no produto final. A expertise da equipe e a atenção aos detalhes foram evidentes durante todo o projeto. Eles superaram nossas expectativas em todos os aspectos, desde a comunicação até a entrega do produto final. Ficamos completamente impressionados com o trabalho deles e altamente recomendamos a qualquer um que busque um serviço excepcional.",
+      "avatarUrl": "Logo.src"
+    },
+    {
+      "id": 7,
+      "name": "James Wilson",
+      "rating": 5,
+      "testimonial": "Experiência fantástica do início ao fim. Recomendaria altamente a qualquer um! O profissionalismo, a expertise e a dedicação da equipe em entregar resultados excepcionais tornaram nosso projeto um sucesso. Desde a consulta inicial até a entrega do produto final, a experiência foi contínua e superou nossas expectativas em todos os aspectos.",
+      "avatarUrl": "Logo.src"
+    },
+    {
+      "id": 8,
+      "name": "Maria Garcia",
+      "rating": 4,
+      "testimonial": "Muito satisfeito com os resultados. Serviço profissional e eficiente. O profissionalismo e a eficiência da equipe foram evidentes durante todo o projeto. Ficamos satisfeitos com o produto final, que atendeu às nossas expectativas. A capacidade deles de entregar um produto de alta qualidade de maneira eficiente foi impressionante, e consideraríamos trabalhar com eles novamente no futuro.",
+      "avatarUrl": "Logo.src"
+    }
+  ]
 }
