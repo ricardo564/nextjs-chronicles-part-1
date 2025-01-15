@@ -1,9 +1,11 @@
 import { QuotedTitle } from "@/components/QuotedTitle";
-import { testimonials } from "@/static/testimonials";
+import { useTestimonials } from "@/hooks/testimonials";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { getUniqueId } from "@/utils/getUniqueId";
 
-export const TestimonialSection = () => {
+export function TestimonialSection() {
+  const testimonials = useTestimonials();
+
   return (
     <div className="relative min-h-[20rem] max-w-7xl mx-auto pt-32 px-2 h-full pb-6">
       <div className="flex flex-col items-center max-w-[40rem] mx-auto">
