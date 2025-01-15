@@ -265,7 +265,27 @@
     "phoneNumber": "Telefone",
     "message": "Mensagem",
     "sending": "Enviando...",
-    "send": "Enviar para o jardim"
+    "send": "Enviar para o jardim",
+    "validation": {
+      "firstName": {
+        "min": "O nome deve ter pelo menos 2 caracteres",
+        "max": "O nome não pode exceder 50 caracteres"
+      },
+      "lastName": {
+        "min": "O sobrenome deve ter pelo menos 2 caracteres",
+        "max": "O sobrenome não pode exceder 50 caracteres"
+      },
+      "email": {
+        "invalid": "Endereço de e-mail inválido"
+      },
+      "phoneNumber": {
+        "invalid": "Número de telefone inválido"
+      },
+      "message": {
+        "min": "A mensagem deve ter pelo menos 10 caracteres",
+        "max": "A mensagem não pode exceder 500 caracteres"
+      }
+    }
   },
   "plants": {
     "invalidDataError": "Dados inválidos recebidos do servidor",

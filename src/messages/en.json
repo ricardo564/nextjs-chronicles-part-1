@@ -265,7 +265,27 @@
     "phoneNumber": "Phone Number",
     "message": "Message",
     "sending": "Sending...",
-    "send": "Send it to the garden"
+    "send": "Send it to the garden",
+    "validation": {
+      "firstName": {
+        "min": "First name must be at least 2 characters",
+        "max": "First name cannot exceed 50 characters"
+      },
+      "lastName": {
+        "min": "Last name must be at least 2 characters",
+        "max": "Last name cannot exceed 50 characters"
+      },
+      "email": {
+        "invalid": "Invalid email address"
+      },
+      "phoneNumber": {
+        "invalid": "Invalid phone number"
+      },
+      "message": {
+        "min": "Message must be at least 10 characters",
+        "max": "Message cannot exceed 500 characters"
+      }
+    }
   },
   "plants": {
     "invalidDataError": "Invalid data received from server",
