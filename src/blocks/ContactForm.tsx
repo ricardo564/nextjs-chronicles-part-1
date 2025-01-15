@@ -13,9 +13,21 @@ import { TextArea } from '@/components/forms/TextArea'
 
 interface ContactFormProps {
   className?: string
+  title: string
+  titleHighlight: string
+  subtitle: string
+  formTitle: string
+  formSubtitle: string
+  firstName: string
+  lastName: string
+  email: string
+  phoneNumber: string
+  message: string
+  sending: string
+  send: string
 }
 
-export const ContactForm: FC<ContactFormProps> = ({ className }) => {
+export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighlight, subtitle, formTitle, formSubtitle, firstName, lastName, email, phoneNumber, message, sending, send }) => {
   const {
     register,
     handleSubmit,
@@ -45,25 +57,25 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-4">
-            Grow with <span className='text-green-500'>us</span>
+            {title} <span className='text-green-500'>{titleHighlight}</span>
           </h1>
           <p className="text-gray-400 text-lg">
-            Reach out, and let&apos;s cultivate a world of possibilities together!
+            {subtitle}
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-8 border border-white/20 shadow-xl">
           <h2 className="text-2xl font-bold text-white mb-2">
-            Let&apos;s nurture connections
+            {formTitle}
           </h2>
           <p className="text-gray-400 mb-8">
-            Let&apos;s connect our roots! Reach out and let the power of collaboration bloom in our gardens.
+            {formSubtitle}
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <TextInput
-                label="First Name"
+                label={firstName}
                 name="firstName"
                 placeholder="First Name"
                 disabled={isSending}
@@ -71,7 +83,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
                 error={errors.firstName?.message}
               />
               <TextInput
-                label="Last Name"
+                label={lastName}
                 name="lastName"
                 placeholder="Last Name"
                 disabled={isSending}
@@ -81,7 +93,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
             </div>
 
             <EmailInput
-              label="Email"
+              label={email}
               name="email"
               placeholder="Email"
               register={register as unknown as UseFormRegister<FieldValues>}
@@ -90,7 +102,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
             />
 
             <PhoneInput
-              label="Phone Number"
+              label={phoneNumber}
               name="phoneNumber"
               placeholder="Phone Number"
               register={register as unknown as UseFormRegister<FieldValues>}
@@ -99,7 +111,7 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
             />
 
             <TextArea
-              label="Message"
+              label={message}
               name="message"
               placeholder="Message"
               register={register as unknown as UseFormRegister<FieldValues>}
@@ -113,10 +125,10 @@ export const ContactForm: FC<ContactFormProps> = ({ className }) => {
               className="w-full"
             >
               {isSending ? (
-                <span className="animate-pulse">Sending...</span>
+                <span className="animate-pulse">{sending}</span>
               ) : (
                 <>
-                  <span>Send it to the garden</span>
+                  <span>{send}</span>
                 </>
               )}
             </Button>
