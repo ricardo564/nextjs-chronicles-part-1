@@ -1,8 +1,8 @@
 {
   "hero": {
-    "title": "Território Verde",
-    "description": "Descubra o poder transformador das plantas em sua vida! Nossa coleção exclusiva de plantas para ambientes internos não apenas embeleza seu espaço, mas cria um refúgio de paz e bem-estar. Deixe a natureza trabalhar sua magia, purificando o ar e trazendo vida nova para cada canto de sua casa.",
-    "trendyPlantsTitle": "Plantas Que Estão Conquistando Corações"
+    "title": "Breath Natural - Seu Oásis Verde Interior",
+    "description": "Transforme sua casa em um santuário natural com nossa coleção premium de plantas para interiores. Cada planta é cuidadosamente selecionada para purificar o ar, reduzir o estresse e criar um ambiente mais saudável e harmonioso. Descubra o poder da natureza em transformar seu espaço e bem-estar com nossas plantas sustentáveis e de fácil manutenção.",
+    "trendyPlantsTitle": "Plantas Tendência 2024: As Mais Desejadas do Momento"
   },
   "explore": {
     "text": "Explorar",
@@ -66,14 +66,14 @@
     }
   },
   "mockupPlants": {
-    "title": "Nossas Estrelas Verdes",
+    "title": "Coleção Exclusiva de Plantas Premium",
     "plant1": {
       "id": 1,
       "common_name": "Dieffenbachia",
       "slug": "dieffenbachia-amoena",
       "scientific_name": "Dieffenbachia amoena",
       "year": 1977,
-      "bibliography": "Ah, a Dieffenbachia! Uma verdadeira obra-prima da natureza que transforma qualquer ambiente com suas folhas exuberantes e padrões únicos. Conhecida carinhosamente como 'comigo-ninguém-pode', ela é perfeita para quem busca uma planta marcante e de fácil cuidado. Suas folhas grandes e manchadas criam um visual tropical impressionante, sendo ideal para espaços internos bem iluminados. Apenas tome cuidado com crianças e pets, pois ela deve ser admirada à distância!",
+      "bibliography": "A Dieffenbachia, carinhosamente conhecida como 'comigo-ninguém-pode', é uma planta tropical premium que transforma ambientes com suas folhas exuberantes e padrões únicos. Ideal para purificação do ar em ambientes internos, esta planta de baixa manutenção é perfeita para decoração moderna e minimalista. Suas folhas grandes e manchadas criam um visual tropical sofisticado, sendo excelente para escritórios e salas bem iluminadas. Observação importante: mantenha fora do alcance de crianças e pets.",
       "author": "Heinrich Wilhelm Schott",
       "status": "aceito",
       "rank": "espécie",
@@ -255,11 +255,11 @@
     "status": "Carregando"
   },
   "contact": {
-    "title": "Cresça",
-    "titleHighlight": "conosco",
-    "subtitle": "Entre em contato e vamos cultivar um mundo de possibilidades juntos!",
-    "formTitle": "Vamos nutrir conexões",
-    "formSubtitle": "Vamos conectar nossas raízes! Entre em contato e deixe o poder da colaboração florescer em nossos jardins.",
+    "title": "Cultive Seu",
+    "titleHighlight": "Jardim dos Sonhos",
+    "subtitle": "Transforme seu espaço com nossa expertise em plantas e design de interiores sustentável",
+    "formTitle": "Consultoria Personalizada de Plantas",
+    "formSubtitle": "Receba orientação especializada para criar seu próprio oásis verde. Nossa equipe de especialistas está pronta para ajudar na escolha das plantas ideais para seu espaço.",
     "firstName": "Nome",
     "lastName": "Sobrenome",
     "email": "E-mail",
