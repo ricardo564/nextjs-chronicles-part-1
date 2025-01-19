@@ -5,6 +5,7 @@ import { quickLinks, socialLinks } from "@/static/footer";
 import { getRandomLinkForRedirection } from "@/utils/getRandomLinkForRedirection";
 import { getUniqueId } from "@/utils/getUniqueId";
 import Button from "@/components/Button";
+import { BuyMeCoffee } from "@/components/BuyMeCoffee";
 
 const Footer: FC = () => {
   const t = useTranslations('footer');
@@ -58,6 +59,9 @@ const Footer: FC = () => {
               <p className="text-gray-300 mb-4">
                 {t('newsletter.description')}
               </p>
+
+              <BuyMeCoffee username={process.env.BUY_ME_A_COFFEE_USERNAME || ''} />
+
               <form className="flex gap-2 flex-wrap md:flex-nowrap truncate">
                 <input
                   type="email"
