@@ -1,26 +1,18 @@
 import { useRouter } from 'next/router'
-import pt from '../../public/locales/pt/common.json'
-import en from '../../public/locales/en/common.json'
+import pt from '../../src/messages/pt.json'
+import en from '../../src/messages/en.json'
+import hi from '../../src/messages/hi.json'
 
-type TranslationKeys = 'intro.title' | 'intro.description' | 'intro.trendyPlantsTitle'
-
-type TranslationType = {
-  intro: {
-    title: string;
-    description: string;
-    trendyPlantsTitle: string;
-  }
-}
-
-const translations: Record<string, TranslationType> = {
+const translations: Record<string, string | Record<string, unknown>> = {
   'pt': pt,
-  'en-US': en,
+  'en': en,
+  'hi': hi,
 }
 
 export function useTranslation() {
   const router = useRouter()
   const { locale } = router
-  const t = (key: TranslationKeys): string => {
+  const t = (key: string): string => {
     const keys = key.split('.')
     let translation: string | Record<string, unknown> = translations[locale as keyof typeof translations]
 
