@@ -7,6 +7,7 @@ import IntroWarningModal from "@/blocks/IntroWarningModal";
 import { Analytics } from '@/components/Analytics'
 import ScrollToTop from "@/components/ScrollToTop";
 import { NextIntlClientProvider } from 'next-intl'
+import { PortfolioShortcut } from "@/blocks/portfolioShortcut";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,6 +95,12 @@ export default async function LocaleLayout({
         </NextIntlClientProvider>
         <Analytics />
         <ScrollToTop />
+
+        <PortfolioShortcut
+          portfolioUrl={process.env.PORTFOLIO_URL || ''}
+          customClassName="fixed bottom-4 left-4 hover:bg-gray-500 hover:text-white transition-all ease-in-out duration-300"
+          showText={false}
+        />
       </body>
 
       <Script
