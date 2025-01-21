@@ -295,6 +295,10 @@
     "genericError": "Erro ao carregar as plantas..."
   },
   "footer": {
+    "home": "Home",
+    "typesOfPlants": "Tipos de Plantas",
+    "contactLink": "Contato",
+    "privacyPolicy": "Política de Privacidade",
     "description": "Descubra as plantas perfeitas para seu espaço na Planto. Oferecemos uma seleção cuidadosamente curada de plantas internas e externas, guias especializados de cuidados e soluções sustentáveis de jardinagem para entusiastas de plantas.",
     "quickLinks": {
       "title": "Links Rápidos"
