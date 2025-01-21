@@ -8,6 +8,7 @@ import menuIcon from "@/assets/svg/menu-icon.svg";
 import { Logo } from "./Logo";
 import { getUniqueId } from "@/utils/getUniqueId";
 import Button from "./Button";
+import { useTranslations } from "next-intl";
 
 interface MobileMenuProps {
   menuItems: MenuItem[];
@@ -16,6 +17,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ menuItems, className }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const translateMenu = useTranslations('menuItems');
 
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,7 +31,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
       >
         <Image
           src={menuIcon}
-          alt="Menu"
+          alt={translateMenu('menu')}
           width={24}
           height={24}
           className="md:w-11 md:h-11 max-w-[44px] max-h-[44px]"
@@ -82,7 +84,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
           <ul className="flex flex-col items-center gap-2 w-full mt-24">
             {menuItems.map((item, index) => (
               <li
-                key={`${item.label}-${index}-mobile-menu-${getUniqueId()}`}
+                key={`${item.menuItemKey}-${index}-mobile-menu-${getUniqueId()}`}
                 className="w-full hover:bg-white/10 transition-all duration-300 hover:border-b-white border-b border-transparent"
               >
                 <Link
@@ -91,7 +93,7 @@ export function MobileMenu({ menuItems, className }: MobileMenuProps) {
                   className="flex items-center justify-center w-full px-3 py-2 text-sm font-medium text-white rounded-md transition-colors duration-200"
                   onClick={handleToggleMenu}
                 >
-                  {item.label}
+                  {translateMenu(item.menuItemKey)}
                 </Link>
               </li>
             ))}
