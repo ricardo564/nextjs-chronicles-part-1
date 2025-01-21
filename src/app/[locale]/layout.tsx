@@ -6,6 +6,7 @@ import Script from "next/script";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
 import { Analytics } from '@/components/Analytics'
 import ScrollToTop from "@/components/ScrollToTop";
+import { NextIntlClientProvider } from 'next-intl'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,11 +48,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params: { locale }
+}: {
+  children: React.ReactNode
+  params: { locale: string }
+}) {
+  const messages = (await import(`@/messages/${locale}.json`)).default
+
   return (
     <html lang="en">
       <head>
@@ -80,11 +85,13 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <IntroWarningModal
-          linkedinUsername={process.env.LINKEDIN_USERNAME || ''}
-          portfolioUrl={process.env.PORTFOLIO_URL || ''}
-        />
-        {children}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <IntroWarningModal
+            linkedinUsername={process.env.LINKEDIN_USERNAME || ''}
+            portfolioUrl={process.env.PORTFOLIO_URL || ''}
+          />
+          {children}
+        </NextIntlClientProvider>
         <Analytics />
         <ScrollToTop />
       </body>
