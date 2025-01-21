@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { menuItems } from "@/static/menuItems";
-import { useTranslation } from "@/hooks/useTranslation";
+import { useTranslations } from 'next-intl';
 
 interface DesktopMenuProps {
   className?: string;
 }
 
 export function DesktopMenu({ className }: DesktopMenuProps) {
-  const { t } = useTranslation();
+  const t = useTranslations('menuItems');
 
   return (
     <ul className={`hidden lg:flex items-center space-x-8 ${className}`}>
