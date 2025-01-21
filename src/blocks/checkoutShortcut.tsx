@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import { useShoppingCartStore } from "@/store/shoppingCartStore";
+import { useTranslations } from "next-intl";
 
 interface CheckoutShortcutProps {
   className?: string;
@@ -9,6 +10,7 @@ interface CheckoutShortcutProps {
 export default function CheckoutShortcut({ className, loading }: CheckoutShortcutProps) {
   const { items: cartItems } = useShoppingCartStore();
   const totalOnStore = cartItems.reduce((acc, cartItem) => acc + cartItem.item.genus_id * cartItem.quantity, 0);
+  const translateCart = useTranslations('cart');
 
   return (
     <div className={`flex items-center justify-center w-full bottom-12 -mt-6 ${className}`}>
@@ -20,7 +22,7 @@ export default function CheckoutShortcut({ className, loading }: CheckoutShortcu
         ${totalOnStore.toFixed(2)}
       </span>
       <span className="text-md font-bold">
-        Checkout
+        {translateCart('checkout')}
       </span>
     </Button>
   </div>
