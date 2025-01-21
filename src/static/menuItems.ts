@@ -1,8 +1,24 @@
 import { MenuItem } from "@/types/menuItem";
 
 export const menuItems: MenuItem[] = [
-  { label: "Home", to: "/", ariaLabel: "Home" },
-  { label: "Plants Types", to: "#", ariaLabel: "Plants Types" },
-  { label: "More", to: "/plants", ariaLabel: "More" },
-  { label: "Contact", to: "/contact", ariaLabel: "Contact" },
+  {
+    menuItemKey: "home",
+    to: "/",
+    ariaLabel: "Home"
+  },
+  {
+    menuItemKey: "typesOfPlants",
+    to: "#",
+    ariaLabel: "Plants Types"
+  },
+  {
+    menuItemKey: "more",
+    to: "/plants",
+    ariaLabel: "More"
+  },
+  {
+    menuItemKey: "contactLink",
+    to: "/contact",
+    ariaLabel: "Contact"
+  },
 ];
