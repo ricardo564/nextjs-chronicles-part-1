@@ -9,6 +9,7 @@ import { QuantityShortcut } from "./quantityShortcut";
 import { Modal } from "@/components/Modal";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { CartItem } from "@/types/cartItem";
+import { useTranslations } from 'next-intl';
 
 interface ShoppingCartProps {
   className?: string;
@@ -31,6 +32,8 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
     );
     return totalOnStore > 99 ? "99+" : totalOnStore;
   }, [cartItems]);
+
+  const translateCart = useTranslations('cart');
 
   const handleClearCartConfirm = () => {
     clearCart();
@@ -107,7 +110,7 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
               className="flex items-center justify-center mr-4 mt-1 text-white hover:bg-white/10 hover:text-gray-50 rounded-full p-2"
               type="button"
               aria-label="Close shopping cart"
-              title="Close shopping cart"
+              title={translateCart('closeShoppingCart')}
               onClick={handleToggleMenu}
             >
               <svg
@@ -124,7 +127,7 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
             </button>
 
             <p className="text-2xl font-bold w-full text-center">
-              Shopping Cart
+              {translateCart('shoppingCart')}
             </p>
 
             <div className="flex flex-col gap-1">
@@ -132,7 +135,7 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
               isOpen={isClearCartOpen}
               onClose={() => setIsClearCartOpen(false)}
               id="clear-cart-modal"
-              title="Clear cart"
+              title={translateCart('clearCart')}
             >
               <div className="flex flex-col gap-4 justify-start">
                 <p className="text-lg text-center">Are you sure you want to clear the cart?</p>
@@ -141,20 +144,20 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
                     onClick={() => setIsClearCartOpen(false)}
                     className="bg-gray-500 text-white px-4 py-2 rounded-md w-full"
                   >
-                    Cancel
+                    {translateCart('cancel')}
                   </button>
                   <button
                     onClick={() => handleClearCartConfirm()}
                     className=" text-white bg-red-500 px-4 py-2 rounded-md w-full"
                   >
-                    Clear
+                    {translateCart('clear')}
                   </button>
                 </div>
               </div>
             </Modal>
               <button
-                title="Clear cart"
-                aria-label="Clear cart"
+                title={translateCart('clearCart')}
+                aria-label={translateCart('clearCart')}
                 type="button"
                 className="text-white hover:text-red-500 rounded-full p-2 transition-all duration-300"
                 onClick={() => setIsClearCartOpen(true)}
@@ -191,7 +194,7 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
             {cartItems.length > 0 ? (
               cartItems.map((cartItem, index) => renderCartItem(cartItem, index))
             ) : (
-              <p>No items in cart</p>
+              <p>{translateCart('noItemsInCart')}</p>
             )}
           </div>
 
