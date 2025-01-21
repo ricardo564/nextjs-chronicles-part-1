@@ -19,7 +19,7 @@ export function Header({ menuItems }: HeaderProps) {
             <Logo />
           </div>
 
-          <DesktopMenu menuItems={menuItems} />
+          <DesktopMenu />
 
           <div className="grid grid-cols-4 md:grid-cols-3 place-items-center gap-4">
             <LanguageSwitcher />
