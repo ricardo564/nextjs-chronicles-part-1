@@ -1,5 +1,5 @@
 export interface MenuItem {
-  label: string;
+  menuItemKey: string;
   to: string;
   ariaLabel: string;
 }
