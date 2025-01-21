@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "title": "प्रकृति को अंदर लाएं",
+    "description": "अपने सही हरे साथी की खोज करें! हमारे ध्यान से चुने गए इनडोर पौधे केवल आपके स्थान को सुंदर नहीं बनाते - वे एक जीवित, सांस लेने वाली शरण स्थली बनाते हैं जो आपकी हवा को शुद्ध करती है और आपकी आत्माओं को उठाती है। हजारों पौधे प्रेमियों में शामिल हों जिन्होंने अपने घरों को प्राकृतिक स्वर्ग में बदल दिया है।",
+    "trendyPlantsTitle": "ट्रेंडिंग हरे साथी"
+  },
+  "explore": {
+    "text": "खोजें",
+    "title": "{name} पौधों का पता लगाएं"
+  },
+  "liveDemo": {
+    "buttonLabel": "लाइव डेमो देखें",
+    "buttonTitle": "लाइव डेमो देखें",
+    "text": "लाइव डेमो",
+    "modalTitle": "लाइव डेमो"
+  },
+  "testimonials": {
+    "title": "ग्राहक समीक्षा",
+    "testimonial1": {
+      "id": 1,
+      "name": "जॉन स्मिथ",
+      "rating": 5,
+      "testimonial": "विस्तार से ध्यान और काम की गुणवत्ता मेरी अपेक्षाओं से अधिक थी। अत्यधिक सिफारिशित!"
+    },
+    "testimonial2": {
+      "id": 2,
+      "name": "सारा चेन",
+      "rating": 3,
+      "testimonial": "पूरी परियोजना के दौरान अविश्वसनीय सेवा और संचार। निश्चित रूप से उनके साथ फिर से काम करेंगे।"
+    },
+    "testimonial3": {
+      "id": 3,
+      "name": "माइकल रोड्रिगेज",
+      "rating": 4,
+      "testimonial": "बहुत पेशेवर और बिल्कुल वही दिया जो वादा किया गया था। मामूली देरी लेकिन कुल मिलाकर शानदार।"
+    },
+    "testimonial4": {
+      "id": 4,
+      "name": "एम्मा थॉम्पसन",
+      "rating": 5,
+      "testimonial": "उत्कृष्ट परिणाम! उन्होंने हमारी दृष्टि को वास्तविकता में पूरी तरह से बदल दिया। टीम की हमारी दृष्टि को समझने और उसे जीवन में लाने की क्षमता असाधारण थी। अंतिम उत्पाद हर तरह से हमारी अपेक्षाओं से अधिक था, और हम परिणाम से बहुत खुश थे। उत्कृष्ट परिणाम देने के लिए उनकी समर्पण सच में प्रशंसनीय है।"
+    },
+    "testimonial5": {
+      "id": 5,
+      "name": "डेविड किम",
+      "rating": 4,
+      "testimonial": "पैसे के लिए बड़ी कीमत। टीम प्रतिक्रियाशील और हमारी जरूरतों के अनुकूल थी। परियोजना की कीमत पैसे के लिए असाधारण थी, दिए गए काम की गुणवत्ता को देखते हुए। टीम की प्रतिक्रियाशीलता और हमारी जरूरतों के अनुकूल होने की इच्छा ने एक सुचारू परियोजना कार्यान्वयन सुनिश्चित किया। हम अंतिम उत्पाद से संतुष्ट थे और लागत प्रभावी समाधान की तलाश में किसी को भी उनकी सिफारिश करेंगे।"
+    },
+    "testimonial6": {
+      "id": 6,
+      "name": "लीसा एंडरसन",
+      "rating": 5,
+      "testimonial": "हर तरह से अपेक्षाओं से अधिक। उनकी विशेषज्ञता अंतिम उत्पाद में स्पष्ट रूप से दिखाई देती है। टीम की विशेषज्ञता और विस्तार पर ध्यान पूरी परियोजना में स्पष्ट था। उन्होंने हर पहलू में हमारी अपेक्षाओं को पार कर लिया, संचार से लेकर अंतिम उत्पाद वितरण तक। हम उनके काम से पूरी तरह प्रभावित थे और असाधारण सेवा की तलाश में किसी को भी उनकी उच्च सिफारिश करेंगे।"
+    },
+    "testimonial7": {
+      "id": 7,
+      "name": "जेम्स विल्सन",
+      "rating": 5,
+      "testimonial": "शुरू से अंत तक शानदार अनुभव। किसी को भी उच्च सिफारिश करेंगे! टीम की पेशेवरता, विशेषज्ञता, और असाधारण परिणाम देने के लिए समर्पण ने हमारी परियोजना को सफल बनाया। प्रारंभिक परामर्श से लेकर अंतिम उत्पाद वितरण तक, अनुभव सहज था और हर तरह से हमारी अपेक्षाओं को पार कर गया।"
+    },
+    "testimonial8": {
+      "id": 8,
+      "name": "मारिया गार्सिया",
+      "rating": 4,
+      "testimonial": "परिणामों से बहुत संतुष्ट। पेशेवर और कुशल सेवा। टीम की पेशेवरता और कुशलता पूरी परियोजना में स्पष्ट थी। हम अंतिम उत्पाद से संतुष्ट थे, जो हमारी अपेक्षाओं को पूरा करता था। उनकी कुशलता से उच्च-गुणवत्ता वाला उत्पाद देने की क्षमता प्रभावशाली थी, और हम भविष्य में उनके साथ फिर से काम करने पर विचार करेंगे।"
+    }
+  },
+  "mockupPlants": {
+    "title": "मॉकअप पौधे",
+    "plant1": {
+      "id": 1,
+      "common_name": "डिफेनबाखिया",
+      "slug": "dieffenbachia-amoena",
+      "scientific_name": "डिफेनबाखिया अमोएना",
+      "year": 1977,
+      "bibliography": "आपको डिफेनबाखिया के बारे में बताने दें! यह आश्चर्यजनक उष्णकटिबंधीय सुंदरता, जिसे 'डम्ब केन' के नाम से भी जाना जाता है, प्रकृति की एक सच्ची कृति है। इसकी बड़ी, विविधतापूर्ण पत्तियाँ किसी भी कमरे में तुरंत उष्णकटिबंधीय अनुभव बनाती हैं। यह देखने में जितनी सुंदर है, मुझे इसकी अनुकूलन क्षमता सबसे अधिक पसंद है - शुरुआती और अनुभवी पौधे माता-पिता दोनों के लिए उत्तम। बस इसे पालतू जानवरों और बच्चों से दूर रखें, क्योंकि इस सुंदरता में एक गुप्त रक्षा तंत्र है!",
+      "author": "हेनरिक विल्हेम शॉट",
+      "status": "स्वीकृत",
+      "rank": "प्रजाति",
+      "family_common_name": "अरेसी",
+      "genus_id": 3275,
+      "image_url": "dieffenbachiaPlantPot.src",
+      "synonyms": [
+        "डिफेनबाखिया मैक्युलाटा",
+        "कैलेडियम मैक्युलाटम",
+        "कोमिगो-निंगुएम-पोड"
+      ],
+      "genus": "डिफेनबाखिया",
+      "family": "अरेसी",
+      "links": {
+        "self": "/api/v1/species/dieffenbachia-amoena",
+        "plant": "/api/v1/plants/dieffenbachia-amoena",
+        "genus": "/api/v1/genus/dieffenbachia"
+      }
+    },
+    "plant2": {
+      "id": 2,
+      "common_name": "होस्टा",
+      "slug": "hosta-ventricosa",
+      "scientific_name": "होस्टा वेंट्रिकोसा",
+      "year": 1859,
+      "bibliography": "अह, होस्टा - क्या अद्भुत छाया उद्यान साथी! मैंने इन सुंदरियों को सबसे चुनौतीपूर्ण, छायादार स्थानों को हरे-भरे, बनावटी चमत्कारों में बदलते देखा है। उनकी लहराती पत्तियाँ गहरे नीले-हरे से लेकर उज्ज्वल चार्ट्रेज तक के सबसे अविश्वसनीय रंगों में आती हैं। वास्तव में अद्भुत बात यह है कि वे हर साल और भी प्रभावशाली हो जाते हैं, जैसे एक अच्छी शराब! उन लोगों के लिए उत्तम जो अपने बाहरी छाया उद्यानों में कुछ नाटक जोड़ना चाहते हैं।",
+      "author": "स्टैप्फ",
+      "status": "स्वीकृत",
+      "rank": "प्रजाति",
+      "family_common_name": "एस्परैगेसी",
+      "genus_id": 3276,
+      "image_url": "hostaPlantWhiteVase.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant3": {
+      "id": 3,
+      "common_name": "Succulent",
+      "slug": "succulent-mint-pot",
+      "scientific_name": "Succulent mint pot",
+      "year": 1859,
+      "bibliography": "मिंट के गमलों में सक्युलेंट बिल्कुल अप्रतिरोध्य हैं! ये छोटे पानी-बुद्धिमान चमत्कार जीवित मूर्तियों की तरह हैं, प्रत्येक की अपनी अनूठी व्यक्तित्व के साथ। मैं इनकी अविश्वसनीय लचीलापन को पूरी तरह से पसंद करता हूं - ये लगभग अविनाशी हैं! व्यस्त पौधों के माता-पिता या जो पानी देने की दिनचर्या को भूल जाते हैं, उनके लिए एकदम सही। साथ ही, ये आधुनिक मिनिमलिस्ट सेटिंग्स में बिल्कुल शानदार दिखते हैं।",
+      "author": "Stapf",
+      "status": "accepted",
+      "rank": "species",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "succulentMintPot.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta und  ulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant4": {
+      "id": 4,
+      "common_name": "Aloe Vera",
+      "slug": "aloe-vera-modern",
+      "scientific_name": "Aloe barbadensis miller",
+      "year": 1768,
+      "bibliography": "किंवदंती एलो वेरा - प्रकृति का अपना प्राथमिक चिकित्सा किट! मेरे पास वर्षों से इनमें से एक चमत्कारी पौधा है, और यह मुझे आश्चर्यचकित करना कभी नहीं छोड़ता। यह न केवल एक आकर्षक वास्तुशिल्पीय पौधा है जो किसी भी स्थान में आधुनिक छूह जोड़ता है, बल्कि यह अविश्वसनीय रूप से व्यावहारिक भी है। सनबर्न को शांत करने से लेकर हवा को शुद्ध करने तक, यह पौधा वास्तव में सभी कार्यों का स्वामी है। और सबसे अच्छी बात? इसे मारना लगभग असंभव है!",
+      "author": "Philip Miller",
+      "status": "accepted",
+      "rank": "species",
+      "family_common_name": "Asphodelaceae",
+      "genus_id": 3277,
+      "image_url": "aloeModernDecor.src",
+      "synonyms": [
+        "Aloe vera var. chinensis",
+        "Aloe vera var. littoralis",
+        "Aloe perfoliata var. vera"
+      ],
+      "genus": "Aloe",
+      "family": "Asphodelaceae",
+      "links": {
+        "self": "/api/v1/species/aloe-vera",
+        "plant": "/api/v1/plants/aloe-vera",
+        "genus": "/api/v1/genus/aloe"
+      }
+    },
+    "plant5": {
+      "id": 5,
+      "common_name": "Bird of Paradise",
+      "slug": "strelitzia-reginae",
+      "scientific_name": "Strelitzia reginae",
+      "year": 1789,
+      "bibliography": "बर्ड ऑफ पैराडाइज वास्तव में इनडोर पौधों की रानी है! जब मैंने पहली बार इसे खिलते देखा, मैं अपनी आंखों पर विश्वास नहीं कर सका - वे जीवंत नारंगी और नीले फूल वास्तव में उड़ान भरते हुए विदेशी पक्षियों की तरह दिखते हैं! यह शानदार पौधा किसी भी जगह में तुरंत एक उष्णकटिबंधीय रिसॉर्ट की भावना लाता है। हालांकि इनडोर में इसे खिलते देखने के लिए धैर्य की आवश्यकता होती है, केवल उन भव्य पैडल के आकार की पत्तियां ही प्रतीक्षा के लायक हैं।",
+      "author": "William Aiton",
+      "status": "accepted",
+      "rank": "species",
+      "family_common_name": "Strelitziaceae",
+      "genus_id": 3278,
+      "image_url": "birdParadiseWhitePot.src",
+      "synonyms": [
+        "Strelitzia parvifolia",
+        "Strelitzia glauca",
+        "Heliconia reginae"
+      ],
+      "genus": "Strelitzia",
+      "family": "Strelitziaceae",
+      "links": {
+        "self": "/api/v1/species/strelitzia-reginae",
+        "plant": "/api/v1/plants/strelitzia-reginae",
+        "genus": "/api/v1/genus/strelitzia"
+      }
+    },
+    "plant6": {
+      "id": 6,
+      "common_name": "Golden Barrel Cactus",
+      "slug": "echinocactus-grusonii",
+      "scientific_name": "Echinocactus grusonii",
+      "year": 1886,
+      "bibliography": "गोल्डन बैरल कैक्टस रेगिस्तान की कला का एक जीवित टुकड़ा है! यह पूरी तरह से गोल सक्युलेंट वर्षों से मेरा पसंदीदा रहा है। इसके सुनहरे कांटे सुंदर ढंग से रोशनी को पकड़ते हैं, एक चमकदार प्रभाव पैदा करते हैं। इसके कांटेदार बाहरी हिस्से के बावजूद, यह वास्तव में सबसे कम रखरखाव वाले पौधों में से एक है जो आप रख सकते हैं। एक सच्चा बातचीत शुरू करने वाला जो किसी भी जगह में दक्षिण-पश्चिम की छूह जोड़ता है।",
+      "author": "Heinrich Hildmann",
+      "status": "accepted",
+      "rank": "species",
+      "family_common_name": "Cactaceae",
+      "genus_id": 3279,
+      "image_url": "cactusTerracottaPot.src",
+      "synonyms": [
+        "Kroenleinia grusonii",
+        "Mother-in-law's cushion",
+        "Golden ball"
+      ],
+      "genus": "Echinocactus",
+      "family": "Cactaceae",
+      "links": {
+        "self": "/api/v1/species/echinocactus-grusonii",
+        "plant": "/api/v1/plants/echinocactus-grusonii",
+        "genus": "/api/v1/genus/echinocactus"
+      }
+    },
+    "plant7": {
+      "id": 7,
+      "common_name": "Swiss Cheese Plant",
+      "slug": "monstera-deliciosa",
+      "scientific_name": "Monstera deliciosa",
+      "year": 1849,
+      "bibliography": "प्रतिष्ठित मॉन्स्टेरा डेलिसिओसा - या स्विस चीज प्लांट - एक सच्चा इंस्टाग्राम स्टार है, और इसका कारण है! वे शानदार विभाजित पत्तियां सबसे अद्भुत छायाएं बनाती हैं और किसी भी कमरे में तुरंत जंगल की वाइब्स जोड़ती हैं। मैंने अपने को एक छोटे पौधे से एक भव्य नमूने में बदलते देखा है, और मैं आपको बता दूं, उन विशेष छेदों के साथ एक नई पत्ती को खुलते देखने से ज्यादा संतोषजनक कुछ नहीं है। किसी भी पौधे के शौकीन के लिए एक जरूरी चीज!",
+      "author": "Karl Heinrich Leopold Liebmann",
+      "status": "accepted",
+      "rank": "species",
+      "family_common_name": "Araceae",
+      "genus_id": 3280,
+      "image_url": "monsteraDarkPedestal.src",
+      "synonyms": [
+        "Philodendron pertusum",
+        "Tornelia fragrans",
+        "Mexican breadfruit"
+      ],
+      "genus" : "Monstera",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/monstera-deliciosa",
+        "plant": "/api/v1/plants/monstera-deliciosa",
+        "genus": "/api/v1/genus/monstera"
+      }
+    }
+  },
+  "loading": {
+    "ariaLabel": "Loading indicator - Growing plant animation",
+    "status": "Loading"
+  },
+  "contact": {
+    "title": "हमारे साथ",
+    "titleHighlight": "विकसित हों",
+    "subtitle": "संपर्क करें, और आइए संभावनाओं की एक दुनिया को साथ मिलकर विकसित करें!",
+    "formTitle": "आइए संबंधों को पोषित करें",
+    "formSubtitle": "आइए अपनी जड़ों को जोड़ें! संपर्क करें और हमारे बगीचों में सहयोग की शक्ति को खिलने दें।",
+    "firstName": "पहला नाम",
+    "lastName": "अंतिम नाम",
+    "email": "ईमेल",
+    "phoneNumber": "फोन नंबर",
+    "message": "संदेश",
+    "sending": "भेज रहा है...",
+    "send": "बगीचे में भेजें",
+    "validation": {
+      "firstName": {
+        "min": "पहला नाम कम से कम 2 अक्षरों का होना चाहिए",
+        "max": "पहला नाम 50 अक्षरों से अधिक नहीं हो सकता"
+      },
+      "lastName": {
+        "min": "अंतिम नाम कम से कम 2 अक्षरों का होना चाहिए",
+        "max": "अंतिम नाम 50 अक्षरों से अधिक नहीं हो सकता"
+      },
+      "email": {
+        "invalid": "अमान्य ईमेल पता"
+      },
+      "phoneNumber": {
+        "invalid": "अमान्य फोन नंबर"
+      },
+      "message": {
+        "min": "संदेश कम से कम 10 अक्षरों का होना चाहिए",
+        "max": "संदेश 500 अक्षरों से अधिक नहीं हो सकता"
+      }
+    }
+  },
+  "plants": {
+    "invalidDataError": "सर्वर से अमान्य डेटा प्राप्त हुआ",
+    "noPlantsMessage": "प्रदर्शित करने के लिए कोई पौधे नहीं...",
+    "loadError": "पौधे लोड करने में त्रुटि: {message}",
+    "genericError": "पौधे लोड करने में त्रुटि..."
+  },
+  "footer": {
+    "home": "होम",
+    "typesOfPlants": "प्रकारों के पौधे",
+    "contactLink": "संपर्क",
+    "privacyPolicy": "गोपनीयता नीति",
+    "description": "प्लांटो में अपनी जगह के लिए सही पौधे खोजें। हम पौधों के प्रेमियों के लिए इनडोर और आउटडोर पौधों, विशेषज्ञ देखभाल गाइड, और टिकाऊ बागवानी समाधानों का सावधानीपूर्वक चयनित संग्रह प्रदान करते हैं।",
+    "quickLinks": {
+      "title": "त्वरित लिंक"
+    },
+    "newsletter": {
+      "title": "जुड़े रहें",
+      "description": "देखभाल के टिप्स, विशेष ऑफर, और नए पौधों की आमद के बारे में अपडेट प्राप्त करने के लिए सब्सक्राइब करें।",
+      "emailPlaceholder": "ईमेल दर्ज करें",
+      "emailAriaLabel": "न्यूजलेटर के लिए ईमेल",
+      "subscribeButton": "सब्सक्राइब करें"
+    },
+    "social": {
+      "followUs": "{platform} पर हमें फॉलो करें"
+    },
+    "copyright": "© {year} प्लांटो। सर्वाधिकार सुरक्षित। प्रकृति को घर के अंदर लाते हुए।"
+  },
+  "topSelling": {
+    "title": "हमारे सर्वाधिक बिकने वाले"
+  },
+  "bestProducts": {
+    "title": "हमारे सर्वश्रेष्ठ ऑक्सीजन"
+  }
+}
