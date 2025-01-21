@@ -296,6 +296,8 @@
     "genericError": "Error loading plants..."
   },
   "menuItems": {
+    "portfolio": "Portfolio",
+    "menu": "Menu",
     "home": "Home",
     "typesOfPlants": "Types of Plants",
     "more": "More",
