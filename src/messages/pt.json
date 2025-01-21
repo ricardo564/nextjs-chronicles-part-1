@@ -327,12 +327,25 @@
     "home": "Home",
     "typesOfPlants": "Tipos de Plantas",
     "more": "Mais",
-    "contactLink": "Contato"
+    "contactLink": "Contato",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço",
+    "aboutUs": "Sobre Nós",
+    "faq": "Perguntas Frequentes",
+    "blog": "Blog"
   },
   "bestProducts": {
     "title": "Nosso Melhor o2"
   },
   "topSelling": {
     "title": "Nossas Estrelas Verdes"
+  },
+  "cart": {
+    "closeShoppingCart": "Close shopping cart",
+    "shoppingCart": "Shopping Cart",
+    "clearCart": "Clear cart",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "noItemsInCart": "No items in cart"
   }
 }

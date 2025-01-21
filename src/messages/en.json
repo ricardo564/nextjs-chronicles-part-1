@@ -298,7 +298,12 @@
     "home": "Home",
     "typesOfPlants": "Types of Plants",
     "more": "More",
-    "contactLink": "Contact"
+    "contactLink": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "aboutUs": "About Us",
+    "faq": "FAQ",
+    "blog": "Blog"
   },
   "footer": {
     "home": "Home",
@@ -334,5 +339,13 @@
   },
   "bestProducts": {
     "title": "Our Best o2"
+  },
+  "cart": {
+    "closeShoppingCart": "Close shopping cart",
+    "shoppingCart": "Shopping Cart",
+    "clearCart": "Clear cart",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "noItemsInCart": "No items in cart"
   }
 }

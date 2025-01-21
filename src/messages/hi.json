@@ -327,12 +327,25 @@
     "home": "होम",
     "typesOfPlants": "प्रकारों के पौधे",
     "more": "अधिक",
-    "contactLink": "संपर्क"
+    "contactLink": "संपर्क",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfService": "टर्म्स ऑफ सेवा",
+    "aboutUs": "हमारे बारे में",
+    "faq": "अक्सर पूछे जाने वाले प्रश्न",
+    "blog": "ब्लॉग"
   },
   "topSelling": {
     "title": "हमारे सर्वाधिक बिकने वाले"
   },
   "bestProducts": {
     "title": "हमारे सर्वश्रेष्ठ ऑक्सीजन"
+  },
+  "cart": {
+    "closeShoppingCart": "Close shopping cart",
+    "shoppingCart": "Shopping Cart",
+    "clearCart": "Clear cart",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "noItemsInCart": "No items in cart"
   }
 }
