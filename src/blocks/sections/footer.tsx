@@ -45,7 +45,7 @@ const Footer: FC = () => {
                           rel="noopener noreferrer"
                           target="_blank"
                         >
-                          {link.label}
+                          {t(link.translationKey)}
                         </a>
                       </li>
                     ))}
@@ -86,7 +86,7 @@ const Footer: FC = () => {
                 key={`${social.id}-${getUniqueId()}`}
                 href={getRandomLinkForRedirection()}
                 className="text-gray-300 hover:text-white transition-colors"
-                aria-label={t('social.followUs', { platform: social.label })}
+                aria-label={t('social.followUs', { platform: t(social.translationKey) })}
                 rel="noopener noreferrer"
               >
                 {social.icon}
