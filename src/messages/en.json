@@ -294,6 +294,12 @@
     "loadError": "Error loading plants: {message}",
     "genericError": "Error loading plants..."
   },
+  "menuItems": {
+    "home": "Home",
+    "typesOfPlants": "Types of Plants",
+    "more": "More",
+    "contactLink": "Contact"
+  },
   "footer": {
     "home": "Home",
     "typesOfPlants": "Types of Plants",
@@ -310,12 +316,6 @@
     "description": "Discover the perfect plants for your space at Planto. We offer a carefully curated selection of indoor and outdoor plants, expert care guides, and sustainable gardening solutions for plant enthusiasts.",
     "quickLinks": {
       "title": "Quick Links"
-    },
-    "menuItems": {
-      "home": "Home",
-      "typesOfPlants": "Types of Plants",
-      "more": "More",
-      "contactLink": "Contact"
     },
     "newsletter": {
       "title": "Stay Connected",

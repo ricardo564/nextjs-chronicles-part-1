@@ -311,12 +311,6 @@
     "quickLinks": {
       "title": "Links Rápidos"
     },
-    "menuItems": {
-      "home": "Home",
-      "typesOfPlants": "Tipos de Plantas",
-      "more": "Mais",
-      "contactLink": "Contato"
-    },
     "newsletter": {
       "title": "Fique Conectado",
       "description": "Inscreva-se para receber dicas de cuidados, ofertas especiais e atualizações sobre novas chegadas de plantas.",
@@ -328,6 +322,12 @@
       "followUs": "Siga-nos no {platform}"
     },
     "copyright": "© {year} Planto. Todos os direitos reservados. Trazendo a natureza para dentro de casa."
+  },
+  "menuItems": {
+    "home": "Home",
+    "typesOfPlants": "Tipos de Plantas",
+    "more": "Mais",
+    "contactLink": "Contato"
   },
   "bestProducts": {
     "title": "Nosso Melhor o2"
