@@ -9,6 +9,7 @@ import { BuyMeCoffee } from "@/components/BuyMeCoffee";
 
 const Footer: FC = () => {
   const t = useTranslations('footer');
+  const translateMenuItems = useTranslations('menuItems');
 
   return (
     <footer className="bg-primary text-white py-12 w-screen mx-auto z-[99]">
@@ -45,7 +46,7 @@ const Footer: FC = () => {
                           rel="noopener noreferrer"
                           target="_blank"
                         >
-                          {t(link.translationKey)}
+                          {translateMenuItems(link.translationKey)}
                         </a>
                       </li>
                     ))}
