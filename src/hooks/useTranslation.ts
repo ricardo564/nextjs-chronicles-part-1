@@ -3,7 +3,7 @@ import pt from '../../src/messages/pt.json'
 import en from '../../src/messages/en.json'
 import hi from '../../src/messages/hi.json'
 
-const translations: Record<string, string | Record<string, unknown>> = {
+const translations = {
   'pt': pt,
   'en': en,
   'hi': hi,
