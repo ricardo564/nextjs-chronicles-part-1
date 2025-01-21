@@ -311,6 +311,12 @@
     "quickLinks": {
       "title": "Quick Links"
     },
+    "menuItems": {
+      "home": "Home",
+      "typesOfPlants": "Types of Plants",
+      "more": "More",
+      "contactLink": "Contact"
+    },
     "newsletter": {
       "title": "Stay Connected",
       "description": "Subscribe to receive care tips, special offers, and updates about new plant arrivals.",
