@@ -138,7 +138,9 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
               title={translateCart('clearCart')}
             >
               <div className="flex flex-col gap-4 justify-start">
-                <p className="text-lg text-center">Are you sure you want to clear the cart?</p>
+                <p className="text-lg text-center">
+                  {translateCart('clearCartConfirmation')}
+                </p>
                 <div className="flex justify-end gap-2 w-full">
                   <button
                     onClick={() => setIsClearCartOpen(false)}
