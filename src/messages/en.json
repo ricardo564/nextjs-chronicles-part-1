@@ -1,4 +1,5 @@
 {
+  "currency": "USD",
   "hero": {
     "title": "Bring Nature Indoors",
     "description": "Discover your perfect green companion! Our carefully selected indoor plants don't just beautify your space - they create a living, breathing sanctuary that purifies your air and lifts your spirits. Join thousands of plant lovers who've transformed their homes into natural havens.",
@@ -346,6 +347,8 @@
     "clearCart": "Clear cart",
     "cancel": "Cancel",
     "clear": "Clear",
-    "noItemsInCart": "No items in cart"
+    "clearCartConfirmation": "Are you sure you want to clear the cart?",
+    "noItemsInCart": "No items in cart",
+    "checkout": "Checkout"
   }
 }
