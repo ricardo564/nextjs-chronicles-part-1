@@ -22,7 +22,6 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const LinkComponent: FC<LinkProps> = ({
   children,
   href,
-  variant = 'light',
   className,
   withUnderline = true,
   externalLink,
