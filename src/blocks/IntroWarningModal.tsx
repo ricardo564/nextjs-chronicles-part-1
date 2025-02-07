@@ -2,13 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { Modal } from "@/components/Modal";
-import {
-  saveItemOnLocalStorage,
-  getItemFromLocalStorage,
-  removeItemFromLocalStorage,
-} from "@/utils/localStorage";
-import { ANALYTICS_LOCAL_STORAGE_NAME } from "@/static/analyticsLocalStorageName";
 import { PortfolioShortcut } from "@/blocks/portfolioShortcut";
+import { useIntroModalStore } from "@/store/introModalStore";
 
 interface IntroWarningModalProps {
   linkedinUsername: string;
@@ -18,71 +13,38 @@ interface IntroWarningModalProps {
 export default function IntroWarningModal({ linkedinUsername, portfolioUrl }: IntroWarningModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
+
+  const {
+    hasSeenModal,
+    analyticsEnabled,
+    setHasSeenModal,
+    setAnalyticsEnabled,
+    setLastVisit,
+    clearAfterOneHour
+  } = useIntroModalStore();
 
   useEffect(() => {
-    const oneHourAgo = new Date();
-    oneHourAgo.setHours(oneHourAgo.getHours() - 1);
-
-    const clearLocalStorageAfterOneHour = () => {
-      const lastVisit = getItemFromLocalStorage("last-visit");
-
-      if (lastVisit) {
-        const lastVisitDate = new Date(lastVisit);
-
-        if (lastVisitDate < oneHourAgo) {
-          removeItemFromLocalStorage("last-visit");
-          removeItemFromLocalStorage("intro-warning-modal");
-          removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
-        }
-      }
-    };
-
-    clearLocalStorageAfterOneHour();
-  }, []);
+    clearAfterOneHour();
+  }, [clearAfterOneHour]);
 
   useEffect(() => {
     setIsMounted(true);
-    const userHasChosenToNotSeeAgain =
-      getItemFromLocalStorage("intro-warning-modal") === "true";
-    saveItemOnLocalStorage("last-visit", new Date().toISOString());
-
-    if (!getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME)) {
-      saveItemOnLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME, "true");
-    }
-
-    setAnalyticsEnabled(
-      getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME) === "true"
-    );
+    setLastVisit(new Date().toISOString());
 
     const timer = setTimeout(() => {
-      if (userHasChosenToNotSeeAgain) {
+      if (hasSeenModal) {
         setIsOpen(false);
-        saveItemOnLocalStorage("intro-warning-modal", "true");
-        saveItemOnLocalStorage(
-          ANALYTICS_LOCAL_STORAGE_NAME,
-          analyticsEnabled.toString()
-        );
       } else {
         setIsOpen(true);
-        saveItemOnLocalStorage("intro-warning-modal", "false");
-        saveItemOnLocalStorage(
-          ANALYTICS_LOCAL_STORAGE_NAME,
-          analyticsEnabled.toString()
-        );
       }
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [analyticsEnabled]);
+  }, [hasSeenModal, setLastVisit]);
 
   const handleCloseModal = () => {
     setIsOpen(false);
-    saveItemOnLocalStorage("intro-warning-modal", "true");
-    saveItemOnLocalStorage(
-      ANALYTICS_LOCAL_STORAGE_NAME,
-      analyticsEnabled.toString()
-    );
+    setHasSeenModal(true);
   };
 
   if (!isMounted) return null;
