@@ -1,5 +1,5 @@
 import { Plant } from "@/types/plant.types";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { useTranslations } from 'next-intl';
 
 interface ExploreShortcutProps {
