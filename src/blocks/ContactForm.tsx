@@ -2,7 +2,7 @@
 
 import type { FC } from 'react'
 import { FieldValues, useForm, UseFormRegister } from 'react-hook-form'
-import { ContactFormData, getContactSchema } from '@/schemas/contactSchema'
+import { getContactSchema, ContactFormData } from '@/schemas/contactSchema'
 import Button from '@/components/Button'
 import { TextInput } from '@/components/forms/TextInput'
 import { EmailInput } from '@/components/forms/EmailInput'
@@ -27,7 +27,22 @@ interface ContactFormProps {
   validationMessages: Record<string, string>
 }
 
-export const ContactForm: FC<ContactFormProps> = ({ className, title, titleHighlight, subtitle, formTitle, formSubtitle, firstName, lastName, email, phoneNumber, message, sending = false, send, validationMessages }) => {
+export const ContactForm: FC<ContactFormProps> = ({
+  className,
+  title,
+  titleHighlight,
+  subtitle,
+  formTitle,
+  formSubtitle,
+  firstName,
+  lastName,
+  email,
+  phoneNumber,
+  message,
+  sending = false,
+  send,
+  validationMessages
+}) => {
   const {
     register,
     handleSubmit,
