@@ -352,5 +352,34 @@
     "clearCartConfirmation": "Tem certeza de que deseja limpar o carrinho?",
     "noItemsInCart": "Nenhum item no carrinho",
     "checkout": "Finalizar compra"
+  },
+  "checkout": {
+    "shipping": {
+      "street": {
+        "required": "Rua é obrigatório"
+      },
+      "number": {
+        "required": "Número é obrigatório"
+      },
+      "complement": {
+        "required": "Complemento é obrigatório"
+      },
+      "neighborhood": {
+        "required": "Bairro é obrigatório"
+      },
+      "city": {
+        "required": "Cidade é obrigatório"
+      },
+      "state": {
+        "required": "Estado é obrigatório"
+      },
+      "zipCode": {
+        "required": "CEP é obrigatório"
+      },
+      "country": {
+        "required": "País é obrigatório"
+      }
+    }
   }
 }
+

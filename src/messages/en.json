@@ -352,5 +352,33 @@
     "clearCartConfirmation": "Are you sure you want to clear the cart?",
     "noItemsInCart": "No items in cart",
     "checkout": "Checkout"
+  },
+  "checkout": {
+    "shipping": {
+      "street": {
+        "required": "Street is required"
+      },
+      "number": {
+        "required": "Number is required"
+      },
+      "complement": {
+        "required": "Complement is required"
+      },
+      "neighborhood": {
+        "required": "Neighborhood is required"
+      },
+      "city": {
+        "required": "City is required"
+      },
+      "state": {
+        "required": "State is required"
+      },
+      "zipCode": {
+        "required": "ZIP Code is required"
+      },
+      "country": {
+        "required": "Country is required"
+      }
+    }
   }
 }
