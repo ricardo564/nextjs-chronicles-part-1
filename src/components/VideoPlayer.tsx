@@ -89,6 +89,10 @@ const VideoPlayer: FC<Props> = ({ className, src, params = {}, title, isModalOpe
     setValid(false);
   };
 
+  useEffect(() => {
+    videoLinkIsValid();
+  }, [videoLinkIsValid]);
+
   return valid ? (
     <div
       id="video-embed"
