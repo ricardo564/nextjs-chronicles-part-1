@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/Link";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { menuItems } from "@/static/menuItems";
 import { useTranslations } from 'next-intl';
