@@ -2,7 +2,6 @@ import { PlantCard } from "@/components/PlantCard";
 import { NoDataToShow } from "@/components/NoDataToShow";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { PlantsService } from "@/modules/plants/plants.service";
-import { HttpService } from "@nestjs/axios";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { Loading } from "@/components/Loading";
 import { Suspense } from "react";
@@ -11,7 +10,6 @@ import { unstable_cache } from 'next/cache';
 
 export default async function PlantsPage() {
   const t = await getTranslations('plants');
-  const httpService = new HttpService();
   const plantsService = new PlantsService();
 
   const getCachedPlants = unstable_cache(
