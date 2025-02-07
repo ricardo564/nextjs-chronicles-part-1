@@ -1,6 +1,6 @@
 import Image from "next/image";
 import shopIcon from "@/assets/svg/shop-icon.svg";
-import Link from "next/link";
+import Link from "@/components/Link";
 
 interface ShopMenuShortcutProps {
   className?: string;
