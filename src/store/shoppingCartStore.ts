@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 import { Plant } from "@/types/plant.types";
 import { CartItem } from "@/types/cartItem";
 
@@ -22,16 +23,27 @@ const ifItemExistsOnlyIncreaseQuantity = (cartItems: CartItem[], item: Plant) =>
   return [...cartItems, { item, quantity: 1 }];
 }
 
-export const useShoppingCartStore = create<ShoppingCartState>()((set) => ({
-  items: [],
-  addItem: (item: Plant) => set((state) => ({
-    items: ifItemExistsOnlyIncreaseQuantity(state.items, item)
-  })),
-  decrementItemQuantity: (item: Plant) => set((state) => ({
-    items: state.items.map((cartItem) => cartItem.item.id === item.id ? { ...cartItem, quantity: cartItem.quantity - 1 } : cartItem)
-  })),
-  removeItem: (item: Plant) => set((state) => ({
-    items: state.items.filter((cartItem) => cartItem.item.id !== item.id)
-  })),
-  clearCart: () => set({ items: [] }),
-}));
+export const useShoppingCartStore = create<ShoppingCartState>()(
+  persist(
+    (set) => ({
+      items: [],
+      addItem: (item: Plant) => set((state) => ({
+        items: ifItemExistsOnlyIncreaseQuantity(state.items, item)
+      })),
+      decrementItemQuantity: (item: Plant) => set((state) => ({
+        items: state.items.map((cartItem) =>
+          cartItem.item.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        )
+      })),
+      removeItem: (item: Plant) => set((state) => ({
+        items: state.items.filter((cartItem) => cartItem.item.id !== item.id)
+      })),
+      clearCart: () => set({ items: [] }),
+    }),
+    {
+      name: 'shopping-cart-storage',
+    }
+  )
+);
