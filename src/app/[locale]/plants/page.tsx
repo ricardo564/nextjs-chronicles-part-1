@@ -7,14 +7,27 @@ import { getUniqueId } from "@/utils/getUniqueId";
 import { Loading } from "@/components/Loading";
 import { Suspense } from "react";
 import { getTranslations } from 'next-intl/server';
+import { unstable_cache } from 'next/cache';
 
 export default async function PlantsPage() {
   const t = await getTranslations('plants');
   const httpService = new HttpService();
-  const plantsService = new PlantsService(httpService);
+  const plantsService = new PlantsService();
+
+  const getCachedPlants = unstable_cache(
+    async () => {
+      const response = await plantsService.getPlants();
+      return response;
+    },
+    ['plants-data'],
+    {
+      revalidate: false,
+      tags: ['plants']
+    }
+  );
 
   try {
-    const { data: plants } = await plantsService.getPlants();
+    const { data: plants } = await getCachedPlants();
 
     if (!Array.isArray(plants)) {
       throw new Error(t('invalidDataError'));
