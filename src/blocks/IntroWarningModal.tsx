@@ -19,10 +19,11 @@ export default function IntroWarningModal({ linkedinUsername, portfolioUrl }: In
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
-  const now = new Date();
-  const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
 
   useEffect(() => {
+    const oneHourAgo = new Date();
+    oneHourAgo.setHours(oneHourAgo.getHours() - 1);
+
     const clearLocalStorageAfterOneHour = () => {
       const lastVisit = getItemFromLocalStorage("last-visit");
 
@@ -38,7 +39,7 @@ export default function IntroWarningModal({ linkedinUsername, portfolioUrl }: In
     };
 
     clearLocalStorageAfterOneHour();
-  }, [oneHourAgo]);
+  }, []);
 
   useEffect(() => {
     setIsMounted(true);
