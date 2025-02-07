@@ -1,41 +1,27 @@
 import { PlantCard } from "@/components/PlantCard";
-import { Plant } from "@/types/plant.types";
 import { NoDataToShow } from "@/components/NoDataToShow";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { PlantsService } from "@/modules/plants/plants.service";
 import { HttpService } from "@nestjs/axios";
 import { getUniqueId } from "@/utils/getUniqueId";
-import { useMockupPlants } from "@/hooks/mockupPlants";
 import { Loading } from "@/components/Loading";
 import { Suspense } from "react";
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function PlantsPage() {
-  const t = useTranslations('plants');
+export default async function PlantsPage() {
+  const t = await getTranslations('plants');
   const httpService = new HttpService();
   const plantsService = new PlantsService(httpService);
-  const mockupPlants = useMockupPlants();
-
-  const handleGetPlants = async () => {
-    const response = await plantsService.getPlants();
-    const plants: Plant[] = response.data;
-
-    plants.push(...mockupPlants);
-
-    return plants;
-  }
 
   try {
-    const plants = handleGetPlants();
+    const { data: plants } = await plantsService.getPlants();
 
     if (!Array.isArray(plants)) {
       throw new Error(t('invalidDataError'));
     }
 
     return (
-      <Suspense fallback={
-        <Loading />
-      }>
+      <Suspense fallback={<Loading />}>
         <DefaultLayout>
           <div className="py-8 px-2 md:pt-[11rem]">
             {plants.length === 0 ? (
