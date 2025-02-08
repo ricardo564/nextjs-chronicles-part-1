@@ -47,7 +47,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   process,
   complete
 }) => {
-  const CHECKOUT_STEPS = ["shipping", "customer", "payment", "confirmation"];
+  const CHECKOUT_STEPS: CheckoutStep[] = ["shipping", "customer", "payment", "confirmation"];
   const router = useRouter();
   const searchParams = useSearchParams();
   const { currentStep, setCurrentStep } = useCheckoutStore();
