@@ -82,19 +82,43 @@ export const ShippingStep: FC<ShippingStepProps> = ({
         <Button
           label="Delivery"
           icon={<FaTruck />}
-          className={`text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-green-500" : "bg-gray-500"
+          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-green-500" : "bg-gray-500"
             }`}
           onClick={() => setIsDelivery(true)}
-        />
+        >
+          <input
+            checked={isDelivery}
+            className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-100" : "scale-0"}`}
+            type="radio"
+            name="shippingType"
+            value="delivery"
+
+
+          />
+
+        </Button>
+
 
         <Button
           label="Pickup"
           icon={<FaStore />}
-          className={`text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-gray-500" : "bg-green-500"
+          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-gray-500" : "bg-green-500"
             }`}
-          onClick={() => setIsDelivery(false)}
-        />
+          onClick={()=> setIsDelivery(false)}
+        >
+          <input
+            checked={!isDelivery}
+            className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-0" : "scale-100"}`}
+            type="radio"
+            name="shippingType"
+            value="pickup"
+
+
+          />
+        </Button>
       </div>
+
+
 
       {isDelivery ? (
         <form
