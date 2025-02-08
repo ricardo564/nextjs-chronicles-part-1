@@ -402,5 +402,10 @@
         "day": "business day"
       }
     }
+  },
+  "comingSoon": {
+    "title": "Growing Soon",
+    "subtitle": "We're cultivating something special for plant lovers",
+    "description": "Your green oasis is about to bloom"
   }
 }
