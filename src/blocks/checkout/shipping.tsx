@@ -103,8 +103,8 @@ const ShippingStep: FC<ShippingStepProps> = ({
   }, [selectedCountry, setValue]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start mx-auto p-6 transition-all duration-300 ease-in-out min-h-screen">
-      <div className="flex items-center justify-center gap-8">
+    <div className="w-full flex flex-col items-center justify-start md:mx-auto p-0 md:p-6 transition-all duration-300 ease-in-out min-h-screen pr-4 md:pr-0">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <Button
           label="Delivery"
           icon={<FaTruck />}
@@ -141,9 +141,9 @@ const ShippingStep: FC<ShippingStepProps> = ({
       {isDelivery ? (
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="space-y-6 w-full min-w-full transition-all duration-300 ease-in-out"
+          className="md:space-y-6 w-full min-w-full transition-all duration-300 ease-in-out grid grid-cols-1 md:grid-cols-2 gap-4"
         >
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
               label={zipCode}
               name="zipCode"
@@ -177,7 +177,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
             disabled={disabledFields}
           />
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
               label={number}
               name="number"
@@ -201,7 +201,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
             disabled={disabledFields}
           />
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
               label={city}
               name="city"
