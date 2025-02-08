@@ -240,7 +240,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
                     />
                     <div>
                       <p className="font-medium">{method.name}</p>
-                      <p className="text-sm text-gray-100">{method.time}</p>
+                      <p className={`text-sm text-gray-100 ${selectedShippingMethod?.id === method.id ? "text-green-500" : ""}`}>{method.time}</p>
                     </div>
                   </div>
                   <span className="font-medium">${method.price}</span>
