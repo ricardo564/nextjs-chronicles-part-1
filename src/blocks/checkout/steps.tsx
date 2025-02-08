@@ -47,15 +47,20 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   process,
   complete
 }) => {
+  const CHECKOUT_STEPS = ["shipping", "customer", "payment", "confirmation"];
   const router = useRouter();
   const searchParams = useSearchParams();
   const { currentStep, setCurrentStep } = useCheckoutStore();
   const countriesStore = useCountriesStore();
 
+  function isStepValid(step: CheckoutStep) {
+    return true;
+  }
+
   useEffect(() => {
     const stepParam = searchParams.get('step') as CheckoutStep;
 
-    if (stepParam && ["shipping", "customer", "payment", "confirmation"].includes(stepParam)) {
+    if (stepParam && CHECKOUT_STEPS.includes(stepParam)) {
       setCurrentStep(stepParam);
     } else if (currentStep) {
       const newSearchParams = new URLSearchParams(searchParams);
@@ -71,6 +76,13 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   }, [countries]);
 
   function handleStepChange(step: CheckoutStep) {
+    const currentStepIndex = CHECKOUT_STEPS.indexOf(currentStep);
+    const targetStepIndex = CHECKOUT_STEPS.indexOf(step);
+
+    if (targetStepIndex > currentStepIndex && !isStepValid(currentStep)) {
+      return;
+    }
+
     setCurrentStep(step);
     const newSearchParams = new URLSearchParams(searchParams);
     newSearchParams.set('step', step);
