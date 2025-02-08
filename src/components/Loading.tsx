@@ -1,6 +1,7 @@
+import type { FC } from "react";
 import { useTranslations } from 'next-intl';
 
-export const Loading = () => {
+const Loading: FC = () => {
   const t = useTranslations('loading');
 
   return (
@@ -75,3 +76,4 @@ export const Loading = () => {
   );
 };
 
+export default Loading;
