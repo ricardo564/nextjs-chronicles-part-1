@@ -16,7 +16,11 @@ import { useRouter } from "next/navigation";
 import { ShippingMethod } from "@/types/shippingMethod";
 import { FaTruck, FaStore } from "react-icons/fa";
 import Link from "@/components/Link";
+import SelectInput from "@/components/forms/SelectInput";
+import { Country } from "@/types/country";
+
 interface ShippingStepProps {
+  countries: Country[];
   shippingMethods: ShippingMethod[];
   validationMessages: Record<string, string>;
   zipCode: string;
@@ -32,6 +36,7 @@ interface ShippingStepProps {
 export const ShippingStep: FC<ShippingStepProps> = ({
   shippingMethods,
   validationMessages,
+  countries,
   zipCode,
   country,
   street,
@@ -92,12 +97,8 @@ export const ShippingStep: FC<ShippingStepProps> = ({
             type="radio"
             name="shippingType"
             value="delivery"
-
-
           />
-
         </Button>
-
 
         <Button
           label="Pickup"
@@ -136,7 +137,11 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               }}
               disabled={isLoadingCep}
             />
-            <TextInput
+            <SelectInput
+              options={countries.map((country: Country) => ({
+                label: country.name.common,
+                value: country.cca2,
+              }))}
               label={country}
               name="country"
               register={register as unknown as UseFormRegister<FieldValues>}
