@@ -1,12 +1,13 @@
 import { NextResponse } from 'next/server';
 import { CountriesService } from '@/services/countries.service';
+import { unstable_cache } from 'next/cache';
 
-export async function GET() {
-  try {
+const getCountriesWithCache = unstable_cache(
+  async () => {
     const countriesService = new CountriesService();
     const countries = await countriesService.getAllCountries();
 
-    const formattedCountries = countries.map(country => ({
+    return countries.map(country => ({
       name: country.name.common,
       officialName: country.name.official,
       code: country.cca2,
@@ -19,6 +20,17 @@ export async function GET() {
       languages: country.languages || {},
       currencies: country.currencies || {}
     }));
+  },
+  ['countries-data'],
+  {
+    revalidate: false,
+    tags: ['countries']
+  }
+);
+
+export async function GET() {
+  try {
+    const formattedCountries = await getCountriesWithCache();
 
     return NextResponse.json({
       data: formattedCountries,
