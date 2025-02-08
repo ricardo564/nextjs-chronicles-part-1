@@ -144,6 +144,8 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
       </button>
 
       <div
+        role="listbox"
+        id={`${name}-dropdown`}
         className={`absolute top-full left-0 w-full mt-1 bg-gray-700 border border-gray-600 rounded-lg shadow-lg max-h-[20rem] overflow-hidden overflow-y-auto z-10 transition-all duration-200 ease-in-out animate-dropdown ${!isDropdownOpen ? '-translate-y-100 opacity-0 z-[-10]' : 'translate-y-2 opacity-100 z-[10]'}`}
       >
         <ul className="list-none py-2">
@@ -151,6 +153,9 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
               <li key={`${name}-${label}-${value}-${index}`}>
                 <button
                   type="button"
+                  role="option"
+                  aria-selected={label === selectedLabel}
+                  tabIndex={isDropdownOpen ? 0 : -1}
                   className="w-full px-4 py-2 text-left text-white hover:bg-gray-600 focus:outline-none focus:bg-gray-600 transition-colors"
                   onClick={() => handleSelect(value)}
                 >
