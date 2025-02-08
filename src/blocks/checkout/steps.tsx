@@ -70,6 +70,13 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
     }
   }, [countries]);
 
+  function handleStepChange(step: CheckoutStep) {
+    setCurrentStep(step);
+    const newSearchParams = new URLSearchParams(searchParams);
+    newSearchParams.set('step', step);
+    router.push(`/checkout?${newSearchParams.toString()}`);
+  }
+
   const renderStepHeader = () => {
     return (
       ["shipping", "customer", "payment", "confirmation"].map(
@@ -81,11 +88,12 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           return (
             <div key={step} className="flex items-center">
               <div
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform ${isCompleted
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform cursor-pointer ${isCompleted
                     ? "bg-green-500 text-white scale-110"
                     : "bg-white/20 text-white/60"
                   }`}
                 style={{ transitionDelay: animationDelay }}
+                onClick={() => handleStepChange(step as CheckoutStep)}
               >
                 {index + 1}
               </div>
