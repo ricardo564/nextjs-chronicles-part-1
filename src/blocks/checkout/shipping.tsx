@@ -96,6 +96,20 @@ const ShippingStep: FC<ShippingStepProps> = ({
   };
 
   useEffect(() => {
+    setShippingAddress({
+      ...shippingFormData,
+      country: selectedCountry,
+      neighborhood: shippingFormData.complement || '',
+      street: shippingFormData.street || '',
+      number: shippingFormData.number || '',
+      complement: shippingFormData.complement || '',
+      city: shippingFormData.city || '',
+      state: shippingFormData.state || '',
+      zipCode: shippingFormData.zipCode || ''
+    });
+  }, [selectedCountry]);
+
+  useEffect(() => {
     setShippingMethods(shippingMethods);
   }, [shippingMethods]);
 
