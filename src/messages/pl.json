@@ -404,6 +404,62 @@
         "days": "dni roboczych",
         "day": "dzień roboczy"
       }
+    },
+    "customer": {
+      "taxIdType": {
+        "label": "Typ ID podatkowego",
+        "required": "Typ ID podatkowego jest wymagany"
+      },
+      "taxIdNumber": {
+        "label": "Numer ID podatkowego",
+        "required": "Numer ID podatkowego jest wymagany"
+      },
+      "password": {
+        "label": "Hasło",
+        "required": "Hasło jest wymagane"
+      },
+      "confirmPassword": {
+        "label": "Potwierdź hasło",
+        "required": "Potwierdź hasło jest wymagane"
+      },
+      "acceptedTerms": {
+        "label": "Akceptuję warunki i zasady",
+        "required": "Musisz akceptować warunki i zasady"
+      },
+      "createAccount": {
+        "label": "Stwórz konto",
+        "required": "Musisz stworzyć konto"
+      },
+      "fullName": {
+        "label": "Pełna nazwa",
+        "required": "Pełna nazwa jest wymagana"
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email jest wymagany"
+      },
+      "phoneNumber": {
+        "label": "Numer telefonu",
+        "required": "Numer telefonu jest wymagany"
+      },
+      "dateOfBirth": {
+        "label": "Data urodzenia",
+        "required": "Data urodzenia jest wymagana"
+      },
+      "gender": {
+        "label": "Płeć",
+        "required": "Płeć jest wymagana"
+      },
+      "preferredLanguage": {
+        "label": "Preferowana język",
+        "required": "Preferowana język jest wymagana"
+      },
+      "back": "Wstecz",
+      "continue": "Kontynuuj",
+      "createAccountDescription": "Stwórz konto, aby zapisać swoje informacje i zwiększyć szybkość zakupu",
+      "createAccountButton": "Do kasy",
+      "createAccountButtonLabel": "Do kasy",
+      "createAccountButtonTitle": "Do kasy"
     }
   },
   "comingSoon": {

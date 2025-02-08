@@ -404,6 +404,62 @@
         "days": "أيام عمل",
         "day": "يوم عمل"
       }
+    },
+    "customer": {
+      "taxIdType": {
+        "label": "نوع الرقم الضريبي",
+        "required": "نوع الرقم الضريبي مطلوب"
+      },
+      "taxIdNumber": {
+        "label": "الرقم الضريبي",
+        "required": "الرقم الضريبي مطلوب"
+      },
+      "password": {
+        "label": "كلمة المرور",
+        "required": "كلمة المرور مطلوبة"
+      },
+      "confirmPassword": {
+        "label": "تأكيد كلمة المرور",
+        "required": "تأكيد كلمة المرور مطلوب"
+      },
+      "acceptedTerms": {
+        "label": "أنا أوافق على شروط الخدمة",
+        "required": "يجب أن توافق على شروط الخدمة"
+      },
+      "createAccount": {
+        "label": "إنشاء حساب",
+        "required": "يجب أن تنشأ حساب"
+      },
+      "fullName": {
+        "label": "الاسم الكامل",
+        "required": "الاسم الكامل مطلوب"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "required": "البريد الإلكتروني مطلوب"
+      },
+      "phoneNumber": {
+        "label": "رقم الهاتف",
+        "required": "رقم الهاتف مطلوب"
+      },
+      "dateOfBirth": {
+        "label": "تاريخ الميلاد",
+        "required": "تاريخ الميلاد مطلوب"
+      },
+      "gender": {
+        "label": "الجنس",
+        "required": "الجنس مطلوب"
+      },
+      "preferredLanguage": {
+        "label": "اللغة المفضلة",
+        "required": "اللغة المفضلة مطلوبة"
+      },
+      "back": "رجوع",
+      "continue": "متابعة",
+      "createAccountDescription": "إنشاء حساب لحفظ معلوماتك وتسريع عملية الشراء",
+      "createAccountButton": "متابعة إلى الدفع",
+      "createAccountButtonLabel": "متابعة إلى الدفع",
+      "createAccountButtonTitle": "متابعة إلى الدفع"
     }
   },
   "comingSoon": {

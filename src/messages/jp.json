@@ -404,6 +404,62 @@
         "days": "営業日",
         "day": "営業日"
       }
+    },
+    "customer": {
+      "taxIdType": {
+        "label": "税IDタイプ",
+        "required": "税IDタイプは必須です"
+      },
+      "taxIdNumber": {
+        "label": "税ID番号",
+        "required": "税ID番号は必須です"
+      },
+      "password": {
+        "label": "パスワード",
+        "required": "パスワードは必須です"
+      },
+      "confirmPassword": {
+        "label": "確認パスワード",
+        "required": "確認パスワードは必須です"
+      },
+      "acceptedTerms": {
+        "label": "利用規約に同意します",
+        "required": "利用規約に同意してください"
+      },
+      "createAccount": {
+        "label": "アカウントを作成する",
+        "required": "アカウントを作成してください"
+      },
+      "fullName": {
+        "label": "フルネーム",
+        "required": "フルネームは必須です"
+      },
+      "email": {
+        "label": "メールアドレス",
+        "required": "メールアドレスは必須です"
+      },
+      "phoneNumber": {
+        "label": "電話番号",
+        "required": "電話番号は必須です"
+      },
+      "dateOfBirth": {
+        "label": "生年月日",
+        "required": "生年月日は必須です"
+      },
+      "gender": {
+        "label": "性別",
+        "required": "性別は必須です"
+      },
+      "preferredLanguage": {
+        "label": "優先言語",
+        "required": "優先言語は必須です"
+      },
+      "back": "戻る",
+      "continue": "続ける",
+      "createAccountDescription": "アカウントを作成して、あなたの情報を保存し、購入をより速く完了できるようにします",
+      "createAccountButton": "支払いへ",
+      "createAccountButtonLabel": "支払いへ",
+      "createAccountButtonTitle": "支払いへ"
     }
   },
   "comingSoon": {

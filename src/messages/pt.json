@@ -405,6 +405,62 @@
         "days": "dias úteis",
         "day": "dia útil"
       }
+    },
+    "customer": {
+      "taxIdType": {
+        "label": "Tipo de ID de imposto",
+        "required": "Tipo de ID de imposto é obrigatório"
+      },
+      "taxIdNumber": {
+        "label": "Número de ID de imposto",
+        "required": "Número de ID de imposto é obrigatório"
+      },
+      "password": {
+        "label": "Senha",
+        "required": "Senha é obrigatório"
+      },
+      "confirmPassword": {
+        "label": "Confirmar senha",
+        "required": "Confirmar senha é obrigatório"
+      },
+      "acceptedTerms": {
+        "label": "Aceito os termos e condições",
+        "required": "Você deve aceitar os termos e condições"
+      },
+      "createAccount": {
+        "label": "Criar uma conta",
+        "required": "Você deve criar uma conta"
+      },
+      "fullName": {
+        "label": "Nome completo",
+        "required": "Nome completo é obrigatório"
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email é obrigatório"
+      },
+      "phoneNumber": {
+        "label": "Número de telefone",
+        "required": "Número de telefone é obrigatório"
+      },
+      "dateOfBirth": {
+        "label": "Data de nascimento",
+        "required": "Data de nascimento é obrigatório"
+      },
+      "gender": {
+        "label": "Gênero",
+        "required": "Gênero é obrigatório"
+      },
+      "preferredLanguage": {
+        "label": "Língua preferida",
+        "required": "Língua preferida é obrigatório"
+      },
+      "back": "Voltar",
+      "continue": "Continuar",
+      "createAccountDescription": "Crie uma conta para salvar suas informações e acelerar suas compras",
+      "createAccountButton": "Continuar para pagamento",
+      "createAccountButtonLabel": "Continuar para pagamento",
+      "createAccountButtonTitle": "Continuar para pagamento"
     }
   },
   "comingSoon": {

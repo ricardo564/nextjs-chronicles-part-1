@@ -404,6 +404,62 @@
         "days": "व्यावसायिक दिन",
         "day": "व्यावसायिक दिन"
       }
+    },
+    "customer": {
+      "taxIdType": {
+        "label": "टैक्स आईडी प्रकार",
+        "required": "टैक्स आईडी प्रकार आवश्यक है"
+      },
+      "taxIdNumber": {
+        "label": "टैक्स आईडी नंबर",
+        "required": "टैक्स आईडी नंबर आवश्यक है"
+      },
+      "password": {
+        "label": "पासवर्ड",
+        "required": "पासवर्ड आवश्यक है"
+      },
+      "confirmPassword": {
+        "label": "पासवर्ड सत्यापित करें",
+        "required": "पासवर्ड सत्यापित करें आवश्यक है"
+      },
+      "acceptedTerms": {
+        "label": "मैं टर्म्स और शर्तें स्वीकारता हूं",
+        "required": "आपको टर्म्स और शर्तें स्वीकारनी होंगी"
+      },
+      "createAccount": {
+        "label": "एक खाता बनाएं",
+        "required": "आपको एक खाता बनाना होगा"
+      },
+      "fullName": {
+        "label": "पूरा नाम",
+        "required": "पूरा नाम आवश्यक है"
+      },
+      "email": {
+        "label": "ईमेल",
+        "required": "ईमेल आवश्यक है"
+      },
+      "phoneNumber": {
+        "label": "फोन नंबर",
+        "required": "फोन नंबर आवश्यक है"
+      },
+      "dateOfBirth": {
+        "label": "जन्म दिनांक",
+        "required": "जन्म दिनांक आवश्यक है"
+      },
+      "gender": {
+        "label": "लिंग",
+        "required": "लिंग आवश्यक है"
+      },
+      "preferredLanguage": {
+        "label": "प्राथमिक भाषा",
+        "required": "प्राथमिक भाषा आवश्यक है"
+      },
+      "back": "वापस",
+      "continue": "जारी रखें",
+      "createAccountDescription": "एक खाता बनाएं जिससे आपकी जानकारी सहेजी जा सके और आपकी खरीदारी तेज हो सके",
+      "createAccountButton": "भुगतान करने के लिए जारी रखें",
+      "createAccountButtonLabel": "भुगतान करने के लिए जारी रखें",
+      "createAccountButtonTitle": "भुगतान करने के लिए जारी रखें"
     }
   },
   "comingSoon": {

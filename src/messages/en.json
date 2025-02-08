@@ -404,6 +404,62 @@
         "days": "business days",
         "day": "business day"
       }
+    },
+    "customer": {
+      "taxIdType": {
+        "label": "Tax ID Type",
+        "required": "Tax ID Type is required"
+      },
+      "taxIdNumber": {
+        "label": "Tax ID Number",
+        "required": "Tax ID Number is required"
+      },
+      "password": {
+        "label": "Password",
+        "required": "Password is required"
+      },
+      "confirmPassword": {
+        "label": "Confirm Password",
+        "required": "Confirm Password is required"
+      },
+      "acceptedTerms": {
+        "label": "I accept the terms and conditions",
+        "required": "You must accept the terms and conditions"
+      },
+      "createAccount": {
+        "label": "Create an account",
+        "required": "You must create an account"
+      },
+      "fullName": {
+        "label": "Full Name",
+        "required": "Full Name is required"
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email is required"
+      },
+      "phoneNumber": {
+        "label": "Phone Number",
+        "required": "Phone Number is required"
+      },
+      "dateOfBirth": {
+        "label": "Date of Birth",
+        "required": "Date of Birth is required"
+      },
+      "gender": {
+        "label": "Gender",
+        "required": "Gender is required"
+      },
+      "preferredLanguage": {
+        "label": "Preferred Language",
+        "required": "Preferred Language is required"
+      },
+      "back": "Back",
+      "continue": "Continue",
+      "createAccountDescription": "Create an account to save your information and make your purchase faster",
+      "createAccountButton": "Continue to Payment",
+      "createAccountButtonLabel": "Continue to Payment",
+      "createAccountButtonTitle": "Continue to Payment"
     }
   },
   "comingSoon": {
