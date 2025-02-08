@@ -161,7 +161,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   };
 
   return (
-    <div className="min-h-screen text-white flex flex-col w-full">
+    <div className="min-h-screen max-h-[800px] text-white flex flex-col w-full">
       <div className="md:mx-auto flex flex-col md:items-center md:justify-center w-full md:px-4 transition-all duration-300 ease-in-out">
         <div className="text-center my-12 mt-6 w-full z-[50]">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
@@ -171,7 +171,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           <p className="text-white/70 text-sm md:text-lg">{complete}</p>
         </div>
 
-        <div className="w-full min-w-[90vw] md:min-w-[75vw] mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">
+        <div className="w-full min-w-[90vw] max-h-[1300px] md:min-w-[75vw] max-w-7xl mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">
           <div className="flex justify-center items-center space-x-4 mb-8">
             {renderStepHeader()}
           </div>
