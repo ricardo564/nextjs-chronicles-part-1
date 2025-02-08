@@ -141,7 +141,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
       {isDelivery ? (
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="md:space-y-6 w-full min-w-full transition-all duration-300 ease-in-out grid grid-cols-1 md:grid-cols-2 gap-4"
+          className="md:space-y-6 w-full min-w-full transition-all duration-300 ease-in-out grid gap-4"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
