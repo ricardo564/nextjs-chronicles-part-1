@@ -93,15 +93,20 @@ const DropdownSelect: FC<Props> = ({
 
   return (
     <div className={`flex flex-col w-full relative ${className}`}>
-      {label && <Label value={label} />}
+      {label && (
+        <Label
+          className="ml-1 -mb-2 text-white w-max p-2 text-xs font-normal bg-gradient-to-r from-white/10 via-transparent rounded-full"
+          value={label}
+        />
+      )}
       <button
         type="button"
-        className="d-input bg-transparent w-full flex items-center justify-center min-h-[41px] border-base-gray rounded-none disabled:bg-gray-200 disabled:border-base-gray disabled:cursor-not-allowed focus:ring-1 focus:ring-primary focus:outline-none transition-all duration-200 delay-50 relative"
+        className="z-[2] w-full flex items-center justify-between bg-gray-700 border border-gray-600 rounded-lg transition-all duration-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
         onClick={toggleDropdown}
       >
         <input
           {...register(name, rules)}
-          className="p-2 w-full text-left focus:outline-none"
+          className="w-full px-4 py-3 bg-transparent text-white placeholder-gray-400 focus:outline-none"
           value={isDropdownOpen ? searchQuery : selectedLabel}
           onClick={() => {
             if (isDropdownOpen && selectedLabel) {
@@ -113,22 +118,22 @@ const DropdownSelect: FC<Props> = ({
           placeholder={placeholder}
           readOnly={!isDropdownOpen}
         />
-        <div className="inset-y-0 right-0">
+        <div className="px-2">
           <ChevronButton
-            className="w-8 h-8 flex-row-reverse bg-transparent"
+            className="w-8 h-8 text-white"
             isOpen={isDropdownOpen}
             onToggle={toggleDropdown}
           />
         </div>
       </button>
       {isDropdownOpen && (
-        <div className="absolute top-full left-0 w-full bg-white border border-base-gray rounded-none shadow-md max-h-[20rem] overflow-hidden overflow-y-auto -mt-5">
+        <div className="absolute top-full left-0 w-full mt-1 bg-gray-700 border border-gray-600 rounded-lg shadow-lg max-h-[20rem] overflow-hidden overflow-y-auto z-10">
           <ul className="list-none py-2">
             {filteredOptions.map(({ label, value }, index) => (
               <li key={`${name}-${label}-${value}-${index}`}>
                 <button
                   type="button"
-                  className="w-full p-2 text-left hover:bg-gray-200 focus:outline-none"
+                  className="w-full px-4 py-2 text-left text-white hover:bg-gray-600 focus:outline-none focus:bg-gray-600 transition-colors"
                   onClick={() => handleSelect(value)}
                 >
                   {label}
