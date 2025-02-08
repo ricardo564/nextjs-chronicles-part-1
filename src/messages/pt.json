@@ -1,5 +1,8 @@
 {
   "currency": "BRL",
+  "BuyMeCoffee": {
+    "message": "Compre-me um café"
+  },
   "hero": {
     "title": "Breath Natural - Seu Oásis Verde Interior",
     "description": "Transforme sua casa em um santuário natural com nossa coleção premium de plantas para interiores. Cada planta é cuidadosamente selecionada para purificar o ar, reduzir o estresse e criar um ambiente mais saudável e harmonioso. Descubra o poder da natureza em transformar seu espaço e bem-estar com nossas plantas sustentáveis e de fácil manutenção.",

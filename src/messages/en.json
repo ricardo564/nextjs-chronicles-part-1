@@ -1,5 +1,8 @@
 {
   "currency": "USD",
+  "BuyMeCoffee": {
+    "message": "Buy me a coffee"
+  },
   "hero": {
     "title": "Breath Natural",
     "description": "Discover your perfect green companion! Our carefully selected indoor plants don't just beautify your space - they create a living, breathing sanctuary that purifies your air and lifts your spirits. Join thousands of plant lovers who've transformed their homes into natural havens.",
