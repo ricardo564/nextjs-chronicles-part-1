@@ -10,6 +10,7 @@ import { PaymentStep } from "@/blocks/checkout/payment";
 import { ConfirmationStep } from "@/blocks/checkout/confirmation";
 import { ShippingMethod } from "@/types/shippingMethod";
 import { Country } from "@/types/country";
+import { useCountriesStore } from "@/store/countriesStore";
 
 interface CheckoutStepProps {
   shippingValidationMessages: Record<string, string>;
@@ -49,6 +50,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   const router = useRouter();
   const searchParams = useSearchParams();
   const { currentStep, setCurrentStep } = useCheckoutStore();
+  const countriesStore = useCountriesStore();
 
   useEffect(() => {
     const stepParam = searchParams.get('step') as CheckoutStep;
@@ -61,6 +63,12 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
       router.push(`/checkout?${newSearchParams.toString()}`);
     }
   }, [searchParams, currentStep, setCurrentStep, router]);
+
+  useEffect(() => {
+    if (countries.length > 0) {
+      countriesStore.setCountries(countries);
+    }
+  }, [countries]);
 
   const renderStep = () => {
     switch (currentStep) {
