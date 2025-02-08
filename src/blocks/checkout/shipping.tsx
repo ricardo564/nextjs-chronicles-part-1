@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { ShippingMethod } from "@/types/shippingMethod";
 import { FaTruck, FaStore } from "react-icons/fa";
 import Link from "@/components/Link";
-import SelectInput from "@/components/forms/SelectInput";
+import DropdownSelect from "@/components/forms/DropdownSelect";
 import { Country } from "@/types/country";
 
 interface ShippingStepProps {
@@ -137,7 +137,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               }}
               disabled={isLoadingCep}
             />
-            <SelectInput
+            <DropdownSelect
               options={countries.map((country: Country) => ({
                 label: country.name.common,
                 value: country.cca2,
@@ -145,7 +145,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               label={country}
               name="country"
               register={register as unknown as UseFormRegister<FieldValues>}
-              error={errors.country?.message}
+              rules={{ required: true }}
             />
           </div>
 
