@@ -1,25 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-
-interface Address {
-  street: string;
-  number: string;
-  complement?: string;
-  neighborhood: string;
-  city: string;
-  state: string;
-  zipCode: string;
-  country: string;
-}
-
-export type CheckoutStep = "shipping" | "customer" | "payment" | "confirmation";
-
-interface ShippingMethod {
-  id: string;
-  name: string;
-  price: number;
-  time: string;
-}
+import { ShippingMethod, CheckoutStep, Address } from "@/types/shippingMethod";
 
 interface CheckoutState {
   currentStep: CheckoutStep;
@@ -34,7 +15,7 @@ interface CheckoutState {
   setUseDifferentBillingAddress: (value: boolean) => void;
   setSelectedShippingMethod: (method: ShippingMethod) => void;
   clearCheckoutData: () => void;
-  getShippingMethods: () => ShippingMethod[];
+  setShippingMethods: (methods: ShippingMethod[]) => void;
 }
 
 const initialState = {
@@ -43,31 +24,12 @@ const initialState = {
   billingAddress: null,
   useDifferentBillingAddress: false,
   selectedShippingMethod: null,
-  shippingMethods: [
-    {
-      id: 'standard',
-      name: 'Standard Shipping',
-      price: 100,
-      time: '5-7 business days'
-    },
-    {
-      id: 'express',
-      name: 'Express Shipping',
-      price: 250,
-      time: '2-3 business days'
-    },
-    {
-      id: 'overnight',
-      name: 'Overnight Shipping',
-      price: 500,
-      time: '1 business day'
-    }
-  ]
+  shippingMethods: [],
 };
 
 export const useCheckoutStore = create<CheckoutState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       ...initialState,
       setCurrentStep: (step) => set({ currentStep: step }),
       setShippingAddress: (address) => set({ shippingAddress: address }),
@@ -77,7 +39,7 @@ export const useCheckoutStore = create<CheckoutState>()(
       setSelectedShippingMethod: (method) =>
         set({ selectedShippingMethod: method }),
       clearCheckoutData: () => set(initialState),
-      getShippingMethods: () => get().shippingMethods,
+      setShippingMethods: (methods) => set({ shippingMethods: methods }),
     }),
     {
       name: "checkout-storage",
