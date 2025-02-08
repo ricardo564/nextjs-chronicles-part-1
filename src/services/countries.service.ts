@@ -1,8 +1,8 @@
-import { CountryResponse } from '@/types/country';
+import { Country } from '@/types/country';
 export class CountriesService {
   private static readonly API_URL = 'https://restcountries.com/v3.1';
 
-  async getAllCountries(): Promise<CountryResponse[]> {
+  async getAllCountries(): Promise<Country[]> {
     try {
       const response = await fetch(`${CountriesService.API_URL}/all`);
 
@@ -18,7 +18,7 @@ export class CountriesService {
     }
   }
 
-  async getCountryByCode(code: string): Promise<CountryResponse> {
+  async getCountryByCode(code: string): Promise<Country> {
     try {
       const response = await fetch(`${CountriesService.API_URL}/alpha/${code}`);
 
