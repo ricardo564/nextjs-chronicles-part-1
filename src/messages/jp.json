@@ -406,6 +406,10 @@
       }
     },
     "customer": {
+      "taxId": {
+        "label": "税ID",
+        "required": "税IDは必須です"
+      },
       "taxIdType": {
         "label": "税IDタイプ",
         "required": "税IDタイプは必須です"

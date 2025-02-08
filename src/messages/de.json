@@ -406,6 +406,10 @@
       }
     },
     "customer": {
+      "taxId": {
+        "label": "Steuernummer",
+        "required": "Steuernummer ist erforderlich"
+      },
       "taxIdType": {
         "label": "Steuernummer",
         "required": "Steuernummer ist erforderlich"

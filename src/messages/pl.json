@@ -406,6 +406,10 @@
       }
     },
     "customer": {
+      "taxId": {
+        "label": "Numer ID podatkowego",
+        "required": "Numer ID podatkowego jest wymagany"
+      },
       "taxIdType": {
         "label": "Typ ID podatkowego",
         "required": "Typ ID podatkowego jest wymagany"

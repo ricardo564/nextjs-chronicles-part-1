@@ -407,6 +407,10 @@
       }
     },
     "customer": {
+      "taxId": {
+        "label": "Número de ID de imposto",
+        "required": "Número de ID de imposto é obrigatório"
+      },
       "taxIdType": {
         "label": "Tipo de ID de imposto",
         "required": "Tipo de ID de imposto é obrigatório"

@@ -406,6 +406,10 @@
       }
     },
     "customer": {
+      "taxId": {
+        "label": "Tax ID",
+        "required": "Tax ID is required"
+      },
       "taxIdType": {
         "label": "Tax ID Type",
         "required": "Tax ID Type is required"
