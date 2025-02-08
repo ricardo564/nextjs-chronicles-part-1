@@ -458,8 +458,12 @@
         "label": "Gewünschte Sprache",
         "required": "Gewünschte Sprache ist erforderlich"
       },
-      "back": "Zurück",
-      "continue": "Fortfahren",
+      "back": {
+        "label": "Zurück"
+      },
+      "continueToPayment": {
+        "label": "Zur Kasse"
+      },
       "createAccountDescription": "Erstellen Sie ein Konto, um Ihre Informationen zu speichern und Ihren Einkauf schneller abzuschließen",
       "createAccountButton": "Zur Kasse",
       "createAccountButtonLabel": "Zur Kasse",

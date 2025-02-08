@@ -458,8 +458,12 @@
         "label": "प्राथमिक भाषा",
         "required": "प्राथमिक भाषा आवश्यक है"
       },
-      "back": "वापस",
-      "continue": "जारी रखें",
+      "back": {
+        "label": "वापस"
+      },
+      "continueToPayment": {
+        "label": "जारी रखें"
+      },
       "createAccountDescription": "एक खाता बनाएं जिससे आपकी जानकारी सहेजी जा सके और आपकी खरीदारी तेज हो सके",
       "createAccountButton": "भुगतान करने के लिए जारी रखें",
       "createAccountButtonLabel": "भुगतान करने के लिए जारी रखें",

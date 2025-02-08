@@ -458,7 +458,12 @@
         "label": "Preferred Language",
         "required": "Preferred Language is required"
       },
-      "back": "Back",
+      "back": {
+        "label": "Back"
+      },
+      "continueToPayment": {
+        "label": "Continue to Payment"
+      },
       "continue": "Continue",
       "createAccountDescription": "Create an account to save your information and make your purchase faster",
       "createAccountButton": "Continue to Payment",

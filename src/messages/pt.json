@@ -459,8 +459,12 @@
         "label": "Língua preferida",
         "required": "Língua preferida é obrigatório"
       },
-      "back": "Voltar",
-      "continue": "Continuar",
+      "back": {
+        "label": "Voltar"
+      },
+      "continueToPayment": {
+        "label": "Continuar para pagamento"
+      },
       "createAccountDescription": "Crie uma conta para salvar suas informações e acelerar suas compras",
       "createAccountButton": "Continuar para pagamento",
       "createAccountButtonLabel": "Continuar para pagamento",
