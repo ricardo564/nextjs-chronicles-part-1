@@ -11,13 +11,12 @@ import { getUniqueId } from "@/utils/getUniqueId";
 import { useTranslations } from 'next-intl';
 import { useTestimonials } from "@/hooks/testimonials";
 import { useMockupPlants } from "@/hooks/mockupPlants";
-import { getDirection, Locale } from '@/config/i18n-config';
 
 interface IntroSectionProps {
-  locale: Locale;
+  className?: string;
 }
 
-export const IntroSection: FC<IntroSectionProps> = ({ locale }) => {
+const IntroSection: FC<IntroSectionProps> = ({ className }) => {
   const t = useTranslations('hero');
   const liveDemo = useTranslations('liveDemo');
   const testimonials = useTestimonials();
@@ -41,7 +40,7 @@ export const IntroSection: FC<IntroSectionProps> = ({ locale }) => {
 
   return (
     <section
-      className="relative overflow-hidden w-screen pb-24 px-4"
+      className={`relative overflow-hidden w-screen pb-24 px-4 ${className}`}
       style={{
         backgroundImage: `url(${background.src})`,
         backgroundSize: "cover",
@@ -87,7 +86,7 @@ export const IntroSection: FC<IntroSectionProps> = ({ locale }) => {
           </div>
         </div>
 
-        <div className={`lg:top-[1rem] mx-auto w-[20rem] sm:w-screen md:w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem] ${getDirection(locale as Locale) ? 'right-0' : 'left-0'}`}>
+        <div className="lg:top-[1rem] lg:right-0 mx-auto w-[20rem] sm:w-screen md:w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
           <EmblaCarousel
             className="relative min-w-full w-full max-w-[20rem] sm:max-w-[99vw] lg:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 lg:ml-0"
             options={{ loop: true }}
@@ -129,3 +128,5 @@ export const IntroSection: FC<IntroSectionProps> = ({ locale }) => {
     </section>
   );
 }
+
+export default IntroSection;
