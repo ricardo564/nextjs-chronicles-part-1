@@ -95,6 +95,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
     setValue('country', selectedCountry);
   }, [selectedCountry, setValue]);
 
+
   return (
     <div className="w-full flex flex-col items-center justify-center mx-auto p-6 transition-all duration-300 ease-in-out">
       <div className="flex items-center justify-center gap-8">
