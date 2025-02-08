@@ -7,7 +7,7 @@ import {
   UseFormRegister,
 } from "react-hook-form";
 import Label from "@/components/Label";
-import ChevronButton from "@/components/ChevronButton";
+import AnimatedChevron from "@/components/AnimatedChevron";
 
 interface Option {
   label: string;
@@ -24,6 +24,7 @@ interface Props {
   register: UseFormRegister<FieldValues>;
   rules?: RegisterOptions<FieldValues, Path<FieldValues>>;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (value: string | number) => void;
 }
 
 const DropdownSelect: FC<Props> = ({
@@ -36,6 +37,7 @@ const DropdownSelect: FC<Props> = ({
   rules,
   register,
   onBlur,
+  onChange,
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedLabel, setSelectedLabel] = useState("");
@@ -56,8 +58,13 @@ const DropdownSelect: FC<Props> = ({
       setSelectedLabel(selectedOption.label);
       if (onBlur) {
         const event = { type: 'blur', target: null } as unknown as React.FocusEvent<HTMLInputElement>;
-
+        console.log('onBlur', event);
         onBlur(event);
+      }
+
+      if (onChange) {
+        console.log('onChange', value);
+        onChange(value);
       }
     }
     setDropdownOpen(false);
@@ -119,7 +126,7 @@ const DropdownSelect: FC<Props> = ({
           readOnly={!isDropdownOpen}
         />
         <div className="px-2">
-          <ChevronButton
+          <AnimatedChevron
             className="w-8 h-8 text-white"
             isOpen={isDropdownOpen}
             onToggle={toggleDropdown}
