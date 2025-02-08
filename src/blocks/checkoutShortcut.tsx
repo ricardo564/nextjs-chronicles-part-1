@@ -4,10 +4,9 @@ import Link from "@/components/Link";
 
 interface CheckoutShortcutProps {
   className?: string;
-  loading?: boolean;
 }
 
-export default function CheckoutShortcut({ className, loading }: CheckoutShortcutProps) {
+export default function CheckoutShortcut({ className }: CheckoutShortcutProps) {
   const { items: cartItems } = useShoppingCartStore();
   const totalOnStore = cartItems.reduce((acc, cartItem) => acc + cartItem.item.genus_id * cartItem.quantity, 0);
   const translateCart = useTranslations('cart');
