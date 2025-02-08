@@ -13,10 +13,9 @@ import { useTranslations } from 'next-intl';
 
 interface ShoppingCartProps {
   className?: string;
-  loading?: boolean;
 }
 
-export function ShoppingCart({ className, loading }: ShoppingCartProps) {
+export function ShoppingCart({ className }: ShoppingCartProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClearCartOpen, setIsClearCartOpen] = useState(false);
   const { items: cartItems } = useShoppingCartStore();
@@ -202,7 +201,6 @@ export function ShoppingCart({ className, loading }: ShoppingCartProps) {
 
           <div className="fixed mt-auto bottom-14 md:bottom-0 w-full bg-transparent md:mb-2">
             <CheckoutShortcut
-              loading={loading}
               className="w-full max-w-[17rem] md:max-w-sm md:px-2 mx-auto "
             />
           </div>

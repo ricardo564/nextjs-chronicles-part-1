@@ -1,5 +1,8 @@
 {
   "currency": "BRL",
+  "BuyMeCoffee": {
+    "message": "Compre-me um café"
+  },
   "hero": {
     "title": "Breath Natural - Seu Oásis Verde Interior",
     "description": "Transforme sua casa em um santuário natural com nossa coleção premium de plantas para interiores. Cada planta é cuidadosamente selecionada para purificar o ar, reduzir o estresse e criar um ambiente mais saudável e harmonioso. Descubra o poder da natureza em transformar seu espaço e bem-estar com nossas plantas sustentáveis e de fácil manutenção.",
@@ -352,5 +355,62 @@
     "clearCartConfirmation": "Tem certeza de que deseja limpar o carrinho?",
     "noItemsInCart": "Nenhum item no carrinho",
     "checkout": "Finalizar compra"
+  },
+  "checkout": {
+    "title": "Finalizar compra",
+    "subtitle": "Complete sua compra seguindo os passos abaixo",
+    "formTitle": "Informações de envio",
+    "formSubtitle": "Por favor, preencha seus detalhes para completar sua compra",
+    "checkout": "Finalizar compra",
+    "process": "",
+    "complete": "Complete sua compra seguindo os passos abaixo",
+    "shipping": {
+
+      "street": {
+        "label": "Rua",
+        "required": "Rua é obrigatório"
+      },
+      "number": {
+        "label": "Número",
+        "required": "Número é obrigatório"
+      },
+      "complement": {
+        "label": "Complemento",
+        "required": "Complemento é obrigatório"
+      },
+      "neighborhood": {
+        "label": "Bairro",
+        "required": "Bairro é obrigatório"
+      },
+      "city": {
+        "label": "Cidade",
+        "required": "Cidade é obrigatório"
+      },
+      "state": {
+        "label": "Estado",
+        "required": "Estado é obrigatório"
+      },
+      "zipCode": {
+        "label": "CEP",
+        "required": "CEP é obrigatório"
+      },
+      "country": {
+        "label": "País",
+        "required": "País é obrigatório"
+      },
+      "methods": {
+        "standard": "Frete Padrão",
+        "express": "Frete Express",
+        "overnight": "Frete Noturno",
+        "days": "dias úteis",
+        "day": "dia útil"
+      }
+    }
+  },
+  "comingSoon": {
+    "title": "Crescendo em breve",
+    "subtitle": "Estamos cultivando algo especial para amantes de plantas",
+    "description": "Seu oásis verde está prestes a florescer"
   }
 }
+

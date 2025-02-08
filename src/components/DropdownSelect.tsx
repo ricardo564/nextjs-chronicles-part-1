@@ -2,7 +2,7 @@
 
 import { FC, useState, useEffect, ChangeEvent } from "react";
 import Label from "@/components/Label";
-import ChevronButton from "@/components/ChevronButton";
+import ChevronButton from "@/components/AnimatedChevron";
 import { getUniqueId } from "@/utils/getUniqueId";
 
 

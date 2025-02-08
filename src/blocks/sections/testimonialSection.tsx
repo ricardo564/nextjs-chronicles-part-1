@@ -1,10 +1,11 @@
+import type { FC } from "react";
 import { QuotedTitle } from "@/components/QuotedTitle";
 import { useTestimonials } from "@/hooks/testimonials";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { useTranslations } from 'next-intl';
 
-export function TestimonialSection() {
+const TestimonialSection: FC = () => {
   const testimonials = useTestimonials();
   const t = useTranslations('testimonials');
 
@@ -28,3 +29,5 @@ export function TestimonialSection() {
     </div>
   );
 }
+
+export default TestimonialSection;

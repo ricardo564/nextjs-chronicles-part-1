@@ -1,7 +1,10 @@
 {
   "currency": "USD",
+  "BuyMeCoffee": {
+    "message": "Buy me a coffee"
+  },
   "hero": {
-    "title": "Bring Nature Indoors",
+    "title": "Breath Natural",
     "description": "Discover your perfect green companion! Our carefully selected indoor plants don't just beautify your space - they create a living, breathing sanctuary that purifies your air and lifts your spirits. Join thousands of plant lovers who've transformed their homes into natural havens.",
     "trendyPlantsTitle": "Trending Green Companions"
   },
@@ -352,5 +355,60 @@
     "clearCartConfirmation": "Are you sure you want to clear the cart?",
     "noItemsInCart": "No items in cart",
     "checkout": "Checkout"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "subtitle": "Complete your purchase by following the steps below",
+    "formTitle": "Shipping Information",
+    "formSubtitle": "Please fill in your details to complete your purchase",
+    "checkout": "Checkout",
+    "process": "Process",
+    "complete": "Complete your purchase by following the steps below",
+    "shipping": {
+      "street": {
+        "label": "Street",
+        "required": "Street is required"
+      },
+      "number": {
+        "label": "Number",
+        "required": "Number is required"
+      },
+      "complement": {
+        "label": "Complement",
+        "required": "Complement is required"
+      },
+      "neighborhood": {
+        "label": "Neighborhood",
+        "required": "Neighborhood is required"
+      },
+      "city": {
+        "label": "City",
+        "required": "City is required"
+      },
+      "state": {
+        "label": "State",
+        "required": "State is required"
+      },
+      "zipCode": {
+        "label": "ZIP Code",
+        "required": "ZIP Code is required"
+      },
+      "country": {
+        "label": "Country",
+        "required": "Country is required"
+      },
+      "methods": {
+        "standard": "Standard Shipping",
+        "express": "Express Shipping",
+        "overnight": "Overnight Shipping",
+        "days": "business days",
+        "day": "business day"
+      }
+    }
+  },
+  "comingSoon": {
+    "title": "Growing Soon",
+    "subtitle": "We're cultivating something special for plant lovers",
+    "description": "Your green oasis is about to bloom"
   }
 }

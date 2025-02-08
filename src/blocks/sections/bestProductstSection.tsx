@@ -1,3 +1,4 @@
+import type { FC } from "react";
 import { QuotedTitle } from "@/components/QuotedTitle";
 import { useMockupPlants } from "@/hooks/mockupPlants";
 import { EmblaCarousel } from "@/components/EmblaCarousel/EmblaCarousel";
@@ -5,7 +6,7 @@ import { PlantCardContent } from "@/components/plantCardContent";
 import { getUniqueId } from "@/utils/getUniqueId";
 import { useTranslations } from "next-intl";
 
-export const BestProductsSection = () => {
+const BestProductsSection: FC = () => {
   const mockupPlants = useMockupPlants();
   const t = useTranslations('bestProducts');
 
@@ -44,3 +45,5 @@ export const BestProductsSection = () => {
     </div>
   );
 };
+
+export default BestProductsSection;

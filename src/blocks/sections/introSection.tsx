@@ -1,3 +1,4 @@
+import type { FC } from "react"
 import { PlantBannerCard } from "@/components/PlantBannerCard";
 import { LiveDemoShortcut } from "../liveDemoShortcut";
 import background from "@/assets/images/topiary-green-pot.webp";
@@ -11,7 +12,11 @@ import { useTranslations } from 'next-intl';
 import { useTestimonials } from "@/hooks/testimonials";
 import { useMockupPlants } from "@/hooks/mockupPlants";
 
-export function IntroSection() {
+interface IntroSectionProps {
+  className?: string;
+}
+
+const IntroSection: FC<IntroSectionProps> = ({ className }) => {
   const t = useTranslations('hero');
   const liveDemo = useTranslations('liveDemo');
   const testimonials = useTestimonials();
@@ -35,7 +40,7 @@ export function IntroSection() {
 
   return (
     <section
-      className="relative overflow-hidden w-screen pb-24 px-4"
+      className={`relative overflow-hidden w-screen pb-24 px-4 ${className}`}
       style={{
         backgroundImage: `url(${background.src})`,
         backgroundSize: "cover",
@@ -43,7 +48,7 @@ export function IntroSection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col justify-between items-start mb-16  pt-4 lg:pt-32 gap-4">
           <h1 className="text-7xl xl:text-6xl text-white font-semibold max-w-[40rem]">
             {t('title')}
@@ -81,7 +86,7 @@ export function IntroSection() {
           </div>
         </div>
 
-        <div className="lg:absolute lg:top-[1rem] lg:right-0 mx-auto w-[20rem] sm:w-screen md:w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
+        <div className="lg:top-[1rem] lg:right-0 mx-auto w-[20rem] sm:w-screen md:w-[30rem] overflow-x-hidden overflow-y-visible min-h-[50rem]">
           <EmblaCarousel
             className="relative min-w-full w-full max-w-[20rem] sm:max-w-[99vw] lg:max-w-[25rem] bg-gradient-to-r from-white/10 via-transparent to-transparent backdrop-blur-md rounded-[32px] p-8 border border-white/20 mt-[7rem] right-0 lg:ml-0"
             options={{ loop: true }}
@@ -101,7 +106,9 @@ export function IntroSection() {
             ))}
           </EmblaCarousel>
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto relative grid grid-cols-1">
         <div className="space-y-6 flex flex-col items-center gap-32 lg:gap-24">
           <QuotedTitle className="text-center text-white">
             {t('trendyPlantsTitle')}
@@ -121,3 +128,5 @@ export function IntroSection() {
     </section>
   );
 }
+
+export default IntroSection;

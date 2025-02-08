@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { HttpModule } from '@nestjs/axios';
-import { PlantsModule } from '@/modules/plants/plants.module';
+import { PlantsModule } from '@/app/api/plants/plants.module';
 
 @Module({
   imports: [

@@ -1,0 +1,415 @@
+{
+  "currency": "PLN",
+  "BuyMeCoffee": {
+    "message": "Kup mi kawę"
+  },
+  "hero": {
+    "title": "Breath Natural - Twoja Wewnętrzna Zielona Oaza",
+    "description": "Przekształć swój dom w naturalną oazę dzięki naszej kolekcji premium roślin domowych. Każda roślina jest starannie dobrana, aby oczyszczać powietrze, redukować stres i tworzyć zdrowsze i bardziej harmonijne środowisko. Odkryj moc natury w przekształcaniu Twojej przestrzeni i samopoczucia dzięki naszym zrównoważonym i łatwym w utrzymaniu roślinom.",
+    "trendyPlantsTitle": "Modne Rośliny 2024: Najbardziej Pożądane w Tym Momencie"
+  },
+  "explore": {
+    "text": "Odkryj",
+    "title": "Odkryj rośliny {name}"
+  },
+  "liveDemo": {
+    "buttonLabel": "Zobacz Prezentację",
+    "buttonTitle": "Zobacz Prezentację",
+    "text": "Prezentacja",
+    "modalTitle": "Prezentacja"
+  },
+  "testimonials": {
+    "title": "Opinie Klientów",
+    "testimonial1": {
+      "id": 1,
+      "name": "John Smith",
+      "rating": 5,
+      "testimonial": "Dbałość o szczegóły i jakość pracy przerosły moje oczekiwania. Gorąco polecam! Zaangażowanie zespołu w dostarczanie produktu najwyższej jakości było widoczne przez cały projekt. Ich zdolność do zrozumienia naszej wizji i wcielenia jej w życie była imponująca. Bez wahania poleciłbym ich każdemu, kto szuka wyjątkowej usługi."
+    },
+    "testimonial2": {
+      "id": 2,
+      "name": "Sarah Chen",
+      "rating": 3,
+      "testimonial": "Niesamowita obsługa i komunikacja przez cały projekt. Z pewnością będę z nimi współpracować ponownie. Responsywność zespołu i chęć dostosowania się do naszych zmieniających się potrzeb były kluczowe dla sukcesu projektu. Mimo kilku drobnych problemów, ogólne doświadczenie było pozytywne i rozważyłabym współpracę z nimi w przyszłości."
+    },
+    "testimonial3": {
+      "id": 3,
+      "name": "Michael Rodriguez",
+      "rating": 4,
+      "testimonial": "Bardzo profesjonalni i dostarczyli dokładnie to, co obiecali. Niewielkie opóźnienia, ale ogólnie świetnie. Profesjonalizm zespołu i zaangażowanie w dostarczanie wysokiej jakości pracy były widoczne przez cały projekt. Mimo niewielkich opóźnień, końcowy produkt przekroczył nasze oczekiwania i jesteśmy zadowoleni z rezultatu."
+    },
+    "testimonial4": {
+      "id": 4,
+      "name": "Emma Thompson",
+      "rating": 5,
+      "testimonial": "Wyjątkowe rezultaty! Perfekcyjnie przekształcili naszą wizję w rzeczywistość. Zdolność zespołu do zrozumienia naszej wizji i wcielenia jej w życie była wyjątkowa. Końcowy produkt przekroczył nasze oczekiwania pod każdym względem i nie moglibyśmy być szczęśliwsi z rezultatu. Ich zaangażowanie w dostarczanie wyjątkowych rezultatów jest naprawdę godne pochwały."
+    },
+    "testimonial5": {
+      "id": 5,
+      "name": "David Kim",
+      "rating": 4,
+      "testimonial": "Świetny stosunek jakości do ceny. Zespół był otwarty i dostosował się do naszych potrzeb. Wartość projektu była wyjątkowa, biorąc pod uwagę jakość dostarczonej pracy. Responsywność zespołu i chęć dostosowania się do naszych potrzeb zapewniły płynną realizację projektu. Jesteśmy zadowoleni z końcowego produktu i polecilibyśmy go każdemu, kto szuka ekonomicznego rozwiązania."
+    },
+    "testimonial6": {
+      "id": 6,
+      "name": "Lisa Anderson",
+      "rating": 5,
+      "testimonial": "Przekroczyli oczekiwania pod każdym względem. Ich ekspertyza naprawdę widoczna jest w końcowym produkcie. Ekspertyza zespołu i dbałość o szczegóły były widoczne przez cały projekt. Przekroczyli nasze oczekiwania pod każdym względem, od komunikacji po dostarczenie końcowego produktu. Jesteśmy niezwykle pod wrażeniem ich pracy i gorąco polecilibyśmy ich każdemu, kto szuka wyjątkowej usługi."
+    },
+    "testimonial7": {
+      "id": 7,
+      "name": "James Wilson",
+      "rating": 5,
+      "testimonial": "Fantastyczne doświadczenie od początku do końca. Gorąco polecam każdemu! Profesjonalizm, ekspertyza i zaangażowanie zespołu w dostarczanie wyjątkowych rezultatów uczyniły nasz projekt sukcesem. Od początkowej konsultacji po dostarczenie końcowego produktu, doświadczenie było płynne i przekroczyło nasze oczekiwania pod każdym względem."
+    },
+    "testimonial8": {
+      "id": 8,
+      "name": "Maria Garcia",
+      "rating": 4,
+      "testimonial": "Bardzo zadowoleni z rezultatów. Profesjonalna i wydajna usługa. Profesjonalizm i wydajność zespołu były widoczne przez cały projekt. Jesteśmy zadowoleni z końcowego produktu, który spełnił nasze oczekiwania. Ich zdolność do dostarczenia wysokiej jakości produktu w wydajny sposób była imponująca i rozważylibyśmy współpracę z nimi w przyszłości."
+    }
+  },
+  "mockupPlants": {
+    "title": "Ekskluzywna Kolekcja Roślin Premium",
+    "plant1": {
+      "id": 1,
+      "common_name": "Difenbachia",
+      "slug": "dieffenbachia-amoena",
+      "scientific_name": "Dieffenbachia amoena",
+      "year": 1977,
+      "bibliography": "Difenbachia, znana jako 'dumb cane', to tropikalna roślina premium, która przekształca wnętrza swoimi bujnymi liśćmi i unikalnymi wzorami. Idealna do oczyszczania powietrza w pomieszczeniach, ta łatwa w pielęgnacji roślina jest doskonała do nowoczesnego i minimalistycznego wystroju. Jej duże, plamiste liście tworzą wyrafinowany tropikalny wygląd, doskonały do dobrze oświetlonych biur i salonów. Ważna uwaga: trzymać z dala od dzieci i zwierząt.",
+      "author": "Heinrich Wilhelm Schott",
+      "status": "zaakceptowany",
+      "rank": "gatunek",
+      "family_common_name": "Araceae",
+      "genus_id": 3275,
+      "image_url": "dieffenbachiaPlantPot.src",
+      "synonyms": [
+        "Dieffenbachia maculata",
+        "Caladium maculatum",
+        "Dumb cane"
+      ],
+      "genus": "Dieffenbachia",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/dieffenbachia-amoena",
+        "plant": "/api/v1/plants/dieffenbachia-amoena",
+        "genus": "/api/v1/genus/dieffenbachia"
+      }
+    },
+    "plant2": {
+      "id": 2,
+      "common_name": "Hosta",
+      "slug": "hosta-ventricosa",
+      "scientific_name": "Hosta ventricosa",
+      "year": 1859,
+      "bibliography": "Hosta jest jak ten niezawodny przyjaciel, który zawsze jest przy tobie! Ze swoimi imponującymi liśćmi w odcieniach zieleni i błękitu, jest idealnym wyborem, aby dodać elegancji twojemu ogrodowi. Wytrzymała i wszechstronna, rozwija się w zacienionych miejscach, tworząc unikalny wizualny spektakl swoimi teksturowanymi liśćmi. To niesamowite, jak potrafi przekształcić nawet najbardziej zapomniane zakątki w prawdziwe punkty skupiające piękno!",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "hostaPlantWhiteVase.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant3": {
+      "id": 3,
+      "common_name": "Suculenta",
+      "slug": "succulent-mint-pot",
+      "scientific_name": "Suculenta mint pot",
+      "year": 1859,
+      "bibliography": "Nasze sukulenty to małe klejnoty świata roślin! Idealne dla osób rozpoczynających swoją przygodę z architekturą krajobrazu lub dla tych, którzy szukają roślin wymagających niewielkiej pielęgnacji. Ze swoimi fascynującymi geometrycznymi kształtami i delikatnymi kolorami są prawdziwymi żywymi rzeźbami, które wnoszą nowoczesny i wyrafinowany akcent do każdego wnętrza. A co najlepsze? Są super wytrzymałe i adaptowalne!",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "succulentMintPot.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant4": {
+      "id": 4,
+      "common_name": "Aloe Vera",
+      "slug": "aloe-vera-modern",
+      "scientific_name": "Aloe barbadensis miller",
+      "year": 1768,
+      "bibliography": "Legendarna Aloe Vera to znacznie więcej niż roślina lecznicza - to prawdziwy towarzysz życia! Jej soczyste liście nie tylko nadają współczesny wygląd twojej przestrzeni, ale także zawierają cenny żel pełen właściwości leczniczych. Łatwa w pielęgnacji i piękna dla oka, jest tym rodzajem rośliny, która łączy piękno z użytecznością. Prawdziwy zielony skarb do posiadania w domu!",
+      "author": "Philip Miller",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asphodelaceae",
+      "genus_id": 3277,
+      "image_url": "aloeModernDecor.src",
+      "synonyms": [
+        "Aloe vera var. chinensis",
+        "Aloe vera var. littoralis",
+        "Aloe perfoliata var. vera"
+      ],
+      "genus": "Aloe",
+      "family": "Asphodelaceae",
+      "links": {
+        "self": "/api/v1/species/aloe-vera",
+        "plant": "/api/v1/plants/aloe-vera",
+        "genus": "/api/v1/genus/aloe"
+      }
+    },
+    "plant5": {
+      "id": 5,
+      "common_name": "Ave do Paraíso",
+      "slug": "strelitzia-reginae",
+      "scientific_name": "Strelitzia reginae",
+      "year": 1789,
+      "bibliography": "Majestatyczna Strelicja królewska to czysta tropikalna wspaniałość! Ze swoimi spektakularnymi kwiatami, które wyglądają jak ptaki w locie, gwarantuje pokaz kolorów i kształtów w twoim ogrodzie. Każdy kwiat to dzieło sztuki natury, łączące żywe odcienie pomarańczu i błękitu w unikalnej strukturze. Odważny wybór dla tych, którzy chcą złożyć prawdziwą deklarację stylu!",
+      "author": "William Aiton",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Strelitziaceae",
+      "genus_id": 3278,
+      "image_url": "birdParadiseWhitePot.src",
+      "synonyms": [
+        "Strelitzia parvifolia",
+        "Strelitzia glauca",
+        "Heliconia reginae"
+      ],
+      "genus": "Strelitzia",
+      "family": "Strelitziaceae",
+      "links": {
+        "self": "/api/v1/species/strelitzia-reginae",
+        "plant": "/api/v1/plants/strelitzia-reginae",
+        "genus": "/api/v1/genus/strelitzia"
+      }
+    },
+    "plant6": {
+      "id": 6,
+      "common_name": "Cacto Barril Dourado",
+      "slug": "echinocactus-grusonii",
+      "scientific_name": "Echinocactus grusonii",
+      "year": 1886,
+      "bibliography": "Złota Beczka to jak żywa rzeźba, która opowiada historie pustyni! Jej solidna forma i złote kolce tworzą imponujący wygląd, który przyciąga uwagę wszystkich. Idealna do nowoczesnych i minimalistycznych wnętrz, jest tym rodzajem rośliny, która wymaga mało wody, ale oferuje wiele uroku. Prawdziwy temat do rozmów w twojej kolekcji!",
+      "author": "Heinrich Hildmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Cactaceae",
+      "genus_id": 3279,
+      "image_url": "cactusTerracottaPot.src",
+      "synonyms": [
+        "Kroenleinia grusonii",
+        "Almofada da sogra",
+        "Bola dourada"
+      ],
+      "genus": "Echinocactus",
+      "family": "Cactaceae",
+      "links": {
+        "self": "/api/v1/species/echinocactus-grusonii",
+        "plant": "/api/v1/plants/echinocactus-grusonii",
+        "genus": "/api/v1/genus/echinocactus"
+      }
+    },
+    "plant7": {
+      "id": 7,
+      "common_name": "Costela de Adão",
+      "slug": "monstera-deliciosa",
+      "scientific_name": "Monstera deliciosa",
+      "year": 1849,
+      "bibliography": "Monstera deliciosa to ulubienica miłośników roślin! Jej gigantyczne, powycinane liście to prawdziwe dzieła sztuki natury, które wnoszą nutę tropikalnego dramatu do każdego wnętrza. Wszechstronna i urocza, rośnie z charakterem, tworząc unikalny wygląd w miarę rozwoju jej liści. To ta roślina, którą każdy rozpoznaje i pragnie mieć w domu!",
+      "author": "Karl Heinrich Leopold Liebmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Araceae",
+      "genus_id": 3280,
+      "image_url": "monsteraDarkPedestal.src",
+      "synonyms": [
+        "Philodendron pertusum",
+        "Tornelia fragrans",
+        "Fruta-pão mexicana"
+      ],
+      "genus": "Monstera",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/monstera-deliciosa",
+        "plant": "/api/v1/plants/monstera-deliciosa",
+        "genus": "/api/v1/genus/monstera"
+      }
+    }
+  },
+  "loading": {
+    "ariaLabel": "Ładowanie",
+    "status": "Ładowanie"
+  },
+  "contact": {
+    "title": "Stwórz Swój",
+    "titleHighlight": "Wymarzony Ogród",
+    "subtitle": "Przekształć swoją przestrzeń dzięki naszej ekspertyzie w zakresie roślin i zrównoważonego projektowania wnętrz",
+    "formTitle": "Spersonalizowana Konsultacja Roślinna",
+    "formSubtitle": "Otrzymaj specjalistyczne porady w tworzeniu własnej zielonej oazy. Nasz zespół ekspertów jest gotowy pomóc w wyborze idealnych roślin do Twojej przestrzeni.",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "email": "E-mail",
+    "phoneNumber": "Telefon",
+    "message": "Wiadomość",
+    "sending": "Wysyłanie...",
+    "send": "Wyślij do ogrodu",
+    "validation": {
+      "firstName": {
+        "min": "Imię musi mieć co najmniej 2 znaki",
+        "max": "Imię nie może przekraczać 50 znaków"
+      },
+      "lastName": {
+        "min": "Nazwisko musi mieć co najmniej 2 znaki",
+        "max": "Nazwisko nie może przekraczać 50 znaków"
+      },
+      "email": {
+        "invalid": "Nieprawidłowy adres e-mail"
+      },
+      "phoneNumber": {
+        "invalid": "Nieprawidłowy numer telefonu"
+      },
+      "message": {
+        "min": "Wiadomość musi mieć co najmniej 10 znaków",
+        "max": "Wiadomość nie może przekraczać 500 znaków"
+      }
+    }
+  },
+  "plants": {
+    "invalidDataError": "Otrzymano nieprawidłowe dane z serwera",
+    "noPlantsMessage": "Brak roślin do wyświetlenia...",
+    "loadError": "Błąd podczas ładowania roślin: {message}",
+    "genericError": "Błąd podczas ładowania roślin..."
+  },
+  "footer": {
+    "home": "Strona główna",
+    "typesOfPlants": "Rodzaje Roślin",
+    "contactLink": "Kontakt",
+    "privacyPolicy": "Polityka Prywatności",
+    "termsOfService": "Warunki Użytkowania",
+    "aboutUs": "O Nas",
+    "faq": "Często Zadawane Pytania",
+    "blog": "Blog",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn",
+    "description": "Odkryj idealne rośliny do swojej przestrzeni w Planto. Oferujemy starannie wyselekcjonowany wybór roślin do wnętrz i na zewnątrz, specjalistyczne poradniki pielęgnacji oraz zrównoważone rozwiązania ogrodnicze dla miłośników roślin.",
+    "quickLinks": {
+      "title": "Szybkie Linki"
+    },
+    "newsletter": {
+      "title": "Bądź w Kontakcie",
+      "description": "Zapisz się, aby otrzymywać wskazówki dotyczące pielęgnacji, specjalne oferty i aktualizacje o nowych roślinach.",
+      "emailPlaceholder": "Wpisz swój Email",
+      "emailAriaLabel": "Email do newslettera",
+      "subscribeButton": "Zapisz się"
+    },
+    "social": {
+      "followUs": "Śledź nas na {platform}"
+    },
+    "copyright": "© {year} Planto. Wszelkie prawa zastrzeżone. Wprowadzamy naturę do Twojego domu."
+  },
+  "menuItems": {
+    "portfolio": "Portfolio",
+    "menu": "Menu",
+    "home": "Strona główna",
+    "typesOfPlants": "Rodzaje Roślin",
+    "more": "Więcej",
+    "contactLink": "Kontakt",
+    "privacyPolicy": "Polityka Prywatności",
+    "termsOfService": "Warunki Użytkowania",
+    "aboutUs": "O Nas",
+    "faq": "FAQ",
+    "blog": "Blog"
+  },
+  "bestProducts": {
+    "title": "Nasze Najlepsze o2"
+  },
+  "topSelling": {
+    "title": "Nasze Zielone Gwiazdy"
+  },
+  "cart": {
+    "closeShoppingCart": "Zamknij koszyk",
+    "shoppingCart": "Koszyk",
+    "clearCart": "Wyczyść koszyk",
+    "cancel": "Anuluj",
+    "clear": "Wyczyść",
+    "clearCartConfirmation": "Czy na pewno chcesz wyczyścić koszyk?",
+    "noItemsInCart": "Brak przedmiotów w koszyku",
+    "checkout": "Do kasy"
+  },
+  "checkout": {
+    "title": "Zamówienie",
+    "subtitle": "Dokończ zakupy, wykonując poniższe kroki",
+    "formTitle": "Informacje o dostawie",
+    "formSubtitle": "Proszę wypełnić swoje dane, aby dokończyć zakup",
+    "checkout": "Do kasy",
+    "process": "",
+    "complete": "Dokończ zakup, wykonując poniższe kroki",
+    "shipping": {
+      "street": {
+        "label": "Ulica",
+        "required": "Ulica jest wymagana"
+      },
+      "number": {
+        "label": "Numer",
+        "required": "Numer jest wymagany"
+      },
+      "complement": {
+        "label": "Uzupełnienie",
+        "required": "Uzupełnienie jest wymagane"
+      },
+      "neighborhood": {
+        "label": "Dzielnica",
+        "required": "Dzielnica jest wymagana"
+      },
+      "city": {
+        "label": "Miasto",
+        "required": "Miasto jest wymagane"
+      },
+      "state": {
+        "label": "Województwo",
+        "required": "Województwo jest wymagane"
+      },
+      "zipCode": {
+        "label": "Kod pocztowy",
+        "required": "Kod pocztowy jest wymagany"
+      },
+      "country": {
+        "label": "Kraj",
+        "required": "Kraj jest wymagany"
+      },
+      "methods": {
+        "standard": "Dostawa Standardowa",
+        "express": "Dostawa Ekspresowa",
+        "overnight": "Dostawa Nocna",
+        "days": "dni roboczych",
+        "day": "dzień roboczy"
+      }
+    }
+  },
+  "comingSoon": {
+    "title": "Wkrótce zakwitnie",
+    "subtitle": "Hodujemy coś specjalnego dla miłośników roślin",
+    "description": "Twoja zielona oaza wkrótce rozkwitnie"
+  }
+}
+
