@@ -47,17 +47,22 @@ export const ShippingStep: FC<ShippingStepProps> = ({
   state,
 }) => {
   const router = useRouter();
-  const [isDelivery, setIsDelivery] = useState(true);
-  const [selectedCountry, setSelectedCountry] = useState(countries[0]?.cca2 || '');
-  const [disabledFields, setDisabledFields] = useState<boolean>(false);
-
   const {
     setShippingAddress,
     setCurrentStep,
     setSelectedShippingMethod,
     selectedShippingMethod,
     setShippingMethods,
+    shippingFormData,
+    setShippingFormData,
+    isDelivery,
+    setIsDelivery,
   } = useCheckoutStore();
+
+  const [selectedCountry, setSelectedCountry] = useState(
+    shippingFormData.country || countries[0]?.cca2 || ''
+  );
+  const [disabledFields, setDisabledFields] = useState<boolean>(false);
 
   const {
     register,
@@ -68,7 +73,8 @@ export const ShippingStep: FC<ShippingStepProps> = ({
   } = useForm<ShippingFormData>({
     resolver: zodResolver(getShippingSchema(validationMessages)),
     defaultValues: {
-      country: countries[0]?.cca2 || ''
+      ...shippingFormData,
+      country: shippingFormData.country || countries[0]?.cca2 || ''
     }
   });
 
@@ -78,6 +84,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
     if (!selectedShippingMethod) return;
 
     setShippingAddress(data);
+    setShippingFormData(data);
     setCurrentStep("customer");
 
     router.push(`/checkout?step=customer`);
@@ -94,7 +101,6 @@ export const ShippingStep: FC<ShippingStepProps> = ({
   useEffect(() => {
     setValue('country', selectedCountry);
   }, [selectedCountry, setValue]);
-
 
   return (
     <div className="w-full flex flex-col items-center justify-center mx-auto p-6 transition-all duration-300 ease-in-out">
