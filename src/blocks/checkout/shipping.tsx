@@ -114,6 +114,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
             name="complement"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.complement?.message}
+            rules={{ required: false }}
           />
         </div>
 
