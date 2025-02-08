@@ -47,7 +47,7 @@ const LinkComponent: FC<LinkProps> = ({
     }
 
 
-    router.push(href);
+    await router.push(href);
 
     if (body && animate) {
       await sleep(sleepTime);
