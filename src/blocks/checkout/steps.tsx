@@ -53,8 +53,8 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   const { currentStep, setCurrentStep } = useCheckoutStore();
   const countriesStore = useCountriesStore();
 
-  function isStepValid(step: CheckoutStep) {
-    return true;
+  function isStepValid(step: CheckoutStep): boolean {
+    return CHECKOUT_STEPS.indexOf(step) > CHECKOUT_STEPS.indexOf(currentStep);
   }
 
   useEffect(() => {
@@ -91,9 +91,9 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
 
   const renderStepHeader = () => {
     return (
-      ["shipping", "customer", "payment", "confirmation"].map(
+      CHECKOUT_STEPS.map(
         (step, index) => {
-          const stepIndex = ["shipping", "customer", "payment", "confirmation"].indexOf(currentStep);
+          const stepIndex = CHECKOUT_STEPS.indexOf(currentStep);
           const isCompleted = index <= stepIndex;
           const animationDelay = `${index * 0.3}s`;
 
