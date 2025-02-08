@@ -76,25 +76,29 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
         (step, index) => {
           const stepIndex = ["shipping", "customer", "payment", "confirmation"].indexOf(currentStep);
           const isCompleted = index <= stepIndex;
+          const animationDelay = `${index * 0.3}s`;
 
           return (
             <div key={step} className="flex items-center">
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out transform ${isCompleted
+                className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform ${
+                  isCompleted
                     ? "bg-green-500 text-white scale-110"
                     : "bg-white/20 text-white/60"
-                  }`}
+                }`}
+                style={{ transitionDelay: animationDelay }}
               >
                 {index + 1}
               </div>
               {index < 3 && (
                 <div className="w-20 h-1 mx-2 relative bg-white/20">
                   <div
-                    className="absolute left-0 top-0 h-full bg-green-500 transition-all duration-500 ease-in-out"
+                    className="absolute left-0 top-0 h-full bg-green-500 transition-all duration-300 ease-in-out"
                     style={{
                       width: index < stepIndex ? '100%' :
                         index === stepIndex ? '50%' : '0%',
-                      opacity: index <= stepIndex ? 1 : 0
+                      opacity: index <= stepIndex ? 1 : 0,
+                      transitionDelay: animationDelay
                     }}
                   />
                 </div>
