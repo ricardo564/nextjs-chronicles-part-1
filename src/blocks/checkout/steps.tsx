@@ -86,19 +86,20 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           const animationDelay = `${index * 0.3}s`;
 
           return (
-            <div key={step} className="flex items-center">
+            <div key={step} className="flex w-full items-center justify-between gap-2 ml-8 md:ml-[14%]">
               <div
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform cursor-pointer ${isCompleted
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 duration-300 ease-in-out transform cursor-pointer hover:bg-green-600 hover:text-white ${
+                  isCompleted
                     ? "bg-green-500 text-white scale-110"
                     : "bg-white/20 text-white/60"
-                  }`}
+                }`}
                 style={{ transitionDelay: animationDelay }}
                 onClick={() => handleStepChange(step as CheckoutStep)}
               >
                 {index + 1}
               </div>
               {index < 3 && (
-                <div className="w-8 md:w-20 h-1 mx-2 relative bg-white/20">
+                <div className="h-1 flex-1 relative bg-white/20">
                   <div
                     className="absolute left-0 top-0 h-full bg-green-500 transition-all duration-300 ease-in-out"
                     style={{
