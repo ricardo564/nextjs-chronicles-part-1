@@ -159,6 +159,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               rules={{ required: true }}
               onChange={(value: string | number) => setSelectedCountry(String(value))}
               value={watch('country')}
+              initialValue={watch('country')}
             />
           </div>
 

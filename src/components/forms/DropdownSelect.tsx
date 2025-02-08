@@ -97,7 +97,7 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
     }
   }, [initialValue, options]);
 
-  if (options.length > 0) {
+  if (options.length === 0) {
     return (
       <div className="flex flex-col w-full relative">
         <Label
