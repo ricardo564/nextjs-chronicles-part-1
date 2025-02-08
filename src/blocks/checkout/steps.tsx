@@ -107,7 +107,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
 
   return (
     <div className="min-h-screen text-white flex flex-col w-full">
-      <div className="mx-auto flex flex-col items-center justify-center w-full px-4">
+      <div className="mx-auto flex flex-col items-center justify-center w-full px-4 transition-all duration-300 ease-in-out">
         <div className="text-center my-12 mt-6 w-full">
           <h1 className="text-5xl font-bold text-white mb-4">
             {title}
