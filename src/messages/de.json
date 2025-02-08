@@ -1,0 +1,411 @@
+{
+  "currency": "EUR",
+  "hero": {
+    "title": "Breath Natural - Ihre grüne Innenwohlfühloase",
+    "description": "Verwandeln Sie Ihr Zuhause in ein natürliches Refugium mit unserer Premium-Kollektion von Zimmerpflanzen. Jede Pflanze wird sorgfältig ausgewählt, um die Luft zu reinigen, Stress zu reduzieren und eine gesündere und harmonischere Umgebung zu schaffen. Entdecken Sie die Kraft der Natur, Ihren Raum und Ihr Wohlbefinden mit unseren nachhaltigen und pflegeleichten Pflanzen zu transformieren.",
+    "trendyPlantsTitle": "Trendpflanzen 2024: Die Begehrtesten des Moments"
+  },
+  "explore": {
+    "text": "Entdecken",
+    "title": "Pflanzen {name} entdecken"
+  },
+  "liveDemo": {
+    "buttonLabel": "Präsentation ansehen",
+    "buttonTitle": "Präsentation ansehen",
+    "text": "Präsentation",
+    "modalTitle": "Präsentation"
+  },
+  "testimonials": {
+    "title": "Kundenbewertungen",
+    "testimonial1": {
+      "id": 1,
+      "name": "John Smith",
+      "rating": 5,
+      "testimonial": "Die Liebe zum Detail und die Qualität der Arbeit haben meine Erwartungen übertroffen. Sehr empfehlenswert! Das Engagement des Teams, ein erstklassiges Produkt zu liefern, war während des gesamten Projekts spürbar. Ihre Fähigkeit, unsere Vision zu verstehen und zum Leben zu erwecken, war beeindruckend. Ich würde sie jedem empfehlen, der einen außergewöhnlichen Service sucht."
+    },
+    "testimonial2": {
+      "id": 2,
+      "name": "Sarah Chen",
+      "rating": 3,
+      "testimonial": "Unglaublicher Service und Kommunikation während des gesamten Projekts. Würde definitiv wieder mit ihnen arbeiten. Die Reaktionsfähigkeit des Teams und die Bereitschaft, sich an unsere sich ändernden Bedürfnisse anzupassen, waren entscheidend für den Projekterfolg. Obwohl es einige kleinere Probleme gab, war die Gesamterfahrung positiv, und ich würde eine zukünftige Zusammenarbeit in Betracht ziehen."
+    },
+    "testimonial3": {
+      "id": 3,
+      "name": "Michael Rodriguez",
+      "rating": 4,
+      "testimonial": "Sehr professionell und lieferte genau das, was versprochen wurde. Kleine Verzögerungen, aber insgesamt großartig. Die Professionalität des Teams und das Engagement, hochwertige Arbeit zu liefern, waren während des gesamten Projekts deutlich. Trotz einiger kleiner Verzögerungen übertraf das Endprodukt unsere Erwartungen, und wir waren mit dem Ergebnis zufrieden."
+    },
+    "testimonial4": {
+      "id": 4,
+      "name": "Emma Thompson",
+      "rating": 5,
+      "testimonial": "Außergewöhnliche Ergebnisse! Sie haben unsere Vision perfekt in die Realität umgesetzt. Die Fähigkeit des Teams, unsere Vision zu verstehen und zum Leben zu erwecken, war außergewöhnlich. Das Endprodukt übertraf unsere Erwartungen in jeder Hinsicht, und wir könnten nicht glücklicher mit dem Ergebnis sein. Ihr Engagement für außergewöhnliche Ergebnisse ist wirklich lobenswert."
+    },
+    "testimonial5": {
+      "id": 5,
+      "name": "David Kim",
+      "rating": 4,
+      "testimonial": "Ausgezeichnetes Preis-Leistungs-Verhältnis. Das Team war aufgeschlossen und ging auf unsere Bedürfnisse ein. Der Projektwert war außergewöhnlich, wenn man die Qualität der gelieferten Arbeit berücksichtigt. Die Reaktionsfähigkeit des Teams und die Bereitschaft, sich an unsere Bedürfnisse anzupassen, sorgten für eine reibungslose Projektdurchführung."
+    },
+    "testimonial6": {
+      "id": 6,
+      "name": "Lisa Anderson",
+      "rating": 5,
+      "testimonial": "Übertraf die Erwartungen in jeder Hinsicht. Ihre Expertise zeigt sich wirklich im Endprodukt. Die Expertise des Teams und die Liebe zum Detail waren während des gesamten Projekts deutlich. Sie übertrafen unsere Erwartungen in allen Aspekten, von der Kommunikation bis zur Lieferung des Endprodukts."
+    },
+    "testimonial7": {
+      "id": 7,
+      "name": "James Wilson",
+      "rating": 5,
+      "testimonial": "Fantastische Erfahrung von Anfang bis Ende. Würde es jedem wärmstens empfehlen! Die Professionalität, Expertise und das Engagement des Teams, außergewöhnliche Ergebnisse zu liefern, machten unser Projekt zu einem Erfolg. Von der ersten Beratung bis zur Lieferung des Endprodukts war die Erfahrung nahtlos."
+    },
+    "testimonial8": {
+      "id": 8,
+      "name": "Maria Garcia",
+      "rating": 4,
+      "testimonial": "Sehr zufrieden mit den Ergebnissen. Professioneller und effizienter Service. Die Professionalität und Effizienz des Teams waren während des gesamten Projekts deutlich. Wir sind mit dem Endprodukt zufrieden, das unsere Erwartungen erfüllte."
+    }
+  },
+  "mockupPlants": {
+    "title": "Exklusive Premium-Pflanzenkollektion",
+    "plant1": {
+      "id": 1,
+      "common_name": "Dieffenbachia",
+      "slug": "dieffenbachia-amoena",
+      "scientific_name": "Dieffenbachia amoena",
+      "year": 1977,
+      "bibliography": "Die Dieffenbachia, liebevoll auch als 'Schwiegermutterzunge' bekannt, ist eine premium tropische Pflanze, die Räume mit ihren üppigen Blättern und einzigartigen Mustern verwandelt. Ideal zur Luftreinigung in Innenräumen, ist diese pflegeleichte Pflanze perfekt für moderne und minimalistische Dekoration. Ihre großen, gefleckten Blätter schaffen einen sophistizierten tropischen Look und eignen sich hervorragend für gut beleuchtete Büros und Wohnräume. Wichtiger Hinweis: Von Kindern und Haustieren fernhalten.",
+      "author": "Heinrich Wilhelm Schott",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Araceae",
+      "genus_id": 3275,
+      "image_url": "dieffenbachiaPlantPot.src",
+      "synonyms": [
+        "Dieffenbachia maculata",
+        "Caladium maculatum",
+        "Comigo-ninguém-pode"
+      ],
+      "genus": "Dieffenbachia",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/dieffenbachia-amoena",
+        "plant": "/api/v1/plants/dieffenbachia-amoena",
+        "genus": "/api/v1/genus/dieffenbachia"
+      }
+    },
+    "plant2": {
+      "id": 2,
+      "common_name": "Hosta",
+      "slug": "hosta-ventricosa",
+      "scientific_name": "Hosta ventricosa",
+      "year": 1859,
+      "bibliography": "Die Hosta ist wie eine verlässliche Freundin, die immer für Sie da ist! Mit ihren beeindruckenden Blättern in Grün- und Blautönen ist sie die perfekte Wahl, um Ihrem Garten einen Hauch von Eleganz zu verleihen. Robust und vielseitig gedeiht sie in schattigen Bereichen und schafft mit ihren strukturierten Blättern ein einzigartiges visuelles Spektakel. Es ist erstaunlich, wie sie selbst die vergessensten Ecken in echte Schönheitsbrennpunkte verwandeln kann!",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "hostaPlantWhiteVase.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant3": {
+      "id": 3,
+      "common_name": "Suculenta",
+      "slug": "succulent-mint-pot",
+      "scientific_name": "Suculenta mint pot",
+      "year": 1859,
+      "bibliography": "Unsere Sukkulenten sind kleine Juwelen der Pflanzenwelt! Perfekt für Einsteiger in die Gartengestaltung oder für diejenigen, die pflegeleichte Pflanzen suchen. Mit ihren faszinierenden geometrischen Formen und sanften Farben sind sie wahre lebende Skulpturen, die jedem Raum eine moderne und sophistizierte Note verleihen. Und das Beste? Sie sind super widerstandsfähig und anpassungsfähig!",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "succulentMintPot.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant4": {
+      "id": 4,
+      "common_name": "Aloe Vera",
+      "slug": "aloe-vera-modern",
+      "scientific_name": "Aloe barbadensis miller",
+      "year": 1768,
+      "bibliography": "Die legendäre Aloe Vera ist viel mehr als nur eine Heilpflanze - sie ist eine wahre Lebensbegleiterin! Ihre saftigen Blätter bringen nicht nur einen zeitgenössischen Look in Ihren Raum, sondern enthalten auch ein wertvolles Gel voller heilender Eigenschaften. Pflegeleicht und schön anzusehen, ist sie die Art von Pflanze, die Schönheit mit Nutzen verbindet. Ein wahrhafter grüner Schatz für Ihr Zuhause!",
+      "author": "Philip Miller",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asphodelaceae",
+      "genus_id": 3277,
+      "image_url": "aloeModernDecor.src",
+      "synonyms": [
+        "Aloe vera var. chinensis",
+        "Aloe vera var. littoralis",
+        "Aloe perfoliata var. vera"
+      ],
+      "genus": "Aloe",
+      "family": "Asphodelaceae",
+      "links": {
+        "self": "/api/v1/species/aloe-vera",
+        "plant": "/api/v1/plants/aloe-vera",
+        "genus": "/api/v1/genus/aloe"
+      }
+    },
+    "plant5": {
+      "id": 5,
+      "common_name": "Ave do Paraíso",
+      "slug": "strelitzia-reginae",
+      "scientific_name": "Strelitzia reginae",
+      "year": 1789,
+      "bibliography": "Die majestätische Strelitzie ist pure tropische Üppigkeit! Mit ihren spektakulären Blüten, die wie Vögel im Flug aussehen, garantiert sie eine Show aus Farben und Formen in Ihrem Garten. Jede Blüte ist ein Kunstwerk der Natur, das leuchtende Orange- und Blautöne in einer einzigartigen Struktur vereint. Eine mutige Wahl für alle, die eine echte Stilaussage treffen möchten!",
+      "author": "William Aiton",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Strelitziaceae",
+      "genus_id": 3278,
+      "image_url": "birdParadiseWhitePot.src",
+      "synonyms": [
+        "Strelitzia parvifolia",
+        "Strelitzia glauca",
+        "Heliconia reginae"
+      ],
+      "genus": "Strelitzia",
+      "family": "Strelitziaceae",
+      "links": {
+        "self": "/api/v1/species/strelitzia-reginae",
+        "plant": "/api/v1/plants/strelitzia-reginae",
+        "genus": "/api/v1/genus/strelitzia"
+      }
+    },
+    "plant6": {
+      "id": 6,
+      "common_name": "Cacto Barril Dourado",
+      "slug": "echinocactus-grusonii",
+      "scientific_name": "Echinocactus grusonii",
+      "year": 1886,
+      "bibliography": "Der Goldkugelkaktus ist wie eine lebende Skulptur, die Geschichten aus der Wüste erzählt! Seine robuste Form und goldenen Dornen schaffen einen beeindruckenden Look, der die Aufmerksamkeit aller auf sich zieht. Perfekt für moderne und minimalistische Umgebungen, ist er die Art von Pflanze, die wenig Wasser benötigt, aber viel Charme bietet. Ein echtes Gesprächsthema für Ihre Sammlung!",
+      "author": "Heinrich Hildmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Cactaceae",
+      "genus_id": 3279,
+      "image_url": "cactusTerracottaPot.src",
+      "synonyms": [
+        "Kroenleinia grusonii",
+        "Almofada da sogra",
+        "Bola dourada"
+      ],
+      "genus": "Echinocactus",
+      "family": "Cactaceae",
+      "links": {
+        "self": "/api/v1/species/echinocactus-grusonii",
+        "plant": "/api/v1/plants/echinocactus-grusonii",
+        "genus": "/api/v1/genus/echinocactus"
+      }
+    },
+    "plant7": {
+      "id": 7,
+      "common_name": "Costela de Adão",
+      "slug": "monstera-deliciosa",
+      "scientific_name": "Monstera deliciosa",
+      "year": 1849,
+      "bibliography": "Die Monstera ist der Liebling aller Pflanzenfreunde! Ihre riesigen, geschlitzten Blätter sind wahre Kunstwerke der Natur, die jedem Raum einen Hauch tropischen Dramas verleihen. Vielseitig und charmant wächst sie mit Persönlichkeit und schafft einen einzigartigen Look, während sich ihre Blätter entwickeln. Sie ist die Pflanze, die jeder kennt und in seinem Zuhause haben möchte!",
+      "author": "Karl Heinrich Leopold Liebmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Araceae",
+      "genus_id": 3280,
+      "image_url": "monsteraDarkPedestal.src",
+      "synonyms": [
+        "Philodendron pertusum",
+        "Tornelia fragrans",
+        "Fruta-pão mexicana"
+      ],
+      "genus": "Monstera",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/monstera-deliciosa",
+        "plant": "/api/v1/plants/monstera-deliciosa",
+        "genus": "/api/v1/genus/monstera"
+      }
+    }
+  },
+  "loading": {
+    "ariaLabel": "Wird geladen",
+    "status": "Wird geladen"
+  },
+  "contact": {
+    "title": "Gestalten Sie Ihren",
+    "titleHighlight": "Traumgarten",
+    "subtitle": "Verwandeln Sie Ihren Raum mit unserer Expertise in Pflanzen und nachhaltigem Innendesign",
+    "formTitle": "Persönliche Pflanzenberatung",
+    "formSubtitle": "Erhalten Sie fachkundige Beratung zur Gestaltung Ihrer eigenen grünen Oase. Unser Expertenteam steht bereit, um Ihnen bei der Auswahl der idealen Pflanzen für Ihren Raum zu helfen.",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "phoneNumber": "Telefon",
+    "message": "Nachricht",
+    "sending": "Wird gesendet...",
+    "send": "In den Garten senden",
+    "validation": {
+      "firstName": {
+        "min": "Der Vorname muss mindestens 2 Zeichen lang sein",
+        "max": "Der Vorname darf nicht länger als 50 Zeichen sein"
+      },
+      "lastName": {
+        "min": "Der Nachname muss mindestens 2 Zeichen lang sein",
+        "max": "Der Nachname darf nicht länger als 50 Zeichen sein"
+      },
+      "email": {
+        "invalid": "Ungültige E-Mail-Adresse"
+      },
+      "phoneNumber": {
+        "invalid": "Ungültige Telefonnummer"
+      },
+      "message": {
+        "min": "Die Nachricht muss mindestens 10 Zeichen lang sein",
+        "max": "Die Nachricht darf nicht länger als 500 Zeichen sein"
+      }
+    }
+  },
+  "plants": {
+    "invalidDataError": "Ungültige Daten vom Server erhalten",
+    "noPlantsMessage": "Keine Pflanzen zum Anzeigen...",
+    "loadError": "Fehler beim Laden der Pflanzen: {message}",
+    "genericError": "Fehler beim Laden der Pflanzen..."
+  },
+  "footer": {
+    "home": "Startseite",
+    "typesOfPlants": "Pflanzenarten",
+    "contactLink": "Kontakt",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen",
+    "aboutUs": "Über uns",
+    "faq": "Häufige Fragen",
+    "blog": "Blog",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn",
+    "description": "Entdecken Sie die perfekten Pflanzen für Ihren Raum bei Planto. Wir bieten eine sorgfältig kuratierte Auswahl an Innen- und Außenpflanzen, Expertenpflegeanleitungen und nachhaltige Gartenlösungen für Pflanzenliebhaber.",
+    "quickLinks": {
+      "title": "Schnelllinks"
+    },
+    "newsletter": {
+      "title": "Bleiben Sie verbunden",
+      "description": "Melden Sie sich an, um Pflegetipps, Sonderangebote und Updates über neue Pflanzen zu erhalten.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "emailAriaLabel": "E-Mail für Newsletter",
+      "subscribeButton": "Abonnieren"
+    },
+    "social": {
+      "followUs": "Folgen Sie uns auf {platform}"
+    },
+    "copyright": "© {year} Planto. Alle Rechte vorbehalten. Wir bringen die Natur in Ihr Zuhause."
+  },
+  "menuItems": {
+    "portfolio": "Portfolio",
+    "menu": "Menü",
+    "home": "Startseite",
+    "typesOfPlants": "Pflanzenarten",
+    "more": "Mehr",
+    "contactLink": "Kontakt",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen",
+    "aboutUs": "Über uns",
+    "faq": "Häufige Fragen",
+    "blog": "Blog"
+  },
+  "bestProducts": {
+    "title": "Unser bestes O2"
+  },
+  "topSelling": {
+    "title": "Unsere grünen Stars"
+  },
+  "cart": {
+    "closeShoppingCart": "Warenkorb schließen",
+    "shoppingCart": "Warenkorb",
+    "clearCart": "Warenkorb leeren",
+    "cancel": "Abbrechen",
+    "clear": "Leeren",
+    "clearCartConfirmation": "Sind Sie sicher, dass Sie den Warenkorb leeren möchten?",
+    "noItemsInCart": "Keine Artikel im Warenkorb",
+    "checkout": "Zur Kasse"
+  },
+  "checkout": {
+    "title": "Zur Kasse",
+    "subtitle": "Schließen Sie Ihren Einkauf ab, indem Sie den untenstehenden Schritten folgen",
+    "formTitle": "Versandinformationen",
+    "formSubtitle": "Bitte füllen Sie Ihre Details aus, um Ihren Einkauf abzuschließen",
+    "checkout": "Zur Kasse",
+    "process": "",
+    "complete": "Schließen Sie Ihren Einkauf ab, indem Sie den untenstehenden Schritten folgen",
+    "shipping": {
+      "street": {
+        "label": "Straße",
+        "required": "Straße ist erforderlich"
+      },
+      "number": {
+        "label": "Hausnummer",
+        "required": "Hausnummer ist erforderlich"
+      },
+      "complement": {
+        "label": "Zusatz",
+        "required": "Zusatz ist erforderlich"
+      },
+      "neighborhood": {
+        "label": "Stadtteil",
+        "required": "Stadtteil ist erforderlich"
+      },
+      "city": {
+        "label": "Stadt",
+        "required": "Stadt ist erforderlich"
+      },
+      "state": {
+        "label": "Bundesland",
+        "required": "Bundesland ist erforderlich"
+      },
+      "zipCode": {
+        "label": "PLZ",
+        "required": "PLZ ist erforderlich"
+      },
+      "country": {
+        "label": "Land",
+        "required": "Land ist erforderlich"
+      },
+      "methods": {
+        "standard": "Standardversand",
+        "express": "Expressversand",
+        "overnight": "Übernachtversand",
+        "days": "Werktage",
+        "day": "Werktag"
+      }
+    }
+  },
+  "comingSoon": {
+    "title": "Wächst in Kürze",
+    "subtitle": "Wir kultivieren etwas Besonderes für Pflanzenliebhaber",
+    "description": "Ihre grüne Oase wird bald erblühen"
+  }
+}
