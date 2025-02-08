@@ -80,14 +80,19 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
   const { isLoadingCep, fetchAddressByCep } = useAddressByCep(setValue);
 
-  const onSubmit = (data: ShippingFormData) => {
-    if (!selectedShippingMethod) return;
+  const onSubmit = async (data: ShippingFormData) => {
+    if (!selectedShippingMethod) {
+      return;
+    }
 
-    setShippingAddress(data);
-    setShippingFormData(data);
-    setCurrentStep("customer");
-
-    router.push(`/checkout?step=customer`);
+    try {
+      setShippingAddress(data);
+      setShippingFormData(data);
+      setCurrentStep("customer");
+      await router.push(`/checkout?step=customer`);
+    } catch (error) {
+      console.error('Failed to process shipping information:', error);
+    }
   };
 
   useEffect(() => {
