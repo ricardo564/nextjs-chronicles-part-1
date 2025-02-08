@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { CSSProperties } from "react";
 import { ReactNode, ButtonHTMLAttributes, JSX } from "react";
 
 
@@ -12,6 +13,7 @@ interface Props {
   label?: string,
   ariaLabel?: string,
   icon?: JSX.Element,
+  style?: CSSProperties,
   onClick?: () => void;
 }
 
@@ -25,6 +27,7 @@ const Button: FC<Props> = ({
   title,
   label,
   icon,
+  style,
 }: Props) => {
   const isLoading = loading ? "opacity-20" : "";
 
@@ -34,6 +37,7 @@ const Button: FC<Props> = ({
       type={type}
       title={title}
       disabled={disabled}
+      style={style}
       onClick={onClick}
     >
       {label}
