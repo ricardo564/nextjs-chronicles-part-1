@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { ReactNode, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   FieldValues,
   UseFormRegister,
@@ -10,17 +10,17 @@ import Label from "@/components/forms/Label";
 
 interface Props {
   name: string;
+  options:any[];
   label?: string;
   className?: string;
   placeholder?: string;
   disabled?: boolean;
-  children: ReactNode;
   error?: string;
   register: UseFormRegister<FieldValues>;
   rules?: RegisterOptions<FieldValues, Path<FieldValues>>;
 }
 
-export const SelectInput: FC<Props> = ({
+const SelectInput: FC<Props> = ({
   name,
   label,
   className,
@@ -29,7 +29,6 @@ export const SelectInput: FC<Props> = ({
   error,
   register,
   rules,
-  children,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [options, setOptions] = useState<HTMLOptionElement[]>([]);
@@ -41,7 +40,7 @@ export const SelectInput: FC<Props> = ({
     ) as HTMLOptionElement[];
     setOptions(optionElements.filter((opt) => opt.value !== ""));
     setFilteredOptions(optionElements.filter((opt) => opt.value !== ""));
-  }, [name, children]);
+  }, [name]);
 
   const handleSearch = (value: string) => {
     setSearchTerm(value);
@@ -93,7 +92,4 @@ export const SelectInput: FC<Props> = ({
   );
 };
 
-
-
-
-
+export default SelectInput;
