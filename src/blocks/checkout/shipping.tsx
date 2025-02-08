@@ -82,7 +82,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
   }, [shippingMethods]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mx-auto p-6">
+    <div className="w-full flex flex-col items-center justify-center mx-auto p-6 transition-all duration-300 ease-in-out">
       <div className="flex items-center justify-center gap-8">
         <Button
           label="Delivery"
@@ -124,7 +124,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
       {isDelivery ? (
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="space-y-6 w-full min-w-full"
+          className="space-y-6 w-full min-w-full transition-all duration-300 ease-in-out"
         >
           <div className="grid grid-cols-2 gap-4">
             <TextInput
@@ -240,7 +240,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
         <div>
           <Link
             href="/checkout?step=customer"
-            className="w-full mt-6 md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center disabled:cursor-not-allowed"
+            className="w-full mt-6 md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 ease-in-out text-center disabled:cursor-not-allowed"
           >
             Continue to Customer Information
           </Link>
