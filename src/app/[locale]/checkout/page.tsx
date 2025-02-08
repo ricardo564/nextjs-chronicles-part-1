@@ -5,6 +5,8 @@ import { CheckoutSteps } from "@/blocks/checkout/steps";
 import { CountriesService } from "@/services/countries.service";
 import { Suspense } from "react";
 import RandomBackground from "@/blocks/randomBackground";
+import { Language } from "@/types/language";
+import { mockCountries } from "@/static/mockCountries";
 
 export default function CheckoutPage() {
   const t = useTranslations('checkout');
@@ -41,12 +43,22 @@ export default function CheckoutPage() {
     country: t('shipping.country.required'),
   };
 
+  const customerValidationMessages = {
+    fullName: t('customer.fullName.required'),
+    email: t('customer.email.required'),
+    phoneNumber: t('customer.phoneNumber.required'),
+    dateOfBirth: t('customer.dateOfBirth.required'),
+    preferredLanguage: t('customer.preferredLanguage.required'),
+    taxId: t('customer.taxId.required'),
+  };
+
   return (
     <DefaultLayout>
       <Suspense fallback={<div>Loading...</div>}>
         <CheckoutContent
           shippingMethods={shippingMethods}
           shippingValidationMessages={shippingValidationMessages}
+          customerValidationMessages={customerValidationMessages}
           t={t}
         />
       </Suspense>
@@ -57,14 +69,38 @@ export default function CheckoutPage() {
 async function CheckoutContent({
   shippingMethods,
   shippingValidationMessages,
+  customerValidationMessages,
   t
+
 }: {
   shippingMethods: ShippingMethod[],
   shippingValidationMessages: Record<string, string>,
+  customerValidationMessages: Record<string, string>,
   t: (key: string) => string
 }) {
   const countriesService = new CountriesService();
-  const countries = await countriesService.getAllCountries();
+  const countries = await countriesService.getAllCountries()
+    .then((countries) => countries.filter((country) => country.languages))
+    .catch((error) => {
+      console.error('Error fetching countries:', error);
+
+      return mockCountries
+    });
+
+  const languages: Language[] = []
+
+  countries.forEach(country => {
+    if (country.languages) {
+      Object.entries(country.languages).forEach(([code, name]) => {
+        if (!languages.some(lang => lang.id === code)) {
+          languages.push({
+            id: code,
+            name: name as string
+          });
+        }
+      });
+    }
+  });
 
   return (
     <>
@@ -73,6 +109,8 @@ async function CheckoutContent({
       <CheckoutSteps
         shippingMethods={shippingMethods}
         shippingValidationMessages={shippingValidationMessages}
+        customerValidationMessages={customerValidationMessages}
+        languages={languages}
         countries={countries}
         title={t('title')}
         process={t('process')}
@@ -85,6 +123,28 @@ async function CheckoutContent({
         neighborhood={t('shipping.neighborhood.label')}
         city={t('shipping.city.label')}
         state={t('shipping.state.label')}
+        fullNameLabel={t('customer.fullName.label')}
+        emailLabel={t('customer.email.label')}
+        phoneNumberLabel={t('customer.phoneNumber.label')}
+        dateOfBirthLabel={t('customer.dateOfBirth.label')}
+        preferredLanguageLabel={t('customer.preferredLanguage.label')}
+        taxIdTypeLabel={t('customer.taxId.label')}
+        taxIdNumberLabel={t('customer.taxIdNumber.label')}
+        stateRegistrationLabel={t('customer.stateRegistration.label')}
+        createAccountLabel={t('customer.createAccount.label')}
+        passwordLabel={t('customer.password.label')}
+        acceptedTermsLabel={t('customer.acceptedTerms.label')}
+        subscribeToNewsletterLabel={t('customer.subscribeToNewsletter.label')}
+        receiveMarketingEmailsLabel={t('customer.receiveMarketingEmails.label')}
+        backLabel={t('customer.back.label')}
+        continueToPaymentLabel={t('customer.continueToPayment.label')}
+        createAccount={t('customer.createAccount.label')}
+        password={t('customer.password.label')}
+        acceptedTerms={t('customer.acceptedTerms.label')}
+        subscribeToNewsletter={t('customer.subscribeToNewsletter.label')}
+        receiveMarketingEmails={t('customer.receiveMarketingEmails.label')}
+        back={t('customer.back.label')}
+        continueToPayment={t('customer.continueToPayment.label')}
       />
     </>
   );
