@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import ogImage from "@/assets/images/android-launchericon-512-512.png";
 import Script from "next/script";
@@ -7,6 +8,7 @@ import { Analytics } from '@/components/Analytics'
 import ScrollToTop from "@/components/ScrollToTop";
 import { NextIntlClientProvider } from 'next-intl'
 import { PortfolioShortcut } from "@/blocks/portfolioShortcut";
+import { getDirection, Locale } from '@/config/i18n-config';
 
 import "@/assets/styles/globals.css";
 import "@/assets/styles/pageTransition.css";
@@ -56,13 +58,13 @@ export default async function LocaleLayout({
   children,
   params: { locale }
 }: {
-  children: React.ReactNode
+  children: ReactNode
   params: { locale: string }
 }) {
   const messages = (await import(`@/messages/${locale}.json`)).default
 
   return (
-    <html lang="en">
+    <html lang={locale} dir={getDirection(locale as Locale) ? 'rtl' : 'ltr'}>
       <head>
         <Script
           id="gtm-script"
