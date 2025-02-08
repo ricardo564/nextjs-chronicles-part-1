@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useState, useEffect, ChangeEvent } from "react";
+import { useState, useEffect, ChangeEvent, FocusEvent } from "react";
 import {
   FieldValues,
   Path,
@@ -25,7 +25,6 @@ interface DropdownSelectProps {
   rules?: RegisterOptions<FieldValues, Path<FieldValues>>;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (value: string | number) => void;
-  value?: string | number;
 }
 
 const DropdownSelect: FC<DropdownSelectProps> = ({
@@ -39,7 +38,6 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
   register,
   onBlur,
   onChange,
-  value,
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedLabel, setSelectedLabel] = useState("");
@@ -59,13 +57,11 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
     if (selectedOption) {
       setSelectedLabel(selectedOption.label);
       if (onBlur) {
-        const event = { type: 'blur', target: null } as unknown as React.FocusEvent<HTMLInputElement>;
-        console.log('onBlur', event);
+        const event = { type: 'blur', target: null } as unknown as FocusEvent<HTMLInputElement>;
         onBlur(event);
       }
 
       if (onChange) {
-        console.log('onChange', value);
         onChange(value);
       }
     }
@@ -85,7 +81,6 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
 
   useEffect(() => {
     if (initialValue !== undefined) {
-      console.log("initialValue", initialValue);
       const initialOption = options.find(
         (option) => option.value === initialValue
       );
