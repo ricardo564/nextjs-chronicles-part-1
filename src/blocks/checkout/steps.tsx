@@ -81,7 +81,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           return (
             <div key={step} className="flex items-center">
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform ${isCompleted
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform ${isCompleted
                     ? "bg-green-500 text-white scale-110"
                     : "bg-white/20 text-white/60"
                   }`}
@@ -90,7 +90,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
                 {index + 1}
               </div>
               {index < 3 && (
-                <div className="w-20 h-1 mx-2 relative bg-white/20">
+                <div className="w-8 md:w-20 h-1 mx-2 relative bg-white/20">
                   <div
                     className="absolute left-0 top-0 h-full bg-green-500 transition-all duration-300 ease-in-out"
                     style={{
@@ -154,7 +154,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
 
   return (
     <div className="min-h-screen text-white flex flex-col w-full">
-      <div className="mx-auto flex flex-col items-center justify-center w-full px-4 transition-all duration-300 ease-in-out">
+      <div className="md:mx-auto flex flex-col md:items-center md:justify-center w-full md:px-4 transition-all duration-300 ease-in-out">
         <div className="text-center my-12 mt-6 w-full">
           <h1 className="text-5xl font-bold text-white mb-4">
             {title}
@@ -163,7 +163,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           <p className="text-white/70 text-lg">{complete}</p>
         </div>
 
-        <div className="w-full min-w-[75vw] mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-8 border border-white/20 shadow-xl">
+        <div className="w-full min-w-[90vw] md:min-w-[75vw] mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md md:rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">
           <div className="flex justify-center items-center space-x-4 mb-8">
             {renderStepHeader()}
           </div>
