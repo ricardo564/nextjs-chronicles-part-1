@@ -73,7 +73,6 @@ const CustomerStep: FC<CustomerStepProps> = ({
   });
 
   const country = checkoutStore.shippingAddress?.country;
-  console.log(country);
   const createAccount = watch("account.createAccount");
   const isBrazil = country === "BR";
   const [taxIdType, setTaxIdType] = useState("CPF");
