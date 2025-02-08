@@ -4,6 +4,7 @@ import { ShippingMethod } from "@/types/shippingMethod";
 import { CheckoutSteps } from "@/blocks/checkout/steps";
 import { CountriesService } from "@/services/countries.service";
 import { Suspense } from "react";
+import RandomBackground from "@/blocks/randomBackground";
 
 export default function CheckoutPage() {
   const t = useTranslations('checkout');
@@ -60,27 +61,31 @@ async function CheckoutContent({
 }: {
   shippingMethods: ShippingMethod[],
   shippingValidationMessages: Record<string, string>,
-  t: any
+  t: (key: string) => string
 }) {
   const countriesService = new CountriesService();
   const countries = await countriesService.getAllCountries();
 
   return (
-    <CheckoutSteps
-      shippingMethods={shippingMethods}
-      shippingValidationMessages={shippingValidationMessages}
-      countries={countries}
-      title={t('title')}
-      process={t('process')}
-      complete={t('complete')}
-      zipCode={t('shipping.zipCode.label')}
-      country={t('shipping.country.label')}
-      street={t('shipping.street.label')}
-      number={t('shipping.number.label')}
-      complement={t('shipping.complement.label')}
-      neighborhood={t('shipping.neighborhood.label')}
-      city={t('shipping.city.label')}
-      state={t('shipping.state.label')}
-    />
+    <>
+      <RandomBackground />
+
+      <CheckoutSteps
+        shippingMethods={shippingMethods}
+        shippingValidationMessages={shippingValidationMessages}
+        countries={countries}
+        title={t('title')}
+        process={t('process')}
+        complete={t('complete')}
+        zipCode={t('shipping.zipCode.label')}
+        country={t('shipping.country.label')}
+        street={t('shipping.street.label')}
+        number={t('shipping.number.label')}
+        complement={t('shipping.complement.label')}
+        neighborhood={t('shipping.neighborhood.label')}
+        city={t('shipping.city.label')}
+        state={t('shipping.state.label')}
+      />
+    </>
   );
 }
