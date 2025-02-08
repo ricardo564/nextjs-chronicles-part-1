@@ -354,6 +354,11 @@
     "checkout": "Checkout"
   },
   "checkout": {
+    "title": "Checkout",
+    "subtitle": "Complete your purchase by following the steps below",
+    "formTitle": "Shipping Information",
+    "formSubtitle": "Please fill in your details to complete your purchase",
+    "checkout": "Checkout",
     "process": "Process",
     "complete": "Complete your purchase by following the steps below",
     "shipping": {
@@ -388,6 +393,13 @@
       "country": {
         "label": "Country",
         "required": "Country is required"
+      },
+      "methods": {
+        "standard": "Standard Shipping",
+        "express": "Express Shipping",
+        "overnight": "Overnight Shipping",
+        "days": "business days",
+        "day": "business day"
       }
     }
   }
