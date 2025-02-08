@@ -63,9 +63,13 @@ export const ShippingStep: FC<ShippingStepProps> = ({
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors },
   } = useForm<ShippingFormData>({
     resolver: zodResolver(getShippingSchema(validationMessages)),
+    defaultValues: {
+      country: countries[0]?.cca2 || ''
+    }
   });
 
   const { isLoadingCep, fetchAddressByCep } = useAddressByCep(setValue);
@@ -86,6 +90,10 @@ export const ShippingStep: FC<ShippingStepProps> = ({
   useEffect(() => {
     setDisabledFields(selectedCountry === 'BR' ? true : false);
   }, [selectedCountry]);
+
+  useEffect(() => {
+    setValue('country', selectedCountry);
+  }, [selectedCountry, setValue]);
 
   return (
     <div className="w-full flex flex-col items-center justify-center mx-auto p-6 transition-all duration-300 ease-in-out">
@@ -142,7 +150,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
 
             <DropdownSelect
               options={countries.map((country: Country) => ({
-                label: country.name.common,
+                label: country.name.common + " - " + country.cca2,
                 value: country.cca2,
               }))}
               label={country}
@@ -150,6 +158,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
               onChange={(value: string | number) => setSelectedCountry(String(value))}
+              value={watch('country')}
             />
           </div>
 
