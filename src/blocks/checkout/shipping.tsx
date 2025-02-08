@@ -48,6 +48,8 @@ export const ShippingStep: FC<ShippingStepProps> = ({
 }) => {
   const router = useRouter();
   const [isDelivery, setIsDelivery] = useState(true);
+  const [selectedCountry, setSelectedCountry] = useState(countries[0]?.cca2 || '');
+  const [disabledFields, setDisabledFields] = useState<boolean>(false);
 
   const {
     setShippingAddress,
@@ -81,18 +83,22 @@ export const ShippingStep: FC<ShippingStepProps> = ({
     setShippingMethods(shippingMethods);
   }, [shippingMethods]);
 
+  useEffect(() => {
+    setDisabledFields(selectedCountry === 'BR' ? true : false);
+  }, [selectedCountry]);
+
   return (
     <div className="w-full flex flex-col items-center justify-center mx-auto p-6 transition-all duration-300 ease-in-out">
       <div className="flex items-center justify-center gap-8">
         <Button
           label="Delivery"
           icon={<FaTruck />}
-          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-green-500" : "bg-gray-500"
-            }`}
+          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-green-500" : "bg-gray-500"}`}
           onClick={() => setIsDelivery(true)}
         >
           <input
             checked={isDelivery}
+            onChange={(e) => setIsDelivery(e.target.checked)}
             className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-100" : "scale-0"}`}
             type="radio"
             name="shippingType"
@@ -103,23 +109,19 @@ export const ShippingStep: FC<ShippingStepProps> = ({
         <Button
           label="Pickup"
           icon={<FaStore />}
-          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-gray-500" : "bg-green-500"
-            }`}
-          onClick={()=> setIsDelivery(false)}
+          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-gray-500" : "bg-green-500"}`}
+          onClick={() => setIsDelivery(false)}
         >
           <input
             checked={!isDelivery}
+            onChange={(e) => setIsDelivery(!e.target.checked)}
             className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-0" : "scale-100"}`}
             type="radio"
             name="shippingType"
             value="pickup"
-
-
           />
         </Button>
       </div>
-
-
 
       {isDelivery ? (
         <form
@@ -137,6 +139,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               }}
               disabled={isLoadingCep}
             />
+
             <DropdownSelect
               options={countries.map((country: Country) => ({
                 label: country.name.common,
@@ -146,6 +149,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               name="country"
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
+              onChange={(value: string | number) => setSelectedCountry(String(value))}
             />
           </div>
 
@@ -154,7 +158,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
             name="street"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.street?.message}
-            disabled={isLoadingCep}
+            disabled={disabledFields}
           />
 
           <div className="grid grid-cols-2 gap-4">
@@ -178,7 +182,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
             name="neighborhood"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.neighborhood?.message}
-            disabled={isLoadingCep}
+            disabled={disabledFields}
           />
 
           <div className="grid grid-cols-2 gap-4">
@@ -187,14 +191,14 @@ export const ShippingStep: FC<ShippingStepProps> = ({
               name="city"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.city?.message}
-              disabled={isLoadingCep}
+              disabled={disabledFields}
             />
             <TextInput
               label={state}
               name="state"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.state?.message}
-              disabled={isLoadingCep}
+              disabled={disabledFields}
             />
           </div>
 
@@ -205,8 +209,8 @@ export const ShippingStep: FC<ShippingStepProps> = ({
                 <label
                   key={method.id}
                   className={`flex items-center justify-between p-4 border rounded-lg w-full z-[2] px-4 py-3 bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 ease-in-out cursor-pointer ${selectedShippingMethod?.id === method.id
-                      ? "border-green-500 bg-green-50 !text-black"
-                      : "border-gray-200"
+                    ? "border-green-500 bg-green-50 !text-black"
+                    : "border-gray-200"
                     }`}
                 >
                   <div className="flex items-center">
