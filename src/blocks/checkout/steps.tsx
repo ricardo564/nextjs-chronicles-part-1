@@ -9,10 +9,12 @@ import { CustomerStep } from "@/blocks/checkout/customer";
 import { PaymentStep } from "@/blocks/checkout/payment";
 import { ConfirmationStep } from "@/blocks/checkout/confirmation";
 import { ShippingMethod } from "@/types/shippingMethod";
+import { Country } from "@/types/country";
 
 interface CheckoutStepProps {
   shippingValidationMessages: Record<string, string>;
   shippingMethods: ShippingMethod[];
+  countries: Country[];
   zipCode: string;
   country: string;
   street: string;
@@ -26,11 +28,24 @@ interface CheckoutStepProps {
   complete: string;
 }
 
-
 type CheckoutStep = "shipping" | "customer" | "payment" | "confirmation";
 
-
-export const CheckoutSteps: FC<CheckoutStepProps> = ({ shippingMethods, shippingValidationMessages, zipCode, country, street, number, complement, neighborhood, city, state, title, process, complete }) => {
+export const CheckoutSteps: FC<CheckoutStepProps> = ({
+  shippingMethods,
+  shippingValidationMessages,
+  countries,
+  zipCode,
+  country,
+  street,
+  number,
+  complement,
+  neighborhood,
+  city,
+  state,
+  title,
+  process,
+  complete
+}) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { currentStep, setCurrentStep } = useCheckoutStore();
@@ -54,6 +69,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({ shippingMethods, shipping
           <ShippingStep
             validationMessages={shippingValidationMessages}
             shippingMethods={shippingMethods}
+            countries={countries}
             zipCode={zipCode}
             country={country}
             street={street}
@@ -73,6 +89,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({ shippingMethods, shipping
       default:
         return (
           <ShippingStep
+            countries={countries}
             validationMessages={shippingValidationMessages}
             shippingMethods={shippingMethods}
             zipCode={zipCode}
