@@ -100,12 +100,21 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           return (
             <div key={step} className="flex w-full items-center justify-between gap-2 ml-8 md:ml-[14%]">
               <div
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 duration-300 ease-in-out transform cursor-pointer hover:bg-green-600 hover:text-white ${isCompleted
-                    ? "bg-green-500 text-white scale-110"
-                    : "bg-white/20 text-white/60"
-                  }`}
+                role="button"
+                tabIndex={0}
+                aria-label={`Step ${index + 1}: ${step}`}
+                aria-current={currentStep === step ? "step" : undefined}
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 duration-300 ease-in-out transform cursor-pointer hover:bg-green-600 hover:text-white ${
+                  isCompleted ? "bg-green-500 text-white scale-110" : "bg-white/20 text-white/60"
+                }`}
                 style={{ transitionDelay: animationDelay }}
                 onClick={() => handleStepChange(step as CheckoutStep)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleStepChange(step as CheckoutStep);
+                  }
+                }}
               >
                 {index + 1}
               </div>
