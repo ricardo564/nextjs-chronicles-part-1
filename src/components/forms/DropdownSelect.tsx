@@ -14,7 +14,7 @@ interface Option {
   value: string | number;
 }
 
-interface Props {
+interface DropdownSelectProps {
   name: string;
   options: Option[];
   label?: string;
@@ -25,9 +25,10 @@ interface Props {
   rules?: RegisterOptions<FieldValues, Path<FieldValues>>;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (value: string | number) => void;
+  value?: string | number;
 }
 
-const DropdownSelect: FC<Props> = ({
+const DropdownSelect: FC<DropdownSelectProps> = ({
   name,
   label,
   placeholder,
@@ -38,6 +39,7 @@ const DropdownSelect: FC<Props> = ({
   register,
   onBlur,
   onChange,
+  value,
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedLabel, setSelectedLabel] = useState("");
@@ -83,6 +85,7 @@ const DropdownSelect: FC<Props> = ({
 
   useEffect(() => {
     if (initialValue !== undefined) {
+      console.log("initialValue", initialValue);
       const initialOption = options.find(
         (option) => option.value === initialValue
       );
@@ -94,8 +97,16 @@ const DropdownSelect: FC<Props> = ({
     }
   }, [initialValue, options]);
 
-  if (options.length === 0) {
-    return null;
+  if (options.length > 0) {
+    return (
+      <div className="flex flex-col w-full relative">
+        <Label
+          className="ml-1 -mb-2 text-white w-max p-2 text-xs font-normal bg-gradient-to-r from-white/10 via-transparent rounded-full"
+          value={"Error loading options for " + label}
+        />
+        <div className="w-full h-[3.1rem] bg-gray-700 border border-gray-600 rounded-lg z-[2] flex items-center justify-between transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"></div>
+      </div>
+    )
   }
 
   return (
