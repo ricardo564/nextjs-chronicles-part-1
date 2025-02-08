@@ -139,9 +139,11 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
           />
         </div>
       </button>
-      {isDropdownOpen && (
-        <div className="absolute top-full left-0 w-full mt-1 bg-gray-700 border border-gray-600 rounded-lg shadow-lg max-h-[20rem] overflow-hidden overflow-y-auto z-10 animate-dropdown">
-          <ul className="list-none py-2">
+
+      <div
+        className={`absolute top-full left-0 w-full mt-1 bg-gray-700 border border-gray-600 rounded-lg shadow-lg max-h-[20rem] overflow-hidden overflow-y-auto z-10 transition-all duration-200 ease-in-out animate-dropdown ${isDropdownOpen ? '-translate-y-100 opacity-0' : 'translate-y-2 opacity-100'}`}
+      >
+        <ul className="list-none py-2">
             {filteredOptions.map(({ label, value }, index) => (
               <li key={`${name}-${label}-${value}-${index}`}>
                 <button
@@ -155,7 +157,6 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
             ))}
           </ul>
         </div>
-      )}
     </div>
   );
 };
