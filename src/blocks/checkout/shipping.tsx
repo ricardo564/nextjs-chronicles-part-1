@@ -1,6 +1,7 @@
 'use client';
 
 import type { FC } from 'react';
+import { useEffect } from 'react';
 import { FieldValues, useForm, UseFormRegister } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TextInput } from '@/components/forms/TextInput';
@@ -9,8 +10,10 @@ import { getShippingSchema, ShippingFormData } from '@/schemas/checkout/shipping
 import { useAddressByCep } from '@/hooks/useAddressByCep';
 import Button from '@/components/Button';
 import { useRouter } from 'next/navigation';
+import { ShippingMethod } from '@/types/shippingMethod';
 
 interface ShippingStepProps {
+  shippingMethods: ShippingMethod[];
   validationMessages: Record<string, string>;
   zipCode: string;
   country: string;
@@ -23,6 +26,7 @@ interface ShippingStepProps {
 }
 
 export const ShippingStep: FC<ShippingStepProps> = ({
+  shippingMethods,
   validationMessages,
   zipCode,
   country,
@@ -40,7 +44,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
     setCurrentStep,
     setSelectedShippingMethod,
     selectedShippingMethod,
-    getShippingMethods,
+    setShippingMethods,
   } = useCheckoutStore();
 
   const {
@@ -62,6 +66,10 @@ export const ShippingStep: FC<ShippingStepProps> = ({
 
     router.push(`/checkout?step=customer`);
   };
+
+  useEffect(() => {
+    setShippingMethods(shippingMethods);
+  }, [shippingMethods]);
 
   return (
     <div
@@ -146,7 +154,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
         <div className="mt-8">
           <h3 className="text-lg font-semibold mb-4">Shipping Method</h3>
           <div className="space-y-4">
-            {getShippingMethods().map((method) => (
+            {shippingMethods.map((method) => (
               <label
                 key={method.id}
                 className={`flex items-center justify-between p-4 border rounded-lg w-full z-[2] px-4 py-3 bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 ease-in-out cursor-pointer ${selectedShippingMethod?.id === method.id
