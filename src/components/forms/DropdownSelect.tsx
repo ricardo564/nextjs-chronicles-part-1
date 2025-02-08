@@ -115,6 +115,9 @@ const DropdownSelect: FC<DropdownSelectProps> = ({
       <button
         type="button"
         className="z-[2] w-full flex items-center justify-between bg-gray-700 border border-gray-600 rounded-lg transition-all duration-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+        aria-haspopup="listbox"
+        aria-expanded={isDropdownOpen}
+        aria-controls={`${name}-dropdown`}
         onClick={toggleDropdown}
       >
         <input
