@@ -358,27 +358,35 @@
     "complete": "Complete your purchase by following the steps below",
     "shipping": {
       "street": {
+        "label": "Street",
         "required": "Street is required"
       },
       "number": {
+        "label": "Number",
         "required": "Number is required"
       },
       "complement": {
+        "label": "Complement",
         "required": "Complement is required"
       },
       "neighborhood": {
+        "label": "Neighborhood",
         "required": "Neighborhood is required"
       },
       "city": {
+        "label": "City",
         "required": "City is required"
       },
       "state": {
+        "label": "State",
         "required": "State is required"
       },
       "zipCode": {
+        "label": "ZIP Code",
         "required": "ZIP Code is required"
       },
       "country": {
+        "label": "Country",
         "required": "Country is required"
       }
     }

@@ -358,27 +358,35 @@
     "complete": "नीचे दिए गए चरणों का पालन करके अपनी खरीदारी समाप्त करें",
     "shipping": {
       "street": {
+        "label": "स्ट्रीट",
         "required": "स्ट्रीट आवश्यक है"
       },
       "number": {
+        "label": "नंबर",
         "required": "नंबर आवश्यक है"
       },
       "complement": {
+        "label": "कम्प्लीमेंट",
         "required": "कम्प्लीमेंट आवश्यक है"
       },
       "neighborhood": {
+        "label": "निवास क्षेत्र",
         "required": "निवास क्षेत्र आवश्यक है"
       },
       "city": {
+        "label": "शहर",
         "required": "शहर आवश्यक है"
       },
       "state": {
+        "label": "राज्य",
         "required": "राज्य आवश्यक है"
       },
       "zipCode": {
+        "label": "जिप कोड",
         "required": "जिप कोड आवश्यक है"
       },
       "country": {
+        "label": "देश",
         "required": "देश आवश्यक है"
       }
     }

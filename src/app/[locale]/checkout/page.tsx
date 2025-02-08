@@ -48,6 +48,14 @@ export default function CheckoutPage() {
         return (
           <ShippingStep
             validationMessages={shippingValidationMessages}
+            zipCode={t('shipping.zipCode.label')}
+            country={t('shipping.country.label')}
+            street={t('shipping.street.label')}
+            number={t('shipping.number.label')}
+            complement={t('shipping.complement.label')}
+            neighborhood={t('shipping.neighborhood.label')}
+            city={t('shipping.city.label')}
+            state={t('shipping.state.label')}
           />
         );
       case "customer":
@@ -60,6 +68,14 @@ export default function CheckoutPage() {
         return (
           <ShippingStep
             validationMessages={shippingValidationMessages}
+            zipCode={t('shipping.zipCode.label')}
+            country={t('shipping.country.label')}
+            street={t('shipping.street.label')}
+            number={t('shipping.number.label')}
+            complement={t('shipping.complement.label')}
+            neighborhood={t('shipping.neighborhood.label')}
+            city={t('shipping.city.label')}
+            state={t('shipping.state.label')}
           />
         );
     }

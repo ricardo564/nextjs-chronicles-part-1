@@ -12,9 +12,27 @@ import { useRouter } from 'next/navigation';
 
 interface ShippingStepProps {
   validationMessages: Record<string, string>;
+  zipCode: string;
+  country: string;
+  street: string;
+  number: string;
+  complement: string;
+  neighborhood: string;
+  city: string;
+  state: string;
 }
 
-export const ShippingStep: FC<ShippingStepProps> = ({ validationMessages }) => {
+export const ShippingStep: FC<ShippingStepProps> = ({
+  validationMessages,
+  zipCode,
+  country,
+  street,
+  number,
+  complement,
+  neighborhood,
+  city,
+  state,
+}) => {
   const router = useRouter();
 
   const {
@@ -59,7 +77,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({ validationMessages }) => {
       >
         <div className="grid grid-cols-2 gap-4">
           <TextInput
-            label="ZIP Code"
+            label={zipCode}
             name="zipCode"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.zipCode?.message}
@@ -69,7 +87,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({ validationMessages }) => {
             disabled={isLoadingCep}
           />
           <TextInput
-            label="Country"
+            label={country}
             name="country"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.country?.message}
@@ -77,7 +95,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({ validationMessages }) => {
         </div>
 
         <TextInput
-          label="Street"
+          label={street}
           name="street"
           register={register as unknown as UseFormRegister<FieldValues>}
           error={errors.street?.message}
@@ -86,13 +104,13 @@ export const ShippingStep: FC<ShippingStepProps> = ({ validationMessages }) => {
 
         <div className="grid grid-cols-2 gap-4">
           <TextInput
-            label="Number"
+            label={number}
             name="number"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.number?.message}
           />
           <TextInput
-            label="Complement"
+            label={complement}
             name="complement"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.complement?.message}
@@ -100,7 +118,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({ validationMessages }) => {
         </div>
 
         <TextInput
-          label="Neighborhood"
+          label={neighborhood}
           name="neighborhood"
           register={register as unknown as UseFormRegister<FieldValues>}
           error={errors.neighborhood?.message}
@@ -109,14 +127,14 @@ export const ShippingStep: FC<ShippingStepProps> = ({ validationMessages }) => {
 
         <div className="grid grid-cols-2 gap-4">
           <TextInput
-            label="City"
+            label={city}
             name="city"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.city?.message}
             disabled={isLoadingCep}
           />
           <TextInput
-            label="State"
+            label={state}
             name="state"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.state?.message}

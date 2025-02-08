@@ -358,27 +358,35 @@
     "complete": "Complete sua compra seguindo os passos abaixo",
     "shipping": {
       "street": {
+        "label": "Rua",
         "required": "Rua é obrigatório"
       },
       "number": {
+        "label": "Número",
         "required": "Número é obrigatório"
       },
       "complement": {
+        "label": "Complemento",
         "required": "Complemento é obrigatório"
       },
       "neighborhood": {
+        "label": "Bairro",
         "required": "Bairro é obrigatório"
       },
       "city": {
+        "label": "Cidade",
         "required": "Cidade é obrigatório"
       },
       "state": {
+        "label": "Estado",
         "required": "Estado é obrigatório"
       },
       "zipCode": {
+        "label": "CEP",
         "required": "CEP é obrigatório"
       },
       "country": {
+        "label": "País",
         "required": "País é obrigatório"
       }
     }
