@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { ShippingMethod, CheckoutStep, Address } from "@/types/shippingMethod";
+import { ShippingFormData } from "@/types/shippingFormData";
 
 interface CheckoutState {
   currentStep: CheckoutStep;
@@ -9,6 +10,8 @@ interface CheckoutState {
   useDifferentBillingAddress: boolean;
   selectedShippingMethod: ShippingMethod | null;
   shippingMethods: ShippingMethod[];
+  shippingFormData: Partial<ShippingFormData>;
+  isDelivery: boolean;
   setCurrentStep: (step: CheckoutStep) => void;
   setShippingAddress: (address: Address) => void;
   setBillingAddress: (address: Address) => void;
@@ -16,6 +19,8 @@ interface CheckoutState {
   setSelectedShippingMethod: (method: ShippingMethod) => void;
   clearCheckoutData: () => void;
   setShippingMethods: (methods: ShippingMethod[]) => void;
+  setShippingFormData: (data: Partial<ShippingFormData>) => void;
+  setIsDelivery: (isDelivery: boolean) => void;
 }
 
 const initialState = {
@@ -25,6 +30,8 @@ const initialState = {
   useDifferentBillingAddress: false,
   selectedShippingMethod: null,
   shippingMethods: [],
+  shippingFormData: {},
+  isDelivery: true,
 };
 
 export const useCheckoutStore = create<CheckoutState>()(
@@ -40,6 +47,11 @@ export const useCheckoutStore = create<CheckoutState>()(
         set({ selectedShippingMethod: method }),
       clearCheckoutData: () => set(initialState),
       setShippingMethods: (methods) => set({ shippingMethods: methods }),
+      setShippingFormData: (data) => 
+        set((state) => ({
+          shippingFormData: { ...state.shippingFormData, ...data }
+        })),
+      setIsDelivery: (isDelivery) => set({ isDelivery }),
     }),
     {
       name: "checkout-storage",
