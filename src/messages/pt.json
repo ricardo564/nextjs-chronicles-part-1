@@ -354,9 +354,15 @@
     "checkout": "Finalizar compra"
   },
   "checkout": {
-    "process": "Processo",
+    "title": "Finalizar compra",
+    "subtitle": "Complete sua compra seguindo os passos abaixo",
+    "formTitle": "Informações de envio",
+    "formSubtitle": "Por favor, preencha seus detalhes para completar sua compra",
+    "checkout": "Finalizar compra",
+    "process": "",
     "complete": "Complete sua compra seguindo os passos abaixo",
     "shipping": {
+
       "street": {
         "label": "Rua",
         "required": "Rua é obrigatório"
@@ -388,6 +394,13 @@
       "country": {
         "label": "País",
         "required": "País é obrigatório"
+      },
+      "methods": {
+        "standard": "Frete Padrão",
+        "express": "Frete Express",
+        "overnight": "Frete Noturno",
+        "days": "dias úteis",
+        "day": "dia útil"
       }
     }
   }
