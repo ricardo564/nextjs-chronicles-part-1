@@ -71,10 +71,13 @@ export default function CheckoutPage() {
         <div className="mx-auto flex flex-col items-center justify-center w-full">
           <div className="text-center my-12 mt-6">
             <h1 className="text-5xl font-bold text-white mb-4">
-              Checkout <span className="text-green-500">Process</span>
+              {t('checkout')}
+              <span className="text-green-500">
+              {t('process')}
+              </span>
             </h1>
             <p className="text-white/70 text-lg">
-              Complete your purchase by following the steps below
+              {t('complete')}
             </p>
           </div>
 

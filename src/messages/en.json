@@ -354,6 +354,8 @@
     "checkout": "Checkout"
   },
   "checkout": {
+    "process": "Process",
+    "complete": "Complete your purchase by following the steps below",
     "shipping": {
       "street": {
         "required": "Street is required"
