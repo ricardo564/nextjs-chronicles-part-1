@@ -81,11 +81,10 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           return (
             <div key={step} className="flex items-center">
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform ${
-                  isCompleted
+                className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out transform ${isCompleted
                     ? "bg-green-500 text-white scale-110"
                     : "bg-white/20 text-white/60"
-                }`}
+                  }`}
                 style={{ transitionDelay: animationDelay }}
               >
                 {index + 1}
