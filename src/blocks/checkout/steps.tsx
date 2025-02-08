@@ -70,6 +70,42 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
     }
   }, [countries]);
 
+  const renderStepHeader = () => {
+    return (
+      ["shipping", "customer", "payment", "confirmation"].map(
+        (step, index) => {
+          const stepIndex = ["shipping", "customer", "payment", "confirmation"].indexOf(currentStep);
+          const isCompleted = index <= stepIndex;
+
+          return (
+            <div key={step} className="flex items-center">
+              <div
+                className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out transform ${isCompleted
+                    ? "bg-green-500 text-white scale-110"
+                    : "bg-white/20 text-white/60"
+                  }`}
+              >
+                {index + 1}
+              </div>
+              {index < 3 && (
+                <div className="w-20 h-1 mx-2 relative bg-white/20">
+                  <div
+                    className="absolute left-0 top-0 h-full bg-green-500 transition-all duration-500 ease-in-out"
+                    style={{
+                      width: index < stepIndex ? '100%' :
+                        index === stepIndex ? '50%' : '0%',
+                      opacity: index <= stepIndex ? 1 : 0
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+          );
+        }
+      )
+    );
+  };
+
   const renderStep = () => {
     switch (currentStep) {
       case "shipping":
@@ -126,21 +162,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
 
         <div className="w-full min-w-[75vw] mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-8 border border-white/20 shadow-xl">
           <div className="flex justify-center items-center space-x-4 mb-8">
-            {["shipping", "customer", "payment", "confirmation"].map(
-              (step, index) => (
-                <div key={step} className="flex items-center">
-                  <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center ${currentStep === step
-                      ? "bg-green-500 text-white"
-                      : "bg-white/20 text-white/60"
-                      }`}
-                  >
-                    {index + 1}
-                  </div>
-                  {index < 3 && <div className="w-20 h-1 mx-2 bg-white/20" />}
-                </div>
-              )
-            )}
+            {renderStepHeader()}
           </div>
 
           {renderStep()}
