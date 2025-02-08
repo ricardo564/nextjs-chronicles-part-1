@@ -1,10 +1,12 @@
 import Button from "@/components/Button";
+import ComingSoon from "@/components/ComingSoon";
 import Link from "@/components/Link";
 
 const CustomerStep = () => {
   return (
     <div className="min-h-screen">
-      <h1>Customer</h1>
+      <ComingSoon />
+
       <Link href="/checkout?step=payment">
         <Button label="Go to Payment" />
       </Link>
