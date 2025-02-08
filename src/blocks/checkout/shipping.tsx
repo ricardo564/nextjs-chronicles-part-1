@@ -1,7 +1,7 @@
 'use client';
 
 import type { FC } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FieldValues, useForm, UseFormRegister } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TextInput } from '@/components/forms/TextInput';
@@ -11,7 +11,8 @@ import { useAddressByCep } from '@/hooks/useAddressByCep';
 import Button from '@/components/Button';
 import { useRouter } from 'next/navigation';
 import { ShippingMethod } from '@/types/shippingMethod';
-
+import { FaTruck, FaStore } from 'react-icons/fa';
+import Link from '@/components/Link';
 interface ShippingStepProps {
   shippingMethods: ShippingMethod[];
   validationMessages: Record<string, string>;
@@ -38,6 +39,7 @@ export const ShippingStep: FC<ShippingStepProps> = ({
   state,
 }) => {
   const router = useRouter();
+  const [isDevelivery, setIsDevelivery] = useState(true);
 
   const {
     setShippingAddress,
@@ -75,10 +77,25 @@ export const ShippingStep: FC<ShippingStepProps> = ({
     <div
       className="w-full flex flex-col items-center justify-center mx-auto p-6"
     >
-      <h2 className="text-2xl font-bold mb-6">
-        Shipping Information
-      </h2>
+      <div className="flex items-center justify-center gap-8">
+        <Button
+          label="Delivery"
+          icon={<FaTruck />}
+          className={`text-2xl font-bold mb-6 gap-4 ${isDevelivery ? 'bg-green-500' : 'bg-gray-500'}`}
+          onClick={() => setIsDevelivery(true)}
+        />
 
+
+        <Button
+          label="Pickup"
+          icon={<FaStore />}
+          className={`text-2xl font-bold mb-6 gap-4 ${isDevelivery ? 'bg-gray-500' : 'bg-green-500'}`}
+          onClick={() => setIsDevelivery(false)}
+        />
+
+      </div>
+
+      {isDevelivery ? (
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="space-y-6 w-full min-w-full"
@@ -194,7 +211,20 @@ export const ShippingStep: FC<ShippingStepProps> = ({
         >
           Continue to Customer Information
         </Button>
-      </form>
+        </form>
+      ) : (
+        <div>
+          <Link
+            href="/checkout?step=customer"
+            className="w-full mt-6 md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 text-center disabled:cursor-not-allowed"
+          >
+            Continue to Customer Information
+          </Link>
+        </div>
+
+      )}
     </div>
+
   );
 };
+
