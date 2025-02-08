@@ -464,6 +464,12 @@
       "continueToPayment": {
         "label": "जारी रखें"
       },
+      "subscribeToNewsletter": {
+        "label": "न्यूजलेटर को सदस्यता लें"
+      },
+      "receiveMarketingEmails": {
+        "label": "विज्ञापन ईमेल प्राप्त करें"
+      },
       "createAccountDescription": "एक खाता बनाएं जिससे आपकी जानकारी सहेजी जा सके और आपकी खरीदारी तेज हो सके",
       "createAccountButton": "भुगतान करने के लिए जारी रखें",
       "createAccountButtonLabel": "भुगतान करने के लिए जारी रखें",

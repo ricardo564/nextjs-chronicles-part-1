@@ -464,6 +464,12 @@
       "continueToPayment": {
         "label": "Continue to Payment"
       },
+      "subscribeToNewsletter": {
+        "label": "Subscribe to Newsletter"
+      },
+      "receiveMarketingEmails": {
+        "label": "Receive marketing emails"
+      },
       "continue": "Continue",
       "createAccountDescription": "Create an account to save your information and make your purchase faster",
       "createAccountButton": "Continue to Payment",

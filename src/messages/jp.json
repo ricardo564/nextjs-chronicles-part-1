@@ -464,6 +464,12 @@
       "continueToPayment": {
         "label": "支払いへ"
       },
+      "subscribeToNewsletter": {
+        "label": "ニュースレターに登録する"
+      },
+      "receiveMarketingEmails": {
+        "label": "マーケティングメールを受信する"
+      },
       "createAccountDescription": "アカウントを作成して、あなたの情報を保存し、購入をより速く完了できるようにします",
       "createAccountButton": "支払いへ",
       "createAccountButtonLabel": "支払いへ",

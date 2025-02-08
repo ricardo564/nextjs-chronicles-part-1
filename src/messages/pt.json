@@ -465,6 +465,12 @@
       "continueToPayment": {
         "label": "Continuar para pagamento"
       },
+      "subscribeToNewsletter": {
+        "label": "Inscrever-se no boletim informativo"
+      },
+      "receiveMarketingEmails": {
+        "label": "Receber e-mails de marketing"
+      },
       "createAccountDescription": "Crie uma conta para salvar suas informações e acelerar suas compras",
       "createAccountButton": "Continuar para pagamento",
       "createAccountButtonLabel": "Continuar para pagamento",

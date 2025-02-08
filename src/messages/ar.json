@@ -464,6 +464,12 @@
       "continueToPayment": {
         "label": "متابعة إلى الدفع"
       },
+      "subscribeToNewsletter": {
+        "label": "اشترك في النشرة الإخبارية"
+      },
+      "receiveMarketingEmails": {
+        "label": "الحصول على الرسائل التسويقية"
+      },
       "createAccountDescription": "إنشاء حساب لحفظ معلوماتك وتسريع عملية الشراء",
       "createAccountButton": "متابعة إلى الدفع",
       "createAccountButtonLabel": "متابعة إلى الدفع",

@@ -464,6 +464,12 @@
       "continueToPayment": {
         "label": "Kontynuuj"
       },
+      "subscribeToNewsletter": {
+        "label": "Zapisz się do newslettera"
+      },
+      "receiveMarketingEmails": {
+        "label": "Otrzymuj marketingowe e-maile"
+      },
       "createAccountDescription": "Stwórz konto, aby zapisać swoje informacje i zwiększyć szybkość zakupu",
       "createAccountButton": "Do kasy",
       "createAccountButtonLabel": "Do kasy",
