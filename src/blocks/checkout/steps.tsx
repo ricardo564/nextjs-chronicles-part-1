@@ -155,7 +155,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   return (
     <div className="min-h-screen text-white flex flex-col w-full">
       <div className="md:mx-auto flex flex-col md:items-center md:justify-center w-full md:px-4 transition-all duration-300 ease-in-out">
-        <div className="text-center my-12 mt-6 w-full">
+        <div className="text-center my-12 mt-6 w-full z-[50]">
           <h1 className="text-5xl font-bold text-white mb-4">
             {title}
             <span className="text-green-500">{process}</span>
