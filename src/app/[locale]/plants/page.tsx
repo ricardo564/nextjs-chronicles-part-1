@@ -3,7 +3,7 @@ import { NoDataToShow } from "@/components/NoDataToShow";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { PlantsService } from "@/app/api/plants/plants.service";
 import { getUniqueId } from "@/utils/getUniqueId";
-import { Loading } from "@/components/Loading";
+import Loading from "@/components/Loading";
 import { Suspense } from "react";
 import { getTranslations } from 'next-intl/server';
 import { unstable_cache } from 'next/cache';

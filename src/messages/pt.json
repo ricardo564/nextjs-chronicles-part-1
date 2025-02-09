@@ -405,6 +405,87 @@
         "days": "dias úteis",
         "day": "dia útil"
       }
+    },
+    "customer": {
+      "taxId": {
+        "label": "CNPJ",
+        "required": "CNPJ é obrigatório",
+        "min": "CNPJ deve ter pelo menos 1 caractere",
+        "max": "CNPJ não pode exceder 18 caracteres"
+      },
+      "taxIdType": {
+        "label": "Tipo de CNPJ",
+        "required": "Tipo de CNPJ é obrigatório"
+      },
+      "taxIdNumber": {
+        "label": "Número de CNPJ",
+        "required": "Número de CNPJ é obrigatório"
+      },
+      "password": {
+        "label": "Senha",
+        "required": "Senha é obrigatório"
+      },
+      "confirmPassword": {
+        "label": "Confirmar Senha",
+        "required": "Confirmar Senha é obrigatório"
+      },
+      "acceptedTerms": {
+        "label": "Aceito os termos e condições",
+        "required": "Você deve aceitar os termos e condições"
+      },
+      "createAccount": {
+        "label": "Criar uma conta",
+        "required": "Você deve criar uma conta"
+      },
+      "fullName": {
+        "label": "Nome Completo",
+        "required": "Nome Completo é obrigatório",
+        "min": "Nome completo deve ter pelo menos 2 caracteres",
+        "max": "Nome completo não pode exceder 50 caracteres"
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email é obrigatório",
+        "invalid": "Endereço de e-mail inválido"
+      },
+      "phoneNumber": {
+        "label": "Telefone",
+        "required": "Telefone é obrigatório",
+        "min": "Telefone deve ter pelo menos 2 caracteres",
+        "max": "Telefone não pode exceder 50 caracteres"
+      },
+      "dateOfBirth": {
+        "label": "Data de nascimento",
+        "required": "Data de nascimento é obrigatório"
+      },
+      "gender": {
+        "label": "Gênero",
+        "required": "Gênero é obrigatório"
+      },
+      "preferredLanguage": {
+        "label": "Língua preferida",
+        "required": "Língua preferida é obrigatório"
+      },
+      "back": {
+        "label": "Voltar"
+      },
+      "continueToPayment": {
+        "label": "Continuar para pagamento"
+      },
+      "subscribeToNewsletter": {
+        "label": "Inscrever-se no boletim informativo"
+      },
+      "receiveMarketingEmails": {
+        "label": "Receber e-mails de marketing"
+      },
+      "stateRegistration": {
+        "label": "Número de registro",
+        "required": "Número de registro é obrigatório"
+      },
+      "createAccountDescription": "Crie uma conta para salvar suas informações e acelerar suas compras",
+      "createAccountButton": "Continuar para pagamento",
+      "createAccountButtonLabel": "Continuar para pagamento",
+      "createAccountButtonTitle": "Continuar para pagamento"
     }
   },
   "comingSoon": {

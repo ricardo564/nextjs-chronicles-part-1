@@ -404,6 +404,87 @@
         "days": "أيام عمل",
         "day": "يوم عمل"
       }
+    },
+    "customer": {
+      "taxId": {
+        "label": "الرقم الضريبي",
+        "required": "الرقم الضريبي مطلوب",
+        "min": "الرقم الضريبي يجب أن يكون أكثر من 1 حرف",
+        "max": "الرقم الضريبي لا يمكن أن يتجاوز 18 حرف"
+      },
+      "taxIdType": {
+        "label": "نوع الرقم الضريبي",
+        "required": "نوع الرقم الضريبي مطلوب"
+      },
+      "taxIdNumber": {
+        "label": "رقم الرقم الضريبي",
+        "required": "رقم الرقم الضريبي مطلوب"
+      },
+      "password": {
+        "label": "كلمة المرور",
+        "required": "كلمة المرور مطلوبة"
+      },
+      "confirmPassword": {
+        "label": "تأكيد كلمة المرور",
+        "required": "تأكيد كلمة المرور مطلوب"
+      },
+      "acceptedTerms": {
+        "label": "أنا أقبل الشروط والأحكام",
+        "required": "يجب أن تقبل الشروط والأحكام"
+      },
+      "createAccount": {
+        "label": "إنشاء حساب",
+        "required": "يجب أن تقوم بإنشاء حساب"
+      },
+      "fullName": {
+        "label": "الاسم الكامل",
+        "required": "الاسم الكامل مطلوب",
+        "min": "الاسم الكامل يجب أن يكون أكثر من 2 حرف",
+        "max": "الاسم الكامل لا يمكن أن يتجاوز 50 حرف"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "required": "البريد الإلكتروني مطلوب",
+        "invalid": "عنوان البريد الإلكتروني غير صالح"
+      },
+      "phoneNumber": {
+        "label": "رقم الهاتف",
+        "required": "رقم الهاتف مطلوب",
+        "min": "رقم الهاتف يجب أن يكون أكثر من 2 حرف",
+        "max": "رقم الهاتف لا يمكن أن يتجاوز 50 حرف"
+      },
+      "dateOfBirth": {
+        "label": "تاريخ الميلاد",
+        "required": "تاريخ الميلاد مطلوب"
+      },
+      "gender": {
+        "label": "الجنس",
+        "required": "الجنس مطلوب"
+      },
+      "preferredLanguage": {
+        "label": "اللغة المفضلة",
+        "required": "اللغة المفضلة مطلوبة"
+      },
+      "back": {
+        "label": "رجوع"
+      },
+      "continueToPayment": {
+        "label": "متابعة إلى الدفع"
+      },
+      "subscribeToNewsletter": {
+        "label": "اشترك في النشرة الإخبارية"
+      },
+      "receiveMarketingEmails": {
+        "label": "الحصول على الرسائل التسويقية"
+      },
+      "stateRegistration": {
+        "label": "الرقم المنصوب",
+        "required": "الرقم المنصوب مطلوب"
+      },
+      "createAccountDescription": "إنشاء حساب لحفظ معلوماتك وتسريع عملية الشراء",
+      "createAccountButton": "متابعة إلى الدفع",
+      "createAccountButtonLabel": "متابعة إلى الدفع",
+      "createAccountButtonTitle": "متابعة إلى الدفع"
     }
   },
   "comingSoon": {

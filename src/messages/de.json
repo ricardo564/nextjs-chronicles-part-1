@@ -404,6 +404,87 @@
         "days": "Werktage",
         "day": "Werktag"
       }
+    },
+    "customer": {
+      "taxId": {
+        "label": "Steuernummer",
+        "required": "Steuernummer ist erforderlich",
+        "min": "Steuernummer muss mindestens 1 Zeichen lang sein",
+        "max": "Steuernummer darf nicht länger als 18 Zeichen sein"
+      },
+      "taxIdType": {
+        "label": "Steuernummer Typ",
+        "required": "Steuernummer Typ ist erforderlich"
+      },
+      "taxIdNumber": {
+        "label": "Steuernummer",
+        "required": "Steuernummer ist erforderlich"
+      },
+      "password": {
+        "label": "Passwort",
+        "required": "Passwort ist erforderlich"
+      },
+      "confirmPassword": {
+        "label": "Passwort bestätigen",
+        "required": "Passwort bestätigen ist erforderlich"
+      },
+      "acceptedTerms": {
+        "label": "Ich akzeptiere die Nutzungsbedingungen",
+        "required": "Sie müssen die Nutzungsbedingungen akzeptieren"
+      },
+      "createAccount": {
+        "label": "Erstellen Sie ein Konto",
+        "required": "Sie müssen ein Konto erstellen"
+      },
+      "fullName": {
+        "label": "Vollständiger Name",
+        "required": "Vollständiger Name ist erforderlich",
+        "min": "Vollständiger Name muss mindestens 2 Zeichen lang sein",
+        "max": "Vollständiger Name darf nicht länger als 50 Zeichen sein"
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email ist erforderlich",
+        "invalid": "Ungültige E-Mail-Adresse"
+      },
+      "phoneNumber": {
+        "label": "Telefonnummer",
+        "required": "Telefonnummer ist erforderlich",
+        "min": "Telefonnummer muss mindestens 2 Zeichen lang sein",
+        "max": "Telefonnummer darf nicht länger als 50 Zeichen sein"
+      },
+      "dateOfBirth": {
+        "label": "Geburtsdatum",
+        "required": "Geburtsdatum ist erforderlich"
+      },
+      "gender": {
+        "label": "Geschlecht",
+        "required": "Geschlecht ist erforderlich"
+      },
+      "preferredLanguage": {
+        "label": "Gewünschte Sprache",
+        "required": "Gewünschte Sprache ist erforderlich"
+      },
+      "back": {
+        "label": "Zurück"
+      },
+      "continueToPayment": {
+        "label": "Zur Kasse"
+      },
+      "subscribeToNewsletter": {
+        "label": "Newsletter abonnieren"
+      },
+      "receiveMarketingEmails": {
+        "label": "Marketing-E-Mails empfangen"
+      },
+      "stateRegistration": {
+        "label": "Registrierungsnummer",
+        "required": "Registrierungsnummer ist erforderlich"
+      },
+      "createAccountDescription": "Erstellen Sie ein Konto, um Ihre Informationen zu speichern und Ihren Einkauf schneller abzuschließen",
+      "createAccountButton": "Zur Kasse",
+      "createAccountButtonLabel": "Zur Kasse",
+      "createAccountButtonTitle": "Zur Kasse"
     }
   },
   "comingSoon": {

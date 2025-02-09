@@ -96,6 +96,20 @@ const ShippingStep: FC<ShippingStepProps> = ({
   };
 
   useEffect(() => {
+    setShippingAddress({
+      ...shippingFormData,
+      country: selectedCountry,
+      neighborhood: shippingFormData.complement || '',
+      street: shippingFormData.street || '',
+      number: shippingFormData.number || '',
+      complement: shippingFormData.complement || '',
+      city: shippingFormData.city || '',
+      state: shippingFormData.state || '',
+      zipCode: shippingFormData.zipCode || ''
+    });
+  }, [selectedCountry]);
+
+  useEffect(() => {
     setShippingMethods(shippingMethods);
   }, [shippingMethods]);
 
@@ -170,7 +184,6 @@ const ShippingStep: FC<ShippingStepProps> = ({
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
               onChange={(value: string | number) => setSelectedCountry(String(value))}
-              initialValue={watch('country')}
             />
           </div>
 
@@ -262,7 +275,18 @@ const ShippingStep: FC<ShippingStepProps> = ({
           </Button>
         </form>
       ) : (
-        <div>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <DropdownSelect
+            options={countries.map((country: Country) => ({
+              label: country.name.common + " - " + country.cca2,
+                value: country.cca2,
+              }))}
+              label={country}
+              name="country"
+              register={register as unknown as UseFormRegister<FieldValues>}
+              rules={{ required: true }}
+              onChange={(value: string | number) => setSelectedCountry(String(value))}
+            />
           <Link
             href="/checkout?step=customer"
             className="w-full mt-6 md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 ease-in-out text-center disabled:cursor-not-allowed"

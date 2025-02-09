@@ -28,7 +28,7 @@ const ComingSoon: FC<ComingSoonProps> = ({ className }) => {
 
           <div className="flex justify-center gap-4">
             <div className="text-2xl animate-bounce delay-100">🌱</div>
-            <div className="text-2xl animate-bounce delay-200">🪴</div>
+            <div className="text-2xl animate-bounce delay-200">🌳</div>
             <div className="text-2xl animate-bounce delay-300">🌿</div>
           </div>
         </div>

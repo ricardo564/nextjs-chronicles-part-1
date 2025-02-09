@@ -404,6 +404,87 @@
         "days": "dni roboczych",
         "day": "dzień roboczy"
       }
+    },
+    "customer": {
+      "taxId": {
+        "label": "NIP",
+        "required": "NIP jest wymagany",
+        "min": "NIP musi mieć co najmniej 1 znak",
+        "max": "NIP nie może przekraczać 18 znaków"
+      },
+      "taxIdType": {
+        "label": "Typ NIP",
+        "required": "Typ NIP jest wymagany"
+      },
+      "taxIdNumber": {
+        "label": "Numer NIP",
+        "required": "Numer NIP jest wymagany"
+      },
+      "password": {
+        "label": "Hasło",
+        "required": "Hasło jest wymagane"
+      },
+      "confirmPassword": {
+        "label": "Potwierdź Hasło",
+        "required": "Potwierdź Hasło jest wymagane"
+      },
+      "acceptedTerms": {
+        "label": "Akceptuję warunki i zasady",
+        "required": "Musisz zaakceptować warunki i zasady"
+      },
+      "createAccount": {
+        "label": "Stwórz konto",
+        "required": "Musisz stworzyć konto"
+      },
+      "fullName": {
+        "label": "Pełna nazwa",
+        "required": "Pełna nazwa jest wymagana",
+        "min": "Pełna nazwa musi mieć co najmniej 2 znaki",
+        "max": "Pełna nazwa nie może przekraczać 50 znaków"
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email jest wymagany",
+        "invalid": "Nieprawidłowy adres e-mail"
+      },
+      "phoneNumber": {
+        "label": "Telefone",
+        "required": "Telefone jest wymagany",
+        "min": "Telefone musi mieć co najmniej 2 znaki",
+        "max": "Telefone nie może przekraczać 50 znaków"
+      },
+      "dateOfBirth": {
+        "label": "Data urodzenia",
+        "required": "Data urodzenia jest wymagana"
+      },
+      "gender": {
+        "label": "Płeć",
+        "required": "Płeć jest wymagana"
+      },
+      "preferredLanguage": {
+        "label": "Preferowana język",
+        "required": "Preferowana język jest wymagana"
+      },
+      "back": {
+        "label": "Wstecz"
+      },
+      "continueToPayment": {
+        "label": "Kontynuuj"
+      },
+      "subscribeToNewsletter": {
+        "label": "Zapisz się do newslettera"
+      },
+      "receiveMarketingEmails": {
+        "label": "Otrzymuj marketingowe e-maile"
+      },
+      "stateRegistration": {
+        "label": "Numer rejestracji",
+        "required": "Numer rejestracji jest wymagany"
+      },
+      "createAccountDescription": "Stwórz konto, aby zapisać swoje informacje i zwiększyć szybkość zakupu",
+      "createAccountButton": "Do kasy",
+      "createAccountButtonLabel": "Do kasy",
+      "createAccountButtonTitle": "Do kasy"
     }
   },
   "comingSoon": {

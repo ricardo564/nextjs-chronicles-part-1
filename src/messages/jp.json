@@ -404,6 +404,87 @@
         "days": "営業日",
         "day": "営業日"
       }
+    },
+    "customer": {
+      "taxId": {
+        "label": "NIP",
+        "required": "NIPは必須です",
+        "min": "NIPは少なくとも1文字でなければなりません",
+        "max": "NIPは18文字を超えることはできません"
+      },
+      "taxIdType": {
+        "label": "NIPタイプ",
+        "required": "NIPタイプは必須です"
+      },
+      "taxIdNumber": {
+        "label": "NIP番号",
+        "required": "NIP番号は必須です"
+      },
+      "password": {
+        "label": "パスワード",
+        "required": "パスワードは必須です"
+      },
+      "confirmPassword": {
+        "label": "確認パスワード",
+        "required": "確認パスワードは必須です"
+      },
+      "acceptedTerms": {
+        "label": "利用規約に同意する",
+        "required": "利用規約に同意する必要があります"
+      },
+      "createAccount": {
+        "label": "アカウントを作成する",
+        "required": "アカウントを作成する必要があります"
+      },
+      "fullName": {
+        "label": "フルネーム",
+        "required": "フルネームは必須です",
+        "min": "フルネームは少なくとも2文字でなければなりません",
+        "max": "フルネームは50文字を超えることはできません"
+      },
+      "email": {
+        "label": "メールアドレス",
+        "required": "メールアドレスは必須です",
+        "invalid": "無効なメールアドレスです"
+      },
+      "phoneNumber": {
+        "label": "電話番号",
+        "required": "電話番号は必須です",
+        "min": "電話番号は少なくとも2文字でなければなりません",
+        "max": "電話番号は50文字を超えることはできません"
+      },
+      "dateOfBirth": {
+        "label": "生年月日",
+        "required": "生年月日は必須です"
+      },
+      "gender": {
+        "label": "性別",
+        "required": "性別は必須です"
+      },
+      "preferredLanguage": {
+        "label": "優先言語",
+        "required": "優先言語は必須です"
+      },
+      "back": {
+        "label": "戻る"
+      },
+      "continueToPayment": {
+        "label": "支払いへ"
+      },
+      "subscribeToNewsletter": {
+        "label": "ニュースレターに登録する"
+      },
+      "receiveMarketingEmails": {
+        "label": "マーケティングメールを受信する"
+      },
+      "stateRegistration": {
+        "label": "州登録番号",
+        "required": "州登録番号は必須です"
+      },
+      "createAccountDescription": "アカウントを作成して、あなたの情報を保存し、購入をより速く完了できるようにします",
+      "createAccountButton": "支払いへ",
+      "createAccountButtonLabel": "支払いへ",
+      "createAccountButtonTitle": "支払いへ"
     }
   },
   "comingSoon": {

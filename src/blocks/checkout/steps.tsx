@@ -10,11 +10,14 @@ import PaymentStep from "@/blocks/checkout/payment";
 import ConfirmationStep from "@/blocks/checkout/confirmation";
 import { ShippingMethod } from "@/types/shippingMethod";
 import { Country } from "@/types/country";
+import { Language } from "@/types/language";
 import { useCountriesStore } from "@/store/countriesStore";
 
 interface CheckoutStepProps {
   shippingValidationMessages: Record<string, string>;
   shippingMethods: ShippingMethod[];
+  customerValidationMessages: Record<string, string>;
+  languages: Language[];
   countries: Country[];
   zipCode: string;
   country: string;
@@ -27,6 +30,28 @@ interface CheckoutStepProps {
   title: string;
   process: string;
   complete: string;
+  fullNameLabel: string;
+  emailLabel: string;
+  phoneNumberLabel: string;
+  dateOfBirthLabel: string;
+  preferredLanguageLabel: string;
+  taxIdTypeLabel: string;
+  taxIdNumberLabel: string;
+  stateRegistrationLabel: string;
+  createAccountLabel: string;
+  passwordLabel: string;
+  acceptedTermsLabel: string;
+  subscribeToNewsletterLabel: string;
+  receiveMarketingEmailsLabel: string;
+  backLabel: string;
+  continueToPaymentLabel: string;
+  createAccount: string;
+  password: string;
+  acceptedTerms: string;
+  subscribeToNewsletter: string;
+  receiveMarketingEmails: string;
+  back: string;
+  continueToPayment: string;
 }
 
 type CheckoutStep = "shipping" | "customer" | "payment" | "confirmation";
@@ -34,6 +59,8 @@ type CheckoutStep = "shipping" | "customer" | "payment" | "confirmation";
 export const CheckoutSteps: FC<CheckoutStepProps> = ({
   shippingMethods,
   shippingValidationMessages,
+  customerValidationMessages,
+  languages,
   countries,
   zipCode,
   country,
@@ -45,7 +72,21 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   state,
   title,
   process,
-  complete
+  complete,
+  fullNameLabel,
+  emailLabel,
+  phoneNumberLabel,
+  dateOfBirthLabel,
+  preferredLanguageLabel,
+  taxIdNumberLabel,
+  stateRegistrationLabel,
+  createAccountLabel,
+  passwordLabel,
+  acceptedTermsLabel,
+  subscribeToNewsletterLabel,
+  receiveMarketingEmailsLabel,
+  backLabel,
+  continueToPaymentLabel,
 }) => {
   const CHECKOUT_STEPS: CheckoutStep[] = ["shipping", "customer", "payment", "confirmation"];
   const router = useRouter();
@@ -157,7 +198,26 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           />
         );
       case "customer":
-        return <CustomerStep />;
+        return (
+          <CustomerStep
+            validationMessages={customerValidationMessages}
+            languages={languages}
+            fullNameLabel={fullNameLabel}
+            emailLabel={emailLabel}
+            phoneNumberLabel={phoneNumberLabel}
+            dateOfBirthLabel={dateOfBirthLabel}
+            preferredLanguageLabel={preferredLanguageLabel}
+            taxIdNumberLabel={taxIdNumberLabel}
+            stateRegistrationLabel={stateRegistrationLabel}
+            createAccountLabel={createAccountLabel}
+            passwordLabel={passwordLabel}
+            acceptedTermsLabel={acceptedTermsLabel}
+            subscribeToNewsletterLabel={subscribeToNewsletterLabel}
+            receiveMarketingEmailsLabel={receiveMarketingEmailsLabel}
+            backLabel={backLabel}
+            continueToPaymentLabel={continueToPaymentLabel}
+          />
+        );
       case "payment":
         return <PaymentStep />;
       case "confirmation":
@@ -192,7 +252,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           <p className="text-white/70 text-sm md:text-lg">{complete}</p>
         </div>
 
-        <div className="w-full min-w-[90vw] max-h-[1300px] md:min-w-[75vw] max-w-7xl mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">
+        <div className="w-full min-w-[90vw] max-h-[1500px] md:min-w-[75vw] max-w-7xl mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">
           <div className="flex justify-center items-center space-x-4 mb-8">
             {renderStepHeader()}
           </div>
