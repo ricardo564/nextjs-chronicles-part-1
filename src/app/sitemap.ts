@@ -5,7 +5,6 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 const staticRoutes = [
   '',
-  'beyond-bio',
   '/api/countries',
   '/sitemap.xml'
 ]
