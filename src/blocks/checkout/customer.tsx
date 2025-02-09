@@ -19,6 +19,7 @@ import MaskedInput from "@/components/forms/MaskedInput";
 import { Language } from "@/types/language";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import Link from "@/components/Link";
+import { PasswordStrengthMeter } from "@/components/forms/PasswordStrengthMeter";
 
 interface CustomerStepProps {
   languages: Language[];
@@ -172,27 +173,34 @@ const CustomerStep: FC<CustomerStepProps> = ({
           register={register as unknown as UseFormRegister<FieldValues>}
         />
 
-
-        <TextInput
-          label={passwordLabel}
-          name="account.password"
-          type={showPassword ? "text" : "password"}
-          register={register as unknown as UseFormRegister<FieldValues>}
-          disabled={!createAccount}
-          error={errors.account?.password?.message}
-        >
-          <Button
-            type="button"
-            onClick={() => setShowPassword(!showPassword)}
-            className="text-gray-400 hover:text-gray-500 border-none bg-transparent"
+        <div className="flex flex-col">
+          <TextInput
+            label={passwordLabel}
+            name="account.password"
+            type={showPassword ? "text" : "password"}
+            register={register as unknown as UseFormRegister<FieldValues>}
+            disabled={!createAccount}
+            error={errors.account?.password?.message}
           >
-            {showPassword ?
-              <EyeIcon className={`w-8 h-8 ${showPassword ? "text-green-500" : "text-gray-400"}`} />
-              :
-              <EyeOffIcon className={`w-8 h-8 ${showPassword ? "text-green-500" : "text-gray-400"}`} />
-            }
-          </Button>
-        </TextInput>
+            <Button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="text-gray-400 hover:text-gray-500 border-none bg-transparent"
+            >
+              {showPassword ?
+                <EyeIcon className={`w-8 h-8 ${showPassword ? "text-green-500" : "text-gray-400"}`} />
+                :
+                <EyeOffIcon className={`w-8 h-8 ${showPassword ? "text-green-500" : "text-gray-400"}`} />
+              }
+            </Button>
+          </TextInput>
+
+          {createAccount && watch("account.password") && (
+            <PasswordStrengthMeter
+              password={watch("account.password") || ""}
+            />
+          )}
+        </div>
 
         <Checkbox
           label={acceptedTermsLabel}
