@@ -15,7 +15,7 @@ const PaymentStep = () => {
         <Link href="/checkout?step=confirmation">
           <Button
             type="button"
-            label={t('customer.back')}
+            label={t('payment.back.label')}
             className="w-auto"
           />
         </Link>
@@ -23,7 +23,7 @@ const PaymentStep = () => {
         <Link href="/checkout?step=confirmation">
           <Button
             type="submit"
-            label={t('customer.next')}
+            label={t('payment.next.label')}
             className="w-auto ml-auto"
           />
         </Link>
