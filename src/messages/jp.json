@@ -471,10 +471,10 @@
       "continueToPayment": {
         "label": "支払いへ"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "ニュースレターに登録する"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "マーケティングメールを受信する"
       },
       "stateRegistration": {
