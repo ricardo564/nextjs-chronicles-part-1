@@ -59,6 +59,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   }, [countries]);
 
   function handleStepChange(step: CheckoutStep) {
+    console.log("Step changed to:", step);
     const currentStepIndex = CHECKOUT_STEPS.indexOf(currentStep);
     const targetStepIndex = CHECKOUT_STEPS.indexOf(step);
 
