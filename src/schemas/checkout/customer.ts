@@ -51,7 +51,7 @@ export const getCustomerSchema = (messages: Record<string, string>) => z.object(
     acceptedTerms: z.boolean()
       .optional()
       .superRefine((accepted, ctx) => {
-        const createAccount = (ctx.path[0] as any).parent.createAccount;
+        const createAccount = (ctx as unknown as { parent: { createAccount: boolean } }).parent.createAccount;
         if (createAccount && !accepted) {
           ctx.addIssue({
             code: z.ZodIssueCode.custom,
