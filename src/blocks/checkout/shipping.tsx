@@ -12,10 +12,8 @@ import {
 } from "@/schemas/checkout/shipping";
 import { useAddressByCep } from "@/hooks/useAddressByCep";
 import Button from "@/components/Button";
-import { useRouter } from "next/navigation";
 import { ShippingMethod } from "@/types/shippingMethod";
 import { FaTruck, FaStore } from "react-icons/fa";
-import Link from "@/components/Link";
 import DropdownSelect from "@/components/forms/DropdownSelect";
 import { Country } from "@/types/country";
 import { useTranslations } from 'next-intl';
@@ -29,7 +27,6 @@ const ShippingStep: FC<ShippingStepProps> = ({
   shippingMethods,
   countries,
 }) => {
-  const router = useRouter();
   const t = useTranslations('checkout');
   const {
     setShippingAddress,
@@ -74,6 +71,10 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
   const { isLoadingCep, fetchAddressByCep } = useAddressByCep(setValue);
 
+  const handleWithNextStep = () => {
+    setCurrentStep("customer");
+  };
+
   const onSubmit = async (data: ShippingFormData) => {
     if (!selectedShippingMethod) {
       return;
@@ -83,7 +84,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
       setShippingAddress(data);
       setShippingFormData(data);
       setCurrentStep("customer");
-      await router.push(`/checkout?step=customer`);
+      handleWithNextStep();
     } catch (error) {
       console.error('Failed to process shipping information:', error);
     }
@@ -281,12 +282,12 @@ const ShippingStep: FC<ShippingStepProps> = ({
               rules={{ required: true }}
               onChange={(value: string | number) => setSelectedCountry(String(value))}
             />
-          <Link
-            href="/checkout?step=customer"
+          <Button
             className="w-full mt-6 md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 ease-in-out text-center disabled:cursor-not-allowed"
+            onClick={() => handleWithNextStep()}
           >
             Continue to Customer Information
-          </Link>
+          </Button>
         </div>
       )}
     </div>
