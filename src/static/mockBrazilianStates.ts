@@ -1,4 +1,4 @@
-import { BrazilianState } from "@/types/brasilianStates";
+import { BrazilianState } from "@/types/brazilianStates";
 
 export const brazilianStates: BrazilianState[] = [
   {
