@@ -68,7 +68,6 @@ const ShippingStep: FC<ShippingStepProps> = ({
     register,
     handleSubmit,
     setValue,
-    watch,
     formState: { errors },
   } = useForm<ShippingFormData>({
     resolver: zodResolver(getShippingSchema(validationMessages)),

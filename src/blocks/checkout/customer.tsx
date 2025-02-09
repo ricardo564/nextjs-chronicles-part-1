@@ -2,7 +2,7 @@
 
 import type { FC } from "react";
 import { useState } from "react";
-import { FieldValues, useForm, UseFormRegister, UseFormWatch } from "react-hook-form";
+import { FieldValues, useForm, UseFormRegister } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useCustomerStore } from "@/store/customerStore";
@@ -89,7 +89,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
     }
   };
 
-  const onError = (errors: any) => {
+  const onError = (errors: FieldValues) => {
     console.log("Form validation errors:", errors);
   };
 
