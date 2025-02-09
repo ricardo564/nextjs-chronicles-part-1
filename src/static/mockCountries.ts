@@ -178,8 +178,8 @@ export const mockCountries: Country[] = [
       latlng: [0, 0]
     },
     postalCode: {
-      format: '99999-999',
-      regex: '^\\d{5}-\\d{3}$'
+      format: '#####-####',
+      regex: '^\\d{5}(-\\d{4})?$'
     }
   }
 ]
