@@ -17,6 +17,7 @@ import { FaTruck, FaStore } from "react-icons/fa";
 import DropdownSelect from "@/components/forms/DropdownSelect";
 import { Country } from "@/types/country";
 import { useTranslations } from 'next-intl';
+import Link from "@/components/Link";
 
 interface ShippingStepProps {
   countries: Country[];
@@ -282,12 +283,13 @@ const ShippingStep: FC<ShippingStepProps> = ({
               rules={{ required: true }}
               onChange={(value: string | number) => setSelectedCountry(String(value))}
             />
-          <Button
+
+          <Link
+            href="/checkout?step=customer"
             className="w-full mt-6 md:w-auto place-self-start flex items-center justify-center px-6 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 ease-in-out text-center disabled:cursor-not-allowed"
-            onClick={() => handleWithNextStep()}
           >
             Continue to Customer Information
-          </Button>
+          </Link>
         </div>
       )}
     </div>
