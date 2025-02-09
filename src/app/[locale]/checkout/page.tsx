@@ -159,9 +159,14 @@ async function CheckoutContent({
 }
 
 export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    params: { locale },
-  }));
+  const steps: string[] = ['shipping', 'customer', 'payment', 'confirmation'];
+
+  return locales.flatMap((locale) =>
+    steps.map((step) => ({
+      params: { locale },
+      query: { step }
+    }))
+  );
 }
 
 export default CheckoutPage
