@@ -21,42 +21,16 @@ import { EyeIcon, EyeOffIcon } from "lucide-react";
 import Link from "@/components/Link";
 import { PasswordStrengthMeter } from "@/components/forms/PasswordStrengthMeter";
 import { brazilianStates } from "@/static/mockBrazilianStates";
+import { useTranslations } from 'next-intl';
 
 interface CustomerStepProps {
   languages: Language[];
   validationMessages: Record<string, string>;
-  fullNameLabel: string;
-  emailLabel: string;
-  phoneNumberLabel: string;
-  dateOfBirthLabel: string;
-  preferredLanguageLabel: string;
-  taxIdNumberLabel: string;
-  stateRegistrationLabel: string;
-  createAccountLabel: string;
-  passwordLabel: string;
-  acceptedTermsLabel: string;
-  subscribeToNewsletterLabel: string;
-  receiveMarketingEmailsLabel: string;
-  backLabel: string;
-  continueToPaymentLabel: string;
 }
 
 const CustomerStep: FC<CustomerStepProps> = ({
   languages,
   validationMessages,
-  fullNameLabel,
-  emailLabel,
-  phoneNumberLabel,
-  dateOfBirthLabel,
-  preferredLanguageLabel,
-  stateRegistrationLabel,
-  createAccountLabel,
-  passwordLabel,
-  acceptedTermsLabel,
-  subscribeToNewsletterLabel,
-  receiveMarketingEmailsLabel,
-  backLabel,
-  continueToPaymentLabel,
 }) => {
   const router = useRouter();
   const { customerInfo, setCustomerInfo } = useCustomerStore();
@@ -110,6 +84,8 @@ const CustomerStep: FC<CustomerStepProps> = ({
     console.error("Form validation errors:", errors);
   };
 
+  const t = useTranslations('checkout');
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit, onError)}
@@ -119,7 +95,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         <h2 className="text-xl font-semibold">Personal Information</h2>
 
         <TextInput
-          label={fullNameLabel}
+          label={t('customer.fullName.label')}
           name="personalInfo.fullName"
           register={register as unknown as UseFormRegister<FieldValues>}
           rules={{ required: true }}
@@ -127,7 +103,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         />
 
         <TextInput
-          label={emailLabel}
+          label={t('customer.email.label')}
           name="personalInfo.email"
           type="email"
           register={register as unknown as UseFormRegister<FieldValues>}
@@ -136,7 +112,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         />
 
         <PhoneInput
-          label={phoneNumberLabel}
+          label={t('customer.phoneNumber.label')}
           name="personalInfo.phoneNumber"
           register={register as unknown as UseFormRegister<FieldValues>}
           rules={{ required: true }}
@@ -144,7 +120,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         />
 
         <DateInput
-          label={dateOfBirthLabel}
+          label={t('customer.dateOfBirth.label')}
           name="personalInfo.dateOfBirth"
           register={register as unknown as UseFormRegister<FieldValues>}
           rules={{ required: true }}
@@ -152,7 +128,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         />
 
         <DropdownSelect
-          label={preferredLanguageLabel}
+          label={t('customer.preferredLanguage.label')}
           name="personalInfo.preferredLanguage"
           options={languages.map((language) => ({
             value: language.id,
@@ -190,8 +166,8 @@ const CustomerStep: FC<CustomerStepProps> = ({
 
           {taxIdType === "CNPJ" && (
             <DropdownSelect
-              label={stateRegistrationLabel}
-              name="brazilianTaxInfo.stateRegistration"
+              label={t('customer.cnpj.stateRegistration.label')}
+              name={t('customer.cnpj.stateRegistration.name')}
               options={brazilianStates.map((state) => ({
                 value: state.adminCode1,
                 label: state.name,
@@ -206,7 +182,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
 
       <section className="space-y-4">
         <Checkbox
-          label={createAccountLabel}
+          label={t('customer.createAccount.label')}
           name="account.createAccount"
           register={register as unknown as UseFormRegister<FieldValues>}
           rules={{ required: false }}
@@ -214,7 +190,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
 
         <div className="flex flex-col">
           <TextInput
-            label={passwordLabel}
+            label={t('customer.password.label')}
             name="account.password"
             type={showPassword ? "text" : "password"}
             register={register as unknown as UseFormRegister<FieldValues>}
@@ -244,7 +220,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         </div>
 
         <Checkbox
-          label={acceptedTermsLabel}
+          label={t('customer.acceptedTerms.label')}
           name="account.acceptedTerms"
           register={register as unknown as UseFormRegister<FieldValues>}
           rules={{ required: createAccount ? true : false }}
@@ -257,14 +233,14 @@ const CustomerStep: FC<CustomerStepProps> = ({
         <h2 className="text-xl font-semibold">Email Preferences</h2>
 
         <Checkbox
-          label={subscribeToNewsletterLabel}
+          label={t('customer.newsletter.label')}
           name="preferences.newsletter"
           register={register as unknown as UseFormRegister<FieldValues>}
           rules={{ required: false }}
         />
 
         <Checkbox
-          label={receiveMarketingEmailsLabel}
+          label={t('customer.marketing.label')}
           name="preferences.marketing"
           register={register as unknown as UseFormRegister<FieldValues>}
           rules={{ required: false }}
@@ -276,7 +252,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
           <Button
             type="button"
             loading={isSubmitting}
-            label={backLabel}
+            label={t('customer.back.label')}
             className="w-auto"
           />
         </Link>
@@ -284,7 +260,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         <Button
           type="submit"
           loading={isSubmitting}
-          label={continueToPaymentLabel}
+          label={t('customer.continueToPayment.label')}
           className="w-auto ml-auto"
         />
       </div>
