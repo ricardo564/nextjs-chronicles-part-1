@@ -6,6 +6,14 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 const routes = [
   '',
   'beyond-bio',
+  '[locale]',
+  '[locale]/checkout',
+  '[locale]/contact',
+  '[locale]/orders',
+  '[locale]/plants',
+  '[locale]/robots.txt',
+  '/api/countries',
+  '/sitemap.xml'
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
