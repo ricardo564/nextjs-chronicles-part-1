@@ -470,6 +470,10 @@
       "receiveMarketingEmails": {
         "label": "विज्ञापन ईमेल प्राप्त करें"
       },
+      "stateRegistration": {
+        "label": "राज्य पंजीकरण",
+        "required": "राज्य पंजीकरण आवश्यक है"
+      },
       "createAccountDescription": "एक खाता बनाएं जिससे आपकी जानकारी सहेजी जा सके और आपकी खरीदारी तेज हो सके",
       "createAccountButton": "भुगतान करने के लिए जारी रखें",
       "createAccountButtonLabel": "भुगतान करने के लिए जारी रखें",

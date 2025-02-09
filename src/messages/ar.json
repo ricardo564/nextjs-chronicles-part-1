@@ -470,6 +470,10 @@
       "receiveMarketingEmails": {
         "label": "الحصول على الرسائل التسويقية"
       },
+      "stateRegistration": {
+        "label": "الرقم المنصوب",
+        "required": "الرقم المنصوب مطلوب"
+      },
       "createAccountDescription": "إنشاء حساب لحفظ معلوماتك وتسريع عملية الشراء",
       "createAccountButton": "متابعة إلى الدفع",
       "createAccountButtonLabel": "متابعة إلى الدفع",

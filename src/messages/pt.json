@@ -471,6 +471,10 @@
       "receiveMarketingEmails": {
         "label": "Receber e-mails de marketing"
       },
+      "stateRegistration": {
+        "label": "Número de registro",
+        "required": "Número de registro é obrigatório"
+      },
       "createAccountDescription": "Crie uma conta para salvar suas informações e acelerar suas compras",
       "createAccountButton": "Continuar para pagamento",
       "createAccountButtonLabel": "Continuar para pagamento",

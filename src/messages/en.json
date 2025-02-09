@@ -470,6 +470,10 @@
       "receiveMarketingEmails": {
         "label": "Receive marketing emails"
       },
+      "stateRegistration": {
+        "label": "State Registration",
+        "required": "State Registration is required"
+      },
       "continue": "Continue",
       "createAccountDescription": "Create an account to save your information and make your purchase faster",
       "createAccountButton": "Continue to Payment",

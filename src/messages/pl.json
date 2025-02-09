@@ -470,6 +470,10 @@
       "receiveMarketingEmails": {
         "label": "Otrzymuj marketingowe e-maile"
       },
+      "stateRegistration": {
+        "label": "Numer rejestracji",
+        "required": "Numer rejestracji jest wymagany"
+      },
       "createAccountDescription": "Stwórz konto, aby zapisać swoje informacje i zwiększyć szybkość zakupu",
       "createAccountButton": "Do kasy",
       "createAccountButtonLabel": "Do kasy",

@@ -470,6 +470,10 @@
       "receiveMarketingEmails": {
         "label": "マーケティングメールを受信する"
       },
+      "stateRegistration": {
+        "label": "州登録番号",
+        "required": "州登録番号は必須です"
+      },
       "createAccountDescription": "アカウントを作成して、あなたの情報を保存し、購入をより速く完了できるようにします",
       "createAccountButton": "支払いへ",
       "createAccountButtonLabel": "支払いへ",
