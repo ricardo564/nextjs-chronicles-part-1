@@ -5,7 +5,6 @@ import Label from "@/components/Label";
 import ChevronButton from "@/components/AnimatedChevron";
 import { getUniqueId } from "@/utils/getUniqueId";
 
-
 interface Props {
   name: string;
   options: { label: string; value: string }[];
@@ -88,13 +87,13 @@ const DropdownSelect: FC<Props> = ({
 
   return (
     <div className={`flex flex-col w-full relative ${className}`}>
-      {label && <Label value={label} />}
+      {label && <Label value={label} htmlFor={name} />}
       <div
         role="button"
         className="d-input bg-transparent w-full flex items-center justify-center min-h-[41px] border-base-gray rounded-none disabled:bg-gray-200 disabled:border-base-gray disabled:cursor-not-allowed focus:ring-1 focus:ring-primary focus:outline-none transition-all duration-200 delay-50 relative"
         tabIndex={disabled ? -1 : 0}
         onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+          if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             if (!disabled) {
               toggleDropdown();
@@ -147,7 +146,10 @@ const DropdownSelect: FC<Props> = ({
         <div className="absolute top-full left-0 w-full place-self-start flex items-center justify-center px-6 py-2 border bg-primary/90 backdrop-blur-sm border-white/20 text-white rounded-lg transition-all duration-300 text-center disabled:cursor-not-allowed border-base-gray shadow-md max-h-[20rem] overflow-hidden overflow-y-auto -mt-1">
           <ul className="list-none py-2 w-full">
             {filteredOptions.map(({ label, value }, index) => (
-              <li key={`${getUniqueId()}-${label}-${value}-${index}`} className=  "w-full">
+              <li
+                key={`${getUniqueId()}-${label}-${value}-${index}`}
+                className="w-full"
+              >
                 <button
                   type="button"
                   className="min-w-full w-full p-2 text-left hover:bg-white/10 focus:outline-none rounded-lg"
