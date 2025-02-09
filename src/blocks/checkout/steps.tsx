@@ -15,7 +15,6 @@ import { useCountriesStore } from "@/store/countriesStore";
 import { useTranslations } from 'next-intl';
 
 interface CheckoutStepProps {
-  shippingValidationMessages: Record<string, string>;
   shippingMethods: ShippingMethod[];
   customerValidationMessages: Record<string, string>;
   languages: Language[];
@@ -26,7 +25,6 @@ type CheckoutStep = "shipping" | "customer" | "payment" | "confirmation";
 
 export const CheckoutSteps: FC<CheckoutStepProps> = ({
   shippingMethods,
-  shippingValidationMessages,
   customerValidationMessages,
   languages,
   countries,
@@ -128,7 +126,6 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
       case "shipping":
         return (
           <ShippingStep
-            validationMessages={shippingValidationMessages}
             shippingMethods={shippingMethods}
             countries={countries}
           />
@@ -162,7 +159,6 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
         return (
           <ShippingStep
             countries={countries}
-            validationMessages={shippingValidationMessages}
             shippingMethods={shippingMethods}
           />
         );
