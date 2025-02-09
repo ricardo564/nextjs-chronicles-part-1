@@ -486,91 +486,91 @@
       "createAccountButton": "Continue to Payment",
       "createAccountButtonLabel": "Continue to Payment",
       "createAccountButtonTitle": "Continue to Payment"
+    }
+  },
+  "payment": {
+    "paymentMethods": "Payment Methods",
+    "methods": {
+      "creditCard": "Credit Card",
+      "debitCard": "Debit Card",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
     },
-    "payment": {
-      "paymentMethods": "Payment Methods",
-      "methods": {
-        "creditCard": "Credit Card",
-        "debitCard": "Debit Card",
-        "paypal": "PayPal",
-        "boleto": "Boleto",
-        "pix": "Pix",
-        "bitcoin": "Bitcoin"
+    "creditCard": {
+      "number": {
+        "label": "Card Number",
+        "required": "Card Number is required"
       },
-      "creditCard": {
-        "number": {
-          "label": "Card Number",
-          "required": "Card Number is required"
-        },
-        "name": {
-          "label": "Cardholder Name",
-          "required": "Cardholder Name is required"
-        },
-        "expirationDate": {
-          "label": "Expiration Date",
-          "required": "Expiration Date is required"
-        },
-        "cvv": {
-          "label": "CVV",
-          "required": "CVV is required"
-        }
+      "name": {
+        "label": "Cardholder Name",
+        "required": "Cardholder Name is required"
       },
-      "debitCard": {
-        "number": {
-          "label": "Card Number",
-          "required": "Card Number is required"
-        },
-        "name": {
-          "label": "Cardholder Name",
-          "required": "Cardholder Name is required"
-        },
-        "expirationDate": {
-          "label": "Expiration Date",
-          "required": "Expiration Date is required"
-        },
-        "cvv": {
-          "label": "CVV",
-          "required": "CVV is required"
-        },
-        "installments": {
-          "label": "Installments",
-          "required": "Installments is required"
-        }
+      "expirationDate": {
+        "label": "Expiration Date",
+        "required": "Expiration Date is required"
       },
-      "boleto": {
-        "description": "The bank slip will be generated after order confirmation",
-        "number": {
-          "label": "Boleto Number",
-          "required": "Boleto Number is required"
-        }
-      },
-      "paypal": {
-        "description": "You will be redirected to PayPal once your order is confirmed",
-        "number": {
-          "label": "PayPal Account",
-          "required": "PayPal Account is required"
-        }
-      },
-      "pix": {
-        "description": "The Pix Key will be generated after order confirmation",
-        "number": {
-          "label": "Pix Key",
-          "required": "Pix Key is required"
-        }
-      },
-      "bitcoin": {
-        "description": "The Bitcoin Key will be generated after order confirmation",
-        "number": {
-          "label": "Bitcoin Key",
-          "required": "Bitcoin Key is required"
-        }
-      },
-      "back": {
-        "label": "Back"
-      },
-      "next": {
-        "label": "Next"
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV is required"
       }
+    },
+    "debitCard": {
+      "number": {
+        "label": "Card Number",
+        "required": "Card Number is required"
+      },
+      "name": {
+        "label": "Cardholder Name",
+        "required": "Cardholder Name is required"
+      },
+      "expirationDate": {
+        "label": "Expiration Date",
+        "required": "Expiration Date is required"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV is required"
+      },
+      "installments": {
+        "label": "Installments",
+        "required": "Installments is required"
+      }
+    },
+    "boleto": {
+      "description": "The bank slip will be generated after order confirmation",
+      "number": {
+        "label": "Boleto Number",
+        "required": "Boleto Number is required"
+      }
+    },
+    "paypal": {
+      "description": "You will be redirected to PayPal once your order is confirmed",
+      "number": {
+        "label": "PayPal Account",
+        "required": "PayPal Account is required"
+      }
+    },
+    "pix": {
+      "description": "The Pix Key will be generated after order confirmation",
+      "number": {
+        "label": "Pix Key",
+        "required": "Pix Key is required"
+      }
+    },
+    "bitcoin": {
+      "description": "The Bitcoin Key will be generated after order confirmation",
+      "number": {
+        "label": "Bitcoin Key",
+        "required": "Bitcoin Key is required"
+      }
+    },
+    "back": {
+      "label": "Back"
+    },
+    "next": {
+      "label": "Next"
     }
   },
   "comingSoon": {
