@@ -23,12 +23,10 @@ import { useTranslations } from 'next-intl';
 interface ShippingStepProps {
   countries: Country[];
   shippingMethods: ShippingMethod[];
-  validationMessages: Record<string, string>;
 }
 
 const ShippingStep: FC<ShippingStepProps> = ({
   shippingMethods,
-  validationMessages,
   countries,
 }) => {
   const router = useRouter();
@@ -50,13 +48,24 @@ const ShippingStep: FC<ShippingStepProps> = ({
   );
   const [disabledFields, setDisabledFields] = useState<boolean>(false);
 
+  const shippingValidationMessages = {
+    street: t('shipping.street.required'),
+    number: t('shipping.number.required'),
+    complement: t('shipping.complement.required'),
+    neighborhood: t('shipping.neighborhood.required'),
+    city: t('shipping.city.required'),
+    state: t('shipping.state.required'),
+    zipCode: t('shipping.zipCode.required'),
+    country: t('shipping.country.required'),
+  };
+
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors },
   } = useForm<ShippingFormData>({
-    resolver: zodResolver(getShippingSchema(validationMessages)),
+    resolver: zodResolver(getShippingSchema(shippingValidationMessages)),
     defaultValues: {
       ...shippingFormData,
       country: shippingFormData.country || countries[0]?.cca2 || ''
