@@ -14,17 +14,17 @@ import { getPaymentSchema } from "@/schemas/checkout/payment";
 import MaskedInput from "@/components/forms/MaskedInput";
 
 const PaymentStep = () => {
-  const t = useTranslations('checkout');
+  const t = useTranslations('payment');
   const [selectedMethod, setSelectedMethod] = useState<string>("creditCard");
   const { paymentInfo, setPaymentInfo } = usePaymentStore();
 
   const paymentValidationMessages = {
-    number: t('payment.creditCard.number.required'),
-    name: t('payment.creditCard.name.required'),
-    expirationDate: t('payment.creditCard.expirationDate.required'),
-    cvv: t('payment.creditCard.cvv.required'),
-    boletoNumber: t('payment.boleto.number.required'),
-    paymentInfoRequired: t('payment.information.required'),
+    number: t('creditCard.number.required'),
+    name: t('creditCard.name.required'),
+    expirationDate: t('creditCard.expirationDate.required'),
+    cvv: t('creditCard.cvv.required'),
+    boletoNumber: t('boleto.number.required'),
+    paymentInfoRequired: t('information.required'),
   };
 
   const {
@@ -38,11 +38,11 @@ const PaymentStep = () => {
   });
 
   const paymentMethods = [
-    { value: "creditCard", label: t('payment.methods.creditCard') },
-    { value: "boleto", label: t('payment.methods.boleto') },
-    { value: "pix", label: t('payment.methods.pix') },
-    { value: "bitcoin", label: t('payment.methods.bitcoin') },
-    { value: "paypal", label: t('payment.methods.paypal') },
+    { value: "creditCard", label: t('methods.creditCard') },
+    { value: "boleto", label: t('methods.boleto') },
+    { value: "pix", label: t('methods.pix') },
+    { value: "bitcoin", label: t('methods.bitcoin') },
+    { value: "paypal", label: t('methods.paypal') },
   ];
 
   const onSubmit = async (data: PaymentInformation) => {
@@ -60,6 +60,7 @@ const PaymentStep = () => {
       <section className="space-y-4">
         <RadioGroup
           name="paymentMethod"
+          label={t('paymentMethods')}
           options={paymentMethods}
           value={selectedMethod}
           onChange={(value) => setSelectedMethod(value)}
@@ -69,7 +70,7 @@ const PaymentStep = () => {
         {selectedMethod === "creditCard" && (
           <div className="flex flex-col gap-4">
             <MaskedInput
-              label={t('payment.creditCard.number.label')}
+              label={t('creditCard.number.label')}
               name="creditCard.number"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.creditCard?.number?.message}
@@ -77,7 +78,7 @@ const PaymentStep = () => {
             />
 
             <TextInput
-              label={t('payment.creditCard.name.label')}
+              label={t('creditCard.name.label')}
               name="creditCard.name"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.creditCard?.name?.message}
@@ -85,7 +86,7 @@ const PaymentStep = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <MaskedInput
-                label={t('payment.creditCard.expirationDate.label')}
+                label={t('creditCard.expirationDate.label')}
                 name="creditCard.expirationDate"
                 register={register as unknown as UseFormRegister<FieldValues>}
                 error={errors.creditCard?.expirationDate?.message}
@@ -93,7 +94,7 @@ const PaymentStep = () => {
               />
 
               <MaskedInput
-                label={t('payment.creditCard.cvv.label')}
+                label={t('creditCard.cvv.label')}
                 name="creditCard.cvv"
                 register={register as unknown as UseFormRegister<FieldValues>}
                 error={errors.creditCard?.cvv?.message}
@@ -105,25 +106,25 @@ const PaymentStep = () => {
 
         {selectedMethod === "boleto" && (
           <div className="p-4 bg-primary/70 rounded-lg">
-            <p className="text-center">{t('payment.boleto.description')}</p>
+            <p className="text-center">{t('boleto.description')}</p>
           </div>
         )}
 
         {selectedMethod === "pix" && (
           <div className="p-4 bg-primary/70 rounded-lg">
-            <p className="text-center">{t('payment.pix.description')}</p>
+            <p className="text-center">{t('pix.description')}</p>
           </div>
         )}
 
         {selectedMethod === "bitcoin" && (
           <div className="p-4 bg-primary/70 rounded-lg">
-            <p className="text-center">{t('payment.bitcoin.description')}</p>
+            <p className="text-center">{t('bitcoin.description')}</p>
           </div>
         )}
 
         {selectedMethod === "paypal" && (
           <div className="p-4 bg-primary/70 rounded-lg">
-            <p className="text-center">{t('payment.paypal.description')}</p>
+            <p className="text-center">{t('paypal.description')}</p>
           </div>
         )}
       </section>
@@ -133,7 +134,7 @@ const PaymentStep = () => {
           <Button
             type="button"
             loading={isSubmitting}
-            label={t('payment.back.label')}
+            label={t('back.label')}
             className="w-auto"
           />
         </Link>
@@ -141,7 +142,7 @@ const PaymentStep = () => {
         <Button
           type="submit"
           loading={isSubmitting}
-          label={t('payment.next.label')}
+          label={t('next.label')}
           className="w-auto ml-auto"
         />
       </div>
