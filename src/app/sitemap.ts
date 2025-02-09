@@ -3,17 +3,25 @@ import { locales, defaultLocale } from "@/config/i18n-config";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
-const routes = [
+const staticRoutes = [
   '',
   'beyond-bio',
-  '[locale]',
-  '[locale]/checkout',
-  '[locale]/contact',
-  '[locale]/orders',
-  '[locale]/plants',
-  '[locale]/robots.txt',
   '/api/countries',
   '/sitemap.xml'
+]
+
+const dynamicRoutes = locales.flatMap((locale) => [
+  `/${locale}`,
+  `/${locale}/checkout`,
+  `/${locale}/contact`,
+  `/${locale}/orders`,
+  `/${locale}/plants`,
+  `/${locale}/robots.txt`
+]);
+
+const routes = [
+  ...staticRoutes,
+  ...dynamicRoutes
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
