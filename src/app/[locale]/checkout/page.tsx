@@ -78,8 +78,6 @@ async function CheckoutContent({
   shippingMethods,
   shippingValidationMessages,
   customerValidationMessages,
-  t
-
 }: {
   shippingMethods: ShippingMethod[],
   shippingValidationMessages: Record<string, string>,
@@ -120,39 +118,6 @@ async function CheckoutContent({
         customerValidationMessages={customerValidationMessages}
         languages={languages}
         countries={countries}
-        title={t('title')}
-        process={t('process')}
-        complete={t('complete')}
-        zipCode={t('shipping.zipCode.label')}
-        country={t('shipping.country.label')}
-        street={t('shipping.street.label')}
-        number={t('shipping.number.label')}
-        complement={t('shipping.complement.label')}
-        neighborhood={t('shipping.neighborhood.label')}
-        city={t('shipping.city.label')}
-        state={t('shipping.state.label')}
-        fullNameLabel={t('customer.fullName.label')}
-        emailLabel={t('customer.email.label')}
-        phoneNumberLabel={t('customer.phoneNumber.label')}
-        dateOfBirthLabel={t('customer.dateOfBirth.label')}
-        preferredLanguageLabel={t('customer.preferredLanguage.label')}
-        taxIdTypeLabel={t('customer.taxId.label')}
-        taxIdNumberLabel={t('customer.taxIdNumber.label')}
-        stateRegistrationLabel={t('customer.stateRegistration.label')}
-        createAccountLabel={t('customer.createAccount.label')}
-        passwordLabel={t('customer.password.label')}
-        acceptedTermsLabel={t('customer.acceptedTerms.label')}
-        subscribeToNewsletterLabel={t('customer.subscribeToNewsletter.label')}
-        receiveMarketingEmailsLabel={t('customer.receiveMarketingEmails.label')}
-        backLabel={t('customer.back.label')}
-        continueToPaymentLabel={t('customer.continueToPayment.label')}
-        createAccount={t('customer.createAccount.label')}
-        password={t('customer.password.label')}
-        acceptedTerms={t('customer.acceptedTerms.label')}
-        subscribeToNewsletter={t('customer.subscribeToNewsletter.label')}
-        receiveMarketingEmails={t('customer.receiveMarketingEmails.label')}
-        back={t('customer.back.label')}
-        continueToPayment={t('customer.continueToPayment.label')}
       />
     </>
   );
