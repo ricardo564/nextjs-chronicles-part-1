@@ -5,7 +5,7 @@ export const getCustomerSchema = (messages: Record<string, string>) => z.object(
     fullName: z.string().min(2, messages['fullName.min']).max(50, messages['fullName.max']),
     email: z.string().email(messages['email.invalid']),
     phoneNumber: z.string().min(2, messages['phoneNumber.min']).max(50, messages['phoneNumber.max']),
-    dateOfBirth: z.date(),
+    dateOfBirth: z.string(),
     preferredLanguage: z.string(),
   }),
 
