@@ -471,10 +471,10 @@
       "continueToPayment": {
         "label": "जारी रखें"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "न्यूजलेटर को सदस्यता लें"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "विज्ञापन ईमेल प्राप्त करें"
       },
       "stateRegistration": {
