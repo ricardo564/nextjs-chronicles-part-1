@@ -100,6 +100,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
           label={fullNameLabel}
           name="personalInfo.fullName"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: true }}
           error={errors.personalInfo?.fullName?.message}
         />
 
@@ -108,6 +109,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
           name="personalInfo.email"
           type="email"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: true }}
           error={errors.personalInfo?.email?.message}
         />
 
@@ -115,6 +117,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
           label={phoneNumberLabel}
           name="personalInfo.phoneNumber"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: true }}
           error={errors.personalInfo?.phoneNumber?.message}
         />
 
@@ -122,6 +125,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
           label={dateOfBirthLabel}
           name="personalInfo.dateOfBirth"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: true }}
           error={errors.personalInfo?.dateOfBirth?.message}
         />
 
@@ -133,6 +137,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
             label: language.name,
           }))}
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: true }}
         />
       </section>
 
@@ -149,6 +154,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
             ]}
             onChange={(value: string | number) => setTaxIdType(String(value))}
             register={register as unknown as UseFormRegister<FieldValues>}
+            rules={{ required: isBrazil ? true : false }}
           />
 
           <MaskedInput
@@ -157,6 +163,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.brazilianTaxInfo?.taxIdNumber?.message}
             mask={taxIdType === "CNPJ" ? "CNPJ" : "CPF"}
+            rules={{ required: isBrazil ? true : false }}
           />
 
           {taxIdType === "CNPJ" && (
@@ -164,6 +171,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
               label={stateRegistrationLabel}
               name="brazilianTaxInfo.stateRegistration"
               register={register as unknown as UseFormRegister<FieldValues>}
+              rules={{ required: isBrazil ? true : false }}
               error={errors.brazilianTaxInfo?.stateRegistration?.message}
             />
           )}
@@ -175,6 +183,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
           label={createAccountLabel}
           name="account.createAccount"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: false }}
         />
 
         <div className="flex flex-col">
@@ -185,11 +194,13 @@ const CustomerStep: FC<CustomerStepProps> = ({
             register={register as unknown as UseFormRegister<FieldValues>}
             disabled={!createAccount}
             error={errors.account?.password?.message}
+            rules={{ required: createAccount ? true : false }}
           >
             <Button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="text-gray-400 hover:text-gray-500 border-none bg-transparent"
+              disabled={!createAccount}
             >
               {showPassword ?
                 <EyeIcon className={`w-8 h-8 ${showPassword ? "text-green-500" : "text-gray-400"}`} />
@@ -210,6 +221,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
           label={acceptedTermsLabel}
           name="account.acceptedTerms"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: createAccount ? true : false }}
           disabled={!createAccount}
           error={errors.account?.acceptedTerms?.message}
         />
@@ -222,12 +234,14 @@ const CustomerStep: FC<CustomerStepProps> = ({
           label={subscribeToNewsletterLabel}
           name="preferences.newsletter"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: false }}
         />
 
         <Checkbox
           label={receiveMarketingEmailsLabel}
           name="preferences.marketing"
           register={register as unknown as UseFormRegister<FieldValues>}
+          rules={{ required: false }}
         />
       </section>
 
