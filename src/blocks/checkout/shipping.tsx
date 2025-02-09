@@ -18,35 +18,21 @@ import { FaTruck, FaStore } from "react-icons/fa";
 import Link from "@/components/Link";
 import DropdownSelect from "@/components/forms/DropdownSelect";
 import { Country } from "@/types/country";
+import { useTranslations } from 'next-intl';
 
 interface ShippingStepProps {
   countries: Country[];
   shippingMethods: ShippingMethod[];
   validationMessages: Record<string, string>;
-  zipCode: string;
-  country: string;
-  street: string;
-  number: string;
-  complement: string;
-  neighborhood: string;
-  city: string;
-  state: string;
 }
 
 const ShippingStep: FC<ShippingStepProps> = ({
   shippingMethods,
   validationMessages,
   countries,
-  zipCode,
-  country,
-  street,
-  number,
-  complement,
-  neighborhood,
-  city,
-  state,
 }) => {
   const router = useRouter();
+  const t = useTranslations('checkout');
   const {
     setShippingAddress,
     setCurrentStep,
@@ -163,7 +149,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
-              label={zipCode}
+              label={t('shipping.zipCode.label')}
               name="zipCode"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.zipCode?.message}
@@ -178,7 +164,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
                 label: country.name.common + " - " + country.cca2,
                 value: country.cca2,
               }))}
-              label={country}
+              label={t('shipping.country.label')}
               name="country"
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
@@ -187,7 +173,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
           </div>
 
           <TextInput
-            label={street}
+            label={t('shipping.street.label')}
             name="street"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.street?.message}
@@ -196,13 +182,13 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
-              label={number}
+              label={t('shipping.number.label')}
               name="number"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.number?.message}
             />
             <TextInput
-              label={complement}
+              label={t('shipping.complement.label')}
               name="complement"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.complement?.message}
@@ -211,7 +197,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
           </div>
 
           <TextInput
-            label={neighborhood}
+            label={t('shipping.neighborhood.label')}
             name="neighborhood"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.neighborhood?.message}
@@ -220,14 +206,14 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
-              label={city}
+              label={t('shipping.city.label')}
               name="city"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.city?.message}
               disabled={disabledFields}
             />
             <TextInput
-              label={state}
+              label={t('shipping.state.label')}
               name="state"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.state?.message}
@@ -280,7 +266,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
               label: country.name.common + " - " + country.cca2,
                 value: country.cca2,
               }))}
-              label={country}
+              label={t('shipping.country.label')}
               name="country"
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
