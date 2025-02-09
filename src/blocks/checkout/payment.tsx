@@ -1,15 +1,33 @@
 import Button from "@/components/Button";
 import ComingSoon from "@/components/ComingSoon";
 import Link from "@/components/Link";
+import { useTranslations } from "next-intl";
+
 
 const PaymentStep = () => {
+  const t = useTranslations('checkout');
+
   return (
     <div className="min-h-screen">
       <ComingSoon />
 
-      <Link href="/checkout?step=confirmation">
-        <Button label="Go to Confirmation" />
-      </Link>
+      <div className="grid grid-cols-2 gap-4 items-center justify-between">
+        <Link href="/checkout?step=confirmation">
+          <Button
+            type="button"
+            label={t('customer.back')}
+            className="w-auto"
+          />
+        </Link>
+
+        <Link href="/checkout?step=confirmation">
+          <Button
+            type="submit"
+            label={t('customer.next')}
+            className="w-auto ml-auto"
+          />
+        </Link>
+      </div>
     </div>
   );
 };
