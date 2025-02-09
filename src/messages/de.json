@@ -537,27 +537,31 @@
       }
     },
     "boleto": {
+      "description": "Der Boleto wird nach Auftragsbestätigung generiert",
       "number": {
         "label": "Boleto-Nummer",
         "required": "Boleto-Nummer ist erforderlich"
       }
     },
-    "pix": {
+    "paypal": {
+      "description": "Sie werden nach der Auftragsbestätigung zu PayPal weitergeleitet",
       "number": {
-        "label": "Pix Key",
-        "required": "Pix Key ist erforderlich"
+        "label": "PayPal-Konto",
+        "required": "PayPal-Konto ist erforderlich"
+      }
+    },
+    "pix": {
+      "description": "Der Pix wird nach Auftragsbestätigung generiert",
+      "number": {
+        "label": "Pix-Schlüssel",
+        "required": "Pix-Schlüssel ist erforderlich"
       }
     },
     "bitcoin": {
+      "description": "Der QR-Code und Bitcoin-Code werden nach Auftragsbestätigung generiert",
       "number": {
-        "label": "Bitcoin Key",
-        "required": "Bitcoin Key ist erforderlich"
-      }
-    },
-    "paypal": {
-      "number": {
-        "label": "PayPal Key",
-        "required": "PayPal Key ist erforderlich"
+        "label": "Bitcoin-Schlüssel",
+        "required": "Bitcoin-Schlüssel ist erforderlich"
       }
     },
     "back": {

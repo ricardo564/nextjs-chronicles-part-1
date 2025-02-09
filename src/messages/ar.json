@@ -537,21 +537,31 @@
       }
     },
     "boleto": {
+      "description": "سيتم إنشاء البوليتو بمجرد تأكيد الطلب",
       "number": {
         "label": "رقم البوليتو",
         "required": "رقم البوليتو مطلوب"
       }
     },
-    "pix": {
+    "paypal": {
+      "description": "سيتم تحويلك إلى PayPal بمجرد تأكيد الطلب",
       "number": {
-        "label": "رقم Pix",
-        "required": "رقم Pix مطلوب"
+        "label": "حساب PayPal",
+        "required": "حساب PayPal مطلوب"
+      }
+    },
+    "pix": {
+      "description": "سيتم إنشاء Pix بمجرد تأكيد الطلب",
+      "number": {
+        "label": "مفتاح Pix",
+        "required": "مفتاح Pix مطلوب"
       }
     },
     "bitcoin": {
+      "description": "سيتم إنشاء رمز QR ورمز Bitcoin بمجرد تأكيد الطلب",
       "number": {
-        "label": "رقم Bitcoin",
-        "required": "رقم Bitcoin مطلوب"
+        "label": "مفتاح Bitcoin",
+        "required": "مفتاح Bitcoin مطلوب"
       }
     },
     "back": {

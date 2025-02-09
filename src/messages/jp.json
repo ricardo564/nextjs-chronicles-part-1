@@ -537,27 +537,31 @@
       }
     },
     "boleto": {
+      "description": "注文確認後にボレートが生成されます",
       "number": {
         "label": "ボレート番号",
         "required": "ボレート番号は必須です"
       }
     },
     "paypal": {
+      "description": "注文確認後にPayPalにリダイレクトされます",
       "number": {
-        "label": "PayPal アカウント",
-        "required": "PayPal アカウントは必須です"
+        "label": "PayPalアカウント",
+        "required": "PayPalアカウントは必須です"
       }
     },
     "pix": {
+      "description": "注文確認後にPixが生成されます",
       "number": {
-        "label": "Pix Chave",
-        "required": "Pix Chave é obrigatória"
+        "label": "Pixキー",
+        "required": "Pixキーは必須です"
       }
     },
     "bitcoin": {
+      "description": "注文確認後にQRコードとビットコインコードが生成されます",
       "number": {
-        "label": "Bitcoin Chave",
-        "required": "Bitcoin Chave é obrigatória"
+        "label": "ビットコインキー",
+        "required": "ビットコインキーは必須です"
       }
     },
     "back": {

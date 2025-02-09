@@ -537,27 +537,31 @@
       }
     },
     "boleto": {
+      "description": "आदेश की पुष्टि होने के बाद बोलेतो उत्पन्न किया जाएगा",
       "number": {
         "label": "बोलेतो नंबर",
         "required": "बोलेतो नंबर आवश्यक है"
       }
     },
     "paypal": {
+      "description": "आदेश की पुष्टि होने के बाद आपको पेपाल पर पुनर्निर्देशित किया जाएगा",
       "number": {
-        "label": "PayPal खाता",
-        "required": "PayPal खाता आवश्यक है"
+        "label": "पेपाल खाता",
+        "required": "पेपाल खाता आवश्यक है"
       }
     },
     "pix": {
+      "description": "आदेश की पुष्टि होने के बाद पिक्स उत्पन्न किया जाएगा",
       "number": {
-        "label": "Pix Chave",
-        "required": "Pix Chave आवश्यक है"
+        "label": "पिक्स कुंजी",
+        "required": "पिक्स कुंजी आवश्यक है"
       }
     },
     "bitcoin": {
+      "description": "आदेश की पुष्टि होने के बाद क्यूआर कोड और बिटकॉइन कोड उत्पन्न किया जाएगा",
       "number": {
-        "label": "Bitcoin Chave",
-        "required": "Bitcoin Chave आवश्यक है"
+        "label": "बिटकॉइन कुंजी",
+        "required": "बिटकॉइन कुंजी आवश्यक है"
       }
     },
     "back": {

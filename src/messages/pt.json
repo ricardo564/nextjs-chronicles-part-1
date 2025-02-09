@@ -538,24 +538,28 @@
       }
     },
     "boleto": {
+      "description": "O boleto sera gerado assim que o pedido for confirmado",
       "number": {
         "label": "Número do Boleto",
         "required": "Número do boleto é obrigatório"
       }
     },
     "paypal": {
+      "description": "Você sera redirecionado para o PayPal assim que o pedido for confirmado",
       "number": {
         "label": "Conta PayPal",
         "required": "Conta PayPal é obrigatória"
       }
     },
     "pix": {
+      "description": "O pix sera gerado assim que o pedido for confirmado",
       "number": {
         "label": "Chave PIX",
         "required": "Chave PIX é obrigatória"
       }
     },
     "bitcoin": {
+      "description": "O qr code e código bitcoin seram gerados assim que o pedido for confirmado",
       "number": {
         "label": "Chave Bitcoin",
         "required": "Chave Bitcoin é obrigatória"
