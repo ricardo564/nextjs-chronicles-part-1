@@ -136,20 +136,6 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           <CustomerStep
             validationMessages={customerValidationMessages}
             languages={languages}
-            fullNameLabel={t('fullNameLabel')}
-            emailLabel={t('emailLabel')}
-            phoneNumberLabel={t('phoneNumberLabel')}
-            dateOfBirthLabel={t('dateOfBirthLabel')}
-            preferredLanguageLabel={t('preferredLanguageLabel')}
-            taxIdNumberLabel={t('taxIdNumberLabel')}
-            stateRegistrationLabel={t('stateRegistrationLabel')}
-            createAccountLabel={t('createAccountLabel')}
-            passwordLabel={t('passwordLabel')}
-            acceptedTermsLabel={t('acceptedTermsLabel')}
-            subscribeToNewsletterLabel={t('subscribeToNewsletterLabel')}
-            receiveMarketingEmailsLabel={t('receiveMarketingEmailsLabel')}
-            backLabel={t('backLabel')}
-            continueToPaymentLabel={t('continueToPaymentLabel')}
           />
         );
       case "payment":
