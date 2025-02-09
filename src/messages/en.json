@@ -406,6 +406,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "State Registration",
+          "name": "State Registration",
+          "required": "State Registration is required"
+        }
+      },
       "taxId": {
         "label": "Tax ID",
         "required": "Tax ID is required",
@@ -571,6 +578,9 @@
     },
     "next": {
       "label": "Next"
+    },
+    "information": {
+      "required": "This field is required"
     }
   },
   "comingSoon": {

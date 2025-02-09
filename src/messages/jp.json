@@ -406,6 +406,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "法人登録番号",
+          "name": "法人登録番号",
+          "required": "法人登録番号は必須です"
+        }
+      },
       "taxId": {
         "label": "NIP",
         "required": "NIPは必須です",
@@ -570,6 +577,9 @@
     },
     "next": {
       "label": "次へ"
+    },
+    "information": {
+      "required": "このフィールドは必須です"
     }
   },
   "comingSoon": {

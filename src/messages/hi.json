@@ -406,6 +406,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "राज्य पंजीकरण",
+          "name": "राज्य पंजीकरण",
+          "required": "राज्य पंजीकरण आवश्यक है"
+        }
+      },
       "taxId": {
         "label": "टैक्स आईडी",
         "required": "टैक्स आईडी आवश्यक है",
@@ -570,6 +577,9 @@
     },
     "next": {
       "label": "अगला"
+    },
+    "information": {
+      "required": "यह फ़ील्ड आवश्यक है"
     }
   },
   "comingSoon": {

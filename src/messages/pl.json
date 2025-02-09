@@ -406,6 +406,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "Rejestracja państwowa",
+          "name": "Rejestracja państwowa",
+          "required": "Rejestracja państwowa jest wymagana"
+        }
+      },
       "taxId": {
         "label": "NIP",
         "required": "NIP jest wymagany",
@@ -570,6 +577,9 @@
     },
     "next": {
       "label": "Dalej"
+    },
+    "information": {
+      "required": "To pole jest wymagane"
     }
   },
   "comingSoon": {

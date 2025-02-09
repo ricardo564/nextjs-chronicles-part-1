@@ -406,6 +406,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "Handelsregisternummer",
+          "name": "Handelsregisternummer",
+          "required": "Handelsregisternummer ist erforderlich"
+        }
+      },
       "taxId": {
         "label": "Steuernummer",
         "required": "Steuernummer ist erforderlich",
@@ -570,6 +577,9 @@
     },
     "next": {
       "label": "Weiter"
+    },
+    "information": {
+      "required": "Dieses Feld ist erforderlich"
     }
   },
   "comingSoon": {

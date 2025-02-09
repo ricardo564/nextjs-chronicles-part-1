@@ -406,6 +406,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "Inscrição Estadual",
+          "name": "Inscrição Estadual",
+          "required": "Inscrição Estadual é obrigatória"
+        }
+      },
       "taxId": {
         "label": "CPF/CNPJ",
         "required": "CPF/CNPJ é obrigatório",
@@ -571,6 +578,9 @@
     },
     "next": {
       "label": "Avançar"
+    },
+    "information": {
+      "required": "Este campo é obrigatório"
     }
   },
   "comingSoon": {

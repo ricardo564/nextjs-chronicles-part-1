@@ -406,6 +406,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "السجل التجاري",
+          "name": "السجل التجاري",
+          "required": "السجل التجاري مطلوب"
+        }
+      },
       "taxId": {
         "label": "الرقم الضريبي",
         "required": "الرقم الضريبي مطلوب",
@@ -570,6 +577,9 @@
     },
     "next": {
       "label": "التالي"
+    },
+    "information": {
+      "required": "هذا الحقل مطلوب"
     }
   },
   "comingSoon": {
