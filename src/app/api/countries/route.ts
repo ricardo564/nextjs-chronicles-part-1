@@ -28,6 +28,16 @@ const getCountriesWithCache = unstable_cache(
   }
 );
 
+/**
+ * Handles HTTP GET requests for the countries API route.
+ *
+ * This function retrieves formatted country data using a caching mechanism provided by `getCountriesWithCache`.
+ * On success, it returns a JSON response containing the country data and the total count of countries.
+ * If an error occurs during data fetching, the error is logged and a JSON response with an error message 
+ * is returned along with a 500 status code.
+ *
+ * @returns A NextResponse JSON response containing either the country data and count or an error message.
+ */
 export async function GET() {
   try {
     const formattedCountries = await getCountriesWithCache();
