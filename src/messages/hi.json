@@ -488,6 +488,7 @@
     }
   },
   "payment": {
+    "paymentMethods": "भुगतान कार्ड",
     "methods": {
       "creditCard": "क्रेडिट कार्ड",
       "debitCard": "डेबिट कार्ड",

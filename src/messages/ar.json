@@ -488,6 +488,7 @@
     }
   },
   "payment": {
+    "paymentMethods": "طرق الدفع",
     "methods": {
       "creditCard": "بطاقة ائتمان",
       "debitCard": "بطاقة ديبيت",

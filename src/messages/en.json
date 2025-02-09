@@ -488,6 +488,7 @@
       "createAccountButtonTitle": "Continue to Payment"
     },
     "payment": {
+      "paymentMethods": "Payment Methods",
       "methods": {
         "creditCard": "Credit Card",
         "debitCard": "Debit Card",

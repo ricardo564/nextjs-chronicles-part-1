@@ -488,6 +488,7 @@
     }
   },
   "payment": {
+    "paymentMethods": "支払い方法",
     "methods": {
       "creditCard": "クレジットカード",
       "debitCard": "デビットカード",

@@ -488,6 +488,7 @@
     }
   },
   "payment": {
+    "paymentMethods": "Metody płatnosci",
     "methods": {
       "creditCard": "Karta kredytowa",
       "debitCard": "Karta debetowa",

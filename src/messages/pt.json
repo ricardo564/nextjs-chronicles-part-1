@@ -489,6 +489,7 @@
     }
   },
   "payment": {
+    "paymentMethods": "Formas de Pagamento",
     "methods": {
       "creditCard": "Cartão de Crédito",
       "debitCard": "Cartão de Débito",
