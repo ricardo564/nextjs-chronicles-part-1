@@ -35,16 +35,6 @@ const CheckoutPage: FC = () => {
     }
   ];
 
-  const shippingValidationMessages = {
-    street: t('shipping.street.required'),
-    number: t('shipping.number.required'),
-    complement: t('shipping.complement.required'),
-    neighborhood: t('shipping.neighborhood.required'),
-    city: t('shipping.city.required'),
-    state: t('shipping.state.required'),
-    zipCode: t('shipping.zipCode.required'),
-    country: t('shipping.country.required'),
-  };
 
   const customerValidationMessages = {
     'fullName.min': t('customer.fullName.min'),
@@ -65,7 +55,6 @@ const CheckoutPage: FC = () => {
       <Suspense fallback={<Loading />}>
         <CheckoutContent
           shippingMethods={shippingMethods}
-          shippingValidationMessages={shippingValidationMessages}
           customerValidationMessages={customerValidationMessages}
           t={t}
         />
@@ -76,11 +65,9 @@ const CheckoutPage: FC = () => {
 
 async function CheckoutContent({
   shippingMethods,
-  shippingValidationMessages,
   customerValidationMessages,
 }: {
   shippingMethods: ShippingMethod[],
-  shippingValidationMessages: Record<string, string>,
   customerValidationMessages: Record<string, string>,
   t: (key: string) => string
 }) {
@@ -114,7 +101,6 @@ async function CheckoutContent({
 
       <CheckoutSteps
         shippingMethods={shippingMethods}
-        shippingValidationMessages={shippingValidationMessages}
         customerValidationMessages={customerValidationMessages}
         languages={languages}
         countries={countries}
