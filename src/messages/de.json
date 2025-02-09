@@ -487,6 +487,86 @@
       "createAccountButtonTitle": "Zur Kasse"
     }
   },
+  "payment": {
+    "methods": {
+      "creditCard": "Kreditkarte",
+      "debitCard": "Debitkarte",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "number": {
+        "label": "Kartennummer",
+        "required": "Kartennummer ist erforderlich"
+      },
+      "name": {
+        "label": "Name des Karteninhabers",
+        "required": "Name des Karteninhabers ist erforderlich"
+      },
+      "expirationDate": {
+        "label": "Ablaufdatum",
+        "required": "Ablaufdatum ist erforderlich"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV ist erforderlich"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "Kartennummer",
+        "required": "Kartennummer ist erforderlich"
+      },
+      "name": {
+        "label": "Name des Karteninhabers",
+        "required": "Name des Karteninhabers ist erforderlich"
+      },
+      "expirationDate": {
+        "label": "Ablaufdatum",
+        "required": "Ablaufdatum ist erforderlich"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV ist erforderlich"
+      },
+      "installments": {
+        "label": "Ratenzahlung",
+        "required": "Ratenzahlung ist erforderlich"
+      }
+    },
+    "boleto": {
+      "number": {
+        "label": "Boleto-Nummer",
+        "required": "Boleto-Nummer ist erforderlich"
+      }
+    },
+    "pix": {
+      "number": {
+        "label": "Pix Key",
+        "required": "Pix Key ist erforderlich"
+      }
+    },
+    "bitcoin": {
+      "number": {
+        "label": "Bitcoin Key",
+        "required": "Bitcoin Key ist erforderlich"
+      }
+    },
+    "paypal": {
+      "number": {
+        "label": "PayPal Key",
+        "required": "PayPal Key ist erforderlich"
+      }
+    },
+    "back": {
+      "label": "Zurück"
+    },
+    "next": {
+      "label": "Weiter"
+    }
+  },
   "comingSoon": {
     "title": "Wächst in Kürze",
     "subtitle": "Wir kultivieren etwas Besonderes für Pflanzenliebhaber",

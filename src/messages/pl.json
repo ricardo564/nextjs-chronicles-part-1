@@ -487,6 +487,86 @@
       "createAccountButtonTitle": "Do kasy"
     }
   },
+  "payment": {
+    "methods": {
+      "creditCard": "Karta kredytowa",
+      "debitCard": "Karta debetowa",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "number": {
+        "label": "Numer karty",
+        "required": "Numer karty jest wymagany"
+      },
+      "name": {
+        "label": "Imię i nazwisko posiadacza",
+        "required": "Imię i nazwisko posiadacza jest wymagane"
+      },
+      "expirationDate": {
+        "label": "Data ważności",
+        "required": "Data ważności jest wymagana"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV jest wymagany"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "Numer karty",
+        "required": "Numer karty jest wymagany"
+      },
+      "name": {
+        "label": "Imię i nazwisko posiadacza",
+        "required": "Imię i nazwisko posiadacza jest wymagane"
+      },
+      "expirationDate": {
+        "label": "Data ważności",
+        "required": "Data ważności jest wymagana"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV jest wymagany"
+      },
+      "installments": {
+        "label": "Raty",
+        "required": "Raty są wymagane"
+      }
+    },
+    "boleto": {
+      "number": {
+        "label": "Numer Boleto",
+        "required": "Numer Boleto jest wymagany"
+      }
+    },
+    "paypal": {
+      "number": {
+        "label": "Numer PayPal",
+        "required": "Numer PayPal jest wymagany"
+      }
+    },
+    "pix": {
+      "number": {
+        "label": "Numer Pix",
+        "required": "Numer Pix jest wymagany"
+      }
+    },
+    "bitcoin": {
+      "number": {
+        "label": "Numer Bitcoin",
+        "required": "Numer Bitcoin jest wymagany"
+      }
+    },
+    "back": {
+      "label": "Wstecz"
+    },
+    "next": {
+      "label": "Dalej"
+    }
+  },
   "comingSoon": {
     "title": "Wkrótce zakwitnie",
     "subtitle": "Hodujemy coś specjalnego dla miłośników roślin",

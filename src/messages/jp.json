@@ -487,6 +487,86 @@
       "createAccountButtonTitle": "支払いへ"
     }
   },
+  "payment": {
+    "methods": {
+      "creditCard": "クレジットカード",
+      "debitCard": "デビットカード",
+      "paypal": "PayPal",
+      "boleto": "ボレート",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "number": {
+        "label": "カード番号",
+        "required": "カード番号は必須です"
+      },
+      "name": {
+        "label": "カード名義人",
+        "required": "カード名義人は必須です"
+      },
+      "expirationDate": {
+        "label": "有効期限",
+        "required": "有効期限は必須です"
+      },
+      "cvv": {
+        "label": "セキュリティコード",
+        "required": "セキュリティコードは必須です"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "カード番号",
+        "required": "カード番号は必須です"
+      },
+      "name": {
+        "label": "カード名義人",
+        "required": "カード名義人は必須です"
+      },
+      "expirationDate": {
+        "label": "有効期限",
+        "required": "有効期限は必須です"
+      },
+      "cvv": {
+        "label": "セキュリティコード",
+        "required": "セキュリティコードは必須です"
+      },
+      "installments": {
+        "label": "分割払い",
+        "required": "分割払いは必須です"
+      }
+    },
+    "boleto": {
+      "number": {
+        "label": "ボレート番号",
+        "required": "ボレート番号は必須です"
+      }
+    },
+    "paypal": {
+      "number": {
+        "label": "PayPal アカウント",
+        "required": "PayPal アカウントは必須です"
+      }
+    },
+    "pix": {
+      "number": {
+        "label": "Pix Chave",
+        "required": "Pix Chave é obrigatória"
+      }
+    },
+    "bitcoin": {
+      "number": {
+        "label": "Bitcoin Chave",
+        "required": "Bitcoin Chave é obrigatória"
+      }
+    },
+    "back": {
+      "label": "戻る"
+    },
+    "next": {
+      "label": "次へ"
+    }
+  },
   "comingSoon": {
     "title": "まもなく成長します",
     "subtitle": "植物愛好家のために特別なものを育てています",

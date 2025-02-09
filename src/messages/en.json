@@ -486,6 +486,86 @@
       "createAccountButton": "Continue to Payment",
       "createAccountButtonLabel": "Continue to Payment",
       "createAccountButtonTitle": "Continue to Payment"
+    },
+    "payment": {
+      "methods": {
+        "creditCard": "Credit Card",
+        "debitCard": "Debit Card",
+        "paypal": "PayPal",
+        "boleto": "Boleto",
+        "pix": "Pix",
+        "bitcoin": "Bitcoin"
+      },
+      "creditCard": {
+        "number": {
+          "label": "Card Number",
+          "required": "Card Number is required"
+        },
+        "name": {
+          "label": "Cardholder Name",
+          "required": "Cardholder Name is required"
+        },
+        "expirationDate": {
+          "label": "Expiration Date",
+          "required": "Expiration Date is required"
+        },
+        "cvv": {
+          "label": "CVV",
+          "required": "CVV is required"
+        }
+      },
+      "debitCard": {
+        "number": {
+          "label": "Card Number",
+          "required": "Card Number is required"
+        },
+        "name": {
+          "label": "Cardholder Name",
+          "required": "Cardholder Name is required"
+        },
+        "expirationDate": {
+          "label": "Expiration Date",
+          "required": "Expiration Date is required"
+        },
+        "cvv": {
+          "label": "CVV",
+          "required": "CVV is required"
+        },
+        "installments": {
+          "label": "Installments",
+          "required": "Installments is required"
+        }
+      },
+      "boleto": {
+        "number": {
+          "label": "Boleto Number",
+          "required": "Boleto Number is required"
+        }
+      },
+      "paypal": {
+        "number": {
+          "label": "PayPal Account",
+          "required": "PayPal Account is required"
+        }
+      },
+      "pix": {
+        "number": {
+          "label": "Pix Key",
+          "required": "Pix Key is required"
+        }
+      },
+      "bitcoin": {
+        "number": {
+          "label": "Bitcoin Key",
+          "required": "Bitcoin Key is required"
+        }
+      },
+      "back": {
+        "label": "Back"
+      },
+      "next": {
+        "label": "Next"
+      }
     }
   },
   "comingSoon": {

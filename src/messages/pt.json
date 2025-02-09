@@ -488,6 +488,86 @@
       "createAccountButtonTitle": "Continuar para Pagamento"
     }
   },
+  "payment": {
+    "methods": {
+      "creditCard": "Cartão de Crédito",
+      "debitCard": "Cartão de Débito",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "number": {
+        "label": "Número do Cartão",
+        "required": "Número do cartão é obrigatório"
+      },
+      "name": {
+        "label": "Nome no Cartão",
+        "required": "Nome no cartão é obrigatório"
+      },
+      "expirationDate": {
+        "label": "Data de Validade",
+        "required": "Data de validade é obrigatória"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV é obrigatório"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "Número do Cartão",
+        "required": "Número do cartão é obrigatório"
+      },
+      "name": {
+        "label": "Nome no Cartão",
+        "required": "Nome no cartão é obrigatório"
+      },
+      "expirationDate": {
+        "label": "Data de Validade",
+        "required": "Data de validade é obrigatória"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV é obrigatório"
+      },
+      "installments": {
+        "label": "Parcelas",
+        "required": "Número de parcelas é obrigatório"
+      }
+    },
+    "boleto": {
+      "number": {
+        "label": "Número do Boleto",
+        "required": "Número do boleto é obrigatório"
+      }
+    },
+    "paypal": {
+      "number": {
+        "label": "Conta PayPal",
+        "required": "Conta PayPal é obrigatória"
+      }
+    },
+    "pix": {
+      "number": {
+        "label": "Chave PIX",
+        "required": "Chave PIX é obrigatória"
+      }
+    },
+    "bitcoin": {
+      "number": {
+        "label": "Chave Bitcoin",
+        "required": "Chave Bitcoin é obrigatória"
+      }
+    },
+    "back": {
+      "label": "Voltar"
+    },
+    "next": {
+      "label": "Avançar"
+    }
+  },
   "comingSoon": {
     "title": "Crescendo em breve",
     "subtitle": "Estamos cultivando algo especial para amantes de plantas",

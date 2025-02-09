@@ -487,6 +487,80 @@
       "createAccountButtonTitle": "متابعة إلى الدفع"
     }
   },
+  "payment": {
+    "methods": {
+      "creditCard": "بطاقة ائتمان",
+      "debitCard": "بطاقة ديبيت",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "number": {
+        "label": "رقم البطاقة",
+        "required": "رقم البطاقة مطلوب"
+      },
+      "name": {
+        "label": "اسم حامل البطاقة",
+        "required": "اسم حامل البطاقة مطلوب"
+      },
+      "expirationDate": {
+        "label": "تاريخ الانتهاء",
+        "required": "تاريخ الانتهاء مطلوب"
+      },
+      "cvv": {
+        "label": "رمز التحقق",
+        "required": "رمز التحقق مطلوب"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "رقم البطاقة",
+        "required": "رقم البطاقة مطلوب"
+      },
+      "name": {
+        "label": "اسم حامل البطاقة",
+        "required": "اسم حامل البطاقة مطلوب"
+      },
+      "expirationDate": {
+        "label": "تاريخ الانتهاء",
+        "required": "تاريخ الانتهاء مطلوب"
+      },
+      "cvv": {
+        "label": "رمز التحقق",
+        "required": "رمز التحقق مطلوب"
+      },
+      "installments": {
+        "label": "الأقساط",
+        "required": "الأقساط مطلوبة"
+      }
+    },
+    "boleto": {
+      "number": {
+        "label": "رقم البوليتو",
+        "required": "رقم البوليتو مطلوب"
+      }
+    },
+    "pix": {
+      "number": {
+        "label": "رقم Pix",
+        "required": "رقم Pix مطلوب"
+      }
+    },
+    "bitcoin": {
+      "number": {
+        "label": "رقم Bitcoin",
+        "required": "رقم Bitcoin مطلوب"
+      }
+    },
+    "back": {
+      "label": "رجوع"
+    },
+    "next": {
+      "label": "التالي"
+    }
+  },
   "comingSoon": {
     "title": "قريباً",
     "subtitle": "نحن نزرع شيئاً مميزاً لمحبي النباتات",
