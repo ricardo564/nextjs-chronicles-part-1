@@ -408,24 +408,26 @@
     },
     "customer": {
       "taxId": {
-        "label": "Número de ID de imposto",
-        "required": "Número de ID de imposto é obrigatório"
+        "label": "CNPJ",
+        "required": "CNPJ é obrigatório",
+        "min": "CNPJ deve ter pelo menos 1 caractere",
+        "max": "CNPJ não pode exceder 18 caracteres"
       },
       "taxIdType": {
-        "label": "Tipo de ID de imposto",
-        "required": "Tipo de ID de imposto é obrigatório"
+        "label": "Tipo de CNPJ",
+        "required": "Tipo de CNPJ é obrigatório"
       },
       "taxIdNumber": {
-        "label": "Número de ID de imposto",
-        "required": "Número de ID de imposto é obrigatório"
+        "label": "Número de CNPJ",
+        "required": "Número de CNPJ é obrigatório"
       },
       "password": {
         "label": "Senha",
         "required": "Senha é obrigatório"
       },
       "confirmPassword": {
-        "label": "Confirmar senha",
-        "required": "Confirmar senha é obrigatório"
+        "label": "Confirmar Senha",
+        "required": "Confirmar Senha é obrigatório"
       },
       "acceptedTerms": {
         "label": "Aceito os termos e condições",
@@ -436,16 +438,21 @@
         "required": "Você deve criar uma conta"
       },
       "fullName": {
-        "label": "Nome completo",
-        "required": "Nome completo é obrigatório"
+        "label": "Nome Completo",
+        "required": "Nome Completo é obrigatório",
+        "min": "Nome completo deve ter pelo menos 2 caracteres",
+        "max": "Nome completo não pode exceder 50 caracteres"
       },
       "email": {
         "label": "Email",
-        "required": "Email é obrigatório"
+        "required": "Email é obrigatório",
+        "invalid": "Endereço de e-mail inválido"
       },
       "phoneNumber": {
-        "label": "Número de telefone",
-        "required": "Número de telefone é obrigatório"
+        "label": "Telefone",
+        "required": "Telefone é obrigatório",
+        "min": "Telefone deve ter pelo menos 2 caracteres",
+        "max": "Telefone não pode exceder 50 caracteres"
       },
       "dateOfBirth": {
         "label": "Data de nascimento",

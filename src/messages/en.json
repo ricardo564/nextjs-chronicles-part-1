@@ -408,7 +408,9 @@
     "customer": {
       "taxId": {
         "label": "Tax ID",
-        "required": "Tax ID is required"
+        "required": "Tax ID is required",
+        "min": "Tax ID must be at least 1 character",
+        "max": "Tax ID cannot exceed 18 characters"
       },
       "taxIdType": {
         "label": "Tax ID Type",
@@ -436,15 +438,20 @@
       },
       "fullName": {
         "label": "Full Name",
-        "required": "Full Name is required"
+        "required": "Full Name is required",
+        "min": "Full name must be at least 2 characters",
+        "max": "Full name cannot exceed 50 characters"
       },
       "email": {
         "label": "Email",
-        "required": "Email is required"
+        "required": "Email is required",
+        "invalid": "Invalid email address"
       },
       "phoneNumber": {
         "label": "Phone Number",
-        "required": "Phone Number is required"
+        "required": "Phone Number is required",
+        "min": "Phone number must be at least 2 characters",
+        "max": "Phone number cannot exceed 50 characters"
       },
       "dateOfBirth": {
         "label": "Date of Birth",

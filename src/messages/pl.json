@@ -407,28 +407,30 @@
     },
     "customer": {
       "taxId": {
-        "label": "Numer ID podatkowego",
-        "required": "Numer ID podatkowego jest wymagany"
+        "label": "NIP",
+        "required": "NIP jest wymagany",
+        "min": "NIP musi mieć co najmniej 1 znak",
+        "max": "NIP nie może przekraczać 18 znaków"
       },
       "taxIdType": {
-        "label": "Typ ID podatkowego",
-        "required": "Typ ID podatkowego jest wymagany"
+        "label": "Typ NIP",
+        "required": "Typ NIP jest wymagany"
       },
       "taxIdNumber": {
-        "label": "Numer ID podatkowego",
-        "required": "Numer ID podatkowego jest wymagany"
+        "label": "Numer NIP",
+        "required": "Numer NIP jest wymagany"
       },
       "password": {
         "label": "Hasło",
         "required": "Hasło jest wymagane"
       },
       "confirmPassword": {
-        "label": "Potwierdź hasło",
-        "required": "Potwierdź hasło jest wymagane"
+        "label": "Potwierdź Hasło",
+        "required": "Potwierdź Hasło jest wymagane"
       },
       "acceptedTerms": {
         "label": "Akceptuję warunki i zasady",
-        "required": "Musisz akceptować warunki i zasady"
+        "required": "Musisz zaakceptować warunki i zasady"
       },
       "createAccount": {
         "label": "Stwórz konto",
@@ -436,15 +438,20 @@
       },
       "fullName": {
         "label": "Pełna nazwa",
-        "required": "Pełna nazwa jest wymagana"
+        "required": "Pełna nazwa jest wymagana",
+        "min": "Pełna nazwa musi mieć co najmniej 2 znaki",
+        "max": "Pełna nazwa nie może przekraczać 50 znaków"
       },
       "email": {
         "label": "Email",
-        "required": "Email jest wymagany"
+        "required": "Email jest wymagany",
+        "invalid": "Nieprawidłowy adres e-mail"
       },
       "phoneNumber": {
-        "label": "Numer telefonu",
-        "required": "Numer telefonu jest wymagany"
+        "label": "Telefone",
+        "required": "Telefone jest wymagany",
+        "min": "Telefone musi mieć co najmniej 2 znaki",
+        "max": "Telefone nie może przekraczać 50 znaków"
       },
       "dateOfBirth": {
         "label": "Data urodzenia",

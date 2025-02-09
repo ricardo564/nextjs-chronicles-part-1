@@ -408,11 +408,13 @@
     "customer": {
       "taxId": {
         "label": "Steuernummer",
-        "required": "Steuernummer ist erforderlich"
+        "required": "Steuernummer ist erforderlich",
+        "min": "Steuernummer muss mindestens 1 Zeichen lang sein",
+        "max": "Steuernummer darf nicht länger als 18 Zeichen sein"
       },
       "taxIdType": {
-        "label": "Steuernummer",
-        "required": "Steuernummer ist erforderlich"
+        "label": "Steuernummer Typ",
+        "required": "Steuernummer Typ ist erforderlich"
       },
       "taxIdNumber": {
         "label": "Steuernummer",
@@ -431,20 +433,25 @@
         "required": "Sie müssen die Nutzungsbedingungen akzeptieren"
       },
       "createAccount": {
-        "label": "Konto erstellen",
+        "label": "Erstellen Sie ein Konto",
         "required": "Sie müssen ein Konto erstellen"
       },
       "fullName": {
         "label": "Vollständiger Name",
-        "required": "Vollständiger Name ist erforderlich"
+        "required": "Vollständiger Name ist erforderlich",
+        "min": "Vollständiger Name muss mindestens 2 Zeichen lang sein",
+        "max": "Vollständiger Name darf nicht länger als 50 Zeichen sein"
       },
       "email": {
         "label": "Email",
-        "required": "Email ist erforderlich"
+        "required": "Email ist erforderlich",
+        "invalid": "Ungültige E-Mail-Adresse"
       },
       "phoneNumber": {
         "label": "Telefonnummer",
-        "required": "Telefonnummer ist erforderlich"
+        "required": "Telefonnummer ist erforderlich",
+        "min": "Telefonnummer muss mindestens 2 Zeichen lang sein",
+        "max": "Telefonnummer darf nicht länger als 50 Zeichen sein"
       },
       "dateOfBirth": {
         "label": "Geburtsdatum",

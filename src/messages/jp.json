@@ -407,16 +407,18 @@
     },
     "customer": {
       "taxId": {
-        "label": "税ID",
-        "required": "税IDは必須です"
+        "label": "NIP",
+        "required": "NIPは必須です",
+        "min": "NIPは少なくとも1文字でなければなりません",
+        "max": "NIPは18文字を超えることはできません"
       },
       "taxIdType": {
-        "label": "税IDタイプ",
-        "required": "税IDタイプは必須です"
+        "label": "NIPタイプ",
+        "required": "NIPタイプは必須です"
       },
       "taxIdNumber": {
-        "label": "税ID番号",
-        "required": "税ID番号は必須です"
+        "label": "NIP番号",
+        "required": "NIP番号は必須です"
       },
       "password": {
         "label": "パスワード",
@@ -427,24 +429,29 @@
         "required": "確認パスワードは必須です"
       },
       "acceptedTerms": {
-        "label": "利用規約に同意します",
-        "required": "利用規約に同意してください"
+        "label": "利用規約に同意する",
+        "required": "利用規約に同意する必要があります"
       },
       "createAccount": {
         "label": "アカウントを作成する",
-        "required": "アカウントを作成してください"
+        "required": "アカウントを作成する必要があります"
       },
       "fullName": {
         "label": "フルネーム",
-        "required": "フルネームは必須です"
+        "required": "フルネームは必須です",
+        "min": "フルネームは少なくとも2文字でなければなりません",
+        "max": "フルネームは50文字を超えることはできません"
       },
       "email": {
         "label": "メールアドレス",
-        "required": "メールアドレスは必須です"
+        "required": "メールアドレスは必須です",
+        "invalid": "無効なメールアドレスです"
       },
       "phoneNumber": {
         "label": "電話番号",
-        "required": "電話番号は必須です"
+        "required": "電話番号は必須です",
+        "min": "電話番号は少なくとも2文字でなければなりません",
+        "max": "電話番号は50文字を超えることはできません"
       },
       "dateOfBirth": {
         "label": "生年月日",

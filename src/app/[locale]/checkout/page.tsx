@@ -44,12 +44,17 @@ export default function CheckoutPage() {
   };
 
   const customerValidationMessages = {
-    fullName: t('customer.fullName.required'),
-    email: t('customer.email.required'),
-    phoneNumber: t('customer.phoneNumber.required'),
-    dateOfBirth: t('customer.dateOfBirth.required'),
-    preferredLanguage: t('customer.preferredLanguage.required'),
-    taxId: t('customer.taxId.required'),
+    'fullName.min': t('customer.fullName.min'),
+    'fullName.max': t('customer.fullName.max'),
+    'email.invalid': t('customer.email.invalid'),
+    'phoneNumber.min': t('customer.phoneNumber.min'),
+    'phoneNumber.max': t('customer.phoneNumber.max'),
+    'dateOfBirth.required': t('customer.dateOfBirth.required'),
+    'preferredLanguage.required': t('customer.preferredLanguage.required'),
+    'taxId.min': t('customer.taxId.min'),
+    'taxId.max': t('customer.taxId.max'),
+    'password.required': t('customer.password.required'),
+    'acceptedTerms.required': t('customer.acceptedTerms.required'),
   };
 
   return (
