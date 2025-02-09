@@ -1,3 +1,4 @@
+import { FC } from "react";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { useTranslations } from "next-intl";
 import { ShippingMethod } from "@/types/shippingMethod";
@@ -7,9 +8,10 @@ import { Suspense } from "react";
 import RandomBackground from "@/blocks/randomBackground";
 import { Language } from "@/types/language";
 import { mockCountries } from "@/static/mockCountries";
+import { locales } from "@/config/i18n-config";
 import Loading from "@/components/Loading";
 
-export default function CheckoutPage() {
+const CheckoutPage: FC = () => {
   const t = useTranslations('checkout');
 
   const shippingMethods: ShippingMethod[] = [
@@ -155,3 +157,11 @@ async function CheckoutContent({
     </>
   );
 }
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({
+    params: { locale },
+  }));
+}
+
+export default CheckoutPage
