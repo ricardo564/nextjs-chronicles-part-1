@@ -77,6 +77,10 @@ export default {
             opacity: "0",
           },
         },
+        dropdown: {
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        }
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
@@ -93,6 +97,7 @@ export default {
         "floating-leaf-0": "floatingLeaf 15s linear infinite",
         "floating-leaf-1": "floatingLeaf 20s linear infinite",
         "floating-leaf-2": "floatingLeaf 25s linear infinite",
+        dropdown: 'dropdown 0.5s ease-out'
       },
     },
   },

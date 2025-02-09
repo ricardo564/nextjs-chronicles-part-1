@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import { Header } from "@/components/Header";
 import { menuItems } from "@/static/menuItems";
 import Footer from "@/blocks/sections/footer";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function DefaultLayout({ children }: Props) {

@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+# General settings
+language: "en"
+tone_instructions: "friendly and constructive"
+
+# Review configuration
+reviews:
+  enabled: true
+  auto_review:
+    enabled: true
+    base_branches: [".*"]
+    ignore_title_patterns: []
+    ignore_labels: ["skip-review", "dependencies"]
+
+  # Path configurations
+  path_filters:
+    - "**/*"
+  exclude_path_filters:
+    - "**/*.md"
+    - "**/*.txt"
+    - "package-lock.json"
+    - "yarn.lock"
+    - "pnpm-lock.yaml"
+    - "**/*.min.js"
+    - "**/*.min.css"
+
+  # Review settings
+  review_status: true
+  auto_review_threshold: 0
+  max_files_to_review: 1000
+  max_lines_to_review: 10000
+  comment_style: "multiline"
+  request_changes_workflow: false
+
+  # Notification settings
+  notifications:
+    slack: false
+
+# Chat configuration (if needed)
+chat:
+  enabled: true
+
+# Knowledge base configuration (if needed)
+knowledge_base:
+  enabled: true

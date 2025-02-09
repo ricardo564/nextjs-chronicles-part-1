@@ -1,4 +1,4 @@
-# 🪴 Breath Natural - NextJS Chronicles Part 1
+# 🌳 Breath Natural - NextJS Chronicles Part 1
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d47b2f19-f948-4850-926f-40a3fdf478e8/deploy-status)](https://app.netlify.com/sites/breath-natural-nextjs-chronicles/deploys)
 

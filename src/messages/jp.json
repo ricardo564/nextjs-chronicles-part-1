@@ -1,0 +1,496 @@
+{
+  "currency": "JPY",
+  "BuyMeCoffee": {
+    "message": "ブレス・ナチュラルをサポートしてください"
+  },
+  "hero": {
+    "title": "ブレス・ナチュラル - あなたの室内緑のオアシス",
+    "description": "プレミアムな室内植物コレクションで、あなたの家を自然の聖域に変えましょう。各植物は空気を浄化し、ストレスを軽減し、より健康的で調和のとれた環境を作るために慎重に選ばれています。持続可能で手入れが簡単な植物で、あなたの空間とウェルビーイングを変える自然の力を発見してください。",
+    "trendyPlantsTitle": "2024年トレンド植物: 今最も人気の植物"
+  },
+  "explore": {
+    "text": "探索する",
+    "title": "{name}の植物を探索"
+  },
+  "liveDemo": {
+    "buttonLabel": "デモを見る",
+    "buttonTitle": "デモを見る",
+    "text": "デモンストレーション",
+    "modalTitle": "デモンストレーション"
+  },
+  "testimonials": {
+    "title": "お客様の声",
+    "testimonial1": {
+      "id": 1,
+      "name": "ジョン・スミス",
+      "rating": 5,
+      "testimonial": "細部への配慮と作業の質は期待を上回りました。強くお勧めします！チームの一流の製品を提供する dedication は、プロジェクト全体を通して明らかでした。私たちのビジョンを理解し、それを実現する能力は印象的でした。卓越したサービスを求める方には迷わずお勧めします。"
+    },
+    "testimonial2": {
+      "id": 2,
+      "name": "サラ・チェン",
+      "rating": 3,
+      "testimonial": "素晴らしいサービスとプロジェクト全体を通じてのコミュニケーション。確実に再び彼らと仕事をしたいと思います。チームの対応力と変化するニーズに適応する意欲は、プロジェクトの成功に不可欠でした。多少の問題はありましたが、全体的な経験は良好で、将来的に再び協力を検討したいと思います。"
+    },
+    "testimonial3": {
+      "id": 3,
+      "name": "マイケル・ロドリゲス",
+      "rating": 4,
+      "testimonial": "非常にプロフェッショナルで、約束通りの成果を提供してくれました。若干の遅延はありましたが、全体的に素晴らしかったです。チームのプロフェッショナリズムと高品質な仕事を提供することへの commitment は、プロジェクト全体を通して明らかでした。"
+    },
+    "testimonial4": {
+      "id": 4,
+      "name": "エマ・トンプソン",
+      "rating": 5,
+      "testimonial": "素晴らしい結果！私たちのビジョンを完璧に実現してくれました。チームのビジョンを理解し、それを実現する能力は卓越していました。最終製品はあらゆる面で期待を上回り、結果に大変満足しています。"
+    },
+    "testimonial5": {
+      "id": 5,
+      "name": "デビッド・キム",
+      "rating": 4,
+      "testimonial": "コストパフォーマンスが素晴らしい。チームは対応が良く、私たちのニーズに対応してくれました。提供された作業の品質を考えると、プロジェクトの価値は exceptional でした。"
+    },
+    "testimonial6": {
+      "id": 6,
+      "name": "リサ・アンダーソン",
+      "rating": 5,
+      "testimonial": "あらゆる面で期待を上回りました。彼らの専門知識は最終製品に本当に表れています。チームの専門知識と細部への注意は、プロジェクト全体を通して明らかでした。"
+    },
+    "testimonial7": {
+      "id": 7,
+      "name": "ジェームズ・ウィルソン",
+      "rating": 5,
+      "testimonial": "始めから終わりまで素晴らしい経験でした。誰にでも強くお勧めします！チームのプロフェッショナリズム、専門知識、そして卓越した結果を提供することへの dedication が、私たちのプロジェクトを成功に導きました。"
+    },
+    "testimonial8": {
+      "id": 8,
+      "name": "マリア・ガルシア",
+      "rating": 4,
+      "testimonial": "結果に大変満足しています。プロフェッショナルで効率的なサービスでした。チームのプロフェッショナリズムと効率性は、プロジェクト全体を通して明らかでした。"
+    }
+  },
+  "mockupPlants": {
+    "title": "プレミアム植物エクスクルーシブコレクション",
+    "plant1": {
+      "id": 1,
+      "common_name": "Dieffenbachia",
+      "slug": "dieffenbachia-amoena",
+      "scientific_name": "Dieffenbachia amoena",
+      "year": 1977,
+      "bibliography": "ディフェンバキアは、その豪華な葉と独特の模様で空間を変える高級な熱帯植物です。室内の空気浄化に最適で、手入れが簡単なこの植物は、モダンでミニマルな装飾に完璧です。大きな斑入りの葉が洗練された熱帯的な雰囲気を作り出し、明るいオフィスやリビングルームに最適です。重要な注意点：お子様やペットの手の届かない場所に置いてください。",
+      "author": "Heinrich Wilhelm Schott",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Araceae",
+      "genus_id": 3275,
+      "image_url": "dieffenbachiaPlantPot.src",
+      "synonyms": [
+        "Dieffenbachia maculata",
+        "Caladium maculatum",
+        "Comigo-ninguém-pode"
+      ],
+      "genus": "Dieffenbachia",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/dieffenbachia-amoena",
+        "plant": "/api/v1/plants/dieffenbachia-amoena",
+        "genus": "/api/v1/genus/dieffenbachia"
+      }
+    },
+    "plant2": {
+      "id": 2,
+      "common_name": "Hosta",
+      "slug": "hosta-ventricosa",
+      "scientific_name": "Hosta ventricosa",
+      "year": 1859,
+      "bibliography": "ホスタは、いつもそばにいる信頼できる友人のような植物です！緑と青の色調の印象的な葉を持ち、庭に優雅さを添えるのに最適な選択肢です。丈夫で多用途な性質を持ち、日陰でも繁栄し、その質感のある葉で独特の視覚的な魅力を作り出します。忘れられた片隅さえも、美しい見どころに変えてしまう素晴らしい能力を持っています！",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "hostaPlantWhiteVase.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant3": {
+      "id": 3,
+      "common_name": "Suculenta",
+      "slug": "succulent-mint-pot",
+      "scientific_name": "Suculenta mint pot",
+      "year": 1859,
+      "bibliography": "私たちの多肉植物は、植物界の小さな宝石です！ガーデニングを始めたばかりの方や、手入れの簡単な植物をお探しの方に最適です。魅力的な幾何学的な形と柔らかな色合いを持ち、どんな空間にもモダンで洗練された雰囲気をもたらす生きた彫刻のような存在です。さらに素晴らしいことに、非常に丈夫で適応力があります！",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "succulentMintPot.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant4": {
+      "id": 4,
+      "common_name": "Aloe Vera",
+      "slug": "aloe-vera-modern",
+      "scientific_name": "Aloe barbadensis miller",
+      "year": 1768,
+      "bibliography": "伝説的なアロエベラは、薬用植物以上の存在 - まさに人生の伴侶です！多肉質の葉は、空間にコンテンポラリーな外観をもたらすだけでなく、治癒特性に富んだ貴重なジェルを含んでいます。手入れが簡単で見た目も美しく、美しさと実用性を兼ね備えた植物です。家庭に置くべき真の緑の宝物です！",
+      "author": "Philip Miller",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asphodelaceae",
+      "genus_id": 3277,
+      "image_url": "aloeModernDecor.src",
+      "synonyms": [
+        "Aloe vera var. chinensis",
+        "Aloe vera var. littoralis",
+        "Aloe perfoliata var. vera"
+      ],
+      "genus": "Aloe",
+      "family": "Asphodelaceae",
+      "links": {
+        "self": "/api/v1/species/aloe-vera",
+        "plant": "/api/v1/plants/aloe-vera",
+        "genus": "/api/v1/genus/aloe"
+      }
+    },
+    "plant5": {
+      "id": 5,
+      "common_name": "Ave do Paraíso",
+      "slug": "strelitzia-reginae",
+      "scientific_name": "Strelitzia reginae",
+      "year": 1789,
+      "bibliography": "壮大な極楽鳥花は、純粋な熱帯の豪華さの象徴です！飛翔する鳥のような見事な花は、あなたの庭に色彩とフォルムの饗宴をもたらすことを保証します。それぞれの花は自然が作り出した芸術作品で、独特の構造にオレンジと青の鮮やかな色調を組み合わせています。スタイルを主張したい方への大胆な選択肢です！",
+      "author": "William Aiton",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Strelitziaceae",
+      "genus_id": 3278,
+      "image_url": "birdParadiseWhitePot.src",
+      "synonyms": [
+        "Strelitzia parvifolia",
+        "Strelitzia glauca",
+        "Heliconia reginae"
+      ],
+      "genus": "Strelitzia",
+      "family": "Strelitziaceae",
+      "links": {
+        "self": "/api/v1/species/strelitzia-reginae",
+        "plant": "/api/v1/plants/strelitzia-reginae",
+        "genus": "/api/v1/genus/strelitzia"
+      }
+    },
+    "plant6": {
+      "id": 6,
+      "common_name": "Cacto Barril Dourado",
+      "slug": "echinocactus-grusonii",
+      "scientific_name": "Echinocactus grusonii",
+      "year": 1886,
+      "bibliography": "金鯱サボテンは、砂漠の物語を語る生きた彫刻のようです！その頑丈な形状と金色の棘は、見る人の目を引く印象的な外観を作り出します。モダンでミニマルな環境に最適で、水やりは少なくて済むのに多くの魅力を提供する植物です。コレクションの中で話題を呼ぶ真の逸品です！",
+      "author": "Heinrich Hildmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Cactaceae",
+      "genus_id": 3279,
+      "image_url": "cactusTerracottaPot.src",
+      "synonyms": [
+        "Kroenleinia grusonii",
+        "Almofada da sogra",
+        "Bola dourada"
+      ],
+      "genus": "Echinocactus",
+      "family": "Cactaceae",
+      "links": {
+        "self": "/api/v1/species/echinocactus-grusonii",
+        "plant": "/api/v1/plants/echinocactus-grusonii",
+        "genus": "/api/v1/genus/echinocactus"
+      }
+    },
+    "plant7": {
+      "id": 7,
+      "common_name": "Costela de Adão",
+      "slug": "monstera-deliciosa",
+      "scientific_name": "Monstera deliciosa",
+      "year": 1849,
+      "bibliography": "モンステラは、植物愛好家たちの大のお気に入りです！その巨大な切れ込みの入った葉は、どんな空間にも熱帯的なドラマチックさをもたらす自然の芸術作品です。多用途で魅力的なこの植物は、葉が成長するにつれて独自の個性を発揮し、ユニークな外観を作り出します。誰もが認識し、家に置きたいと願う植物です！",
+      "author": "Karl Heinrich Leopold Liebmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Araceae",
+      "genus_id": 3280,
+      "image_url": "monsteraDarkPedestal.src",
+      "synonyms": [
+        "Philodendron pertusum",
+        "Tornelia fragrans",
+        "Fruta-pão mexicana"
+      ],
+      "genus": "Monstera",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/monstera-deliciosa",
+        "plant": "/api/v1/plants/monstera-deliciosa",
+        "genus": "/api/v1/genus/monstera"
+      }
+    }
+  },
+  "loading": {
+    "ariaLabel": "読み込み中",
+    "status": "読み込み中"
+  },
+  "contact": {
+    "title": "あなたの",
+    "titleHighlight": "夢の庭を育てる",
+    "subtitle": "私たちの植物の専門知識と持続可能なインテリアデザインであなたの空間を変えましょう",
+    "formTitle": "パーソナライズド植物コンサルティング",
+    "formSubtitle": "あなた自身の緑のオアシスを作るための専門家のガイダンスを受けましょう。専門家チームがあなたの空間に最適な植物選びをサポートします。",
+    "firstName": "名",
+    "lastName": "姓",
+    "email": "メールアドレス",
+    "phoneNumber": "電話番号",
+    "message": "メッセージ",
+    "sending": "送信中...",
+    "send": "ガーデンに送信",
+    "validation": {
+      "firstName": {
+        "min": "名前は2文字以上である必要があります",
+        "max": "名前は50文字を超えることはできません"
+      },
+      "lastName": {
+        "min": "姓は2文字以上である必要があります",
+        "max": "姓は50文字を超えることはできません"
+      },
+      "email": {
+        "invalid": "無効なメールアドレスです"
+      },
+      "phoneNumber": {
+        "invalid": "無効な電話番号です"
+      },
+      "message": {
+        "min": "メッセージは10文字以上である必要があります",
+        "max": "メッセージは500文字を超えることはできません"
+      }
+    }
+  },
+  "plants": {
+    "invalidDataError": "サーバーから無効なデータを受信しました",
+    "noPlantsMessage": "表示する植物がありません...",
+    "loadError": "植物の読み込みエラー: {message}",
+    "genericError": "植物の読み込み中にエラーが発生しました..."
+  },
+  "footer": {
+    "home": "ホーム",
+    "typesOfPlants": "植物の種類",
+    "contactLink": "お問い合わせ",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "aboutUs": "会社概要",
+    "faq": "よくある質問",
+    "blog": "ブログ",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn",
+    "description": "プラントで、あなたの空間に最適な植物を見つけましょう。室内外の植物の厳選されたセレクション、専門的なケアガイド、植物愛好家のための持続可能なガーデニングソリューションを提供しています。",
+    "quickLinks": {
+      "title": "クイックリンク"
+    },
+    "newsletter": {
+      "title": "最新情報を受け取る",
+      "description": "ケアのヒント、特別オファー、新着植物の更新情報を受け取るには登録してください。",
+      "emailPlaceholder": "メールアドレスを入力",
+      "emailAriaLabel": "ニュースレター用メールアドレス",
+      "subscribeButton": "登録する"
+    },
+    "social": {
+      "followUs": "{platform}でフォローする"
+    },
+    "copyright": "© {year} プラント。全権利所有。自然を室内へ。"
+  },
+  "menuItems": {
+    "portfolio": "ポートフォリオ",
+    "menu": "メニュー",
+    "home": "ホーム",
+    "typesOfPlants": "植物の種類",
+    "more": "その他",
+    "contactLink": "お問い合わせ",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "aboutUs": "会社概要",
+    "faq": "よくある質問",
+    "blog": "ブログ"
+  },
+  "bestProducts": {
+    "title": "最高の酸素"
+  },
+  "topSelling": {
+    "title": "人気の観葉植物"
+  },
+  "cart": {
+    "closeShoppingCart": "買い物かごを閉じる",
+    "shoppingCart": "買い物かご",
+    "clearCart": "かごを空にする",
+    "cancel": "キャンセル",
+    "clear": "クリア",
+    "clearCartConfirmation": "買い物かごを空にしてもよろしいですか？",
+    "noItemsInCart": "かごに商品がありません",
+    "checkout": "購入手続きへ"
+  },
+  "checkout": {
+    "title": "購入手続き",
+    "subtitle": "以下の手順に従って購入手続きを完了してください",
+    "formTitle": "配送情報",
+    "formSubtitle": "購入を完了するために詳細を入力してください",
+    "checkout": "購入手続き",
+    "process": "",
+    "complete": "以下の手順に従って購入を完了してください",
+    "shipping": {
+      "street": {
+        "label": "住所",
+        "required": "住所は必須です"
+      },
+      "number": {
+        "label": "番地",
+        "required": "番地は必須です"
+      },
+      "complement": {
+        "label": "建物名・部屋番号",
+        "required": "建物名・部屋番号は必須です"
+      },
+      "neighborhood": {
+        "label": "地区",
+        "required": "地区は必須です"
+      },
+      "city": {
+        "label": "市区町村",
+        "required": "市区町村は必須です"
+      },
+      "state": {
+        "label": "都道府県",
+        "required": "都道府県は必須です"
+      },
+      "zipCode": {
+        "label": "郵便番号",
+        "required": "郵便番号は必須です"
+      },
+      "country": {
+        "label": "国",
+        "required": "国は必須です"
+      },
+      "methods": {
+        "standard": "標準配送",
+        "express": "速達配送",
+        "overnight": "翌日配送",
+        "days": "営業日",
+        "day": "営業日"
+      }
+    },
+    "customer": {
+      "taxId": {
+        "label": "NIP",
+        "required": "NIPは必須です",
+        "min": "NIPは少なくとも1文字でなければなりません",
+        "max": "NIPは18文字を超えることはできません"
+      },
+      "taxIdType": {
+        "label": "NIPタイプ",
+        "required": "NIPタイプは必須です"
+      },
+      "taxIdNumber": {
+        "label": "NIP番号",
+        "required": "NIP番号は必須です"
+      },
+      "password": {
+        "label": "パスワード",
+        "required": "パスワードは必須です"
+      },
+      "confirmPassword": {
+        "label": "確認パスワード",
+        "required": "確認パスワードは必須です"
+      },
+      "acceptedTerms": {
+        "label": "利用規約に同意する",
+        "required": "利用規約に同意する必要があります"
+      },
+      "createAccount": {
+        "label": "アカウントを作成する",
+        "required": "アカウントを作成する必要があります"
+      },
+      "fullName": {
+        "label": "フルネーム",
+        "required": "フルネームは必須です",
+        "min": "フルネームは少なくとも2文字でなければなりません",
+        "max": "フルネームは50文字を超えることはできません"
+      },
+      "email": {
+        "label": "メールアドレス",
+        "required": "メールアドレスは必須です",
+        "invalid": "無効なメールアドレスです"
+      },
+      "phoneNumber": {
+        "label": "電話番号",
+        "required": "電話番号は必須です",
+        "min": "電話番号は少なくとも2文字でなければなりません",
+        "max": "電話番号は50文字を超えることはできません"
+      },
+      "dateOfBirth": {
+        "label": "生年月日",
+        "required": "生年月日は必須です"
+      },
+      "gender": {
+        "label": "性別",
+        "required": "性別は必須です"
+      },
+      "preferredLanguage": {
+        "label": "優先言語",
+        "required": "優先言語は必須です"
+      },
+      "back": {
+        "label": "戻る"
+      },
+      "continueToPayment": {
+        "label": "支払いへ"
+      },
+      "subscribeToNewsletter": {
+        "label": "ニュースレターに登録する"
+      },
+      "receiveMarketingEmails": {
+        "label": "マーケティングメールを受信する"
+      },
+      "stateRegistration": {
+        "label": "州登録番号",
+        "required": "州登録番号は必須です"
+      },
+      "createAccountDescription": "アカウントを作成して、あなたの情報を保存し、購入をより速く完了できるようにします",
+      "createAccountButton": "支払いへ",
+      "createAccountButtonLabel": "支払いへ",
+      "createAccountButtonTitle": "支払いへ"
+    }
+  },
+  "comingSoon": {
+    "title": "まもなく成長します",
+    "subtitle": "植物愛好家のために特別なものを育てています",
+    "description": "あなたの緑のオアシスがまもなく開花します"
+  }
+}
+

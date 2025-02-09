@@ -1,0 +1,496 @@
+{
+  "currency": "EGP",
+  "BuyMeCoffee": {
+    "message": "شراء نباتاتي"
+  },
+  "hero": {
+    "title": "بريث ناتشورال - واحتك الخضراء الداخلية",
+    "description": "حوّل منزلك إلى ملاذ طبيعي مع مجموعتنا المميزة من النباتات الداخلية. يتم اختيار كل نبات بعناية لتنقية الهواء وتقليل التوتر وخلق بيئة أكثر صحة وتناغماً. اكتشف قوة الطبيعة في تحويل مساحتك ورفاهيتك مع نباتاتنا المستدامة وسهلة الصيانة.",
+    "trendyPlantsTitle": "نباتات رائجة 2024: الأكثر طلباً حالياً"
+  },
+  "explore": {
+    "text": "استكشف",
+    "title": "استكشف النباتات {name}"
+  },
+  "liveDemo": {
+    "buttonLabel": "مشاهدة العرض",
+    "buttonTitle": "مشاهدة العرض",
+    "text": "عرض",
+    "modalTitle": "عرض"
+  },
+  "testimonials": {
+    "title": "آراء العملاء",
+    "testimonial1": {
+      "id": 1,
+      "name": "جون سميث",
+      "rating": 5,
+      "testimonial": "الاهتمام بالتفاصيل وجودة العمل تجاوزت توقعاتي. أوصي به بشدة! تفاني الفريق في تقديم منتج من الدرجة الأولى كان واضحاً طوال المشروع. قدرتهم على فهم رؤيتنا وتحقيقها كانت مثيرة للإعجاب. لن أتردد في التوصية بهم لمن يبحث عن خدمة استثنائية."
+    },
+    "testimonial2": {
+      "id": 2,
+      "name": "Sarah Chen",
+      "rating": 3,
+      "testimonial": "خدمة رائعة وتواصل ممتاز طوال المشروع. سأعمل معهم مرة أخرى بالتأكيد. كانت استجابة الفريق واستعدادهم للتكيف مع احتياجاتنا المتغيرة حاسمة لنجاح المشروع. على الرغم من وجود بعض المشكلات الصغيرة، كانت التجربة العامة إيجابية، وسأفكر في التعاون معهم مرة أخرى في المستقبل."
+    },
+    "testimonial3": {
+      "id": 3,
+      "name": "Michael Rodriguez",
+      "rating": 4,
+      "testimonial": "محترف للغاية وقدم بالضبط ما تم الوعد به. تأخيرات طفيفة، لكن رائع بشكل عام. كانت مهنية الفريق والتزامهم بتقديم عمل عالي الجودة واضحة طوال المشروع. على الرغم من وجود بعض التأخيرات الطفيفة، فإن المنتج النهائي تجاوز توقعاتنا، ونحن راضون عن النتيجة."
+    },
+    "testimonial4": {
+      "id": 4,
+      "name": "Emma Thompson",
+      "rating": 5,
+      "testimonial": "نتائج استثنائية! لقد حولوا رؤيتنا إلى واقع بشكل مثالي. كانت قدرة الفريق على فهم رؤيتنا وتحقيقها استثنائية. تجاوز المنتج النهائي توقعاتنا من جميع النواحي، ولا يمكن أن نكون أكثر سعادة بالنتيجة. تفانيهم في تقديم نتائج استثنائية يستحق الثناء حقاً."
+    },
+    "testimonial5": {
+      "id": 5,
+      "name": "David Kim",
+      "rating": 4,
+      "testimonial": "قيمة رائعة مقابل المال. كان الفريق متجاوباً وتكيف مع احتياجاتنا. كانت قيمة المشروع استثنائية بالنظر إلى جودة العمل المقدم. ضمنت استجابة الفريق واستعدادهم للتكيف مع احتياجاتنا تنفيذاً سلساً للمشروع. نحن راضون عن المنتج النهائي ونوصي به لأي شخص يبحث عن حل اقتصادي."
+    },
+    "testimonial6": {
+      "id": 6,
+      "name": "Lisa Anderson",
+      "rating": 5,
+      "testimonial": "تجاوز التوقعات من جميع النواحي. تظهر خبرتهم حقاً في المنتج النهائي. كانت خبرة الفريق واهتمامهم بالتفاصيل واضحة طوال المشروع. لقد تجاوزوا توقعاتنا في كل جانب، من التواصل إلى تسليم المنتج النهائي. لقد أعجبنا للغاية بعملهم ونوصي بهم بشدة لأي شخص يبحث عن خدمة استثنائية."
+    },
+    "testimonial7": {
+      "id": 7,
+      "name": "James Wilson",
+      "rating": 5,
+      "testimonial": "تجربة رائعة من البداية إلى النهاية. أوصي بشدة لأي شخص! جعلت مهنية الفريق وخبرتهم وتفانيهم في تقديم نتائج استثنائية مشروعنا ناجحاً. من الاستشارة الأولية إلى تسليم المنتج النهائي، كانت التجربة سلسة وتجاوزت توقعاتنا في جميع النواحي."
+    },
+    "testimonial8": {
+      "id": 8,
+      "name": "Maria Garcia",
+      "rating": 4,
+      "testimonial": "راضٍ جداً عن النتائج. خدمة مهنية وفعالة. كانت مهنية وكفاءة الفريق واضحة طوال المشروع. نحن راضون عن المنتج النهائي الذي لبى توقعاتنا. كانت قدرتهم على تقديم منتج عالي الجودة بكفاءة مثيرة للإعجاب، وسنفكر في العمل معهم مرة أخرى في المستقبل."
+    }
+  },
+  "mockupPlants": {
+    "title": "مجموعة حصرية من النباتات الفاخرة",
+    "plant1": {
+      "id": 1,
+      "common_name": "الدفنباخيا",
+      "slug": "dieffenbachia-amoena",
+      "scientific_name": "Dieffenbachia amoena",
+      "year": 1977,
+      "bibliography": "الدفنباخيا، المعروفة بمحبة لا أحد، هي نبتة استوائية فاخرة تحول المساحات بأوراقها الوارفة وأنماطها الفريدة. مثالية لتنقية الهواء في الأماكن المغلقة، هذه النبتة منخفضة الصيانة مثالية للديكور العصري والبسيط. أوراقها الكبيرة المنقطة تخلق مظهراً استوائياً أنيقاً، وهي ممتازة للمكاتب والغرف جيدة الإضاءة. ملاحظة مهمة: احفظها بعيداً عن متناول الأطفال والحيوانات الأليفة.",
+      "author": "Heinrich Wilhelm Schott",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Araceae",
+      "genus_id": 3275,
+      "image_url": "dieffenbachiaPlantPot.src",
+      "synonyms": [
+        "Dieffenbachia maculata",
+        "Caladium maculatum",
+        "Comigo-ninguém-pode"
+      ],
+      "genus": "Dieffenbachia",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/dieffenbachia-amoena",
+        "plant": "/api/v1/plants/dieffenbachia-amoena",
+        "genus": "/api/v1/genus/dieffenbachia"
+      }
+    },
+    "plant2": {
+      "id": 2,
+      "common_name": "هوستا",
+      "slug": "hosta-ventricosa",
+      "scientific_name": "Hosta ventricosa",
+      "year": 1859,
+      "bibliography": "الهوستا مثل الصديق الموثوق الذي يكون دائماً بجانبك! بأوراقها المذهلة بدرجات الأخضر والأزرق، إنها الخيار المثالي لإضفاء لمسة من الأناقة على حديقتك. قوية ومتعددة الاستخدامات، تزدهر في المناطق المظللة، وتخلق عرضاً بصرياً فريداً بأوراقها المنسوجة. من المذهل كيف يمكنها تحويل حتى أكثر الزوايا المنسية إلى نقاط جذب جمالية حقيقية!",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "hostaPlantWhiteVase.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant3": {
+      "id": 3,
+      "common_name": "Suculenta",
+      "slug": "succulent-mint-pot",
+      "scientific_name": "Suculenta mint pot",
+      "year": 1859,
+      "bibliography": "نباتاتنا العصارية هي جواهر صغيرة من عالم النباتات! مثالية للمبتدئين في تنسيق الحدائق أو لأولئك الذين يبحثون عن نباتات منخفضة الصيانة. بأشكالها الهندسية الساحرة وألوانها الناعمة، إنها منحوتات حية حقيقية تضفي لمسة حديثة وأنيقة على أي بيئة. والأفضل من ذلك؟ إنها قوية للغاية وقابلة للتكيف!",
+      "author": "Stapf",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asparagaceae",
+      "genus_id": 3276,
+      "image_url": "succulentMintPot.src",
+      "synonyms": [
+        "Hosta caerulea",
+        "Hosta sieboldiana",
+        "Hosta undulata"
+      ],
+      "genus": "Hosta",
+      "family": "Asparagaceae",
+      "links": {
+        "self": "/api/v1/species/hosta-ventricosa",
+        "plant": "/api/v1/plants/hosta-ventricosa",
+        "genus": "/api/v1/genus/hosta"
+      }
+    },
+    "plant4": {
+      "id": 4,
+      "common_name": "Aloe Vera",
+      "slug": "aloe-vera-modern",
+      "scientific_name": "Aloe barbadensis miller",
+      "year": 1768,
+      "bibliography": "الألوة فيرا الأسطورية هي أكثر من مجرد نبات طبي - إنها رفيقة حياة حقيقية! أوراقها العصارية لا تجلب فقط مظهراً معاصراً لمساحتك، ولكنها تحتوي أيضاً على جل ثمين مليء بالخصائص العلاجية. سهلة العناية وجميلة المظهر، إنها نوع من النباتات التي تجمع بين الجمال والفائدة. كنز أخضر حقيقي يجب أن يكون في المنزل!",
+      "author": "Philip Miller",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Asphodelaceae",
+      "genus_id": 3277,
+      "image_url": "aloeModernDecor.src",
+      "synonyms": [
+        "Aloe vera var. chinensis",
+        "Aloe vera var. littoralis",
+        "Aloe perfoliata var. vera"
+      ],
+      "genus": "Aloe",
+      "family": "Asphodelaceae",
+      "links": {
+        "self": "/api/v1/species/aloe-vera",
+        "plant": "/api/v1/plants/aloe-vera",
+        "genus": "/api/v1/genus/aloe"
+      }
+    },
+    "plant5": {
+      "id": 5,
+      "common_name": "Ave do Paraíso",
+      "slug": "strelitzia-reginae",
+      "scientific_name": "Strelitzia reginae",
+      "year": 1789,
+      "bibliography": "طائر الجنة المهيب هو مجرد روعة استوائية خالصة! بأزهارها المذهلة التي تشبه الطيور في حالة طيران، إنها تضمن عرضاً من الألوان والأشكال في حديقتك. كل زهرة هي تحفة فنية من الطبيعة، تجمع بين درجات البرتقالي والأزرق النابضة بالحياة في هيكل فريد. خيار جريء لمن يريد أن يصنع بياناً حقيقياً عن الأسلوب!",
+      "author": "William Aiton",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Strelitziaceae",
+      "genus_id": 3278,
+      "image_url": "birdParadiseWhitePot.src",
+      "synonyms": [
+        "Strelitzia parvifolia",
+        "Strelitzia glauca",
+        "Heliconia reginae"
+      ],
+      "genus": "Strelitzia",
+      "family": "Strelitziaceae",
+      "links": {
+        "self": "/api/v1/species/strelitzia-reginae",
+        "plant": "/api/v1/plants/strelitzia-reginae",
+        "genus": "/api/v1/genus/strelitzia"
+      }
+    },
+    "plant6": {
+      "id": 6,
+      "common_name": "الصبار البرميلي الذهبي",
+      "slug": "echinocactus-grusonii",
+      "scientific_name": "Echinocactus grusonii",
+      "year": 1886,
+      "bibliography": "الصبار البرميلي الذهبي هو مثل منحوتة حية تروي قصص الصحراء! شكله القوي وأشواكه الذهبية تخلق مظهراً مذهلاً يجذب انتباه الجميع. مثالي للبيئات الحديثة والبسيطة، إنه نوع من النباتات التي تتطلب القليل من الماء ولكنها تقدم الكثير من السحر. قطعة حوارية حقيقية لمجموعتك!",
+      "author": "Heinrich Hildmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Cactaceae",
+      "genus_id": 3279,
+      "image_url": "cactusTerracottaPot.src",
+      "synonyms": [
+        "Kroenleinia grusonii",
+        "Almofada da sogra",
+        "Bola dourada"
+      ],
+      "genus": "Echinocactus",
+      "family": "Cactaceae",
+      "links": {
+        "self": "/api/v1/species/echinocactus-grusonii",
+        "plant": "/api/v1/plants/echinocactus-grusonii",
+        "genus": "/api/v1/genus/echinocactus"
+      }
+    },
+    "plant7": {
+      "id": 7,
+      "common_name": "مونستيرا",
+      "slug": "monstera-deliciosa",
+      "scientific_name": "Monstera deliciosa",
+      "year": 1849,
+      "bibliography": "المونستيرا هي المفضلة لدى عشاق النباتات! أوراقها العملاقة المقطعة هي أعمال فنية طبيعية حقيقية تضفي لمسة من الدراما الاستوائية على أي مكان. متعددة الاستخدامات وساحرة، تنمو بشخصية فريدة، مما يخلق مظهراً فريداً مع تطور أوراقها. إنها النبتة التي يعرفها الجميع ويرغب في امتلاكها!",
+      "author": "Karl Heinrich Leopold Liebmann",
+      "status": "aceito",
+      "rank": "espécie",
+      "family_common_name": "Araceae",
+      "genus_id": 3280,
+      "image_url": "monsteraDarkPedestal.src",
+      "synonyms": [
+        "Philodendron pertusum",
+        "Tornelia fragrans",
+        "Fruta-pão mexicana"
+      ],
+      "genus": "Monstera",
+      "family": "Araceae",
+      "links": {
+        "self": "/api/v1/species/monstera-deliciosa",
+        "plant": "/api/v1/plants/monstera-deliciosa",
+        "genus": "/api/v1/genus/monstera"
+      }
+    }
+  },
+  "loading": {
+    "ariaLabel": "جاري التحميل",
+    "status": "جاري التحميل"
+  },
+  "contact": {
+    "title": "ازرع",
+    "titleHighlight": "حديقة أحلامك",
+    "subtitle": "حوّل مساحتك بخبرتنا في النباتات والتصميم الداخلي المستدام",
+    "formTitle": "استشارة نباتات شخصية",
+    "formSubtitle": "احصل على توجيه متخصص لإنشاء واحتك الخضراء. فريق خبرائنا مستعد للمساعدة في اختيار النباتات المثالية لمساحتك.",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phoneNumber": "رقم الهاتف",
+    "message": "الرسالة",
+    "sending": "جاري الإرسال...",
+    "send": "إرسال إلى الحديقة",
+    "validation": {
+      "firstName": {
+        "min": "يجب أن يحتوي الاسم على حرفين على الأقل",
+        "max": "لا يمكن أن يتجاوز الاسم 50 حرفاً"
+      },
+      "lastName": {
+        "min": "يجب أن يحتوي اسم العائلة على حرفين على الأقل",
+        "max": "لا يمكن أن يتجاوز اسم العائلة 50 حرفاً"
+      },
+      "email": {
+        "invalid": "عنوان البريد الإلكتروني غير صالح"
+      },
+      "phoneNumber": {
+        "invalid": "رقم الهاتف غير صالح"
+      },
+      "message": {
+        "min": "يجب أن تحتوي الرسالة على 10 أحرف على الأقل",
+        "max": "لا يمكن أن تتجاوز الرسالة 500 حرف"
+      }
+    }
+  },
+  "plants": {
+    "invalidDataError": "تم استلام بيانات غير صالحة من الخادم",
+    "noPlantsMessage": "لا توجد نباتات للعرض...",
+    "loadError": "خطأ في تحميل النباتات: {message}",
+    "genericError": "خطأ في تحميل النباتات..."
+  },
+  "footer": {
+    "home": "الرئيسية",
+    "typesOfPlants": "أنواع النباتات",
+    "contactLink": "اتصل بنا",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "aboutUs": "من نحن",
+    "faq": "الأسئلة الشائعة",
+    "blog": "المدونة",
+    "facebook": "فيسبوك",
+    "instagram": "انستغرام",
+    "twitter": "تويتر",
+    "linkedin": "لينكد إن",
+    "description": "اكتشف النباتات المثالية لمساحتك في بلانتو. نقدم مجموعة مختارة بعناية من النباتات الداخلية والخارجية، وأدلة متخصصة للعناية، وحلول بستنة مستدامة لمحبي النباتات.",
+    "quickLinks": {
+      "title": "روابط سريعة"
+    },
+    "newsletter": {
+      "title": "ابق على تواصل",
+      "description": "اشترك للحصول على نصائح العناية والعروض الخاصة وتحديثات حول وصول نباتات جديدة",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "emailAriaLabel": "البريد الإلكتروني للنشرة الإخبارية",
+      "subscribeButton": "اشترك"
+    },
+    "social": {
+      "followUs": "تابعنا على {platform}"
+    },
+    "copyright": "© {year} بلانتو. جميع الحقوق محفوظة. نجلب الطبيعة إلى منزلك."
+  },
+  "menuItems": {
+    "portfolio": "معرض الأعمال",
+    "menu": "القائمة",
+    "home": "الرئيسية",
+    "typesOfPlants": "أنواع النباتات",
+    "more": "المزيد",
+    "contactLink": "اتصل بنا",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "aboutUs": "من نحن",
+    "faq": "الأسئلة الشائعة",
+    "blog": "المدونة"
+  },
+  "bestProducts": {
+    "title": "أفضل منتجاتنا للأكسجين"
+  },
+  "topSelling": {
+    "title": "نجومنا الخضراء"
+  },
+  "cart": {
+    "closeShoppingCart": "إغلاق عربة التسوق",
+    "shoppingCart": "عربة التسوق",
+    "clearCart": "تفريغ العربة",
+    "cancel": "إلغاء",
+    "clear": "تفريغ",
+    "clearCartConfirmation": "هل أنت متأكد من أنك تريد تفريغ العربة؟",
+    "noItemsInCart": "لا توجد منتجات في العربة",
+    "checkout": "إتمام الشراء"
+  },
+  "checkout": {
+    "title": "إتمام الشراء",
+    "subtitle": "أكمل عملية الشراء باتباع الخطوات أدناه",
+    "formTitle": "معلومات الشحن",
+    "formSubtitle": "يرجى ملء بياناتك لإكمال عملية الشراء",
+    "checkout": "إتمام الشراء",
+    "process": "",
+    "complete": "أكمل عملية الشراء باتباع الخطوات أدناه",
+    "shipping": {
+      "street": {
+        "label": "الشارع",
+        "required": "الشارع مطلوب"
+      },
+      "number": {
+        "label": "الرقم",
+        "required": "الرقم مطلوب"
+      },
+      "complement": {
+        "label": "تفاصيل إضافية",
+        "required": "التفاصيل الإضافية مطلوبة"
+      },
+      "neighborhood": {
+        "label": "الحي",
+        "required": "الحي مطلوب"
+      },
+      "city": {
+        "label": "المدينة",
+        "required": "المدينة مطلوبة"
+      },
+      "state": {
+        "label": "المحافظة",
+        "required": "المحافظة مطلوبة"
+      },
+      "zipCode": {
+        "label": "الرمز البريدي",
+        "required": "الرمز البريدي مطلوب"
+      },
+      "country": {
+        "label": "البلد",
+        "required": "البلد مطلوب"
+      },
+      "methods": {
+        "standard": "الشحن القياسي",
+        "express": "الشحن السريع",
+        "overnight": "الشحن الليلي",
+        "days": "أيام عمل",
+        "day": "يوم عمل"
+      }
+    },
+    "customer": {
+      "taxId": {
+        "label": "الرقم الضريبي",
+        "required": "الرقم الضريبي مطلوب",
+        "min": "الرقم الضريبي يجب أن يكون أكثر من 1 حرف",
+        "max": "الرقم الضريبي لا يمكن أن يتجاوز 18 حرف"
+      },
+      "taxIdType": {
+        "label": "نوع الرقم الضريبي",
+        "required": "نوع الرقم الضريبي مطلوب"
+      },
+      "taxIdNumber": {
+        "label": "رقم الرقم الضريبي",
+        "required": "رقم الرقم الضريبي مطلوب"
+      },
+      "password": {
+        "label": "كلمة المرور",
+        "required": "كلمة المرور مطلوبة"
+      },
+      "confirmPassword": {
+        "label": "تأكيد كلمة المرور",
+        "required": "تأكيد كلمة المرور مطلوب"
+      },
+      "acceptedTerms": {
+        "label": "أنا أقبل الشروط والأحكام",
+        "required": "يجب أن تقبل الشروط والأحكام"
+      },
+      "createAccount": {
+        "label": "إنشاء حساب",
+        "required": "يجب أن تقوم بإنشاء حساب"
+      },
+      "fullName": {
+        "label": "الاسم الكامل",
+        "required": "الاسم الكامل مطلوب",
+        "min": "الاسم الكامل يجب أن يكون أكثر من 2 حرف",
+        "max": "الاسم الكامل لا يمكن أن يتجاوز 50 حرف"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "required": "البريد الإلكتروني مطلوب",
+        "invalid": "عنوان البريد الإلكتروني غير صالح"
+      },
+      "phoneNumber": {
+        "label": "رقم الهاتف",
+        "required": "رقم الهاتف مطلوب",
+        "min": "رقم الهاتف يجب أن يكون أكثر من 2 حرف",
+        "max": "رقم الهاتف لا يمكن أن يتجاوز 50 حرف"
+      },
+      "dateOfBirth": {
+        "label": "تاريخ الميلاد",
+        "required": "تاريخ الميلاد مطلوب"
+      },
+      "gender": {
+        "label": "الجنس",
+        "required": "الجنس مطلوب"
+      },
+      "preferredLanguage": {
+        "label": "اللغة المفضلة",
+        "required": "اللغة المفضلة مطلوبة"
+      },
+      "back": {
+        "label": "رجوع"
+      },
+      "continueToPayment": {
+        "label": "متابعة إلى الدفع"
+      },
+      "subscribeToNewsletter": {
+        "label": "اشترك في النشرة الإخبارية"
+      },
+      "receiveMarketingEmails": {
+        "label": "الحصول على الرسائل التسويقية"
+      },
+      "stateRegistration": {
+        "label": "الرقم المنصوب",
+        "required": "الرقم المنصوب مطلوب"
+      },
+      "createAccountDescription": "إنشاء حساب لحفظ معلوماتك وتسريع عملية الشراء",
+      "createAccountButton": "متابعة إلى الدفع",
+      "createAccountButtonLabel": "متابعة إلى الدفع",
+      "createAccountButtonTitle": "متابعة إلى الدفع"
+    }
+  },
+  "comingSoon": {
+    "title": "قريباً",
+    "subtitle": "نحن نزرع شيئاً مميزاً لمحبي النباتات",
+    "description": "واحتك الخضراء على وشك الازدهار"
+  }
+}
+

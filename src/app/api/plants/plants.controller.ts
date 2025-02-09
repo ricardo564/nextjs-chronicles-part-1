@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { PlantsService } from '@/modules/plants/plants.service';
+import { PlantsService } from '@/app/api/plants/plants.service';
 import { PlantApiResponse } from '@/types/plant.types';
 
 @Controller('api/plants')
