@@ -78,6 +78,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
   const isBrazil = country === "BR";
   const [taxIdType, setTaxIdType] = useState("CPF");
   const onSubmit = async (data: CustomerInformation) => {
+    console.log("data", data);
     try {
       setCustomerInfo(data);
       setCurrentStep("payment");
@@ -88,7 +89,10 @@ const CustomerStep: FC<CustomerStepProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="space-y-6"
+    >
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Personal Information</h2>
 
