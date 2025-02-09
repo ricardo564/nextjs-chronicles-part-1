@@ -471,10 +471,10 @@
       "continueToPayment": {
         "label": "Zur Kasse"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "Newsletter abonnieren"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "Marketing-E-Mails empfangen"
       },
       "stateRegistration": {
