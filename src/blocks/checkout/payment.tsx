@@ -139,12 +139,26 @@ const PaymentStep = () => {
           />
         </Link>
 
-        <Button
-          type="submit"
-          loading={isSubmitting}
-          label={t('next.label')}
-          className="w-auto ml-auto"
-        />
+        {selectedMethod === "creditCard" &&
+          <Button
+            type="button"
+            loading={isSubmitting}
+            label={t('next.label')}
+            className="w-auto ml-auto"
+          />
+        }
+
+        {selectedMethod !== "creditCard" &&
+          <Link href="/checkout?step=confirmation">
+            <Button
+              type="button"
+              loading={isSubmitting}
+              label={t('next.label')}
+              className="w-auto ml-auto"
+            />
+          </Link>
+        }
+
       </div>
     </form>
   );
