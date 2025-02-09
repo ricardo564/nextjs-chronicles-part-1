@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { PlantCard } from "@/components/PlantCard";
 import { NoDataToShow } from "@/components/NoDataToShow";
 import DefaultLayout from "@/layouts/DefaultLayout";
@@ -7,8 +8,9 @@ import Loading from "@/components/Loading";
 import { Suspense } from "react";
 import { getTranslations } from 'next-intl/server';
 import { unstable_cache } from 'next/cache';
+import { locales } from "@/config/i18n-config";
 
-export default async function PlantsPage() {
+const PlantsPage: FC = async () => {
   const t = await getTranslations('plants');
   const plantsService = new PlantsService();
 
@@ -74,3 +76,11 @@ export default async function PlantsPage() {
     );
   }
 }
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({
+    params: { locale },
+  }));
+}
+
+export default PlantsPage;

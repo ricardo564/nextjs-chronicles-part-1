@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import ComingSoon from "@/components/ComingSoon";
+import { locales } from "@/config/i18n-config";
 
 const OrdersPage: FC = () => {
   return (
@@ -11,5 +12,11 @@ const OrdersPage: FC = () => {
     </DefaultLayout>
   );
 };
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({
+    params: { locale },
+  }));
+}
 
 export default OrdersPage;
