@@ -54,7 +54,7 @@ export default function CheckoutPage() {
     'taxId.min': t('customer.taxId.min'),
     'taxId.max': t('customer.taxId.max'),
     'password.required': t('customer.password.required'),
-    'acceptedTerms.required': t('customer.acceptedTerms.required'),
+    'terms.required': t('customer.acceptedTerms.required'),
   };
 
   return (
