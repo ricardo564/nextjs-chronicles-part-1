@@ -26,8 +26,39 @@ export const getCustomerSchema = (messages: Record<string, string>) => z.object(
 
   account: z.object({
     createAccount: z.boolean(),
-    password: z.string().optional(),
-    acceptedTerms: z.boolean().optional(),
+    password: z.string()
+      .optional()
+      .superRefine((pass, ctx) => {
+        if (!pass) return;
+
+        const checks = [
+          { condition: pass.length >= 8, message: messages['password.tooShort'] },
+          { condition: /[A-Z]/.test(pass), message: messages['password.upperCase'] },
+          { condition: /[a-z]/.test(pass), message: messages['password.lowerCase'] },
+          { condition: /[0-9]/.test(pass), message: messages['password.number'] },
+          { condition: /[!@#$%^&*]/.test(pass), message: messages['password.special'] }
+        ];
+
+        checks.forEach(check => {
+          if (!check.condition) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: check.message
+            });
+          }
+        });
+      }),
+    acceptedTerms: z.boolean()
+      .optional()
+      .superRefine((accepted, ctx) => {
+        const createAccount = (ctx.path[0] as any).parent.createAccount;
+        if (createAccount && !accepted) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: messages['terms.required']
+          });
+        }
+      }),
   }),
 
   preferences: z.object({
