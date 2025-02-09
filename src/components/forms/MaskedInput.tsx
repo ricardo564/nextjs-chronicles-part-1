@@ -6,7 +6,7 @@ import {
   UseFormRegister,
 } from "react-hook-form";
 import Label from "@/components/Label";
-import { formatCpfCnpj } from "@/utils/formatCpfCnpj";
+import { formatValueWithMask } from "@/utils/formatValueWithMask";
 
 interface Props {
   name: string;
@@ -40,14 +40,13 @@ const MaskedInput: FC<Props> = ({
   const applyMask = (value: string): string => {
     if (!mask || !value) return value;
     const numbers = value.replace(/\D/g, "");
-    return formatCpfCnpj(numbers);
+    return formatValueWithMask(numbers, mask);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newMaskedValue = applyMask(e.target.value);
     setMaskedValue(newMaskedValue);
-    
-    // Create a new event to pass the unmasked value
+
     const unmaskedValue = newMaskedValue.replace(/\D/g, "");
     const newEvent = {
       ...e,
@@ -57,13 +56,11 @@ const MaskedInput: FC<Props> = ({
         name: e.target.name,
       },
     };
-    
-    // Call the original onChange with the new event
+
     onChange(newEvent);
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    // Create a new event with the unmasked value
     const unmaskedValue = maskedValue.replace(/\D/g, "");
     const newEvent = {
       ...e,
@@ -79,7 +76,6 @@ const MaskedInput: FC<Props> = ({
     }
   };
 
-  // Get the register props
   const { ref, onChange, ...restRegisterProps } = register(name, {
     ...rules,
     setValueAs: (value: string) => value.replace(/\D/g, ""),
