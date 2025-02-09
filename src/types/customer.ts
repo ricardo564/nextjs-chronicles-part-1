@@ -3,7 +3,7 @@ export interface CustomerInformation {
     fullName: string;
     email: string;
     phoneNumber: string;
-    dateOfBirth: Date;
+    dateOfBirth: string;
     preferredLanguage: string;
   };
 
