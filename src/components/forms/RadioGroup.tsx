@@ -53,17 +53,16 @@ export const RadioGroup: FC<RadioGroupProps<FieldValues>> = ({
         />
       )}
 
-      <div className="flex gap-2 h-14">
+      <div className="grid grid-cols-2 md:flex sm:flex-nowrap flex-wrap gap-2 h-14">
         {options.map((option) => (
           <label
             key={option.value}
             className={`
               flex items-center p-4 rounded-lg cursor-pointer
               transition-all duration-200 w-full
-              ${
-                value === option.value
-                  ? "bg-gray-700 border-2 border-green-500"
-                  : "bg-gray-800 border border-gray-600 hover:border-gray-500"
+              ${value === option.value
+                ? "bg-gray-700 border-2 border-green-500"
+                : "bg-gray-800 border border-gray-600 hover:border-gray-500"
               }
               ${disabled ? "opacity-50 cursor-not-allowed" : ""}
             `}
@@ -83,10 +82,9 @@ export const RadioGroup: FC<RadioGroupProps<FieldValues>> = ({
                   w-5 h-5 rounded-full border-2
                   transition-all duration-200 ease-in-out
                   flex items-center justify-center
-                  ${
-                    value === option.value
-                      ? "border-green-500 scale-100"
-                      : "border-gray-50 scale-0"
+                  ${value === option.value
+                    ? "border-green-500 scale-100"
+                    : "border-gray-50 scale-0"
                   }
                 `}
               >
