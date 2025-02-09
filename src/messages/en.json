@@ -471,10 +471,10 @@
       "continueToPayment": {
         "label": "Continue to Payment"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "Subscribe to Newsletter"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "Receive marketing emails"
       },
       "stateRegistration": {
