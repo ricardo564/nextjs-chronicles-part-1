@@ -184,7 +184,6 @@ const ShippingStep: FC<ShippingStepProps> = ({
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
               onChange={(value: string | number) => setSelectedCountry(String(value))}
-              initialValue={watch('country')}
             />
           </div>
 
@@ -287,7 +286,6 @@ const ShippingStep: FC<ShippingStepProps> = ({
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
               onChange={(value: string | number) => setSelectedCountry(String(value))}
-              initialValue={watch('country')}
             />
           <Link
             href="/checkout?step=customer"
