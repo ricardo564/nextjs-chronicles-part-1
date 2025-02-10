@@ -398,6 +398,7 @@
         "required": "देश आवश्यक है"
       },
       "methods": {
+        "title": "शिपिंग मेथोड",
         "standard": "स्टैंडर्ड शिपिंग",
         "express": "एक्सप्रेस शिपिंग",
         "overnight": "ओवरनाइट शिपिंग",
@@ -406,6 +407,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "राज्य पंजीकरण",
+          "name": "राज्य पंजीकरण",
+          "required": "राज्य पंजीकरण आवश्यक है"
+        }
+      },
       "taxId": {
         "label": "टैक्स आईडी",
         "required": "टैक्स आईडी आवश्यक है",
@@ -471,10 +479,10 @@
       "continueToPayment": {
         "label": "जारी रखें"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "न्यूजलेटर को सदस्यता लें"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "विज्ञापन ईमेल प्राप्त करें"
       },
       "stateRegistration": {
@@ -485,6 +493,95 @@
       "createAccountButton": "भुगतान करने के लिए जारी रखें",
       "createAccountButtonLabel": "भुगतान करने के लिए जारी रखें",
       "createAccountButtonTitle": "भुगतान करने के लिए जारी रखें"
+    }
+  },
+  "payment": {
+    "paymentMethods": "भुगतान कार्ड",
+    "methods": {
+      "creditCard": "क्रेडिट कार्ड",
+      "debitCard": "डेबिट कार्ड",
+      "paypal": "पेपाल",
+      "boleto": "बोलेतो",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "label":"क्रेडिट कार्ड",
+      "number": {
+        "label": "कार्ड नंबर",
+        "required": "कार्ड नंबर आवश्यक है"
+      },
+      "name": {
+        "label": "कार्डधारक का नाम",
+        "required": "कार्डधारक का नाम आवश्यक है"
+      },
+      "expirationDate": {
+        "label": "समाप्ति तिथि",
+        "required": "समाप्ति तिथि आवश्यक है"
+      },
+      "cvv": {
+        "label": "सीवीवी",
+        "required": "सीवीवी आवश्यक है"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "कार्ड नंबर",
+        "required": "कार्ड नंबर आवश्यक है"
+      },
+      "name": {
+        "label": "कार्डधारक का नाम",
+        "required": "कार्डधारक का नाम आवश्यक है"
+      },
+      "expirationDate": {
+        "label": "समाप्ति तिथि",
+        "required": "समाप्ति तिथि आवश्यक है"
+      },
+      "cvv": {
+        "label": "सीवीवी",
+        "required": "सीवीवी आवश्यक है"
+      },
+      "installments": {
+        "label": "किस्तें",
+        "required": "किस्तें आवश्यक हैं"
+      }
+    },
+    "boleto": {
+      "description": "आदेश की पुष्टि होने के बाद बोलेतो उत्पन्न किया जाएगा",
+      "number": {
+        "label": "बोलेतो नंबर",
+        "required": "बोलेतो नंबर आवश्यक है"
+      }
+    },
+    "paypal": {
+      "description": "आदेश की पुष्टि होने के बाद आपको पेपाल पर पुनर्निर्देशित किया जाएगा",
+      "number": {
+        "label": "पेपाल खाता",
+        "required": "पेपाल खाता आवश्यक है"
+      }
+    },
+    "pix": {
+      "description": "आदेश की पुष्टि होने के बाद पिक्स उत्पन्न किया जाएगा",
+      "number": {
+        "label": "पिक्स कुंजी",
+        "required": "पिक्स कुंजी आवश्यक है"
+      }
+    },
+    "bitcoin": {
+      "description": "आदेश की पुष्टि होने के बाद क्यूआर कोड और बिटकॉइन कोड उत्पन्न किया जाएगा",
+      "number": {
+        "label": "बिटकॉइन कुंजी",
+        "required": "बिटकॉइन कुंजी आवश्यक है"
+      }
+    },
+    "back": {
+      "label": "वापस"
+    },
+    "next": {
+      "label": "अगला"
+    },
+    "information": {
+      "required": "यह फ़ील्ड आवश्यक है"
     }
   },
   "comingSoon": {

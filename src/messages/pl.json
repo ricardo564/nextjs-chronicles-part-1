@@ -398,6 +398,7 @@
         "required": "Kraj jest wymagany"
       },
       "methods": {
+        "title": "Metody Dostawy",
         "standard": "Dostawa Standardowa",
         "express": "Dostawa Ekspresowa",
         "overnight": "Dostawa Nocna",
@@ -406,6 +407,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "Rejestracja państwowa",
+          "name": "Rejestracja państwowa",
+          "required": "Rejestracja państwowa jest wymagana"
+        }
+      },
       "taxId": {
         "label": "NIP",
         "required": "NIP jest wymagany",
@@ -471,10 +479,10 @@
       "continueToPayment": {
         "label": "Kontynuuj"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "Zapisz się do newslettera"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "Otrzymuj marketingowe e-maile"
       },
       "stateRegistration": {
@@ -485,6 +493,95 @@
       "createAccountButton": "Do kasy",
       "createAccountButtonLabel": "Do kasy",
       "createAccountButtonTitle": "Do kasy"
+    }
+  },
+  "payment": {
+    "paymentMethods": "Metody płatnosci",
+    "methods": {
+      "creditCard": "Karta kredytowa",
+      "debitCard": "Karta debetowa",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "label":"Karta kredytowa",
+      "number": {
+        "label": "Numer karty",
+        "required": "Numer karty jest wymagany"
+      },
+      "name": {
+        "label": "Imię i nazwisko posiadacza",
+        "required": "Imię i nazwisko posiadacza jest wymagane"
+      },
+      "expirationDate": {
+        "label": "Data ważności",
+        "required": "Data ważności jest wymagana"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV jest wymagany"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "Numer karty",
+        "required": "Numer karty jest wymagany"
+      },
+      "name": {
+        "label": "Imię i nazwisko posiadacza",
+        "required": "Imię i nazwisko posiadacza jest wymagane"
+      },
+      "expirationDate": {
+        "label": "Data ważności",
+        "required": "Data ważności jest wymagana"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV jest wymagany"
+      },
+      "installments": {
+        "label": "Raty",
+        "required": "Raty są wymagane"
+      }
+    },
+    "boleto": {
+      "description": "Boleto zostanie wygenerowany po potwierdzeniu zamówienia",
+      "number": {
+        "label": "Numer Boleto",
+        "required": "Numer Boleto jest wymagany"
+      }
+    },
+    "paypal": {
+      "description": "Po potwierdzeniu zamówienia zostaniesz przekierowany do PayPal",
+      "number": {
+        "label": "Konto PayPal",
+        "required": "Konto PayPal jest wymagane"
+      }
+    },
+    "pix": {
+      "description": "Pix zostanie wygenerowany po potwierdzeniu zamówienia",
+      "number": {
+        "label": "Klucz PIX",
+        "required": "Klucz PIX jest wymagany"
+      }
+    },
+    "bitcoin": {
+      "description": "Kod QR i kod Bitcoin zostaną wygenerowane po potwierdzeniu zamówienia",
+      "number": {
+        "label": "Klucz Bitcoin",
+        "required": "Klucz Bitcoin jest wymagany"
+      }
+    },
+    "back": {
+      "label": "Wstecz"
+    },
+    "next": {
+      "label": "Dalej"
+    },
+    "information": {
+      "required": "To pole jest wymagane"
     }
   },
   "comingSoon": {

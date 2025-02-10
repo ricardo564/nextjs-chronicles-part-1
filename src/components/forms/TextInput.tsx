@@ -44,6 +44,7 @@ export const TextInput: FC<TextInputProps<FieldValues>> = ({
           htmlFor={name.toString()}
         />
       )}
+
       <input
         {...register(name, rules)}
         type={type}
@@ -53,11 +54,13 @@ export const TextInput: FC<TextInputProps<FieldValues>> = ({
         className="z-[2] w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition disabled:bg-gray-600 disabled:border-gray-400 disabled:text-gray-300 disabled:placeholder-gray-200 disabled:cursor-not-allowed"
         onBlur={onBlur}
       />
+
       {children && (
         <div className="absolute inset-y-0 right-0 flex items-center pr-3 z-[3] justify-center h-12 mt-6">
           {children}
         </div>
       )}
+
       {error && <p className="mt-1 text-sm text-red-400">{error}</p>}
     </div>
   );

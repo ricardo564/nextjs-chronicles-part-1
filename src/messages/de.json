@@ -398,6 +398,7 @@
         "required": "Land ist erforderlich"
       },
       "methods": {
+        "title": "Versandmethode",
         "standard": "Standardversand",
         "express": "Expressversand",
         "overnight": "Übernachtversand",
@@ -406,6 +407,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "Handelsregisternummer",
+          "name": "Handelsregisternummer",
+          "required": "Handelsregisternummer ist erforderlich"
+        }
+      },
       "taxId": {
         "label": "Steuernummer",
         "required": "Steuernummer ist erforderlich",
@@ -471,10 +479,10 @@
       "continueToPayment": {
         "label": "Zur Kasse"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "Newsletter abonnieren"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "Marketing-E-Mails empfangen"
       },
       "stateRegistration": {
@@ -485,6 +493,95 @@
       "createAccountButton": "Zur Kasse",
       "createAccountButtonLabel": "Zur Kasse",
       "createAccountButtonTitle": "Zur Kasse"
+    }
+  },
+  "payment": {
+    "paymentMethods": "Zahlungsarten",
+    "methods": {
+      "creditCard": "Kreditkarte",
+      "debitCard": "Debitkarte",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "label":"Kreditkarte",
+      "number": {
+        "label": "Kartennummer",
+        "required": "Kartennummer ist erforderlich"
+      },
+      "name": {
+        "label": "Name des Karteninhabers",
+        "required": "Name des Karteninhabers ist erforderlich"
+      },
+      "expirationDate": {
+        "label": "Ablaufdatum",
+        "required": "Ablaufdatum ist erforderlich"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV ist erforderlich"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "Kartennummer",
+        "required": "Kartennummer ist erforderlich"
+      },
+      "name": {
+        "label": "Name des Karteninhabers",
+        "required": "Name des Karteninhabers ist erforderlich"
+      },
+      "expirationDate": {
+        "label": "Ablaufdatum",
+        "required": "Ablaufdatum ist erforderlich"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV ist erforderlich"
+      },
+      "installments": {
+        "label": "Ratenzahlung",
+        "required": "Ratenzahlung ist erforderlich"
+      }
+    },
+    "boleto": {
+      "description": "Der Boleto wird nach Auftragsbestätigung generiert",
+      "number": {
+        "label": "Boleto-Nummer",
+        "required": "Boleto-Nummer ist erforderlich"
+      }
+    },
+    "paypal": {
+      "description": "Sie werden nach der Auftragsbestätigung zu PayPal weitergeleitet",
+      "number": {
+        "label": "PayPal-Konto",
+        "required": "PayPal-Konto ist erforderlich"
+      }
+    },
+    "pix": {
+      "description": "Der Pix wird nach Auftragsbestätigung generiert",
+      "number": {
+        "label": "Pix-Schlüssel",
+        "required": "Pix-Schlüssel ist erforderlich"
+      }
+    },
+    "bitcoin": {
+      "description": "Der QR-Code und Bitcoin-Code werden nach Auftragsbestätigung generiert",
+      "number": {
+        "label": "Bitcoin-Schlüssel",
+        "required": "Bitcoin-Schlüssel ist erforderlich"
+      }
+    },
+    "back": {
+      "label": "Zurück"
+    },
+    "next": {
+      "label": "Weiter"
+    },
+    "information": {
+      "required": "Dieses Feld ist erforderlich"
     }
   },
   "comingSoon": {

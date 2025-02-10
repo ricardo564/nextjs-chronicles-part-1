@@ -4,7 +4,6 @@ import ogImage from '@/assets/images/android-launchericon-512-512.png'
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { useTranslations } from "next-intl";
 import RandomBackground from "@/blocks/randomBackground";
-import { locales } from "@/config/i18n-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ''),
@@ -69,12 +68,6 @@ const ContactPage = () => {
       />
     </DefaultLayout>
   )
-}
-
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    params: { locale },
-  }));
 }
 
 export default ContactPage;

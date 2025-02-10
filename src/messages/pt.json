@@ -357,18 +357,17 @@
     "checkout": "Finalizar compra"
   },
   "checkout": {
-    "title": "Finalizar compra",
+    "title": "Finalizar Compra",
     "subtitle": "Complete sua compra seguindo os passos abaixo",
-    "formTitle": "Informações de envio",
-    "formSubtitle": "Por favor, preencha seus detalhes para completar sua compra",
-    "checkout": "Finalizar compra",
-    "process": "",
+    "formTitle": "Informações de Entrega",
+    "formSubtitle": "Por favor, preencha seus dados para completar sua compra",
+    "checkout": "Finalizar Compra",
+    "process": "🛍️",
     "complete": "Complete sua compra seguindo os passos abaixo",
     "shipping": {
-
       "street": {
         "label": "Rua",
-        "required": "Rua é obrigatório"
+        "required": "Rua é obrigatória"
       },
       "number": {
         "label": "Número",
@@ -384,7 +383,7 @@
       },
       "city": {
         "label": "Cidade",
-        "required": "Cidade é obrigatório"
+        "required": "Cidade é obrigatória"
       },
       "state": {
         "label": "Estado",
@@ -399,35 +398,43 @@
         "required": "País é obrigatório"
       },
       "methods": {
-        "standard": "Frete Padrão",
-        "express": "Frete Express",
-        "overnight": "Frete Noturno",
+        "title": "Opções de Entrega",
+        "standard": "Entrega Padrão",
+        "express": "Entrega Expressa",
+        "overnight": "Entrega no Dia Seguinte",
         "days": "dias úteis",
         "day": "dia útil"
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "Inscrição Estadual",
+          "name": "Inscrição Estadual",
+          "required": "Inscrição Estadual é obrigatória"
+        }
+      },
       "taxId": {
-        "label": "CNPJ",
-        "required": "CNPJ é obrigatório",
-        "min": "CNPJ deve ter pelo menos 1 caractere",
-        "max": "CNPJ não pode exceder 18 caracteres"
+        "label": "CPF/CNPJ",
+        "required": "CPF/CNPJ é obrigatório",
+        "min": "CPF/CNPJ deve ter pelo menos 11 caracteres",
+        "max": "CPF/CNPJ não pode exceder 18 caracteres"
       },
       "taxIdType": {
-        "label": "Tipo de CNPJ",
-        "required": "Tipo de CNPJ é obrigatório"
+        "label": "Tipo de Documento",
+        "required": "Tipo de documento é obrigatório"
       },
       "taxIdNumber": {
-        "label": "Número de CNPJ",
-        "required": "Número de CNPJ é obrigatório"
+        "label": "Número do Documento",
+        "required": "Número do documento é obrigatório"
       },
       "password": {
         "label": "Senha",
-        "required": "Senha é obrigatório"
+        "required": "Senha é obrigatória"
       },
       "confirmPassword": {
         "label": "Confirmar Senha",
-        "required": "Confirmar Senha é obrigatório"
+        "required": "Confirmação de senha é obrigatória"
       },
       "acceptedTerms": {
         "label": "Aceito os termos e condições",
@@ -439,13 +446,13 @@
       },
       "fullName": {
         "label": "Nome Completo",
-        "required": "Nome Completo é obrigatório",
+        "required": "Nome completo é obrigatório",
         "min": "Nome completo deve ter pelo menos 2 caracteres",
         "max": "Nome completo não pode exceder 50 caracteres"
       },
       "email": {
-        "label": "Email",
-        "required": "Email é obrigatório",
+        "label": "E-mail",
+        "required": "E-mail é obrigatório",
         "invalid": "Endereço de e-mail inválido"
       },
       "phoneNumber": {
@@ -455,37 +462,127 @@
         "max": "Telefone não pode exceder 50 caracteres"
       },
       "dateOfBirth": {
-        "label": "Data de nascimento",
-        "required": "Data de nascimento é obrigatório"
+        "label": "Data de Nascimento",
+        "required": "Data de nascimento é obrigatória"
       },
       "gender": {
         "label": "Gênero",
         "required": "Gênero é obrigatório"
       },
       "preferredLanguage": {
-        "label": "Língua preferida",
-        "required": "Língua preferida é obrigatório"
+        "label": "Idioma Preferido",
+        "required": "Idioma preferido é obrigatório"
       },
       "back": {
         "label": "Voltar"
       },
       "continueToPayment": {
-        "label": "Continuar para pagamento"
+        "label": "Continuar para Pagamento"
       },
-      "subscribeToNewsletter": {
-        "label": "Inscrever-se no boletim informativo"
+      "newsletter": {
+        "label": "Inscrever-se na Newsletter"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "Receber e-mails de marketing"
       },
       "stateRegistration": {
-        "label": "Número de registro",
-        "required": "Número de registro é obrigatório"
+        "label": "Inscrição Estadual",
+        "required": "Inscrição estadual é obrigatória"
       },
-      "createAccountDescription": "Crie uma conta para salvar suas informações e acelerar suas compras",
-      "createAccountButton": "Continuar para pagamento",
-      "createAccountButtonLabel": "Continuar para pagamento",
-      "createAccountButtonTitle": "Continuar para pagamento"
+      "continue": "Continuar",
+      "createAccountDescription": "Crie uma conta para salvar suas informações e tornar suas compras mais rápidas",
+      "createAccountButton": "Continuar para Pagamento",
+      "createAccountButtonLabel": "Continuar para Pagamento",
+      "createAccountButtonTitle": "Continuar para Pagamento"
+    }
+  },
+  "payment": {
+    "paymentMethods": "Formas de Pagamento",
+    "methods": {
+      "creditCard": "Cartão de Crédito",
+      "debitCard": "Cartão de Débito",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "label":"Cartão de Crédito",
+      "number": {
+        "label": "Número do Cartão",
+        "required": "Número do cartão é obrigatório"
+      },
+      "name": {
+        "label": "Nome no Cartão",
+        "required": "Nome no cartão é obrigatório"
+      },
+      "expirationDate": {
+        "label": "Data de Validade",
+        "required": "Data de validade é obrigatória"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV é obrigatório"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "Número do Cartão",
+        "required": "Número do cartão é obrigatório"
+      },
+      "name": {
+        "label": "Nome no Cartão",
+        "required": "Nome no cartão é obrigatório"
+      },
+      "expirationDate": {
+        "label": "Data de Validade",
+        "required": "Data de validade é obrigatória"
+      },
+      "cvv": {
+        "label": "CVV",
+        "required": "CVV é obrigatório"
+      },
+      "installments": {
+        "label": "Parcelas",
+        "required": "Número de parcelas é obrigatório"
+      }
+    },
+    "boleto": {
+      "description": "O boleto sera gerado assim que o pedido for confirmado",
+      "number": {
+        "label": "Número do Boleto",
+        "required": "Número do boleto é obrigatório"
+      }
+    },
+    "paypal": {
+      "description": "Você sera redirecionado para o PayPal assim que o pedido for confirmado",
+      "number": {
+        "label": "Conta PayPal",
+        "required": "Conta PayPal é obrigatória"
+      }
+    },
+    "pix": {
+      "description": "O pix sera gerado assim que o pedido for confirmado",
+      "number": {
+        "label": "Chave PIX",
+        "required": "Chave PIX é obrigatória"
+      }
+    },
+    "bitcoin": {
+      "description": "O qr code e código bitcoin seram gerados assim que o pedido for confirmado",
+      "number": {
+        "label": "Chave Bitcoin",
+        "required": "Chave Bitcoin é obrigatória"
+      }
+    },
+    "back": {
+      "label": "Voltar"
+    },
+    "next": {
+      "label": "Avançar"
+    },
+    "information": {
+      "required": "Este campo é obrigatório"
     }
   },
   "comingSoon": {
