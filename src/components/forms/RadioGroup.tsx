@@ -53,10 +53,15 @@ export const RadioGroup: FC<RadioGroupProps<FieldValues>> = ({
         />
       )}
 
-      <div className="grid grid-cols-2 md:flex sm:flex-nowrap flex-wrap gap-2 h-14">
+      <div
+        role="radiogroup"
+        aria-labelledby={`${name}-group-label`}
+        className="grid grid-cols-2 md:flex sm:flex-nowrap flex-wrap gap-2 h-14"
+      >
         {options.map((option) => (
           <label
             key={option.value}
+            aria-checked={value === option.value}
             className={`
               flex items-center p-4 rounded-lg cursor-pointer
               transition-all duration-200 w-full
