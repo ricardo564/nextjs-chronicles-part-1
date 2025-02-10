@@ -20,6 +20,7 @@ import { Language } from "@/types/language";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import Link from "@/components/Link";
 import { PasswordStrengthMeter } from "@/components/forms/PasswordStrengthMeter";
+import { brazilianStates } from "@/static/mockBrazilianStates";
 
 interface CustomerStepProps {
   languages: Language[];
@@ -171,9 +172,13 @@ const CustomerStep: FC<CustomerStepProps> = ({
           />
 
           {taxIdType === "CNPJ" && (
-            <TextInput
+            <DropdownSelect
               label={stateRegistrationLabel}
               name="brazilianTaxInfo.stateRegistration"
+              options={brazilianStates.map((state) => ({
+                value: state.adminCode1,
+                label: state.name,
+              }))}
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: isBrazil ? true : false }}
               error={errors.brazilianTaxInfo?.stateRegistration?.message}
