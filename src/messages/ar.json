@@ -398,6 +398,7 @@
         "required": "البلد مطلوب"
       },
       "methods": {
+        "title": "طرق الشحن",
         "standard": "الشحن القياسي",
         "express": "الشحن السريع",
         "overnight": "الشحن الليلي",
@@ -406,6 +407,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "السجل التجاري",
+          "name": "السجل التجاري",
+          "required": "السجل التجاري مطلوب"
+        }
+      },
       "taxId": {
         "label": "الرقم الضريبي",
         "required": "الرقم الضريبي مطلوب",
@@ -471,10 +479,10 @@
       "continueToPayment": {
         "label": "متابعة إلى الدفع"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "اشترك في النشرة الإخبارية"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "الحصول على الرسائل التسويقية"
       },
       "stateRegistration": {
@@ -485,6 +493,95 @@
       "createAccountButton": "متابعة إلى الدفع",
       "createAccountButtonLabel": "متابعة إلى الدفع",
       "createAccountButtonTitle": "متابعة إلى الدفع"
+    }
+  },
+  "payment": {
+    "paymentMethods": "طرق الدفع",
+    "methods": {
+      "creditCard": "بطاقة ائتمان",
+      "debitCard": "بطاقة ديبيت",
+      "paypal": "PayPal",
+      "boleto": "Boleto",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "label":"بطاقة ائتمان",
+      "number": {
+        "label": "رقم البطاقة",
+        "required": "رقم البطاقة مطلوب"
+      },
+      "name": {
+        "label": "اسم حامل البطاقة",
+        "required": "اسم حامل البطاقة مطلوب"
+      },
+      "expirationDate": {
+        "label": "تاريخ الانتهاء",
+        "required": "تاريخ الانتهاء مطلوب"
+      },
+      "cvv": {
+        "label": "رمز التحقق",
+        "required": "رمز التحقق مطلوب"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "رقم البطاقة",
+        "required": "رقم البطاقة مطلوب"
+      },
+      "name": {
+        "label": "اسم حامل البطاقة",
+        "required": "اسم حامل البطاقة مطلوب"
+      },
+      "expirationDate": {
+        "label": "تاريخ الانتهاء",
+        "required": "تاريخ الانتهاء مطلوب"
+      },
+      "cvv": {
+        "label": "رمز التحقق",
+        "required": "رمز التحقق مطلوب"
+      },
+      "installments": {
+        "label": "الأقساط",
+        "required": "الأقساط مطلوبة"
+      }
+    },
+    "boleto": {
+      "description": "سيتم إنشاء البوليتو بمجرد تأكيد الطلب",
+      "number": {
+        "label": "رقم البوليتو",
+        "required": "رقم البوليتو مطلوب"
+      }
+    },
+    "paypal": {
+      "description": "سيتم تحويلك إلى PayPal بمجرد تأكيد الطلب",
+      "number": {
+        "label": "حساب PayPal",
+        "required": "حساب PayPal مطلوب"
+      }
+    },
+    "pix": {
+      "description": "سيتم إنشاء Pix بمجرد تأكيد الطلب",
+      "number": {
+        "label": "مفتاح Pix",
+        "required": "مفتاح Pix مطلوب"
+      }
+    },
+    "bitcoin": {
+      "description": "سيتم إنشاء رمز QR ورمز Bitcoin بمجرد تأكيد الطلب",
+      "number": {
+        "label": "مفتاح Bitcoin",
+        "required": "مفتاح Bitcoin مطلوب"
+      }
+    },
+    "back": {
+      "label": "رجوع"
+    },
+    "next": {
+      "label": "التالي"
+    },
+    "information": {
+      "required": "هذا الحقل مطلوب"
     }
   },
   "comingSoon": {

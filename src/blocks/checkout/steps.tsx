@@ -12,87 +12,29 @@ import { ShippingMethod } from "@/types/shippingMethod";
 import { Country } from "@/types/country";
 import { Language } from "@/types/language";
 import { useCountriesStore } from "@/store/countriesStore";
+import { useTranslations } from 'next-intl';
 
 interface CheckoutStepProps {
-  shippingValidationMessages: Record<string, string>;
   shippingMethods: ShippingMethod[];
   customerValidationMessages: Record<string, string>;
   languages: Language[];
   countries: Country[];
-  zipCode: string;
-  country: string;
-  street: string;
-  number: string;
-  complement: string;
-  neighborhood: string;
-  city: string;
-  state: string;
-  title: string;
-  process: string;
-  complete: string;
-  fullNameLabel: string;
-  emailLabel: string;
-  phoneNumberLabel: string;
-  dateOfBirthLabel: string;
-  preferredLanguageLabel: string;
-  taxIdTypeLabel: string;
-  taxIdNumberLabel: string;
-  stateRegistrationLabel: string;
-  createAccountLabel: string;
-  passwordLabel: string;
-  acceptedTermsLabel: string;
-  subscribeToNewsletterLabel: string;
-  receiveMarketingEmailsLabel: string;
-  backLabel: string;
-  continueToPaymentLabel: string;
-  createAccount: string;
-  password: string;
-  acceptedTerms: string;
-  subscribeToNewsletter: string;
-  receiveMarketingEmails: string;
-  back: string;
-  continueToPayment: string;
 }
 
 type CheckoutStep = "shipping" | "customer" | "payment" | "confirmation";
 
 export const CheckoutSteps: FC<CheckoutStepProps> = ({
   shippingMethods,
-  shippingValidationMessages,
   customerValidationMessages,
   languages,
   countries,
-  zipCode,
-  country,
-  street,
-  number,
-  complement,
-  neighborhood,
-  city,
-  state,
-  title,
-  process,
-  complete,
-  fullNameLabel,
-  emailLabel,
-  phoneNumberLabel,
-  dateOfBirthLabel,
-  preferredLanguageLabel,
-  taxIdNumberLabel,
-  stateRegistrationLabel,
-  createAccountLabel,
-  passwordLabel,
-  acceptedTermsLabel,
-  subscribeToNewsletterLabel,
-  receiveMarketingEmailsLabel,
-  backLabel,
-  continueToPaymentLabel,
 }) => {
   const CHECKOUT_STEPS: CheckoutStep[] = ["shipping", "customer", "payment", "confirmation"];
   const router = useRouter();
   const searchParams = useSearchParams();
   const { currentStep, setCurrentStep } = useCheckoutStore();
   const countriesStore = useCountriesStore();
+  const t = useTranslations('checkout');
 
   function isStepValid(step: CheckoutStep): boolean {
     return CHECKOUT_STEPS.indexOf(step) > CHECKOUT_STEPS.indexOf(currentStep);
@@ -117,6 +59,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
   }, [countries]);
 
   function handleStepChange(step: CheckoutStep) {
+    console.log("Step changed to:", step);
     const currentStepIndex = CHECKOUT_STEPS.indexOf(currentStep);
     const targetStepIndex = CHECKOUT_STEPS.indexOf(step);
 
@@ -184,17 +127,8 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
       case "shipping":
         return (
           <ShippingStep
-            validationMessages={shippingValidationMessages}
             shippingMethods={shippingMethods}
             countries={countries}
-            zipCode={zipCode}
-            country={country}
-            street={street}
-            number={number}
-            complement={complement}
-            neighborhood={neighborhood}
-            city={city}
-            state={state}
           />
         );
       case "customer":
@@ -202,20 +136,6 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           <CustomerStep
             validationMessages={customerValidationMessages}
             languages={languages}
-            fullNameLabel={fullNameLabel}
-            emailLabel={emailLabel}
-            phoneNumberLabel={phoneNumberLabel}
-            dateOfBirthLabel={dateOfBirthLabel}
-            preferredLanguageLabel={preferredLanguageLabel}
-            taxIdNumberLabel={taxIdNumberLabel}
-            stateRegistrationLabel={stateRegistrationLabel}
-            createAccountLabel={createAccountLabel}
-            passwordLabel={passwordLabel}
-            acceptedTermsLabel={acceptedTermsLabel}
-            subscribeToNewsletterLabel={subscribeToNewsletterLabel}
-            receiveMarketingEmailsLabel={receiveMarketingEmailsLabel}
-            backLabel={backLabel}
-            continueToPaymentLabel={continueToPaymentLabel}
           />
         );
       case "payment":
@@ -226,16 +146,7 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
         return (
           <ShippingStep
             countries={countries}
-            validationMessages={shippingValidationMessages}
             shippingMethods={shippingMethods}
-            zipCode={zipCode}
-            country={country}
-            street={street}
-            number={number}
-            complement={complement}
-            neighborhood={neighborhood}
-            city={city}
-            state={state}
           />
         );
     }
@@ -246,10 +157,10 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
       <div className="md:mx-auto flex flex-col md:items-center md:justify-center w-full md:px-4 transition-all duration-300 ease-in-out">
         <div className="text-center my-12 mt-6 w-full z-[50]">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            {title}
-            <span className="text-green-500">{process}</span>
+            {t('title')}
+            <span className="text-green-500">{t('process')}</span>
           </h1>
-          <p className="text-white/70 text-sm md:text-lg">{complete}</p>
+          <p className="text-white/70 text-sm md:text-lg">{t('complete')}</p>
         </div>
 
         <div className="w-full min-w-[90vw] max-h-[1500px] md:min-w-[75vw] max-w-7xl mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">

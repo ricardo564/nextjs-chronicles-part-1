@@ -398,6 +398,7 @@
         "required": "国は必須です"
       },
       "methods": {
+        "title": "配送方法",
         "standard": "標準配送",
         "express": "速達配送",
         "overnight": "翌日配送",
@@ -406,6 +407,13 @@
       }
     },
     "customer": {
+      "cnpj": {
+        "stateRegistration": {
+          "label": "法人登録番号",
+          "name": "法人登録番号",
+          "required": "法人登録番号は必須です"
+        }
+      },
       "taxId": {
         "label": "NIP",
         "required": "NIPは必須です",
@@ -471,10 +479,10 @@
       "continueToPayment": {
         "label": "支払いへ"
       },
-      "subscribeToNewsletter": {
+      "newsletter": {
         "label": "ニュースレターに登録する"
       },
-      "receiveMarketingEmails": {
+      "marketing": {
         "label": "マーケティングメールを受信する"
       },
       "stateRegistration": {
@@ -485,6 +493,95 @@
       "createAccountButton": "支払いへ",
       "createAccountButtonLabel": "支払いへ",
       "createAccountButtonTitle": "支払いへ"
+    }
+  },
+  "payment": {
+    "paymentMethods": "支払い方法",
+    "methods": {
+      "creditCard": "クレジットカード",
+      "debitCard": "デビットカード",
+      "paypal": "PayPal",
+      "boleto": "ボレート",
+      "pix": "Pix",
+      "bitcoin": "Bitcoin"
+    },
+    "creditCard": {
+      "label":"クレジットカード",
+      "number": {
+        "label": "カード番号",
+        "required": "カード番号は必須です"
+      },
+      "name": {
+        "label": "カード名義人",
+        "required": "カード名義人は必須です"
+      },
+      "expirationDate": {
+        "label": "有効期限",
+        "required": "有効期限は必須です"
+      },
+      "cvv": {
+        "label": "セキュリティコード",
+        "required": "セキュリティコードは必須です"
+      }
+    },
+    "debitCard": {
+      "number": {
+        "label": "カード番号",
+        "required": "カード番号は必須です"
+      },
+      "name": {
+        "label": "カード名義人",
+        "required": "カード名義人は必須です"
+      },
+      "expirationDate": {
+        "label": "有効期限",
+        "required": "有効期限は必須です"
+      },
+      "cvv": {
+        "label": "セキュリティコード",
+        "required": "セキュリティコードは必須です"
+      },
+      "installments": {
+        "label": "分割払い",
+        "required": "分割払いは必須です"
+      }
+    },
+    "boleto": {
+      "description": "注文確認後にボレートが生成されます",
+      "number": {
+        "label": "ボレート番号",
+        "required": "ボレート番号は必須です"
+      }
+    },
+    "paypal": {
+      "description": "注文確認後にPayPalにリダイレクトされます",
+      "number": {
+        "label": "PayPalアカウント",
+        "required": "PayPalアカウントは必須です"
+      }
+    },
+    "pix": {
+      "description": "注文確認後にPixが生成されます",
+      "number": {
+        "label": "Pixキー",
+        "required": "Pixキーは必須です"
+      }
+    },
+    "bitcoin": {
+      "description": "注文確認後にQRコードとビットコインコードが生成されます",
+      "number": {
+        "label": "ビットコインキー",
+        "required": "ビットコインキーは必須です"
+      }
+    },
+    "back": {
+      "label": "戻る"
+    },
+    "next": {
+      "label": "次へ"
+    },
+    "information": {
+      "required": "このフィールドは必須です"
     }
   },
   "comingSoon": {
