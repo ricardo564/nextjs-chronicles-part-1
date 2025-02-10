@@ -3,7 +3,7 @@ reviews:
   enabled: true
   auto_review:
     enabled: true
-    base_branches: ["*"]
+    base_branches: [".*"]
     ignore_title_patterns: []
     ignore_labels: []
 
