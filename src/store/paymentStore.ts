@@ -19,23 +19,12 @@ const paymentInfoDefaultValue: PaymentInformation = {
   boleto: {
     number: ''
   }
-}
+};
 
 export const usePaymentStore = create<PaymentStore>()(
   persist(
     (set) => ({
-      paymentInfo: {
-        paymentMethod: 'bitcoin',
-        creditCard: {
-          number: '',
-          name: '',
-          expirationDate: '',
-          cvv: ''
-        },
-        boleto: {
-          number: ''
-        }
-      },
+      paymentInfo: paymentInfoDefaultValue,
       setPaymentInfo: (info) => set({ paymentInfo: info }),
       clearPaymentInfo: () => set({ paymentInfo: paymentInfoDefaultValue }),
     }),
