@@ -506,6 +506,7 @@
       "bitcoin": "Bitcoin"
     },
     "creditCard": {
+      "label":"Kreditkarte",
       "number": {
         "label": "Kartennummer",
         "required": "Kartennummer ist erforderlich"

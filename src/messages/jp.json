@@ -506,6 +506,7 @@
       "bitcoin": "Bitcoin"
     },
     "creditCard": {
+      "label":"クレジットカード",
       "number": {
         "label": "カード番号",
         "required": "カード番号は必須です"
