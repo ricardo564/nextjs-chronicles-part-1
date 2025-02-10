@@ -110,14 +110,9 @@ async function CheckoutContent({
 }
 
 export async function generateStaticParams() {
-  const steps: string[] = ['shipping', 'customer', 'payment', 'confirmation'];
-
-  return locales.flatMap((locale) =>
-    steps.map((step) => ({
-      params: { locale },
-      query: { step }
-    }))
-  );
+  return locales.map((locale) => ({
+    params: { locale }
+  }));
 }
 
 export default CheckoutPage
