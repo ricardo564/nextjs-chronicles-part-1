@@ -23,6 +23,8 @@ const CreditCard: FC<Props> = ({
 
   return (
     <div
+      role="group"
+      aria-label={t("creditCard.label")}
       className={`relative w-[420px] h-[260px] rounded-2xl shadow-xl overflow-hidden ${className}`}
     >
       <div className="absolute inset-0 opacity-10">
