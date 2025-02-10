@@ -6,6 +6,7 @@ import * as gtm from '@/lib/gtm'
 import { getItemFromLocalStorage } from '@/utils/localStorage'
 import { ANALYTICS_LOCAL_STORAGE_NAME } from '@/static/analyticsLocalStorageName'
 import { Suspense } from 'react'
+import Loading from '@/components/Loading'
 
 function AnalyticsContent() {
   const pathname = usePathname()
@@ -37,7 +38,7 @@ function AnalyticsContent() {
 
 export function Analytics() {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<Loading />}>
       <AnalyticsContent />
     </Suspense>
   )

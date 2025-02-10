@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import RandomBackground from "@/blocks/randomBackground";
 import { Language } from "@/types/language";
 import { mockCountries } from "@/static/mockCountries";
+import Loading from "@/components/Loading";
 
 export default function CheckoutPage() {
   const t = useTranslations('checkout');
@@ -59,7 +60,7 @@ export default function CheckoutPage() {
 
   return (
     <DefaultLayout>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <CheckoutContent
           shippingMethods={shippingMethods}
           shippingValidationMessages={shippingValidationMessages}
