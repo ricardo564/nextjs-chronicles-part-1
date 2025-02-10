@@ -237,7 +237,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
           <div className="mt-8">
             <h3 className="text-lg font-semibold mb-4">
-              {t("shipping.method.title")}
+              {t("shipping.methods.title")}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {shippingMethods.map((method) => (
