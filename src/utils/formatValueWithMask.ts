@@ -38,8 +38,14 @@ export const formatValueWithMask = (value: string, maskName?: string): string =>
     if (cleanedValue.length > 4) return cleanedValue;
 
     const month = parseInt(cleanedValue.slice(0, 2));
+    const year = parseInt(cleanedValue.slice(2));
+    const currentYear = new Date().getFullYear() % 100;
     if (month > 12) {
       return '12' + cleanedValue.slice(2);
+    }
+
+    if (year < currentYear) {
+      return cleanedValue.slice(0, 2) + currentYear.toString().padStart(2, '0');
     }
 
     return cleanedValue
