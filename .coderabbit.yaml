@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+reviews:
+  enabled: true
+  auto_review:
+    enabled: true
+    base_branches: ["*"]  # Roda em todos os branches
+    ignore_title_patterns: []  # Não ignora nenhum padrão de título
+    ignore_labels: []  # Não ignora nenhuma label
+
+  # Configurações adicionais úteis
+  path_filters:
+    - "**/*"  # Analisa todos os arquivos
+  exclude_path_filters:
+    - "**/*.md"  # Opcional: ignora arquivos markdown
+    - "**/*.txt"
+    - "package-lock.json"
+    - "yarn.lock"
+    - "pnpm-lock.yaml"
+
+  # Configurações de revisão
+  review_status: true  # Mostra status da revisão
+  auto_review_threshold: 0  # Número mínimo de linhas alteradas para trigger automático
+  max_files_to_review: 100  # Máximo de arquivos por revisão
+
+  # Comportamento das revisões
+  comment_style: "multiline"  # ou "inline"
+  request_changes_workflow: false  # Não bloqueia o PR automaticamente
+  notifications:
+    slack: false  # Configurar se necessário
