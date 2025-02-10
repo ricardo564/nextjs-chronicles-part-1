@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { useTranslations } from "next-intl";
+import Link from "@/components/Link";
 
 interface Props {
   cardNumber: string;
@@ -39,7 +40,14 @@ const CreditCard: FC<Props> = ({
               <div className="bg-yellow-700/30 rounded-sm" />
             </div>
           </div>
-          <div className="text-2xl font-bold italic text-white">{cardName}</div>
+          <Link
+            href="https://cnpj.biz/47798810000107"
+            externalLink
+            rel="noopener noreferrer"
+            className="text-2xl font-bold italic text-white"
+          >
+            {cardName}
+          </Link>
         </div>
 
         <div className="text-2xl tracking-wider text-white font-mono">
