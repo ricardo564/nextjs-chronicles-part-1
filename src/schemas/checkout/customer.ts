@@ -10,8 +10,17 @@ export const getCustomerSchema = (messages: Record<string, string>) => z.object(
   }),
 
   brazilianTaxInfo: z.object({
-    taxIdType: z.string(),
-    taxIdNumber: z.string().min(1, messages['taxId.min']).max(18, messages['taxId.max']),
+    taxIdType: z.enum(['CPF', 'CNPJ']),
+    taxIdNumber: z.string()
+      .transform(val => val.replace(/\D/g, ""))
+      .refine(
+        (val) => {
+          if (!val) return false;
+          const length = val.length;
+          return length === 11 || length === 14;
+        },
+        { message: messages.invalidTaxId || "Invalid Tax ID" }
+      ),
     stateRegistration: z.string().optional(),
   }).optional(),
 
