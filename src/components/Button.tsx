@@ -1,3 +1,4 @@
+import { Loader } from "lucide-react";
 import type { FC } from "react";
 import { CSSProperties } from "react";
 import { ReactNode, ButtonHTMLAttributes, JSX } from "react";
@@ -40,6 +41,7 @@ const Button: FC<Props> = ({
       style={style}
       onClick={onClick}
     >
+      {loading && <Loader />}
       {label}
       {icon}
       {children}
