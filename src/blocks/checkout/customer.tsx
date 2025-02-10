@@ -81,7 +81,24 @@ const CustomerStep: FC<CustomerStepProps> = ({
   const [taxIdType, setTaxIdType] = useState("CPF");
   const onSubmit = async (data: CustomerInformation) => {
     try {
-      setCustomerInfo(data);
+      const formattedData = {
+        ...data,
+        account: {
+          createAccount: data.account?.createAccount ?? false,
+          password: data.account?.createAccount ? data.account.password : undefined,
+          acceptedTerms: data.account?.createAccount ? data.account.acceptedTerms : false,
+        },
+        preferences: {
+          newsletter: data.preferences?.newsletter ?? false,
+          marketing: data.preferences?.marketing ?? false,
+        },
+        personalInfo: {
+          ...data.personalInfo,
+        },
+        brazilianTaxInfo: isBrazil ? data.brazilianTaxInfo : undefined,
+      };
+
+      setCustomerInfo(formattedData);
       setCurrentStep("payment");
       await router.push("/checkout?step=payment");
     } catch (error) {
@@ -90,7 +107,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
   };
 
   const onError = (errors: FieldValues) => {
-    console.log("Form validation errors:", errors);
+    console.error("Form validation errors:", errors);
   };
 
   return (
@@ -258,6 +275,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
         <Link href="/checkout?step=shipping">
           <Button
             type="button"
+            loading={isSubmitting}
             label={backLabel}
             className="w-auto"
           />
@@ -265,16 +283,10 @@ const CustomerStep: FC<CustomerStepProps> = ({
 
         <Button
           type="submit"
+          loading={isSubmitting}
           label={continueToPaymentLabel}
           className="w-auto ml-auto"
         />
-      </div>
-
-      <div className="text-sm text-gray-400">
-        {isSubmitting && <p>Submitting...</p>}
-        {Object.keys(errors).length > 0 && (
-          <p className="text-red-400">There are form errors</p>
-        )}
       </div>
     </form>
   );
