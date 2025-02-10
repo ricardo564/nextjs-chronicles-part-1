@@ -13,6 +13,7 @@ import { getDirection, Locale } from '@/config/i18n-config';
 import "@/assets/styles/globals.css";
 import "@/assets/styles/pageTransition.css";
 import "@/assets/styles/animatedUnderline.css";
+import "@/assets/styles/scrollDriven.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -100,6 +101,8 @@ export default async function RootLayout({
         </NextIntlClientProvider>
         <Analytics />
         <ScrollToTop />
+
+        <div className="scroll-indicator"></div>
 
         <PortfolioShortcut
           portfolioUrl={process.env.PORTFOLIO_URL || ''}
