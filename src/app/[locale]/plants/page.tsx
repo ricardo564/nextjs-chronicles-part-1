@@ -8,7 +8,6 @@ import Loading from "@/components/Loading";
 import { Suspense } from "react";
 import { getTranslations } from 'next-intl/server';
 import { unstable_cache } from 'next/cache';
-import { locales } from "@/config/i18n-config";
 
 const PlantsPage: FC = async () => {
   const t = await getTranslations('plants');
@@ -75,12 +74,6 @@ const PlantsPage: FC = async () => {
       </DefaultLayout>
     );
   }
-}
-
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    params: { locale },
-  }));
 }
 
 export default PlantsPage;

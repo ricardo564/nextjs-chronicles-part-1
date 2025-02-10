@@ -8,7 +8,6 @@ import { Suspense } from "react";
 import RandomBackground from "@/blocks/randomBackground";
 import { Language } from "@/types/language";
 import { mockCountries } from "@/static/mockCountries";
-import { locales } from "@/config/i18n-config";
 import Loading from "@/components/Loading";
 
 const CheckoutPage: FC = () => {
@@ -107,12 +106,6 @@ async function CheckoutContent({
       />
     </>
   );
-}
-
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    params: { locale }
-  }));
 }
 
 export default CheckoutPage

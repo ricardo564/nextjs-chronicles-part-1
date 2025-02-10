@@ -6,7 +6,6 @@ import DefaultLayout from "@/layouts/DefaultLayout";
 import TestimonialSection from "@/blocks/sections/testimonialSection";
 import BestProductsSection from "@/blocks/sections/bestProductstSection";
 import Loading from "@/components/Loading";
-import { locales } from '@/config/i18n-config';
 
 const Home: FC = () => {
   return (
@@ -21,12 +20,6 @@ const Home: FC = () => {
       </DefaultLayout>
     </Suspense>
   );
-}
-
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    params: { locale },
-  }));
 }
 
 export default Home;
