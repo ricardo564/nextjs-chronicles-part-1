@@ -4,11 +4,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import ogImage from "@/assets/images/android-launchericon-512-512.png";
 import Script from "next/script";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
-import { Analytics } from '@/components/Analytics'
+import { Analytics } from "@/components/Analytics";
 import ScrollToTop from "@/components/ScrollToTop";
-import { NextIntlClientProvider } from 'next-intl'
+import { NextIntlClientProvider } from "next-intl";
 import { PortfolioShortcut } from "@/blocks/portfolioShortcut";
-import { getDirection, Locale } from '@/config/i18n-config';
+import { getDirection, Locale } from "@/config/i18n-config";
 
 import "@/assets/styles/globals.css";
 import "@/assets/styles/pageTransition.css";
@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ''),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ""),
   title: "Breath Natural - NextJS Chronicles Part 1",
   description:
     "Discover premium indoor plants at Breath Natural. Shop exotic houseplants, succulents & cacti with expert care guides. Free shipping on orders over $50. Same-day delivery available.",
@@ -57,15 +57,15 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: {
-  children: ReactNode
-  params: { locale: string }
+  children: ReactNode;
+  params: { locale: string };
 }) {
-  const messages = (await import(`@/messages/${locale}.json`)).default
+  const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
-    <html lang={locale} dir={getDirection(locale as Locale) ? 'rtl' : 'ltr'}>
+    <html lang={locale} dir={getDirection(locale as Locale) ? "rtl" : "ltr"}>
       <head>
         <Script
           id="gtm-script"
@@ -77,7 +77,7 @@ export default async function RootLayout({
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
-            `
+            `,
           }}
         />
       </head>
@@ -89,23 +89,27 @@ export default async function RootLayout({
             src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <IntroWarningModal
-            linkedinUsername={process.env.LINKEDIN_USERNAME || ''}
-            portfolioUrl={process.env.PORTFOLIO_URL || ''}
+            linkedinUsername={process.env.LINKEDIN_USERNAME || ""}
+            portfolioUrl={process.env.PORTFOLIO_URL || ""}
           />
           {children}
         </NextIntlClientProvider>
         <Analytics />
         <ScrollToTop />
 
-        <div className="scroll-indicator"></div>
+        <div
+          className="scroll-indicator"
+          role="progressbar"
+          aria-label="Page scroll progress"
+        ></div>
 
         <PortfolioShortcut
-          portfolioUrl={process.env.PORTFOLIO_URL || ''}
+          portfolioUrl={process.env.PORTFOLIO_URL || ""}
           customClassName="fixed bottom-4 left-4 hover:bg-gray-500 hover:text-white transition-all ease-in-out duration-300"
           showText={false}
         />
