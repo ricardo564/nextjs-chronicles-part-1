@@ -41,7 +41,7 @@ const Button: FC<Props> = ({
       style={style}
       onClick={onClick}
     >
-      {loading && <Loader />}
+      {loading && <Loader className="w-4 h-4 animate-spin mr-2 transition-all duration-300 ease-in-out" />}
       {label}
       {icon}
       {children}
