@@ -207,7 +207,6 @@ export const brazilianStates: BrazilianState[] = [
     countryId: "3469034",
     fcl: "A",
     population: 2778986,
-    numberOfChildren: 1,
     countryCode: "BR",
     name: "Mato Grosso do Sul",
     fclName: "country, state, region,...",
