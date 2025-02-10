@@ -2,7 +2,7 @@
 
 import type { FC } from "react";
 import { useState } from "react";
-import { FieldValues, useForm, UseFormRegister } from "react-hook-form";
+import { FieldValues, useForm, UseFormRegister, UseFormWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useCustomerStore } from "@/store/customerStore";
@@ -67,10 +67,11 @@ const CustomerStep: FC<CustomerStepProps> = ({
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<CustomerInformation>({
     resolver: zodResolver(getCustomerSchema(validationMessages)),
     defaultValues: customerInfo,
+    mode: "onChange",
   });
 
   const country = checkoutStore.shippingAddress?.country;
@@ -78,7 +79,6 @@ const CustomerStep: FC<CustomerStepProps> = ({
   const isBrazil = country === "BR";
   const [taxIdType, setTaxIdType] = useState("CPF");
   const onSubmit = async (data: CustomerInformation) => {
-    console.log("data", data);
     try {
       setCustomerInfo(data);
       setCurrentStep("payment");
@@ -88,9 +88,13 @@ const CustomerStep: FC<CustomerStepProps> = ({
     }
   };
 
+  const onError = (errors: any) => {
+    console.log("Form validation errors:", errors);
+  };
+
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit, onError)}
       className="space-y-6"
     >
       <section className="space-y-4">
@@ -149,8 +153,8 @@ const CustomerStep: FC<CustomerStepProps> = ({
             label={taxIdType}
             name="brazilianTaxInfo.taxIdType"
             options={[
-              { value: "CPF", label: "CPF (Individual)" },
-              { value: "CNPJ", label: "CNPJ (Business)" },
+              { value: "CPF", label: "CPF" },
+              { value: "CNPJ", label: "CNPJ" },
             ]}
             onChange={(value: string | number) => setTaxIdType(String(value))}
             register={register as unknown as UseFormRegister<FieldValues>}
@@ -259,6 +263,13 @@ const CustomerStep: FC<CustomerStepProps> = ({
           label={continueToPaymentLabel}
           className="w-auto ml-auto"
         />
+      </div>
+
+      <div className="text-sm text-gray-400">
+        {isSubmitting && <p>Submitting...</p>}
+        {Object.keys(errors).length > 0 && (
+          <p className="text-red-400">There are form errors</p>
+        )}
       </div>
     </form>
   );
