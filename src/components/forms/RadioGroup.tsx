@@ -37,7 +37,7 @@ export const RadioGroup: FC<RadioGroupProps<FieldValues>> = ({
   register,
   rules,
 }: RadioGroupProps<FieldValues>) => {
-  const handleChange = (optionValue: string) => {
+  const handleChange = (optionValue: RadioOption['value']): void => {
     if (!disabled) {
       onChange(optionValue);
     }
