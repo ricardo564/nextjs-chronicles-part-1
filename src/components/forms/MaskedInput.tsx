@@ -6,6 +6,7 @@ import {
   UseFormRegister,
 } from "react-hook-form";
 import Label from "@/components/Label";
+import { formatCpfCnpj } from "@/utils/formatCpfCnpj";
 
 interface Props {
   name: string;
@@ -34,45 +35,55 @@ const MaskedInput: FC<Props> = ({
   rules,
   onBlur,
 }: Props) => {
-  const [value, setValue] = useState("");
+  const [maskedValue, setMaskedValue] = useState("");
 
   const applyMask = (value: string): string => {
     if (!mask || !value) return value;
-
     const numbers = value.replace(/\D/g, "");
-
-    if (mask === "CPF") {
-      return numbers
-        .replace(/(\d{3})(\d)/, "$1.$2")
-        .replace(/(\d{3})(\d)/, "$1.$2")
-        .replace(/(\d{3})(\d{1,2})/, "$1-$2")
-        .replace(/(-\d{2})\d+?$/, "$1");
-    }
-
-    if (mask === "CNPJ") {
-      return numbers
-        .replace(/(\d{2})(\d)/, "$1.$2")
-        .replace(/(\d{3})(\d)/, "$1.$2")
-        .replace(/(\d{3})(\d)/, "$1/$2")
-        .replace(/(\d{4})(\d)/, "$1-$2")
-        .replace(/(-\d{2})\d+?$/, "$1");
-    }
-
-    return numbers;
+    return formatCpfCnpj(numbers);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = applyMask(e.target.value);
-    setValue(newValue);
+    const newMaskedValue = applyMask(e.target.value);
+    setMaskedValue(newMaskedValue);
+    
+    // Create a new event to pass the unmasked value
+    const unmaskedValue = newMaskedValue.replace(/\D/g, "");
+    const newEvent = {
+      ...e,
+      target: {
+        ...e.target,
+        value: unmaskedValue,
+        name: e.target.name,
+      },
+    };
+    
+    // Call the original onChange with the new event
+    onChange(newEvent);
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    // Create a new event with the unmasked value
+    const unmaskedValue = maskedValue.replace(/\D/g, "");
+    const newEvent = {
+      ...e,
+      target: {
+        ...e.target,
+        value: unmaskedValue,
+        name: e.target.name,
+      },
+    };
+
     if (onBlur) {
-      onBlur(e);
+      onBlur(newEvent);
     }
   };
 
-  const { ref, ...registerProps } = register(name, rules);
+  // Get the register props
+  const { ref, onChange, ...restRegisterProps } = register(name, {
+    ...rules,
+    setValueAs: (value: string) => value.replace(/\D/g, ""),
+  });
 
   return (
     <div className={`flex flex-col ${className}`}>
@@ -83,21 +94,24 @@ const MaskedInput: FC<Props> = ({
           htmlFor={name}
         />
       )}
+
       <input
-        {...registerProps}
+        {...restRegisterProps}
         ref={(e) => {
           ref(e);
         }}
         type={type}
         id={name}
+        name={name}
         placeholder={placeholder}
         disabled={disabled}
         className="z-[2] w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition disabled:bg-gray-600 disabled:border-gray-400 disabled:text-gray-300 disabled:placeholder-gray-200 disabled:cursor-not-allowed"
         onBlur={handleBlur}
-        value={value}
+        value={maskedValue}
         onChange={handleChange}
-        maxLength={mask === "999.999.999-99" ? 14 : mask === "99.999.999/9999-99" ? 18 : undefined}
+        maxLength={mask === "CPF" ? 14 : mask === "CNPJ" ? 18 : undefined}
       />
+
       {error && <p className="mt-1 text-sm text-red-400">{error}</p>}
     </div>
   );
