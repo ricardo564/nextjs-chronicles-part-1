@@ -72,10 +72,6 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
   const { isLoadingCep, fetchAddressByCep } = useAddressByCep(setValue);
 
-  const handleWithNextStep = () => {
-    setCurrentStep("customer");
-  };
-
   const onSubmit = async (data: ShippingFormData) => {
     if (!selectedShippingMethod) {
       return;
@@ -85,7 +81,6 @@ const ShippingStep: FC<ShippingStepProps> = ({
       setShippingAddress(data);
       setShippingFormData(data);
       setCurrentStep("customer");
-      handleWithNextStep();
     } catch (error) {
       console.error('Failed to process shipping information:', error);
     }
