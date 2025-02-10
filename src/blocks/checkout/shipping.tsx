@@ -16,7 +16,7 @@ import { ShippingMethod } from "@/types/shippingMethod";
 import { FaTruck, FaStore } from "react-icons/fa";
 import DropdownSelect from "@/components/forms/DropdownSelect";
 import { Country } from "@/types/country";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import Link from "@/components/Link";
 
 interface ShippingStepProps {
@@ -24,11 +24,22 @@ interface ShippingStepProps {
   shippingMethods: ShippingMethod[];
 }
 
+const getShippingValidationMessages = (t: (key: string) => string) => ({
+  street: t("shipping.street.required"),
+  number: t("shipping.number.required"),
+  complement: t("shipping.complement.required"),
+  neighborhood: t("shipping.neighborhood.required"),
+  city: t("shipping.city.required"),
+  state: t("shipping.state.required"),
+  zipCode: t("shipping.zipCode.required"),
+  country: t("shipping.country.required"),
+});
+
 const ShippingStep: FC<ShippingStepProps> = ({
   shippingMethods,
   countries,
 }) => {
-  const t = useTranslations('checkout');
+  const t = useTranslations("checkout");
   const {
     setShippingAddress,
     setCurrentStep,
@@ -42,20 +53,11 @@ const ShippingStep: FC<ShippingStepProps> = ({
   } = useCheckoutStore();
 
   const [selectedCountry, setSelectedCountry] = useState(
-    shippingFormData.country || countries[0]?.cca2 || ''
+    shippingFormData.country || countries[0]?.cca2 || ""
   );
   const [disabledFields, setDisabledFields] = useState<boolean>(false);
 
-  const shippingValidationMessages = {
-    street: t('shipping.street.required'),
-    number: t('shipping.number.required'),
-    complement: t('shipping.complement.required'),
-    neighborhood: t('shipping.neighborhood.required'),
-    city: t('shipping.city.required'),
-    state: t('shipping.state.required'),
-    zipCode: t('shipping.zipCode.required'),
-    country: t('shipping.country.required'),
-  };
+  const shippingValidationMessages = getShippingValidationMessages(t);
 
   const {
     register,
@@ -66,8 +68,8 @@ const ShippingStep: FC<ShippingStepProps> = ({
     resolver: zodResolver(getShippingSchema(shippingValidationMessages)),
     defaultValues: {
       ...shippingFormData,
-      country: shippingFormData.country || countries[0]?.cca2 || ''
-    }
+      country: shippingFormData.country || countries[0]?.cca2 || "",
+    },
   });
 
   const { isLoadingCep, fetchAddressByCep } = useAddressByCep(setValue);
@@ -82,7 +84,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
       setShippingFormData(data);
       setCurrentStep("customer");
     } catch (error) {
-      console.error('Failed to process shipping information:', error);
+      console.error("Failed to process shipping information:", error);
     }
   };
 
@@ -90,13 +92,13 @@ const ShippingStep: FC<ShippingStepProps> = ({
     setShippingAddress({
       ...shippingFormData,
       country: selectedCountry,
-      neighborhood: shippingFormData.complement || '',
-      street: shippingFormData.street || '',
-      number: shippingFormData.number || '',
-      complement: shippingFormData.complement || '',
-      city: shippingFormData.city || '',
-      state: shippingFormData.state || '',
-      zipCode: shippingFormData.zipCode || ''
+      neighborhood: shippingFormData.complement || "",
+      street: shippingFormData.street || "",
+      number: shippingFormData.number || "",
+      complement: shippingFormData.complement || "",
+      city: shippingFormData.city || "",
+      state: shippingFormData.state || "",
+      zipCode: shippingFormData.zipCode || "",
     });
   }, [selectedCountry]);
 
@@ -105,11 +107,11 @@ const ShippingStep: FC<ShippingStepProps> = ({
   }, [shippingMethods]);
 
   useEffect(() => {
-    setDisabledFields(selectedCountry === 'BR' ? true : false);
+    setDisabledFields(selectedCountry === "BR" ? true : false);
   }, [selectedCountry]);
 
   useEffect(() => {
-    setValue('country', selectedCountry);
+    setValue("country", selectedCountry);
   }, [selectedCountry, setValue]);
 
   return (
@@ -118,13 +120,15 @@ const ShippingStep: FC<ShippingStepProps> = ({
         <Button
           label="Delivery"
           icon={<FaTruck />}
-          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-green-500" : "bg-gray-500"}`}
+          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-green-500" : "bg-gray-500"
+            }`}
           onClick={() => setIsDelivery(true)}
         >
           <input
             checked={isDelivery}
             onChange={(e) => setIsDelivery(e.target.checked)}
-            className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-100" : "scale-0"}`}
+            className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-100" : "scale-0"
+              }`}
             type="radio"
             name="shippingType"
             value="delivery"
@@ -134,13 +138,15 @@ const ShippingStep: FC<ShippingStepProps> = ({
         <Button
           label="Pickup"
           icon={<FaStore />}
-          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-gray-500" : "bg-green-500"}`}
+          className={`flex-row-reverse text-2xl font-bold mb-6 gap-4 ${isDelivery ? "bg-gray-500" : "bg-green-500"
+            }`}
           onClick={() => setIsDelivery(false)}
         >
           <input
             checked={!isDelivery}
             onChange={(e) => setIsDelivery(!e.target.checked)}
-            className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-0" : "scale-100"}`}
+            className={`w-6 h-6 transition-all duration-300 ease-in-out ${isDelivery ? "scale-0" : "scale-100"
+              }`}
             type="radio"
             name="shippingType"
             value="pickup"
@@ -155,7 +161,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
-              label={t('shipping.zipCode.label')}
+              label={t("shipping.zipCode.label")}
               name="zipCode"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.zipCode?.message}
@@ -170,16 +176,18 @@ const ShippingStep: FC<ShippingStepProps> = ({
                 label: country.name.common + " - " + country.cca2,
                 value: country.cca2,
               }))}
-              label={t('shipping.country.label')}
+              label={t("shipping.country.label")}
               name="country"
               register={register as unknown as UseFormRegister<FieldValues>}
               rules={{ required: true }}
-              onChange={(value: string | number) => setSelectedCountry(String(value))}
+              onChange={(value: string | number) =>
+                setSelectedCountry(String(value))
+              }
             />
           </div>
 
           <TextInput
-            label={t('shipping.street.label')}
+            label={t("shipping.street.label")}
             name="street"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.street?.message}
@@ -188,13 +196,13 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
-              label={t('shipping.number.label')}
+              label={t("shipping.number.label")}
               name="number"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.number?.message}
             />
             <TextInput
-              label={t('shipping.complement.label')}
+              label={t("shipping.complement.label")}
               name="complement"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.complement?.message}
@@ -203,7 +211,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
           </div>
 
           <TextInput
-            label={t('shipping.neighborhood.label')}
+            label={t("shipping.neighborhood.label")}
             name="neighborhood"
             register={register as unknown as UseFormRegister<FieldValues>}
             error={errors.neighborhood?.message}
@@ -212,14 +220,14 @@ const ShippingStep: FC<ShippingStepProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TextInput
-              label={t('shipping.city.label')}
+              label={t("shipping.city.label")}
               name="city"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.city?.message}
               disabled={disabledFields}
             />
             <TextInput
-              label={t('shipping.state.label')}
+              label={t("shipping.state.label")}
               name="state"
               register={register as unknown as UseFormRegister<FieldValues>}
               error={errors.state?.message}
@@ -228,14 +236,16 @@ const ShippingStep: FC<ShippingStepProps> = ({
           </div>
 
           <div className="mt-8">
-            <h3 className="text-lg font-semibold mb-4">Shipping Method</h3>
+            <h3 className="text-lg font-semibold mb-4">
+              {t("shipping.method.title")}
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {shippingMethods.map((method) => (
                 <label
                   key={method.id}
                   className={`flex items-center justify-between p-4 border rounded-lg w-full z-[2] px-4 py-3 bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 ease-in-out cursor-pointer ${selectedShippingMethod?.id === method.id
-                    ? "border-green-500 bg-green-50 !text-black"
-                    : "border-gray-200"
+                      ? "border-green-500 bg-green-50 !text-black"
+                      : "border-gray-200"
                     }`}
                 >
                   <div className="flex items-center">
@@ -243,16 +253,24 @@ const ShippingStep: FC<ShippingStepProps> = ({
                       type="radio"
                       name="shippingMethod"
                       value={method.id}
+                      aria-label={`${method.name} - ${method.time}`}
                       checked={selectedShippingMethod?.id === method.id}
                       onChange={() => setSelectedShippingMethod(method)}
                       className="mr-3"
                     />
                     <div>
                       <p className="font-medium">{method.name}</p>
-                      <p className={`text-sm text-gray-100 ${selectedShippingMethod?.id === method.id ? "text-green-500" : ""}`}>{method.time}</p>
+                      <p
+                        className={`text-sm text-gray-100 ${selectedShippingMethod?.id === method.id
+                            ? "text-green-500"
+                            : ""
+                          }`}
+                      >
+                        {method.time}
+                      </p>
                     </div>
                   </div>
-                  <span className="font-medium">${method.price}</span>
+                  <span className="font-medium">U${method.price}</span>
                 </label>
               ))}
             </div>
@@ -270,14 +288,16 @@ const ShippingStep: FC<ShippingStepProps> = ({
           <DropdownSelect
             options={countries.map((country: Country) => ({
               label: country.name.common + " - " + country.cca2,
-                value: country.cca2,
-              }))}
-              label={t('shipping.country.label')}
-              name="country"
-              register={register as unknown as UseFormRegister<FieldValues>}
-              rules={{ required: true }}
-              onChange={(value: string | number) => setSelectedCountry(String(value))}
-            />
+              value: country.cca2,
+            }))}
+            label={t("shipping.country.label")}
+            name="country"
+            register={register as unknown as UseFormRegister<FieldValues>}
+            rules={{ required: true }}
+            onChange={(value: string | number) =>
+              setSelectedCountry(String(value))
+            }
+          />
 
           <Link
             href="/checkout?step=customer"
@@ -291,4 +311,4 @@ const ShippingStep: FC<ShippingStepProps> = ({
   );
 };
 
-export default ShippingStep
+export default ShippingStep;
