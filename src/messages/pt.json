@@ -398,6 +398,7 @@
         "required": "País é obrigatório"
       },
       "methods": {
+        "title": "Opções de Entrega",
         "standard": "Entrega Padrão",
         "express": "Entrega Expressa",
         "overnight": "Entrega no Dia Seguinte",

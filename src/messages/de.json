@@ -398,6 +398,7 @@
         "required": "Land ist erforderlich"
       },
       "methods": {
+        "title": "Versandmethode",
         "standard": "Standardversand",
         "express": "Expressversand",
         "overnight": "Übernachtversand",

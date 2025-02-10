@@ -398,6 +398,7 @@
         "required": "国は必須です"
       },
       "methods": {
+        "title": "配送方法",
         "standard": "標準配送",
         "express": "速達配送",
         "overnight": "翌日配送",

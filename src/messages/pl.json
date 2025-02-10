@@ -398,6 +398,7 @@
         "required": "Kraj jest wymagany"
       },
       "methods": {
+        "title": "Metody Dostawy",
         "standard": "Dostawa Standardowa",
         "express": "Dostawa Ekspresowa",
         "overnight": "Dostawa Nocna",

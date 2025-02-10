@@ -398,6 +398,7 @@
         "required": "Country is required"
       },
       "methods": {
+        "title": "Shipping Methods",
         "standard": "Standard Shipping",
         "express": "Express Shipping",
         "overnight": "Overnight Shipping",
