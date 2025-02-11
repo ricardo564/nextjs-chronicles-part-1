@@ -4,7 +4,7 @@ import Link from "@/components/Link";
 
 const ConfirmationStep = () => {
   return (
-    <div className="min-h-screen">
+    <div className="w-full min-h-[400px] transition-all duration-300 ease-in-out">
       <ComingSoon />
 
       <div className="grid grid-cols-2 gap-4 items-center justify-between">
