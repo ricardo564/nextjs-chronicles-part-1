@@ -88,9 +88,8 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
                 tabIndex={0}
                 aria-label={`Step ${index + 1}: ${step}`}
                 aria-current={currentStep === step ? "step" : undefined}
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 duration-300 ease-in-out transform cursor-pointer hover:bg-green-600 hover:text-white ${
-                  isCompleted ? "bg-green-500 text-white scale-110" : "bg-white/20 text-white/60"
-                }`}
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 duration-300 ease-in-out transform cursor-pointer hover:bg-green-600 hover:text-white ${isCompleted ? "bg-green-500 text-white scale-110" : "bg-white/20 text-white/60"
+                  }`}
                 style={{ transitionDelay: animationDelay }}
                 onClick={() => handleStepChange(step as CheckoutStep)}
                 onKeyDown={(e) => {
@@ -126,35 +125,49 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
     switch (currentStep) {
       case "shipping":
         return (
-          <ShippingStep
-            shippingMethods={shippingMethods}
-            countries={countries}
-          />
+          <div className="w-full md:min-w-[800px] max-w-7xl grid mx-auto">
+            <ShippingStep
+              shippingMethods={shippingMethods}
+              countries={countries}
+            />
+          </div>
         );
       case "customer":
         return (
-          <CustomerStep
-            validationMessages={customerValidationMessages}
-            languages={languages}
-          />
+          <div className="w-full md:min-w-[800px] max-w-7xl grid mx-auto">
+            <CustomerStep
+              validationMessages={customerValidationMessages}
+              languages={languages}
+            />
+          </div>
         );
       case "payment":
-        return <PaymentStep />;
+        return (
+          <div className="w-full md:min-w-[800px] max-w-7xl">
+            <PaymentStep />
+          </div>
+        );
       case "confirmation":
-        return <ConfirmationStep />;
+        return (
+          <div className="w-full md:min-w-[800px] max-w-7xl grid mx-auto">
+            <ConfirmationStep />
+          </div>
+        );
       default:
         return (
-          <ShippingStep
-            countries={countries}
-            shippingMethods={shippingMethods}
-          />
+          <div className="w-full md:min-w-[800px] max-w-7xl grid mx-auto">
+            <ShippingStep
+              countries={countries}
+              shippingMethods={shippingMethods}
+            />
+          </div>
         );
     }
   };
 
   return (
-    <div className="text-white flex flex-col w-full">
-      <div className="md:mx-auto flex flex-col md:items-center md:justify-center w-full md:px-4 transition-all duration-300 ease-in-out">
+    <div className="text-white flex flex-col w-full max-w-7xl mx-auto">
+      <div className="flex flex-col md:items-center md:justify-center w-full md:px-4 transition-all duration-300 ease-in-out">
         <div className="text-center my-12 mt-6 w-full z-[50]">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
             {t('title')}
@@ -163,12 +176,14 @@ export const CheckoutSteps: FC<CheckoutStepProps> = ({
           <p className="text-white/70 text-sm md:text-lg">{t('complete')}</p>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">
+        <div className="w-full max-w-7xl grid mx-auto bg-gradient-to-r from-black/10 via-black/20 to-black/60 backdrop-blur-md rounded-[32px] p-4 md:p-8 border border-white/20 shadow-xl">
           <div className="flex justify-center items-center space-x-4 mb-8">
             {renderStepHeader()}
           </div>
 
-          {renderStep()}
+          <div className="transition-all duration-300 ease-in-out">
+            {renderStep()}
+          </div>
         </div>
       </div>
     </div>

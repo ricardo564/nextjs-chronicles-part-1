@@ -89,7 +89,7 @@ const CustomerStep: FC<CustomerStepProps> = ({
   return (
     <form
       onSubmit={handleSubmit(onSubmit, onError)}
-      className="space-y-6"
+      className="w-full space-y-6 transition-all duration-300 ease-in-out"
     >
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Personal Information</h2>
