@@ -22,6 +22,14 @@ interface Props {
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
+const MASK_LENGTHS = {
+  CPF: 14,
+  CNPJ: 18,
+  EXPIRATION_DATE: 5,
+  CVV: 3,
+  CREDIT_CARD: 16,
+} as const;
+
 const MaskedInput: FC<Props> = ({
   name,
   type = "text",
@@ -84,15 +92,15 @@ const MaskedInput: FC<Props> = ({
   const maxLength = () => {
     switch (mask) {
       case "CPF":
-        return 14;
+        return MASK_LENGTHS.CPF;
       case "CNPJ":
-        return 18;
+        return MASK_LENGTHS.CNPJ;
       case "expirationDate":
-        return 5;
+        return MASK_LENGTHS.EXPIRATION_DATE;
       case "cvv":
-        return 3;
+        return MASK_LENGTHS.CVV;
       case "creditCard":
-        return 16;
+        return MASK_LENGTHS.CREDIT_CARD;
       default:
         return undefined;
     }
