@@ -81,6 +81,23 @@ const MaskedInput: FC<Props> = ({
     setValueAs: (value: string) => value.replace(/\D/g, ""),
   });
 
+  const maxLength = () => {
+    switch (mask) {
+      case "CPF":
+        return 14;
+      case "CNPJ":
+        return 18;
+      case "expirationDate":
+        return 5;
+      case "cvv":
+        return 3;
+      case "creditCard":
+        return 16;
+      default:
+        return undefined;
+    }
+  }
+
   return (
     <div className={`flex flex-col ${className}`}>
       {label && (
@@ -105,7 +122,7 @@ const MaskedInput: FC<Props> = ({
         onBlur={handleBlur}
         value={maskedValue}
         onChange={handleChange}
-        maxLength={mask === "CPF" ? 14 : mask === "CNPJ" ? 18 : undefined}
+        maxLength={maxLength()}
       />
 
       {error && <p className="mt-1 text-sm text-red-400">{error}</p>}
