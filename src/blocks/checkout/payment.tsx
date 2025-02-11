@@ -65,7 +65,10 @@ const PaymentStep = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="w-full space-y-6 transition-all duration-300 ease-in-out"
+    >
       <section className="flex flex-col gap-4 h-full">
         <div className="min-h-[15rem] md:min-h-full">
           <RadioGroup

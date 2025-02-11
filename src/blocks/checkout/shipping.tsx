@@ -115,7 +115,7 @@ const ShippingStep: FC<ShippingStepProps> = ({
   }, [selectedCountry, setValue]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start md:mx-auto p-0 md:p-6 transition-all duration-300 ease-in-out">
+    <div className="w-full transition-all duration-300 ease-in-out">
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <Button
           label="Delivery"
