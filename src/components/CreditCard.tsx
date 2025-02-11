@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { useTranslations } from "next-intl";
 import Link from "@/components/Link";
+import { formatValueWithMask } from "@/utils/formatValueWithMask";
 
 interface Props {
   cardNumber: string;
@@ -69,7 +70,9 @@ const CreditCard: FC<Props> = ({
               <div className="text-xs text-gray-300 uppercase tracking-wider">
                 {t("creditCard.expirationDate.label")}
               </div>
-              <div className="text-white font-medium">{expirationDate}</div>
+              <div className="text-white font-medium">
+                {formatValueWithMask(expirationDate, "expirationDate")}
+              </div>
             </div>
 
             <div className="text-right">
