@@ -58,7 +58,6 @@ const PaymentStep = () => {
     try {
       setPaymentInfo(data);
 
-      console.log("paymentInfo:", paymentInfo);
       router.push("/checkout?step=confirmation");
     } catch (error) {
       console.error("Failed to process payment:", error);
