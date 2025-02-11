@@ -161,7 +161,7 @@ const PaymentStep = () => {
 
         {selectedMethod === "creditCard" &&
           <Button
-            type="button"
+            type="submit"
             loading={isSubmitting}
             label={t('next.label')}
             className="w-auto ml-auto"
