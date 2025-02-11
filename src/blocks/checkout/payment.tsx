@@ -13,11 +13,13 @@ import { PaymentInformation } from "@/types/payment";
 import { getPaymentSchema } from "@/schemas/checkout/payment";
 import MaskedInput from "@/components/forms/MaskedInput";
 import CreditCard from "@/components/CreditCard";
+import { useRouter } from "next/navigation";
 
 const PaymentStep = () => {
   const t = useTranslations('payment');
   const [selectedMethod, setSelectedMethod] = useState<string>("creditCard");
   const { paymentInfo, setPaymentInfo } = usePaymentStore();
+  const router = useRouter();
 
   const paymentValidationMessages = {
     number: t('creditCard.number.required'),
@@ -56,7 +58,7 @@ const PaymentStep = () => {
     try {
       setPaymentInfo(data);
 
-      console.log("paymentInfo:", paymentInfo);
+      router.push("/checkout?step=confirmation");
     } catch (error) {
       console.error("Failed to process payment:", error);
     }
@@ -161,7 +163,7 @@ const PaymentStep = () => {
 
         {selectedMethod === "creditCard" &&
           <Button
-            type="button"
+            type="submit"
             loading={isSubmitting}
             label={t('next.label')}
             className="w-auto ml-auto"

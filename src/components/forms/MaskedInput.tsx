@@ -22,6 +22,14 @@ interface Props {
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
+const MASK_LENGTHS = {
+  CPF: 14,
+  CNPJ: 18,
+  EXPIRATION_DATE: 5,
+  CVV: 3,
+  CREDIT_CARD: 16,
+} as const;
+
 const MaskedInput: FC<Props> = ({
   name,
   type = "text",
@@ -81,6 +89,23 @@ const MaskedInput: FC<Props> = ({
     setValueAs: (value: string) => value.replace(/\D/g, ""),
   });
 
+  const maxLength = () => {
+    switch (mask) {
+      case "CPF":
+        return MASK_LENGTHS.CPF;
+      case "CNPJ":
+        return MASK_LENGTHS.CNPJ;
+      case "expirationDate":
+        return MASK_LENGTHS.EXPIRATION_DATE;
+      case "cvv":
+        return MASK_LENGTHS.CVV;
+      case "creditCard":
+        return MASK_LENGTHS.CREDIT_CARD;
+      default:
+        return undefined;
+    }
+  }
+
   return (
     <div className={`flex flex-col ${className}`}>
       {label && (
@@ -105,7 +130,7 @@ const MaskedInput: FC<Props> = ({
         onBlur={handleBlur}
         value={maskedValue}
         onChange={handleChange}
-        maxLength={mask === "CPF" ? 14 : mask === "CNPJ" ? 18 : undefined}
+        maxLength={maxLength()}
       />
 
       {error && <p className="mt-1 text-sm text-red-400">{error}</p>}

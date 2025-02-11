@@ -7,9 +7,23 @@ const ConfirmationStep = () => {
     <div className="min-h-screen">
       <ComingSoon />
 
-      <Link href="/orders">
-        <Button label="Finalize Order" />
-      </Link>
+      <div className="grid grid-cols-2 gap-4 items-center justify-between">
+        <Link href="/checkout?step=customer">
+          <Button
+            type="button"
+            label="Back"
+            className="w-auto"
+          />
+        </Link>
+
+          <Link href="/orders">
+            <Button
+              type="button"
+              label="Finalize Order"
+              className="w-auto ml-auto"
+            />
+          </Link>
+      </div>
     </div>
   );
 };
